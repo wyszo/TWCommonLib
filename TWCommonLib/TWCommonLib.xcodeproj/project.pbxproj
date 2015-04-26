@@ -30,6 +30,7 @@
 		318394B31AEDA85D0077C079 /* DispatchMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchMacros.m; sourceTree = "<group>"; };
 		318394B71AEDA9E90077C079 /* TWSimpleTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewDelegate.h; sourceTree = "<group>"; };
 		318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewDelegate.m; sourceTree = "<group>"; };
+		318394BA1AEDAAA50077C079 /* TWCommonLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonLib.h; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3138C917A5D6846C5FBC483 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				318394AE1AEDA2010077C079 /* CommonTypes.h */,
+				318394BA1AEDAAA50077C079 /* TWCommonLib.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
