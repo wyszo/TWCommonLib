@@ -10,7 +10,7 @@
 		2191FDED734A6C8015795DDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3138C917A5D6846C5FBC483 /* libPods.a */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
-		318394AD1AEDA1850077C079 /* NSArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* NSArrayTableViewDataSource.m */; };
+		318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +20,8 @@
 		318394851AED9E2A0077C079 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Exclude/main.m; sourceTree = "<group>"; };
 		318394871AED9E2A0077C079 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Exclude/AppDelegate.h; sourceTree = "<group>"; };
 		318394881AED9E2A0077C079 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../Exclude/AppDelegate.m; sourceTree = "<group>"; };
-		318394AB1AEDA1850077C079 /* NSArrayTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayTableViewDataSource.h; sourceTree = "<group>"; };
-		318394AC1AEDA1850077C079 /* NSArrayTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTableViewDataSource.m; sourceTree = "<group>"; };
+		318394AB1AEDA1850077C079 /* TWArrayTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWArrayTableViewDataSource.h; sourceTree = "<group>"; };
+		318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWArrayTableViewDataSource.m; sourceTree = "<group>"; };
 		318394AE1AEDA2010077C079 /* CommonTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTypes.h; sourceTree = "<group>"; };
 		318394B01AEDA36B0077C079 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../Exclude/PrefixHeader.pch; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,8 +91,8 @@
 		318394AA1AED9EEC0077C079 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				318394AB1AEDA1850077C079 /* NSArrayTableViewDataSource.h */,
-				318394AC1AEDA1850077C079 /* NSArrayTableViewDataSource.m */,
+				318394AB1AEDA1850077C079 /* TWArrayTableViewDataSource.h */,
+				318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -240,7 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
-				318394AD1AEDA1850077C079 /* NSArrayTableViewDataSource.m in Sources */,
+				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

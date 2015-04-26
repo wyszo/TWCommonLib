@@ -2,11 +2,11 @@
 //  TWCommonLib
 //
 
-#import "NSArrayTableViewDataSource.h"
+#import "TWArrayTableViewDataSource.h"
 #import <KZAsserts/KZAsserts.h>
 
 
-@interface NSArrayTableViewDataSource ()
+@interface TWArrayTableViewDataSource ()
 
 @property (strong, nonatomic) NSMutableArray *array;
 @property (weak, nonatomic) UITableView *tableView;
@@ -15,7 +15,7 @@
 @end
 
 
-@implementation NSArrayTableViewDataSource
+@implementation TWArrayTableViewDataSource
 
 - (instancetype)initWithArray:(NSArray *)array attachToTableView:(UITableView *)tableView cellNibName:(NSString *)cellNibName
 {

@@ -7,7 +7,7 @@
 
 // TODO: dataSource should bind it's lifecycle to a tableView lifespan
 
-@interface NSArrayTableViewDataSource : NSObject <UITableViewDataSource>
+@interface TWArrayTableViewDataSource : NSObject <UITableViewDataSource>
 
 @property (copy, nonatomic) CellAtIndexPathBlock configureCellBlock;
 
