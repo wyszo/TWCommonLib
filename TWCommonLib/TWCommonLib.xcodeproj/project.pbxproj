@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
+		318394AD1AEDA1850077C079 /* NSArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* NSArrayTableViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,10 @@
 		318394851AED9E2A0077C079 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Exclude/main.m; sourceTree = "<group>"; };
 		318394871AED9E2A0077C079 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Exclude/AppDelegate.h; sourceTree = "<group>"; };
 		318394881AED9E2A0077C079 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../Exclude/AppDelegate.m; sourceTree = "<group>"; };
+		318394AB1AEDA1850077C079 /* NSArrayTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayTableViewDataSource.h; sourceTree = "<group>"; };
+		318394AC1AEDA1850077C079 /* NSArrayTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTableViewDataSource.m; sourceTree = "<group>"; };
+		318394AE1AEDA2010077C079 /* CommonTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTypes.h; sourceTree = "<group>"; };
+		318394B01AEDA36B0077C079 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../Exclude/PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				318394AA1AED9EEC0077C079 /* Classes */,
+				318394AF1AEDA2050077C079 /* Headers */,
 				318394A91AED9EE50077C079 /* AppDelegate */,
 				318394831AED9E2A0077C079 /* Supporting Files */,
 			);
@@ -59,6 +65,7 @@
 		318394831AED9E2A0077C079 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				318394B01AEDA36B0077C079 /* PrefixHeader.pch */,
 				318394841AED9E2A0077C079 /* Info.plist */,
 				318394851AED9E2A0077C079 /* main.m */,
 			);
@@ -77,8 +84,18 @@
 		318394AA1AED9EEC0077C079 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				318394AB1AEDA1850077C079 /* NSArrayTableViewDataSource.h */,
+				318394AC1AEDA1850077C079 /* NSArrayTableViewDataSource.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		318394AF1AEDA2050077C079 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				318394AE1AEDA2010077C079 /* CommonTypes.h */,
+			);
+			name = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
+				318394AD1AEDA1850077C079 /* NSArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +271,7 @@
 		318394A41AED9E2A0077C079 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PREFIX_HEADER = Exclude/PrefixHeader.pch;
 				INFOPLIST_FILE = TWCommonLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -262,6 +281,7 @@
 		318394A51AED9E2A0077C079 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PREFIX_HEADER = Exclude/PrefixHeader.pch;
 				INFOPLIST_FILE = TWCommonLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
