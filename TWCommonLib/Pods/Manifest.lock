@@ -1,0 +1,10 @@
+PODS:
+  - KZAsserts (1.0)
+
+DEPENDENCIES:
+  - KZAsserts (= 1.0)
+
+SPEC CHECKSUMS:
+  KZAsserts: 6e613b569a33582dc94cf7a1f34a2c6d870982a7
+
+COCOAPODS: 0.35.0

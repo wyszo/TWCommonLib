@@ -3,6 +3,7 @@
 //
 
 #import "NSArrayTableViewDataSource.h"
+#import <KZAsserts/KZAsserts.h>
 
 
 @interface NSArrayTableViewDataSource ()

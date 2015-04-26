@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2191FDED734A6C8015795DDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3138C917A5D6846C5FBC483 /* libPods.a */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
 		318394AD1AEDA1850077C079 /* NSArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* NSArrayTableViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318394851AED9E2A0077C079 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Exclude/main.m; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		318394AC1AEDA1850077C079 /* NSArrayTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTableViewDataSource.m; sourceTree = "<group>"; };
 		318394AE1AEDA2010077C079 /* CommonTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTypes.h; sourceTree = "<group>"; };
 		318394B01AEDA36B0077C079 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../Exclude/PrefixHeader.pch; sourceTree = "<group>"; };
+		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E3138C917A5D6846C5FBC483 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2191FDED734A6C8015795DDD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				318394821AED9E2A0077C079 /* TWCommonLib */,
 				318394811AED9E2A0077C079 /* Products */,
+				5B4955590A51240DDED0D614 /* Pods */,
+				3204F5FC6F235B183EDE0409 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +105,23 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
+		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3138C917A5D6846C5FBC483 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B4955590A51240DDED0D614 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */,
+				3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,10 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 318394A31AED9E2A0077C079 /* Build configuration list for PBXNativeTarget "TWCommonLib" */;
 			buildPhases = (
+				1A512928B78C54E210885563 /* Check Pods Manifest.lock */,
 				3183947C1AED9E2A0077C079 /* Sources */,
 				3183947D1AED9E2A0077C079 /* Frameworks */,
 				3183947E1AED9E2A0077C079 /* Resources */,
 				066A35C604374BF8F24DB5A4 /* Find unused imports */,
+				7A3898079963CD1C39E64929 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,6 +201,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"/Users/wyszo/Library/Application Support/Developer/Shared/Xcode/Plug-ins/xcfui.xcplugin/Contents/Resources/fui_script.sh\" \"/Volumes/OS X Mavericks/Users/wyszo/Documents/Devel/PlayerAid/TWCommonLib/TWCommonLib\"";
+		};
+		1A512928B78C54E210885563 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A3898079963CD1C39E64929 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -270,6 +326,7 @@
 		};
 		318394A41AED9E2A0077C079 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = Exclude/PrefixHeader.pch;
 				INFOPLIST_FILE = TWCommonLib/Info.plist;
@@ -280,6 +337,7 @@
 		};
 		318394A51AED9E2A0077C079 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = Exclude/PrefixHeader.pch;
 				INFOPLIST_FILE = TWCommonLib/Info.plist;
