@@ -12,5 +12,6 @@
 #import "TWSimpleTableViewDelegate.h"
 #import "TWLocationUpdatesManager.h"
 #import "TWJSONHelper.h"
+#import "UIView+TWFadeAnimations.h"
 
 #endif
