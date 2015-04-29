@@ -11,5 +11,6 @@
 #import "TWArrayTableViewDataSource.h"
 #import "TWSimpleTableViewDelegate.h"
 #import "TWLocationUpdatesManager.h"
+#import "TWJSONHelper.h"
 
 #endif
