@@ -2,11 +2,11 @@
 //  ChopinSelfie
 //
 
-#import "JSONHelper.h"
+#import "TWJSONHelper.h"
 #import <KZAsserts.h>
 
 
-@implementation JSONHelper
+@implementation TWJSONHelper
 
 - (id)jsonObjectFromFileNamed:(NSString *)filename
 {
@@ -25,7 +25,7 @@
 - (NSDictionary *)jsonDictionaryFromFileNamed:(NSString *)filename
 {
   AssertTrueOrReturnNil(filename.length);
-  id jsonObject = [[JSONHelper new] jsonObjectFromFileNamed:filename];
+  id jsonObject = [[TWJSONHelper new] jsonObjectFromFileNamed:filename];
   AssertTrueOrReturnNil([jsonObject isKindOfClass:[NSDictionary class]]);
   return (NSDictionary *)jsonObject;
 }

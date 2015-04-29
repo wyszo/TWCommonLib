@@ -13,7 +13,7 @@
 		318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */; };
 		318394B41AEDA85D0077C079 /* DispatchMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B31AEDA85D0077C079 /* DispatchMacros.m */; };
 		318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */; };
-		318395021AF006080077C079 /* JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 318395011AF006080077C079 /* JSONHelper.m */; };
+		318395021AF006080077C079 /* TWJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 318395011AF006080077C079 /* TWJSONHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		318394B71AEDA9E90077C079 /* TWSimpleTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewDelegate.h; sourceTree = "<group>"; };
 		318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewDelegate.m; sourceTree = "<group>"; };
 		318394BA1AEDAAA50077C079 /* TWCommonLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonLib.h; sourceTree = "<group>"; };
-		318395001AF006080077C079 /* JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHelper.h; sourceTree = "<group>"; };
-		318395011AF006080077C079 /* JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHelper.m; sourceTree = "<group>"; };
+		318395001AF006080077C079 /* TWJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWJSONHelper.h; sourceTree = "<group>"; };
+		318395011AF006080077C079 /* TWJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWJSONHelper.m; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3138C917A5D6846C5FBC483 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,8 +158,8 @@
 		318394FF1AF005EE0077C079 /* JSONHelper */ = {
 			isa = PBXGroup;
 			children = (
-				318395001AF006080077C079 /* JSONHelper.h */,
-				318395011AF006080077C079 /* JSONHelper.m */,
+				318395001AF006080077C079 /* TWJSONHelper.h */,
+				318395011AF006080077C079 /* TWJSONHelper.m */,
 			);
 			name = JSONHelper;
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
-				318395021AF006080077C079 /* JSONHelper.m in Sources */,
+				318395021AF006080077C079 /* TWJSONHelper.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
 				318394B41AEDA85D0077C079 /* DispatchMacros.m in Sources */,
