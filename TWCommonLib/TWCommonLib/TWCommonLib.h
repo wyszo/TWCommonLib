@@ -13,5 +13,6 @@
 #import "TWLocationUpdatesManager.h"
 #import "TWJSONHelper.h"
 #import "UIView+TWFadeAnimations.h"
+#import "NSObject+TWObjectLifetime.h"
 
 #endif
