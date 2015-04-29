@@ -19,7 +19,10 @@
   }
   self.alpha = 0.0f;
   self.hidden = NO;
-  [UIView animateWithDuration:duration animations:^{
+  
+  UIViewAnimationOptions *animationOptions = (UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction);
+  
+  [UIView animateWithDuration:duration delay:0 options:animationOptions animations:^{
     self.alpha = 1.0f;
   } completion:completion];
 }
@@ -34,7 +37,10 @@
   if (duration == 0.0f) {
     return;
   }
-  [UIView animateWithDuration:duration animations:^{
+  
+  UIViewAnimationOptions *animationOptions = (UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction);
+  
+  [UIView animateWithDuration:duration delay:0 options:animationOptions animations:^{
     self.alpha = 0.0f;
   } completion:^(BOOL finished) {
     self.hidden = YES;
