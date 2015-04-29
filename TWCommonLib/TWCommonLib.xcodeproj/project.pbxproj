@@ -18,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		314529611AF0B3CB00C33BC1 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318394851AED9E2A0077C079 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Exclude/main.m; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		318394AF1AEDA2050077C079 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				314529611AF0B3CB00C33BC1 /* CommonMacros.h */,
 				318394AE1AEDA2010077C079 /* CommonTypes.h */,
 				318394BA1AEDAAA50077C079 /* TWCommonLib.h */,
 			);
