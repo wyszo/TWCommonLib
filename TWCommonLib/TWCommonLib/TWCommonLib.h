@@ -7,8 +7,9 @@
 
 #import "CommonMacros.h"
 #import "CommonTypes.h"
+#import "DispatchMacros.h"
 #import "TWArrayTableViewDataSource.h"
 #import "TWSimpleTableViewDelegate.h"
-#import "DispatchMacros.h"
+#import "TWLocationUpdatesManager.h"
 
 #endif
