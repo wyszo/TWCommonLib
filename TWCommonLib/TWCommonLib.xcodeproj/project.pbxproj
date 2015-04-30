@@ -11,6 +11,7 @@
 		311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79E91AF0EA7F00E97FBC /* TWLocationUpdatesManager.m */; };
 		311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */; };
 		311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */; };
+		311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
 		318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */; };
@@ -27,6 +28,8 @@
 		311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWFadeAnimations.m"; sourceTree = "<group>"; };
 		311B79FA1AF1471400E97FBC /* NSObject+TWObjectLifetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TWObjectLifetime.h"; sourceTree = "<group>"; };
 		311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TWObjectLifetime.m"; sourceTree = "<group>"; };
+		311B79FF1AF26FA200E97FBC /* NSSet+TWSetByRemoving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+TWSetByRemoving.h"; sourceTree = "<group>"; };
+		311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+TWSetByRemoving.m"; sourceTree = "<group>"; };
 		314529611AF0B3CB00C33BC1 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,13 +72,13 @@
 			name = LocationUpdatesManager;
 			sourceTree = "<group>";
 		};
-		311B79F11AF107E400E97FBC /* UIView FadeAnimations */ = {
+		311B79F11AF107E400E97FBC /* UIView */ = {
 			isa = PBXGroup;
 			children = (
 				311B79F21AF107F800E97FBC /* UIView+TWFadeAnimations.h */,
 				311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */,
 			);
-			name = "UIView FadeAnimations";
+			name = UIView;
 			sourceTree = "<group>";
 		};
 		311B79F91AF1470500E97FBC /* ObjectLifetime */ = {
@@ -85,6 +88,24 @@
 				311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */,
 			);
 			name = ObjectLifetime;
+			sourceTree = "<group>";
+		};
+		311B79FD1AF26F6B00E97FBC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				311B79FE1AF26F9000E97FBC /* NSSet */,
+				311B79F11AF107E400E97FBC /* UIView */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		311B79FE1AF26F9000E97FBC /* NSSet */ = {
+			isa = PBXGroup;
+			children = (
+				311B79FF1AF26FA200E97FBC /* NSSet+TWSetByRemoving.h */,
+				311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */,
+			);
+			name = NSSet;
 			sourceTree = "<group>";
 		};
 		318394771AED9E2A0077C079 = {
@@ -187,9 +208,9 @@
 		318394FE1AF005E10077C079 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				311B79FD1AF26F6B00E97FBC /* Categories */,
 				318394FF1AF005EE0077C079 /* JSONHelper */,
 				311B79F91AF1470500E97FBC /* ObjectLifetime */,
-				311B79F11AF107E400E97FBC /* UIView FadeAnimations */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -346,6 +367,7 @@
 				311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */,
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
+				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
