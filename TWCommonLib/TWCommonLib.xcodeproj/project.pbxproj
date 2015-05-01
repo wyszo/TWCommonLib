@@ -12,7 +12,7 @@
 		311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */; };
 		311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */; };
 		311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */; };
-		311B7A0B1AF3F2A300E97FBC /* TWCommonLib_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A0A1AF3F2A300E97FBC /* TWCommonLib_Tests.m */; };
+		311B7A0B1AF3F2A300E97FBC /* SampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A0A1AF3F2A300E97FBC /* SampleSpec.m */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
 		318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */; };
@@ -42,9 +42,9 @@
 		311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TWObjectLifetime.m"; sourceTree = "<group>"; };
 		311B79FF1AF26FA200E97FBC /* NSSet+TWSetByRemoving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+TWSetByRemoving.h"; sourceTree = "<group>"; };
 		311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+TWSetByRemoving.m"; sourceTree = "<group>"; };
-		311B7A061AF3F2A200E97FBC /* TWCommonLib Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "TWCommonLib Tests.xctest"; path = TWCommonLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		311B7A061AF3F2A200E97FBC /* TWCommonLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWCommonLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		311B7A091AF3F2A200E97FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		311B7A0A1AF3F2A300E97FBC /* TWCommonLib_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWCommonLib_Tests.m; sourceTree = "<group>"; };
+		311B7A0A1AF3F2A300E97FBC /* SampleSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleSpec.m; sourceTree = "<group>"; };
 		314529611AF0B3CB00C33BC1 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		311B7A071AF3F2A200E97FBC /* TWCommonLib Tests */ = {
 			isa = PBXGroup;
 			children = (
-				311B7A0A1AF3F2A300E97FBC /* TWCommonLib_Tests.m */,
+				311B7A111AF3F68800E97FBC /* TestSpecs */,
 				311B7A081AF3F2A200E97FBC /* Supporting Files */,
 			);
 			path = "TWCommonLib Tests";
@@ -149,6 +149,14 @@
 				311B7A091AF3F2A200E97FBC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		311B7A111AF3F68800E97FBC /* TestSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				311B7A0A1AF3F2A300E97FBC /* SampleSpec.m */,
+			);
+			name = TestSpecs;
 			sourceTree = "<group>";
 		};
 		318394771AED9E2A0077C079 = {
@@ -166,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				318394801AED9E2A0077C079 /* TWCommonLib.app */,
-				311B7A061AF3F2A200E97FBC /* TWCommonLib Tests.xctest */,
+				311B7A061AF3F2A200E97FBC /* TWCommonLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,7 +317,7 @@
 			);
 			name = TWCommonLibTests;
 			productName = "TWCommonLib Tests";
-			productReference = 311B7A061AF3F2A200E97FBC /* TWCommonLib Tests.xctest */;
+			productReference = 311B7A061AF3F2A200E97FBC /* TWCommonLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3183947F1AED9E2A0077C079 /* TWCommonLib */ = {
@@ -468,7 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				311B7A0B1AF3F2A300E97FBC /* TWCommonLib_Tests.m in Sources */,
+				311B7A0B1AF3F2A300E97FBC /* SampleSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
