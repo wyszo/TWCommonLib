@@ -12,13 +12,18 @@
 		311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */; };
 		311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */; };
 		311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */; };
-		311B7A0B1AF3F2A300E97FBC /* SampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A0A1AF3F2A300E97FBC /* SampleSpec.m */; };
+		311B7A0B1AF3F2A300E97FBC /* SimpleTableViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A0A1AF3F2A300E97FBC /* SimpleTableViewSpec.m */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
 		318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */; };
 		318394B41AEDA85D0077C079 /* DispatchMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B31AEDA85D0077C079 /* DispatchMacros.m */; };
 		318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */; };
 		318395021AF006080077C079 /* TWJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 318395011AF006080077C079 /* TWJSONHelper.m */; };
+		3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */; };
+		319412931AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */; };
+		319412941AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */; };
+		319412971AF412E000D676A3 /* libPods-KZAsserts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 319412961AF412E000D676A3 /* libPods-KZAsserts.a */; };
+		319412981AF412FD00D676A3 /* TWSimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +49,7 @@
 		311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+TWSetByRemoving.m"; sourceTree = "<group>"; };
 		311B7A061AF3F2A200E97FBC /* TWCommonLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWCommonLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		311B7A091AF3F2A200E97FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		311B7A0A1AF3F2A300E97FBC /* SampleSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleSpec.m; sourceTree = "<group>"; };
+		311B7A0A1AF3F2A300E97FBC /* SimpleTableViewSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewSpec.m; sourceTree = "<group>"; };
 		314529611AF0B3CB00C33BC1 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +67,11 @@
 		318394BA1AEDAAA50077C079 /* TWCommonLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonLib.h; sourceTree = "<group>"; };
 		318395001AF006080077C079 /* TWJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWJSONHelper.h; sourceTree = "<group>"; };
 		318395011AF006080077C079 /* TWJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWJSONHelper.m; sourceTree = "<group>"; };
+		3194128B1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewDataSource.h; sourceTree = "<group>"; };
+		3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewDataSource.m; sourceTree = "<group>"; };
+		319412911AF410AC00D676A3 /* TWSimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewCell.h; sourceTree = "<group>"; };
+		319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewCell.m; sourceTree = "<group>"; };
+		319412961AF412E000D676A3 /* libPods-KZAsserts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-KZAsserts.a"; path = "Pods/build/Debug-iphoneos/libPods-KZAsserts.a"; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319412971AF412E000D676A3 /* libPods-KZAsserts.a in Frameworks */,
 				A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,7 +166,7 @@
 		311B7A111AF3F68800E97FBC /* TestSpecs */ = {
 			isa = PBXGroup;
 			children = (
-				311B7A0A1AF3F2A300E97FBC /* SampleSpec.m */,
+				311B7A0A1AF3F2A300E97FBC /* SimpleTableViewSpec.m */,
 			);
 			name = TestSpecs;
 			sourceTree = "<group>";
@@ -183,10 +194,11 @@
 		318394821AED9E2A0077C079 /* TWCommonLib */ = {
 			isa = PBXGroup;
 			children = (
+				318394A91AED9EE50077C079 /* AppDelegate */,
 				318394AA1AED9EEC0077C079 /* Classes */,
 				318394AF1AEDA2050077C079 /* Headers */,
 				318394FE1AF005E10077C079 /* Helpers */,
-				318394A91AED9EE50077C079 /* AppDelegate */,
+				3194128E1AF4106A00D676A3 /* UI Components */,
 				318394831AED9E2A0077C079 /* Supporting Files */,
 			);
 			path = TWCommonLib;
@@ -235,8 +247,8 @@
 		318394B11AEDA8370077C079 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				318394AB1AEDA1850077C079 /* TWArrayTableViewDataSource.h */,
-				318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */,
+				319412891AF40F2400D676A3 /* ArrayTableView */,
+				3194128A1AF40F3400D676A3 /* SimpleTableView */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -278,9 +290,53 @@
 			name = JSONHelper;
 			sourceTree = "<group>";
 		};
+		319412891AF40F2400D676A3 /* ArrayTableView */ = {
+			isa = PBXGroup;
+			children = (
+				318394AB1AEDA1850077C079 /* TWArrayTableViewDataSource.h */,
+				318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */,
+			);
+			name = ArrayTableView;
+			sourceTree = "<group>";
+		};
+		3194128A1AF40F3400D676A3 /* SimpleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				3194128B1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.h */,
+				3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */,
+			);
+			name = SimpleTableView;
+			sourceTree = "<group>";
+		};
+		3194128E1AF4106A00D676A3 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				3194128F1AF4107E00D676A3 /* Cells */,
+			);
+			name = "UI Components";
+			sourceTree = "<group>";
+		};
+		3194128F1AF4107E00D676A3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				319412901AF4108700D676A3 /* SimpleTableView */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		319412901AF4108700D676A3 /* SimpleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				319412911AF410AC00D676A3 /* TWSimpleTableViewCell.h */,
+				319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */,
+			);
+			name = SimpleTableView;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				319412961AF412E000D676A3 /* libPods-KZAsserts.a */,
 				E3138C917A5D6846C5FBC483 /* libPods.a */,
 				AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */,
 			);
@@ -477,7 +533,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				311B7A0B1AF3F2A300E97FBC /* SampleSpec.m in Sources */,
+				319412941AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */,
+				311B7A0B1AF3F2A300E97FBC /* SimpleTableViewSpec.m in Sources */,
+				319412981AF412FD00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +543,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
+				319412931AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */,
 				318395021AF006080077C079 /* TWJSONHelper.m in Sources */,
 				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
@@ -525,6 +585,10 @@
 				INFOPLIST_FILE = "TWCommonLib Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "";
 			};
@@ -542,6 +606,10 @@
 				INFOPLIST_FILE = "TWCommonLib Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TWCommonLib.app/TWCommonLib";
 			};
