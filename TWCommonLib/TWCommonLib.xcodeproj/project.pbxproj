@@ -12,6 +12,7 @@
 		311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */; };
 		311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */; };
 		311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */; };
+		311B7A0B1AF3F2A300E97FBC /* TWCommonLib_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A0A1AF3F2A300E97FBC /* TWCommonLib_Tests.m */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
 		318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */; };
@@ -19,6 +20,16 @@
 		318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */; };
 		318395021AF006080077C079 /* TWJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 318395011AF006080077C079 /* TWJSONHelper.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		311B7A0C1AF3F2A300E97FBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 318394781AED9E2A0077C079 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3183947F1AED9E2A0077C079;
+			remoteInfo = TWCommonLib;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -30,6 +41,9 @@
 		311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TWObjectLifetime.m"; sourceTree = "<group>"; };
 		311B79FF1AF26FA200E97FBC /* NSSet+TWSetByRemoving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+TWSetByRemoving.h"; sourceTree = "<group>"; };
 		311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+TWSetByRemoving.m"; sourceTree = "<group>"; };
+		311B7A061AF3F2A200E97FBC /* TWCommonLib Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TWCommonLib Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		311B7A091AF3F2A200E97FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		311B7A0A1AF3F2A300E97FBC /* TWCommonLib_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWCommonLib_Tests.m; sourceTree = "<group>"; };
 		314529611AF0B3CB00C33BC1 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +66,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		311B7A031AF3F2A200E97FBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3183947D1AED9E2A0077C079 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,10 +129,28 @@
 			name = NSSet;
 			sourceTree = "<group>";
 		};
+		311B7A071AF3F2A200E97FBC /* TWCommonLib Tests */ = {
+			isa = PBXGroup;
+			children = (
+				311B7A0A1AF3F2A300E97FBC /* TWCommonLib_Tests.m */,
+				311B7A081AF3F2A200E97FBC /* Supporting Files */,
+			);
+			path = "TWCommonLib Tests";
+			sourceTree = "<group>";
+		};
+		311B7A081AF3F2A200E97FBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				311B7A091AF3F2A200E97FBC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		318394771AED9E2A0077C079 = {
 			isa = PBXGroup;
 			children = (
 				318394821AED9E2A0077C079 /* TWCommonLib */,
+				311B7A071AF3F2A200E97FBC /* TWCommonLib Tests */,
 				318394811AED9E2A0077C079 /* Products */,
 				5B4955590A51240DDED0D614 /* Pods */,
 				3204F5FC6F235B183EDE0409 /* Frameworks */,
@@ -122,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				318394801AED9E2A0077C079 /* TWCommonLib.app */,
+				311B7A061AF3F2A200E97FBC /* TWCommonLib Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +284,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		311B7A051AF3F2A200E97FBC /* TWCommonLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 311B7A0E1AF3F2A300E97FBC /* Build configuration list for PBXNativeTarget "TWCommonLibTests" */;
+			buildPhases = (
+				311B7A021AF3F2A200E97FBC /* Sources */,
+				311B7A031AF3F2A200E97FBC /* Frameworks */,
+				311B7A041AF3F2A200E97FBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				311B7A0D1AF3F2A300E97FBC /* PBXTargetDependency */,
+			);
+			name = TWCommonLibTests;
+			productName = "TWCommonLib Tests";
+			productReference = 311B7A061AF3F2A200E97FBC /* TWCommonLib Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3183947F1AED9E2A0077C079 /* TWCommonLib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 318394A31AED9E2A0077C079 /* Build configuration list for PBXNativeTarget "TWCommonLib" */;
@@ -273,6 +331,10 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Synappse;
 				TargetAttributes = {
+					311B7A051AF3F2A200E97FBC = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 3183947F1AED9E2A0077C079;
+					};
 					3183947F1AED9E2A0077C079 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -292,11 +354,19 @@
 			projectRoot = "";
 			targets = (
 				3183947F1AED9E2A0077C079 /* TWCommonLib */,
+				311B7A051AF3F2A200E97FBC /* TWCommonLibTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		311B7A041AF3F2A200E97FBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3183947E1AED9E2A0077C079 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +424,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		311B7A021AF3F2A200E97FBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				311B7A0B1AF3F2A300E97FBC /* TWCommonLib_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3183947C1AED9E2A0077C079 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -373,7 +451,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		311B7A0D1AF3F2A300E97FBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3183947F1AED9E2A0077C079 /* TWCommonLib */;
+			targetProxy = 311B7A0C1AF3F2A300E97FBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		311B7A0F1AF3F2A300E97FBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TWCommonLib Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TWCommonLib.app/TWCommonLib";
+			};
+			name = Debug;
+		};
+		311B7A101AF3F2A300E97FBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TWCommonLib Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TWCommonLib.app/TWCommonLib";
+			};
+			name = Release;
+		};
 		318394A11AED9E2A0077C079 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -475,6 +597,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		311B7A0E1AF3F2A300E97FBC /* Build configuration list for PBXNativeTarget "TWCommonLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				311B7A0F1AF3F2A300E97FBC /* Debug */,
+				311B7A101AF3F2A300E97FBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3183947B1AED9E2A0077C079 /* Build configuration list for PBXProject "TWCommonLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
