@@ -134,12 +134,13 @@
 			name = NSSet;
 			sourceTree = "<group>";
 		};
-		311B7A071AF3F2A200E97FBC /* TWCommonLib Tests */ = {
+		311B7A071AF3F2A200E97FBC /* TWCommonLibTests */ = {
 			isa = PBXGroup;
 			children = (
 				311B7A111AF3F68800E97FBC /* TestSpecs */,
 				311B7A081AF3F2A200E97FBC /* Supporting Files */,
 			);
+			name = TWCommonLibTests;
 			path = "TWCommonLib Tests";
 			sourceTree = "<group>";
 		};
@@ -163,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				318394821AED9E2A0077C079 /* TWCommonLib */,
-				311B7A071AF3F2A200E97FBC /* TWCommonLib Tests */,
+				311B7A071AF3F2A200E97FBC /* TWCommonLibTests */,
 				318394811AED9E2A0077C079 /* Products */,
 				5B4955590A51240DDED0D614 /* Pods */,
 				3204F5FC6F235B183EDE0409 /* Frameworks */,
@@ -525,7 +526,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TWCommonLib.app/TWCommonLib";
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
