@@ -19,6 +19,7 @@
 		318394B41AEDA85D0077C079 /* DispatchMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B31AEDA85D0077C079 /* DispatchMacros.m */; };
 		318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */; };
 		318395021AF006080077C079 /* TWJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 318395011AF006080077C079 /* TWJSONHelper.m */; };
+		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 		311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TWObjectLifetime.m"; sourceTree = "<group>"; };
 		311B79FF1AF26FA200E97FBC /* NSSet+TWSetByRemoving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+TWSetByRemoving.h"; sourceTree = "<group>"; };
 		311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+TWSetByRemoving.m"; sourceTree = "<group>"; };
-		311B7A061AF3F2A200E97FBC /* TWCommonLib Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TWCommonLib Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		311B7A061AF3F2A200E97FBC /* TWCommonLib Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "TWCommonLib Tests.xctest"; path = TWCommonLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		311B7A091AF3F2A200E97FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311B7A0A1AF3F2A300E97FBC /* TWCommonLib_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWCommonLib_Tests.m; sourceTree = "<group>"; };
 		314529611AF0B3CB00C33BC1 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
@@ -62,6 +63,9 @@
 		318395001AF006080077C079 /* TWJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWJSONHelper.h; sourceTree = "<group>"; };
 		318395011AF006080077C079 /* TWJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWJSONHelper.m; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AECCAF1FCC57060D2E1C36CD /* Pods-TWCommonLibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3138C917A5D6846C5FBC483 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				E3138C917A5D6846C5FBC483 /* libPods.a */,
+				AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -277,6 +283,8 @@
 			children = (
 				52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */,
 				3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */,
+				AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */,
+				AECCAF1FCC57060D2E1C36CD /* Pods-TWCommonLibTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -288,9 +296,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 311B7A0E1AF3F2A300E97FBC /* Build configuration list for PBXNativeTarget "TWCommonLibTests" */;
 			buildPhases = (
+				B7F184AE5D59F91AEBCDBC6C /* Check Pods Manifest.lock */,
 				311B7A021AF3F2A200E97FBC /* Sources */,
 				311B7A031AF3F2A200E97FBC /* Frameworks */,
 				311B7A041AF3F2A200E97FBC /* Resources */,
+				F636B692DA464C6B43683AE3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -421,6 +431,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B7F184AE5D59F91AEBCDBC6C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F636B692DA464C6B43683AE3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -462,6 +502,7 @@
 /* Begin XCBuildConfiguration section */
 		311B7A0F1AF3F2A300E97FBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -482,6 +523,7 @@
 		};
 		311B7A101AF3F2A300E97FBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AECCAF1FCC57060D2E1C36CD /* Pods-TWCommonLibTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -604,6 +646,7 @@
 				311B7A101AF3F2A300E97FBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3183947B1AED9E2A0077C079 /* Build configuration list for PBXProject "TWCommonLib" */ = {
 			isa = XCConfigurationList;
