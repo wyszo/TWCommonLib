@@ -16,7 +16,7 @@
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
 		318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */; };
-		318394B41AEDA85D0077C079 /* DispatchMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B31AEDA85D0077C079 /* DispatchMacros.m */; };
+		318394B41AEDA85D0077C079 /* TWDispatchMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B31AEDA85D0077C079 /* TWDispatchMacros.m */; };
 		318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */; };
 		318395021AF006080077C079 /* TWJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 318395011AF006080077C079 /* TWJSONHelper.m */; };
 		3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */; };
@@ -50,7 +50,7 @@
 		311B7A061AF3F2A200E97FBC /* TWCommonLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWCommonLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		311B7A091AF3F2A200E97FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311B7A0A1AF3F2A300E97FBC /* SimpleTableViewSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewSpec.m; sourceTree = "<group>"; };
-		314529611AF0B3CB00C33BC1 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
+		314529611AF0B3CB00C33BC1 /* TWCommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonMacros.h; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318394851AED9E2A0077C079 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Exclude/main.m; sourceTree = "<group>"; };
@@ -58,10 +58,10 @@
 		318394881AED9E2A0077C079 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../Exclude/AppDelegate.m; sourceTree = "<group>"; };
 		318394AB1AEDA1850077C079 /* TWArrayTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWArrayTableViewDataSource.h; sourceTree = "<group>"; };
 		318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWArrayTableViewDataSource.m; sourceTree = "<group>"; };
-		318394AE1AEDA2010077C079 /* CommonTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTypes.h; sourceTree = "<group>"; };
+		318394AE1AEDA2010077C079 /* TWCommonTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonTypes.h; sourceTree = "<group>"; };
 		318394B01AEDA36B0077C079 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../Exclude/PrefixHeader.pch; sourceTree = "<group>"; };
-		318394B21AEDA85D0077C079 /* DispatchMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchMacros.h; sourceTree = "<group>"; };
-		318394B31AEDA85D0077C079 /* DispatchMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchMacros.m; sourceTree = "<group>"; };
+		318394B21AEDA85D0077C079 /* TWDispatchMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWDispatchMacros.h; sourceTree = "<group>"; };
+		318394B31AEDA85D0077C079 /* TWDispatchMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWDispatchMacros.m; sourceTree = "<group>"; };
 		318394B71AEDA9E90077C079 /* TWSimpleTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewDelegate.h; sourceTree = "<group>"; };
 		318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewDelegate.m; sourceTree = "<group>"; };
 		318394BA1AEDAAA50077C079 /* TWCommonLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonLib.h; sourceTree = "<group>"; };
@@ -237,8 +237,8 @@
 		318394AF1AEDA2050077C079 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				314529611AF0B3CB00C33BC1 /* CommonMacros.h */,
-				318394AE1AEDA2010077C079 /* CommonTypes.h */,
+				314529611AF0B3CB00C33BC1 /* TWCommonMacros.h */,
+				318394AE1AEDA2010077C079 /* TWCommonTypes.h */,
 				318394BA1AEDAAA50077C079 /* TWCommonLib.h */,
 			);
 			name = Headers;
@@ -256,8 +256,8 @@
 		318394B51AEDA8610077C079 /* DispatchMacros */ = {
 			isa = PBXGroup;
 			children = (
-				318394B21AEDA85D0077C079 /* DispatchMacros.h */,
-				318394B31AEDA85D0077C079 /* DispatchMacros.m */,
+				318394B21AEDA85D0077C079 /* TWDispatchMacros.h */,
+				318394B31AEDA85D0077C079 /* TWDispatchMacros.m */,
 			);
 			name = DispatchMacros;
 			sourceTree = "<group>";
@@ -550,7 +550,7 @@
 				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
-				318394B41AEDA85D0077C079 /* DispatchMacros.m in Sources */,
+				318394B41AEDA85D0077C079 /* TWDispatchMacros.m in Sources */,
 				311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */,
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,

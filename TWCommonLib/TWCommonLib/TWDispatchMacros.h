@@ -2,8 +2,8 @@
 //  TWCommonLib
 //
 
-#ifndef DispatchMacros_h
-#define DispatchMacros_h
+#ifndef TWCommonLib_TWDispatchMacros_h
+#define TWCommonLib_TWDispatchMacros_h
 
 typedef NS_ENUM(long, QueuePriority) {
   QueuePriorityHigh = DISPATCH_QUEUE_PRIORITY_HIGH,

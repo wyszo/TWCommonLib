@@ -2,8 +2,8 @@
 //  TWCommonLib
 //
 
-#ifndef TWCommonLib_CommonMacros_h
-#define TWCommonLib_CommonMacros_h
+#ifndef TWCommonLib_TWCommonMacros_h
+#define TWCommonLib_TWCommonMacros_h
 
 
 // Inside methods
