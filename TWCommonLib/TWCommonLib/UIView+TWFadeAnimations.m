@@ -20,7 +20,7 @@
   self.alpha = 0.0f;
   self.hidden = NO;
   
-  UIViewAnimationOptions *animationOptions = (UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction);
+  UIViewAnimationOptions animationOptions = (UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction);
   
   [UIView animateWithDuration:duration delay:0 options:animationOptions animations:^{
     self.alpha = 1.0f;
@@ -38,7 +38,7 @@
     return;
   }
   
-  UIViewAnimationOptions *animationOptions = (UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction);
+  UIViewAnimationOptions animationOptions = (UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction);
   
   [UIView animateWithDuration:duration delay:0 options:animationOptions animations:^{
     self.alpha = 0.0f;
