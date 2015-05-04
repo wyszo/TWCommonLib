@@ -15,6 +15,7 @@
 #import "TWJSONHelper.h"
 #import "TWOrientationChangeDetector.h"
 #import "TWOrientationChangeDelegate.h"
+#import "TWMapKitHelper.h"
 #import "UIView+TWFadeAnimations.h"
 #import "NSObject+TWObjectLifetime.h"
 #import "NSSet+TWSetByRemoving.h"
