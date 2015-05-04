@@ -13,6 +13,7 @@
 #import "TWSimpleTableViewDelegate.h"
 #import "TWLocationUpdatesManager.h"
 #import "TWJSONHelper.h"
+#import "TWOrientationChangeDetector.h"
 #import "UIView+TWFadeAnimations.h"
 #import "NSObject+TWObjectLifetime.h"
 #import "NSSet+TWSetByRemoving.h"

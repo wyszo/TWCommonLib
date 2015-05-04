@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2191FDED734A6C8015795DDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3138C917A5D6846C5FBC483 /* libPods.a */; };
+		3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3108E7841AF7BA3700E02C07 /* TWOrientationChangeDetector.m */; };
 		311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79E91AF0EA7F00E97FBC /* TWLocationUpdatesManager.m */; };
 		311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */; };
 		311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3108E7831AF7BA3700E02C07 /* TWOrientationChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetector.h; sourceTree = "<group>"; };
+		3108E7841AF7BA3700E02C07 /* TWOrientationChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOrientationChangeDetector.m; sourceTree = "<group>"; };
 		311B79E81AF0EA7F00E97FBC /* TWLocationUpdatesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWLocationUpdatesManager.h; sourceTree = "<group>"; };
 		311B79E91AF0EA7F00E97FBC /* TWLocationUpdatesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWLocationUpdatesManager.m; sourceTree = "<group>"; };
 		311B79F21AF107F800E97FBC /* UIView+TWFadeAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWFadeAnimations.h"; sourceTree = "<group>"; };
@@ -100,6 +103,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3108E7811AF7B9F100E02C07 /* Observers */ = {
+			isa = PBXGroup;
+			children = (
+				3108E7821AF7B9FE00E02C07 /* OrientationChange */,
+			);
+			name = Observers;
+			sourceTree = "<group>";
+		};
+		3108E7821AF7B9FE00E02C07 /* OrientationChange */ = {
+			isa = PBXGroup;
+			children = (
+				3108E7831AF7BA3700E02C07 /* TWOrientationChangeDetector.h */,
+				3108E7841AF7BA3700E02C07 /* TWOrientationChangeDetector.m */,
+			);
+			name = OrientationChange;
+			sourceTree = "<group>";
+		};
 		311B79E71AF0EA3B00E97FBC /* LocationUpdatesManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +250,7 @@
 				318394B61AEDA9CC0077C079 /* Delegates */,
 				318394B51AEDA8610077C079 /* DispatchMacros */,
 				311B79E71AF0EA3B00E97FBC /* LocationUpdatesManager */,
+				3108E7811AF7B9F100E02C07 /* Observers */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -545,6 +566,7 @@
 			files = (
 				3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
+				3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */,
 				319412931AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */,
 				318395021AF006080077C079 /* TWJSONHelper.m in Sources */,
 				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
