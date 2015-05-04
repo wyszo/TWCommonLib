@@ -25,6 +25,7 @@
 		319412941AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */; };
 		319412971AF412E000D676A3 /* libPods-KZAsserts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 319412961AF412E000D676A3 /* libPods-KZAsserts.a */; };
 		319412981AF412FD00D676A3 /* TWSimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */; };
+		31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,9 @@
 		319412911AF410AC00D676A3 /* TWSimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewCell.h; sourceTree = "<group>"; };
 		319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewCell.m; sourceTree = "<group>"; };
 		319412961AF412E000D676A3 /* libPods-KZAsserts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-KZAsserts.a"; path = "Pods/build/Debug-iphoneos/libPods-KZAsserts.a"; sourceTree = "<group>"; };
+		31BFFB621AF7C54600645566 /* TWOrientationChangeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDelegate.h; sourceTree = "<group>"; };
+		31BFFB631AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorUsingAccelerometer.h; sourceTree = "<group>"; };
+		31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOrientationChangeDetectorUsingAccelerometer.m; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,18 +110,20 @@
 		3108E7811AF7B9F100E02C07 /* Observers */ = {
 			isa = PBXGroup;
 			children = (
-				3108E7821AF7B9FE00E02C07 /* OrientationChange */,
+				31BFFB611AF7C52E00645566 /* OrientationChangeDelegate */,
+				31BFFB601AF7C51000645566 /* OrientationChange (accelerometer) */,
+				3108E7821AF7B9FE00E02C07 /* OrientationChange (notification) */,
 			);
 			name = Observers;
 			sourceTree = "<group>";
 		};
-		3108E7821AF7B9FE00E02C07 /* OrientationChange */ = {
+		3108E7821AF7B9FE00E02C07 /* OrientationChange (notification) */ = {
 			isa = PBXGroup;
 			children = (
 				3108E7831AF7BA3700E02C07 /* TWOrientationChangeDetector.h */,
 				3108E7841AF7BA3700E02C07 /* TWOrientationChangeDetector.m */,
 			);
-			name = OrientationChange;
+			name = "OrientationChange (notification)";
 			sourceTree = "<group>";
 		};
 		311B79E71AF0EA3B00E97FBC /* LocationUpdatesManager */ = {
@@ -354,6 +360,23 @@
 			name = SimpleTableView;
 			sourceTree = "<group>";
 		};
+		31BFFB601AF7C51000645566 /* OrientationChange (accelerometer) */ = {
+			isa = PBXGroup;
+			children = (
+				31BFFB631AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.h */,
+				31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */,
+			);
+			name = "OrientationChange (accelerometer)";
+			sourceTree = "<group>";
+		};
+		31BFFB611AF7C52E00645566 /* OrientationChangeDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				31BFFB621AF7C54600645566 /* TWOrientationChangeDelegate.h */,
+			);
+			name = OrientationChangeDelegate;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,6 +593,7 @@
 				319412931AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */,
 				318395021AF006080077C079 /* TWJSONHelper.m in Sources */,
 				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
+				31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
 				318394B41AEDA85D0077C079 /* TWDispatchMacros.m in Sources */,

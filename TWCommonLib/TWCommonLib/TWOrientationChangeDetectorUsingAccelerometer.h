@@ -6,9 +6,9 @@
 
 
 /**
- Uses UIDeviceOrientationDidChangeNotification to observe UI orientation chagnes. It won't pick up a change if the device is orientation-locked (the change can then still occur on some views - for example when recording a video).
+ Since the class uses CoreMotion and an accelerometer, remember to turn it off when not using to preserve battery life
  */
-@interface TWOrientationChangeDetector : NSObject
+@interface TWOrientationChangeDetectorUsingAccelerometer : NSObject
 
 @property (nonatomic, weak) id<TWOrientationChangeDelegate> delegate;
 
