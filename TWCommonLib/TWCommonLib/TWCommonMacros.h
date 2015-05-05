@@ -18,6 +18,11 @@ Code; \
 _Pragma("clang diagnostic pop") \
 } while (0)
 
+/**
+ Useful when we want to have selector as NSString but we still want to get an error if a selector is not implemented
+ */
+#define SelectorString(methodName) NSStringFromSelector(@selector(methodName))
+
 
 // Inside methods - assertions
 #define NOT_IMPLEMENTED_YET_RETURN AssertTrueOrReturn(NO && @"Not implemented yet");
