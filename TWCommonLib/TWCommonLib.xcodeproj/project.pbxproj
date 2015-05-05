@@ -29,6 +29,7 @@
 		31BFFB751AF8349B00645566 /* TWMapKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB741AF8349B00645566 /* TWMapKitHelper.m */; };
 		31BFFB771AF834E700645566 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BFFB761AF834E700645566 /* MapKit.framework */; };
 		31BFFB8D1AF9535000645566 /* TWItemsToSeguesMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB8C1AF9535000645566 /* TWItemsToSeguesMapping.m */; };
+		31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB9A1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,8 @@
 		31BFFB761AF834E700645566 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		31BFFB8B1AF9535000645566 /* TWItemsToSeguesMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWItemsToSeguesMapping.h; sourceTree = "<group>"; };
 		31BFFB8C1AF9535000645566 /* TWItemsToSeguesMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWItemsToSeguesMapping.m; sourceTree = "<group>"; };
+		31BFFB991AF974AD00645566 /* NSLayoutConstraint+TWAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+TWAnimations.h"; sourceTree = "<group>"; };
+		31BFFB9A1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+TWAnimations.m"; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 		311B79FD1AF26F6B00E97FBC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				31BFFB981AF9748800645566 /* NSLayoutConstraint */,
 				311B79FE1AF26F9000E97FBC /* NSSet */,
 				311B79F11AF107E400E97FBC /* UIView */,
 			);
@@ -414,6 +418,15 @@
 			name = TWItemsToSeguesMapping;
 			sourceTree = "<group>";
 		};
+		31BFFB981AF9748800645566 /* NSLayoutConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				31BFFB991AF974AD00645566 /* NSLayoutConstraint+TWAnimations.h */,
+				31BFFB9A1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m */,
+			);
+			name = NSLayoutConstraint;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +645,7 @@
 				319412931AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */,
 				318395021AF006080077C079 /* TWJSONHelper.m in Sources */,
 				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
+				31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */,
 				31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
