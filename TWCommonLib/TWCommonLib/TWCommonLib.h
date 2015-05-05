@@ -18,9 +18,10 @@
 #import "TWMapKitHelper.h"
 #import "TWItemsToSeguesMapping.h"
 #import "NSLayoutConstraint+TWAnimations.h"
+#import "NSSet+TWSetByRemoving.h"
+#import "UIImagePickerController+TWCameraDeviceSwitching.h"
 #import "UIView+TWFadeAnimations.h"
 #import "NSObject+TWObjectLifetime.h"
-#import "NSSet+TWSetByRemoving.h"
 // import TWSimpleTableViewDataSource when implementation finished
 
 
