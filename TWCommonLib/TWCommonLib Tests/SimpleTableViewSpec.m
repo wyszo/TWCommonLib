@@ -14,6 +14,9 @@ SPEC_BEGIN(SimpleTableViewDataSourceSpec)
 
 describe(@"SimpleTableViewDataSource", ^{
   
+  // The problem with this approach is that it won't allow us to reuse and dequeue cells - we shouldn't be creating cell classes like that (they'd have to all be loaded in memory all the time, doesn't scale well)
+  // We should have a addCellWithNibName:action and addCellWithDequeueIdentifier: methods instead!
+  
   TWSimpleTableViewCell *sampleCell = [TWSimpleTableViewCell cellWithDequeueIdentifier:@"-" action:nil];
   NSArray *cellsArray = @[ sampleCell ];
   UITableView *tableView = [UITableView new];
