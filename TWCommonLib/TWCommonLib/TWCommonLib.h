@@ -18,6 +18,7 @@
 #import "TWMapKitHelper.h"
 #import "TWItemsToSeguesMapping.h"
 #import "TWOrientationChangeDetectorUsingAccelerometer.h"
+#import "TWOrientationChangeDetectorProtocol.h"
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
 #import "UIImagePickerController+TWCameraDeviceSwitching.h"

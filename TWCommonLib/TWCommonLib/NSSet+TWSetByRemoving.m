@@ -5,7 +5,7 @@
 #import "NSSet+TWSetByRemoving.h"
 
 
-@implementation NSSet(SetByRemovingSet)
+@implementation NSSet(TWSetByRemovingSet)
 
 - (NSSet *)tw_setByRemovingObjectsInSet:(NSSet *)setToRemove
 {
