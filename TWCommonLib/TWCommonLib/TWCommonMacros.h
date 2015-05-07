@@ -29,7 +29,7 @@ _Pragma("clang diagnostic pop") \
 #define NOT_IMPLEMENTED_YET_RETURN_NIL AssertTrueOrReturnNil(NO && @"Not implemented yet");
 
 // Inside class interface definition
-#define NEW_AND_INIT_UNAVAILABLE - (instancetype)new __unavailable; - (instancetype)init __unavailable;
+#define NEW_AND_INIT_UNAVAILABLE + (instancetype)new __unavailable; - (instancetype)init __unavailable;
 
 
 #endif
