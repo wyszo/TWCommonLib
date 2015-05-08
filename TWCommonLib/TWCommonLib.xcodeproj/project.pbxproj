@@ -34,6 +34,7 @@
 		31BFFB9F1AF9841C00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB9E1AF9841B00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m */; };
 		31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D6459D1AFB6E63003B4262 /* TWAlertFactory.m */; };
 		31D645AB1AFD4D55003B4262 /* TWRectangleMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645AA1AFD4D55003B4262 /* TWRectangleMath.m */; };
+		31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645AC1AFD5B62003B4262 /* TWCommonFunctions.m */; };
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
@@ -103,6 +104,8 @@
 		31D6459D1AFB6E63003B4262 /* TWAlertFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAlertFactory.m; sourceTree = "<group>"; };
 		31D645A91AFD4D55003B4262 /* TWRectangleMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRectangleMath.h; sourceTree = "<group>"; };
 		31D645AA1AFD4D55003B4262 /* TWRectangleMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRectangleMath.m; sourceTree = "<group>"; };
+		31D645AC1AFD5B62003B4262 /* TWCommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCommonFunctions.m; sourceTree = "<group>"; };
+		31D645AD1AFD5B62003B4262 /* TWCommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCommonFunctions.h; sourceTree = "<group>"; };
 		31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorProtocol.h; sourceTree = "<group>"; };
 		31D6DACB1AFA27C100432340 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -342,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				311B79FD1AF26F6B00E97FBC /* Categories */,
+				31D645AF1AFD5BB5003B4262 /* CommonFunctions */,
 				312D5FCC1AFABD5000813EE8 /* DataWriteHelper */,
 				31D6459B1AFB6E51003B4262 /* Factories */,
 				318394FF1AF005EE0077C079 /* JSONHelper */,
@@ -482,6 +486,15 @@
 				31D645AA1AFD4D55003B4262 /* TWRectangleMath.m */,
 			);
 			name = Math;
+			sourceTree = "<group>";
+		};
+		31D645AF1AFD5BB5003B4262 /* CommonFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				31D645AD1AFD5B62003B4262 /* TWCommonFunctions.h */,
+				31D645AC1AFD5B62003B4262 /* TWCommonFunctions.m */,
+			);
+			name = CommonFunctions;
 			sourceTree = "<group>";
 		};
 		31D6DAC91AFA256600432340 /* Protocols */ = {
@@ -723,6 +736,7 @@
 				311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */,
 				31D645AB1AFD4D55003B4262 /* TWRectangleMath.m in Sources */,
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
+				31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
 			);
