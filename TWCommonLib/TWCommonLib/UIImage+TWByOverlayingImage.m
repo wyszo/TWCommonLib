@@ -5,6 +5,8 @@
 #import "UIImage+TWByOverlayingImage.h"
 #import <KZAsserts/KZAsserts.h>
 #import "TWRectangleMath.h"
+#import "TWCommonMacros.h"
+#import "UIImage+TWCreateImage.h"
 
 
 @implementation UIImage (TWByOverlayingImage)
@@ -18,16 +20,13 @@
     combinedImageSize = [TWRectangleMath rectangleUnionSizeFromRectangleWithSize:self.size andRectangleWithSize:image.size];
   }
   
-  UIGraphicsBeginImageContext(combinedImageSize);
-  
-  CGPoint firstImageTopLeftForCombinedSize = [TWRectangleMath topLeftPointOfRectangleWithSize:self.size concentricWithRectangleWithSize:image.size];
-  [self drawAtPoint:firstImageTopLeftForCombinedSize];
-  
-  CGPoint secondImageTopLeftForCombinedSize = [TWRectangleMath topLeftPointOfRectangleWithSize:image.size concentricWithRectangleWithSize:self.size];
-  [image drawAtPoint:secondImageTopLeftForCombinedSize];
-  
-  UIImage *overlayedImage = UIGraphicsGetImageFromCurrentImageContext();
-  UIGraphicsEndImageContext();
+  UIImage *overlayedImage = [UIImage tw_createImageWithSize:combinedImageSize drawingBlock:^{
+    CGPoint firstImageTopLeftForCombinedSize = [TWRectangleMath topLeftPointOfRectangleWithSize:self.size concentricWithRectangleWithSize:image.size];
+    [self drawAtPoint:firstImageTopLeftForCombinedSize];
+    
+    CGPoint secondImageTopLeftForCombinedSize = [TWRectangleMath topLeftPointOfRectangleWithSize:image.size concentricWithRectangleWithSize:self.size];
+    [image drawAtPoint:secondImageTopLeftForCombinedSize];
+  }];
   
   AssertTrueOrReturnNil(overlayedImage);
   return overlayedImage;
@@ -42,18 +41,15 @@
 {
   AssertTrueOrReturnNil(image);
   
-  UIGraphicsBeginImageContext(self.size);
-  
-  CGPoint firstImageTopLeftForCombinedSize = [TWRectangleMath topLeftPointOfRectangleWithSize:self.size concentricWithRectangleWithSize:image.size];
-  [self drawAtPoint:firstImageTopLeftForCombinedSize];
-  
-  CGPoint imageTopLeft = [TWRectangleMath topLeftPointOfRectangleWithSize:imageSize centerPoint:imageCenter];
-  CGRect rect = CGRectMake(imageTopLeft.x, imageTopLeft.y, imageSize.width, imageSize.height);
-  rect = CGRectIntegral(rect);
-  [image drawInRect:rect];
-  
-  UIImage *overlayedImage = UIGraphicsGetImageFromCurrentImageContext();
-  UIGraphicsEndImageContext();
+  UIImage *overlayedImage = [UIImage tw_createImageWithSize:self.size drawingBlock:^{
+    CGPoint firstImageTopLeftForCombinedSize = [TWRectangleMath topLeftPointOfRectangleWithSize:self.size concentricWithRectangleWithSize:image.size];
+    [self drawAtPoint:firstImageTopLeftForCombinedSize];
+    
+    CGPoint imageTopLeft = [TWRectangleMath topLeftPointOfRectangleWithSize:imageSize centerPoint:imageCenter];
+    CGRect rect = CGRectMake(imageTopLeft.x, imageTopLeft.y, imageSize.width, imageSize.height);
+    rect = CGRectIntegral(rect);
+    [image drawInRect:rect];
+  }];
   
   AssertTrueOrReturnNil(overlayedImage);
   return overlayedImage;

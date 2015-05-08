@@ -37,6 +37,7 @@
 		31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645AC1AFD5B62003B4262 /* TWCommonFunctions.m */; };
 		31D645B31AFD7121003B4262 /* TWCoordinateSystemConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645B21AFD7121003B4262 /* TWCoordinateSystemConverter.m */; };
 		31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645B51AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m */; };
+		31D645BF1AFD7CFE003B4262 /* UIImage+TWCreateImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645BE1AFD7CFE003B4262 /* UIImage+TWCreateImage.m */; };
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,8 @@
 		31D645B21AFD7121003B4262 /* TWCoordinateSystemConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoordinateSystemConverter.m; sourceTree = "<group>"; };
 		31D645B41AFD77BD003B4262 /* UIImage+TWByOverlayingImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TWByOverlayingImage.h"; sourceTree = "<group>"; };
 		31D645B51AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TWByOverlayingImage.m"; sourceTree = "<group>"; };
+		31D645BD1AFD7CFE003B4262 /* UIImage+TWCreateImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TWCreateImage.h"; sourceTree = "<group>"; };
+		31D645BE1AFD7CFE003B4262 /* UIImage+TWCreateImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TWCreateImage.m"; sourceTree = "<group>"; };
 		31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorProtocol.h; sourceTree = "<group>"; };
 		31D6DACB1AFA27C100432340 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -517,10 +520,28 @@
 		31D645B71AFD7832003B4262 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				31D645BB1AFD7CDE003B4262 /* CreateImage */,
+				31D645BC1AFD7CE7003B4262 /* OverlayingImage */,
+			);
+			name = UIImage;
+			sourceTree = "<group>";
+		};
+		31D645BB1AFD7CDE003B4262 /* CreateImage */ = {
+			isa = PBXGroup;
+			children = (
+				31D645BD1AFD7CFE003B4262 /* UIImage+TWCreateImage.h */,
+				31D645BE1AFD7CFE003B4262 /* UIImage+TWCreateImage.m */,
+			);
+			name = CreateImage;
+			sourceTree = "<group>";
+		};
+		31D645BC1AFD7CE7003B4262 /* OverlayingImage */ = {
+			isa = PBXGroup;
+			children = (
 				31D645B41AFD77BD003B4262 /* UIImage+TWByOverlayingImage.h */,
 				31D645B51AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m */,
 			);
-			name = UIImage;
+			name = OverlayingImage;
 			sourceTree = "<group>";
 		};
 		31D6DAC91AFA256600432340 /* Protocols */ = {
@@ -750,6 +771,7 @@
 				3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */,
 				31BFFB751AF8349B00645566 /* TWMapKitHelper.m in Sources */,
 				319412931AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */,
+				31D645BF1AFD7CFE003B4262 /* UIImage+TWCreateImage.m in Sources */,
 				318395021AF006080077C079 /* TWJSONHelper.m in Sources */,
 				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
 				31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */,
