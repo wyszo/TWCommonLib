@@ -23,6 +23,7 @@
 #import "TWOrientationChangeDetectorProtocol.h"
 #import "TWRectangleMath.h"
 #import "TWCommonFunctions.h"
+#import "TWCoordinateSystemConverter.h"
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
 #import "UIImagePickerController+TWCameraDeviceSwitching.h"
