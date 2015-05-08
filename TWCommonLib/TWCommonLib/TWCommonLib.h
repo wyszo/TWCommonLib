@@ -29,6 +29,7 @@
 #import "UIImagePickerController+TWCameraDeviceSwitching.h"
 #import "UIView+TWFadeAnimations.h"
 #import "NSObject+TWObjectLifetime.h"
+#import "UIImage+TWByOverlayingImage.h"
 // import TWSimpleTableViewDataSource when implementation finished
 
 
