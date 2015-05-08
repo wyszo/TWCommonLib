@@ -7,7 +7,7 @@
 
 @implementation TWRectangleMath
 
-- (CGPoint)centerPointOfRectangleWithSize:(CGSize)firstRectangleSize concentricWithRectangleWithSize:(CGSize)secondRectangleSize
++ (CGPoint)centerPointOfRectangleWithSize:(CGSize)firstRectangleSize concentricWithRectangleWithSize:(CGSize)secondRectangleSize
 {
   CGSize unionRectangleSize = [self rectangleUnionSizeFromRectangleWithSize:firstRectangleSize andRectangleWithSize:secondRectangleSize];
   CGFloat x = (unionRectangleSize.width - firstRectangleSize.width) / 2.0;
@@ -16,7 +16,7 @@
   return firstRectangleCenterForCombinedSize;
 }
 
-- (CGSize)rectangleUnionSizeFromRectangleWithSize:(CGSize)firstRectangleSize andRectangleWithSize:(CGSize)secondRectangleSize
++ (CGSize)rectangleUnionSizeFromRectangleWithSize:(CGSize)firstRectangleSize andRectangleWithSize:(CGSize)secondRectangleSize
 {
   CGFloat unionSizeWidth = MAX(firstRectangleSize.width, secondRectangleSize.width);
   CGFloat unionSizeHeight = MAX(firstRectangleSize.height, secondRectangleSize.height);
