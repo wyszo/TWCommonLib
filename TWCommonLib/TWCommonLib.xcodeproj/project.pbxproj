@@ -33,6 +33,7 @@
 		31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB9A1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m */; };
 		31BFFB9F1AF9841C00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB9E1AF9841B00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m */; };
 		31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D6459D1AFB6E63003B4262 /* TWAlertFactory.m */; };
+		31D645AB1AFD4D55003B4262 /* TWRectangleMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645AA1AFD4D55003B4262 /* TWRectangleMath.m */; };
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,8 @@
 		31BFFB9E1AF9841B00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+TWCameraDeviceSwitching.m"; sourceTree = "<group>"; };
 		31D6459C1AFB6E63003B4262 /* TWAlertFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAlertFactory.h; sourceTree = "<group>"; };
 		31D6459D1AFB6E63003B4262 /* TWAlertFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAlertFactory.m; sourceTree = "<group>"; };
+		31D645A91AFD4D55003B4262 /* TWRectangleMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRectangleMath.h; sourceTree = "<group>"; };
+		31D645AA1AFD4D55003B4262 /* TWRectangleMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRectangleMath.m; sourceTree = "<group>"; };
 		31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorProtocol.h; sourceTree = "<group>"; };
 		31D6DACB1AFA27C100432340 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -260,6 +263,7 @@
 				318394AA1AED9EEC0077C079 /* Classes */,
 				318394AF1AEDA2050077C079 /* Headers */,
 				318394FE1AF005E10077C079 /* Helpers */,
+				31D645A81AFD4D3F003B4262 /* Math */,
 				3194128E1AF4106A00D676A3 /* UI Components */,
 				318394831AED9E2A0077C079 /* Supporting Files */,
 			);
@@ -469,6 +473,15 @@
 				31D6459D1AFB6E63003B4262 /* TWAlertFactory.m */,
 			);
 			name = Factories;
+			sourceTree = "<group>";
+		};
+		31D645A81AFD4D3F003B4262 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				31D645A91AFD4D55003B4262 /* TWRectangleMath.h */,
+				31D645AA1AFD4D55003B4262 /* TWRectangleMath.m */,
+			);
+			name = Math;
 			sourceTree = "<group>";
 		};
 		31D6DAC91AFA256600432340 /* Protocols */ = {
@@ -708,6 +721,7 @@
 				31BFFB8D1AF9535000645566 /* TWItemsToSeguesMapping.m in Sources */,
 				312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */,
 				311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */,
+				31D645AB1AFD4D55003B4262 /* TWRectangleMath.m in Sources */,
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
