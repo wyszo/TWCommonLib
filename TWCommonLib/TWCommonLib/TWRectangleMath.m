@@ -9,8 +9,8 @@
 
 + (CGPoint)topLeftPointOfRectangleWithSize:(CGSize)rectangleSize centerPoint:(CGPoint)center
 {
-  CGFloat x = (center.x - rectangleSize.width) / 2.0;
-  CGFloat y = (center.y - rectangleSize.height) / 2.0;
+  CGFloat x = center.x - (rectangleSize.width / 2.0);
+  CGFloat y = center.y - (rectangleSize.height / 2.0);
   CGPoint topLeftPoint = CGPointMake(x, y);
   return topLeftPoint;
 }
