@@ -31,14 +31,11 @@ void DISPATCH_SYNC_ON_MAIN_THREAD(VoidBlock block)
 {
   AssertTrueOrReturn(block);
   
-  dispatch_queue_t dispatchQueue = dispatch_get_current_queue();
-  dispatch_queue_t mainQueue = dispatch_get_main_queue();
-  
-  if (dispatchQueue == mainQueue) {
+  if ([NSThread isMainThread]) {
     CallBlock(block);
   }
   else {
-    dispatch_sync(mainQueue, ^{
+    dispatch_sync(dispatch_get_main_queue(), ^{
       CallBlock(block);
     });
   }
