@@ -3,8 +3,8 @@
 //
 
 #import <KZAsserts/KZAsserts.h>
-#import "TWCommonTypes.h"
 #import "TWDispatchMacros.h"
+#import "TWCommonMacros.h"
 
 
 void inline DISPATCH_AFTER(NSTimeInterval when, VoidBlock block)
@@ -25,4 +25,18 @@ void DISPATCH_ASYNC_ON_MAIN_THREAD(VoidBlock block)
 {
   AssertTrueOrReturn(block); // TODO: not safe for C functions! Will crash
   dispatch_async(dispatch_get_main_queue(), block);
+}
+
+void DISPATCH_SYNC_ON_MAIN_THREAD(VoidBlock block)
+{
+  AssertTrueOrReturn(block);
+  
+  if ([NSThread isMainThread]) {
+    CallBlock(block);
+  }
+  else {
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      CallBlock(block);
+    });
+  }
 }

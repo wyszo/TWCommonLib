@@ -11,6 +11,7 @@
 
 
 @implementation TWOrientationChangeDetector
+@synthesize delegate;
 
 #pragma mark - Initialization
 
