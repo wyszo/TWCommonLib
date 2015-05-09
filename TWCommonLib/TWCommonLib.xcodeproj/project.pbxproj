@@ -39,6 +39,7 @@
 		31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645B51AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m */; };
 		31D645BF1AFD7CFE003B4262 /* UIImage+TWCreateImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645BE1AFD7CFE003B4262 /* UIImage+TWCreateImage.m */; };
 		31D645C71AFE55CE003B4262 /* TWUIImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645C61AFE55CE003B4262 /* TWUIImagePickerHelper.m */; };
+		31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645CA1AFE5896003B4262 /* UIImage+TWConvenience.m */; };
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,8 @@
 		31D645BE1AFD7CFE003B4262 /* UIImage+TWCreateImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TWCreateImage.m"; sourceTree = "<group>"; };
 		31D645C51AFE55CE003B4262 /* TWUIImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUIImagePickerHelper.h; sourceTree = "<group>"; };
 		31D645C61AFE55CE003B4262 /* TWUIImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIImagePickerHelper.m; sourceTree = "<group>"; };
+		31D645C91AFE5896003B4262 /* UIImage+TWConvenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TWConvenience.h"; sourceTree = "<group>"; };
+		31D645CA1AFE5896003B4262 /* UIImage+TWConvenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TWConvenience.m"; sourceTree = "<group>"; };
 		31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorProtocol.h; sourceTree = "<group>"; };
 		31D6DACB1AFA27C100432340 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -524,6 +527,7 @@
 		31D645B71AFD7832003B4262 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				31D645C81AFE587A003B4262 /* Convenience */,
 				31D645BB1AFD7CDE003B4262 /* CreateImage */,
 				31D645BC1AFD7CE7003B4262 /* OverlayingImage */,
 			);
@@ -555,6 +559,15 @@
 				31D645C61AFE55CE003B4262 /* TWUIImagePickerHelper.m */,
 			);
 			name = ImagePickerHelper;
+			sourceTree = "<group>";
+		};
+		31D645C81AFE587A003B4262 /* Convenience */ = {
+			isa = PBXGroup;
+			children = (
+				31D645C91AFE5896003B4262 /* UIImage+TWConvenience.h */,
+				31D645CA1AFE5896003B4262 /* UIImage+TWConvenience.m */,
+			);
+			name = Convenience;
 			sourceTree = "<group>";
 		};
 		31D6DAC91AFA256600432340 /* Protocols */ = {
@@ -790,6 +803,7 @@
 				31D645C71AFE55CE003B4262 /* TWUIImagePickerHelper.m in Sources */,
 				31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */,
 				31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */,
+				31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
 				318394B41AEDA85D0077C079 /* TWDispatchMacros.m in Sources */,

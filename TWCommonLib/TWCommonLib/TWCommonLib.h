@@ -33,6 +33,7 @@
 #import "NSObject+TWObjectLifetime.h"
 #import "UIImage+TWByOverlayingImage.h"
 #import "UIImage+TWCreateImage.h"
+#import "UIImage+TWConvenience.h"
 // import TWSimpleTableViewDataSource when implementation finished
 
 
