@@ -1,5 +1,5 @@
 #include "Pods-KZAsserts.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/KZAsserts" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/KZAsserts"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/KZAsserts" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/KZAsserts" "${PODS_ROOT}/Headers/Public/Kiwi"
 OTHER_LDFLAGS = -ObjC
 PODS_ROOT = ${SRCROOT}
