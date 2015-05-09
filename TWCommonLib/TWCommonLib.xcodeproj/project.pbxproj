@@ -40,6 +40,7 @@
 		31D645BF1AFD7CFE003B4262 /* UIImage+TWCreateImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645BE1AFD7CFE003B4262 /* UIImage+TWCreateImage.m */; };
 		31D645C71AFE55CE003B4262 /* TWUIImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645C61AFE55CE003B4262 /* TWUIImagePickerHelper.m */; };
 		31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645CA1AFE5896003B4262 /* UIImage+TWConvenience.m */; };
+		31D645D01AFE5AF4003B4262 /* UIView+TWSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645CF1AFE5AF4003B4262 /* UIView+TWSizes.m */; };
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
@@ -121,6 +122,8 @@
 		31D645C61AFE55CE003B4262 /* TWUIImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIImagePickerHelper.m; sourceTree = "<group>"; };
 		31D645C91AFE5896003B4262 /* UIImage+TWConvenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TWConvenience.h"; sourceTree = "<group>"; };
 		31D645CA1AFE5896003B4262 /* UIImage+TWConvenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TWConvenience.m"; sourceTree = "<group>"; };
+		31D645CE1AFE5AF4003B4262 /* UIView+TWSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWSizes.h"; sourceTree = "<group>"; };
+		31D645CF1AFE5AF4003B4262 /* UIView+TWSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWSizes.m"; sourceTree = "<group>"; };
 		31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorProtocol.h; sourceTree = "<group>"; };
 		31D6DACB1AFA27C100432340 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,8 +187,8 @@
 		311B79F11AF107E400E97FBC /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				311B79F21AF107F800E97FBC /* UIView+TWFadeAnimations.h */,
-				311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */,
+				31D645CD1AFE5AC7003B4262 /* Sizes */,
+				31D645CC1AFE5AC1003B4262 /* FadeAnimations */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -570,6 +573,24 @@
 			name = Convenience;
 			sourceTree = "<group>";
 		};
+		31D645CC1AFE5AC1003B4262 /* FadeAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				311B79F21AF107F800E97FBC /* UIView+TWFadeAnimations.h */,
+				311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */,
+			);
+			name = FadeAnimations;
+			sourceTree = "<group>";
+		};
+		31D645CD1AFE5AC7003B4262 /* Sizes */ = {
+			isa = PBXGroup;
+			children = (
+				31D645CE1AFE5AF4003B4262 /* UIView+TWSizes.h */,
+				31D645CF1AFE5AF4003B4262 /* UIView+TWSizes.m */,
+			);
+			name = Sizes;
+			sourceTree = "<group>";
+		};
 		31D6DAC91AFA256600432340 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -806,6 +827,7 @@
 				31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
+				31D645D01AFE5AF4003B4262 /* UIView+TWSizes.m in Sources */,
 				318394B41AEDA85D0077C079 /* TWDispatchMacros.m in Sources */,
 				31BFFB8D1AF9535000645566 /* TWItemsToSeguesMapping.m in Sources */,
 				312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */,

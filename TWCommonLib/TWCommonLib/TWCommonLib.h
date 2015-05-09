@@ -34,6 +34,7 @@
 #import "UIImage+TWByOverlayingImage.h"
 #import "UIImage+TWCreateImage.h"
 #import "UIImage+TWConvenience.h"
+#import "UIView+TWSizes.h"
 // import TWSimpleTableViewDataSource when implementation finished
 
 
