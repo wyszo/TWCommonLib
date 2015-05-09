@@ -8,16 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		2191FDED734A6C8015795DDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3138C917A5D6846C5FBC483 /* libPods.a */; };
+		311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79E91AF0EA7F00E97FBC /* TWLocationUpdatesManager.m */; };
+		311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */; };
+		311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */; };
+		311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
 		318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */; };
 		318394B41AEDA85D0077C079 /* DispatchMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B31AEDA85D0077C079 /* DispatchMacros.m */; };
 		318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */; };
-		318395021AF006080077C079 /* JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 318395011AF006080077C079 /* JSONHelper.m */; };
+		318395021AF006080077C079 /* TWJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 318395011AF006080077C079 /* TWJSONHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		311B79E81AF0EA7F00E97FBC /* TWLocationUpdatesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWLocationUpdatesManager.h; sourceTree = "<group>"; };
+		311B79E91AF0EA7F00E97FBC /* TWLocationUpdatesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWLocationUpdatesManager.m; sourceTree = "<group>"; };
+		311B79F21AF107F800E97FBC /* UIView+TWFadeAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWFadeAnimations.h"; sourceTree = "<group>"; };
+		311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWFadeAnimations.m"; sourceTree = "<group>"; };
+		311B79FA1AF1471400E97FBC /* NSObject+TWObjectLifetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TWObjectLifetime.h"; sourceTree = "<group>"; };
+		311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TWObjectLifetime.m"; sourceTree = "<group>"; };
+		311B79FF1AF26FA200E97FBC /* NSSet+TWSetByRemoving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+TWSetByRemoving.h"; sourceTree = "<group>"; };
+		311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+TWSetByRemoving.m"; sourceTree = "<group>"; };
 		314529611AF0B3CB00C33BC1 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,8 +45,8 @@
 		318394B71AEDA9E90077C079 /* TWSimpleTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewDelegate.h; sourceTree = "<group>"; };
 		318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewDelegate.m; sourceTree = "<group>"; };
 		318394BA1AEDAAA50077C079 /* TWCommonLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonLib.h; sourceTree = "<group>"; };
-		318395001AF006080077C079 /* JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHelper.h; sourceTree = "<group>"; };
-		318395011AF006080077C079 /* JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHelper.m; sourceTree = "<group>"; };
+		318395001AF006080077C079 /* TWJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWJSONHelper.h; sourceTree = "<group>"; };
+		318395011AF006080077C079 /* TWJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWJSONHelper.m; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3138C917A5D6846C5FBC483 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -51,6 +63,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		311B79E71AF0EA3B00E97FBC /* LocationUpdatesManager */ = {
+			isa = PBXGroup;
+			children = (
+				311B79E81AF0EA7F00E97FBC /* TWLocationUpdatesManager.h */,
+				311B79E91AF0EA7F00E97FBC /* TWLocationUpdatesManager.m */,
+			);
+			name = LocationUpdatesManager;
+			sourceTree = "<group>";
+		};
+		311B79F11AF107E400E97FBC /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				311B79F21AF107F800E97FBC /* UIView+TWFadeAnimations.h */,
+				311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		311B79F91AF1470500E97FBC /* ObjectLifetime */ = {
+			isa = PBXGroup;
+			children = (
+				311B79FA1AF1471400E97FBC /* NSObject+TWObjectLifetime.h */,
+				311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */,
+			);
+			name = ObjectLifetime;
+			sourceTree = "<group>";
+		};
+		311B79FD1AF26F6B00E97FBC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				311B79FE1AF26F9000E97FBC /* NSSet */,
+				311B79F11AF107E400E97FBC /* UIView */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		311B79FE1AF26F9000E97FBC /* NSSet */ = {
+			isa = PBXGroup;
+			children = (
+				311B79FF1AF26FA200E97FBC /* NSSet+TWSetByRemoving.h */,
+				311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */,
+			);
+			name = NSSet;
+			sourceTree = "<group>";
+		};
 		318394771AED9E2A0077C079 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +163,7 @@
 				318394B11AEDA8370077C079 /* DataSources */,
 				318394B61AEDA9CC0077C079 /* Delegates */,
 				318394B51AEDA8610077C079 /* DispatchMacros */,
+				311B79E71AF0EA3B00E97FBC /* LocationUpdatesManager */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -150,7 +208,9 @@
 		318394FE1AF005E10077C079 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				311B79FD1AF26F6B00E97FBC /* Categories */,
 				318394FF1AF005EE0077C079 /* JSONHelper */,
+				311B79F91AF1470500E97FBC /* ObjectLifetime */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -158,8 +218,8 @@
 		318394FF1AF005EE0077C079 /* JSONHelper */ = {
 			isa = PBXGroup;
 			children = (
-				318395001AF006080077C079 /* JSONHelper.h */,
-				318395011AF006080077C079 /* JSONHelper.m */,
+				318395001AF006080077C079 /* TWJSONHelper.h */,
+				318395011AF006080077C079 /* TWJSONHelper.m */,
 			);
 			name = JSONHelper;
 			sourceTree = "<group>";
@@ -299,11 +359,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
-				318395021AF006080077C079 /* JSONHelper.m in Sources */,
+				318395021AF006080077C079 /* TWJSONHelper.m in Sources */,
+				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
 				318394B41AEDA85D0077C079 /* DispatchMacros.m in Sources */,
+				311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */,
+				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
+				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
