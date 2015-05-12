@@ -41,6 +41,7 @@
 		31D645C71AFE55CE003B4262 /* TWUIImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645C61AFE55CE003B4262 /* TWUIImagePickerHelper.m */; };
 		31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645CA1AFE5896003B4262 /* UIImage+TWConvenience.m */; };
 		31D645D01AFE5AF4003B4262 /* UIView+TWSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645CF1AFE5AF4003B4262 /* UIView+TWSizes.m */; };
+		31D645DB1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645DA1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m */; };
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,8 @@
 		31D645CA1AFE5896003B4262 /* UIImage+TWConvenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TWConvenience.m"; sourceTree = "<group>"; };
 		31D645CE1AFE5AF4003B4262 /* UIView+TWSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWSizes.h"; sourceTree = "<group>"; };
 		31D645CF1AFE5AF4003B4262 /* UIView+TWSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWSizes.m"; sourceTree = "<group>"; };
+		31D645D91B0271D7003B4262 /* UIViewController+PerformSegueMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PerformSegueMapping.h"; sourceTree = "<group>"; };
+		31D645DA1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PerformSegueMapping.m"; sourceTree = "<group>"; };
 		31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorProtocol.h; sourceTree = "<group>"; };
 		31D6DACB1AFA27C100432340 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,9 +210,10 @@
 			children = (
 				31BFFB981AF9748800645566 /* NSLayoutConstraint */,
 				311B79FE1AF26F9000E97FBC /* NSSet */,
+				31D645B71AFD7832003B4262 /* UIImage */,
 				31BFFB9C1AF983EA00645566 /* UIImagePickerController */,
 				311B79F11AF107E400E97FBC /* UIView */,
-				31D645B71AFD7832003B4262 /* UIImage */,
+				31D645D81B0271A3003B4262 /* UIViewController */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -591,6 +595,15 @@
 			name = Sizes;
 			sourceTree = "<group>";
 		};
+		31D645D81B0271A3003B4262 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				31D645D91B0271D7003B4262 /* UIViewController+PerformSegueMapping.h */,
+				31D645DA1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m */,
+			);
+			name = UIViewController;
+			sourceTree = "<group>";
+		};
 		31D6DAC91AFA256600432340 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -833,6 +846,7 @@
 				312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */,
 				311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */,
 				31D645AB1AFD4D55003B4262 /* TWRectangleMath.m in Sources */,
+				31D645DB1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m in Sources */,
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
 				31D645B31AFD7121003B4262 /* TWCoordinateSystemConverter.m in Sources */,
 				31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */,

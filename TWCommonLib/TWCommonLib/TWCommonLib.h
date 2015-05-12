@@ -35,6 +35,8 @@
 #import "UIImage+TWCreateImage.h"
 #import "UIImage+TWConvenience.h"
 #import "UIView+TWSizes.h"
+#import "UIViewController+PerformSegueMapping.h"
+
 // import TWSimpleTableViewDataSource when implementation finished
 
 
