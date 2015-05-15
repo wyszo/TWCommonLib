@@ -42,6 +42,7 @@
 		31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645CA1AFE5896003B4262 /* UIImage+TWConvenience.m */; };
 		31D645D01AFE5AF4003B4262 /* UIView+TWSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645CF1AFE5AF4003B4262 /* UIView+TWSizes.m */; };
 		31D645DB1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645DA1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m */; };
+		31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D6463E1B066A29003B4262 /* TWSimpleMapViewDelegate.m */; };
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
@@ -127,6 +128,8 @@
 		31D645CF1AFE5AF4003B4262 /* UIView+TWSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWSizes.m"; sourceTree = "<group>"; };
 		31D645D91B0271D7003B4262 /* UIViewController+PerformSegueMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PerformSegueMapping.h"; sourceTree = "<group>"; };
 		31D645DA1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PerformSegueMapping.m"; sourceTree = "<group>"; };
+		31D6463D1B066A29003B4262 /* TWSimpleMapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleMapViewDelegate.h; sourceTree = "<group>"; };
+		31D6463E1B066A29003B4262 /* TWSimpleMapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleMapViewDelegate.m; sourceTree = "<group>"; };
 		31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorProtocol.h; sourceTree = "<group>"; };
 		31D6DACB1AFA27C100432340 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -358,8 +361,8 @@
 		318394B61AEDA9CC0077C079 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				318394B71AEDA9E90077C079 /* TWSimpleTableViewDelegate.h */,
-				318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */,
+				31D6463C1B0669E3003B4262 /* MapView */,
+				31D6463B1B0669DC003B4262 /* TableView */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -602,6 +605,24 @@
 				31D645DA1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m */,
 			);
 			name = UIViewController;
+			sourceTree = "<group>";
+		};
+		31D6463B1B0669DC003B4262 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				318394B71AEDA9E90077C079 /* TWSimpleTableViewDelegate.h */,
+				318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		31D6463C1B0669E3003B4262 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				31D6463D1B066A29003B4262 /* TWSimpleMapViewDelegate.h */,
+				31D6463E1B066A29003B4262 /* TWSimpleMapViewDelegate.m */,
+			);
+			name = MapView;
 			sourceTree = "<group>";
 		};
 		31D6DAC91AFA256600432340 /* Protocols */ = {
@@ -851,6 +872,7 @@
 				31D645B31AFD7121003B4262 /* TWCoordinateSystemConverter.m in Sources */,
 				31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */,
 				31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */,
+				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
 			);
