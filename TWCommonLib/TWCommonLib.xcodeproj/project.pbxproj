@@ -16,6 +16,7 @@
 		311B7A0B1AF3F2A300E97FBC /* SimpleTableViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A0A1AF3F2A300E97FBC /* SimpleTableViewSpec.m */; };
 		312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 312D5FCE1AFABD6200813EE8 /* TWDataWriteHelper.m */; };
 		313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873DD1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m */; };
+		313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873E11B076EA20088CDA7 /* UIView+LayerDecoration.m */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
 		318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */; };
@@ -77,6 +78,8 @@
 		312D5FCE1AFABD6200813EE8 /* TWDataWriteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWDataWriteHelper.m; sourceTree = "<group>"; };
 		313873DC1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextViewWithMaxLengthDelegate.h; sourceTree = "<group>"; };
 		313873DD1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTextViewWithMaxLengthDelegate.m; sourceTree = "<group>"; };
+		313873E01B076EA20088CDA7 /* UIView+LayerDecoration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayerDecoration.h"; sourceTree = "<group>"; };
+		313873E11B076EA20088CDA7 /* UIView+LayerDecoration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayerDecoration.m"; sourceTree = "<group>"; };
 		314529611AF0B3CB00C33BC1 /* TWCommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonMacros.h; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 		311B79F11AF107E400E97FBC /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				313873DF1B076E8C0088CDA7 /* LayerDecoration */,
 				31D645CD1AFE5AC7003B4262 /* Sizes */,
 				31D645CC1AFE5AC1003B4262 /* FadeAnimations */,
 			);
@@ -275,6 +279,15 @@
 				313873DD1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m */,
 			);
 			name = TextView;
+			sourceTree = "<group>";
+		};
+		313873DF1B076E8C0088CDA7 /* LayerDecoration */ = {
+			isa = PBXGroup;
+			children = (
+				313873E01B076EA20088CDA7 /* UIView+LayerDecoration.h */,
+				313873E11B076EA20088CDA7 /* UIView+LayerDecoration.m */,
+			);
+			name = LayerDecoration;
 			sourceTree = "<group>";
 		};
 		318394771AED9E2A0077C079 = {
@@ -886,6 +899,7 @@
 				31D645B31AFD7121003B4262 /* TWCoordinateSystemConverter.m in Sources */,
 				31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */,
 				31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */,
+				313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
