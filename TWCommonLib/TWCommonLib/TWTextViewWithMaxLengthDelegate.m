@@ -38,6 +38,11 @@
   return ![self textLengthExceedsMaxLength:newTextLength];
 }
 
+- (void)textViewDidChange:(UITextView *)textView
+{
+  CallBlock(self.textDidChange, textView.text);
+}
+
 - (BOOL)textLengthExceedsMaxLength:(NSInteger)textLength
 {
   return (textLength > self.maxLength);
