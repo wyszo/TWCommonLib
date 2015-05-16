@@ -8,12 +8,12 @@
 
 @implementation TWJSONHelper
 
-- (id)jsonObjectFromFileNamed:(NSString *)filename
+- (id)jsonObjectFromFilePath:(NSString *)filepath
 {
-  AssertTrueOrReturnNil(filename.length);
+  AssertTrueOrReturnNil(filepath.length);
   
   NSError *error;
-  NSString *json = [[NSString alloc] initWithContentsOfFile:filename encoding:NSUTF8StringEncoding error:&error];
+  NSString *json = [[NSString alloc] initWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:&error];
   AssertTrueOrReturnNil(error == nil);
   
   id jsonObject = [NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
@@ -22,12 +22,24 @@
   return jsonObject;
 }
 
-- (NSDictionary *)jsonDictionaryFromFileNamed:(NSString *)filename
+- (NSDictionary *)jsonDictionaryFromBundledFileNamed:(NSString *)filename
 {
-  AssertTrueOrReturnNil(filename.length);
-  id jsonObject = [[TWJSONHelper new] jsonObjectFromFileNamed:filename];
+  NSString *resourcePath = [self pathForResurceNamed:filename];
+  AssertTrueOrReturnNil(resourcePath.length);
+  return [self jsonDictionaryFromFilePath:resourcePath];
+}
+
+- (NSDictionary *)jsonDictionaryFromFilePath:(NSString *)filepath
+{
+  AssertTrueOrReturnNil(filepath.length);
+  id jsonObject = [[TWJSONHelper new] jsonObjectFromFilePath:filepath];
   AssertTrueOrReturnNil([jsonObject isKindOfClass:[NSDictionary class]]);
   return (NSDictionary *)jsonObject;
 }
 
+- (NSString *)pathForResurceNamed:(NSString *)filename
+{
+  return [[NSBundle mainBundle] pathForResource:filename ofType:nil];
+}
+   
 @end
