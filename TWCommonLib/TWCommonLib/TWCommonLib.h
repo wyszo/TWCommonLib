@@ -25,6 +25,7 @@
 #import "TWCommonFunctions.h"
 #import "TWCoordinateSystemConverter.h"
 #import "TWUIImagePickerHelper.h"
+#import "TWTextViewWithMaxLengthDelegate.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
