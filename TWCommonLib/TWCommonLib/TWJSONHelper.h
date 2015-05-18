@@ -4,7 +4,9 @@
 
 @interface TWJSONHelper : NSObject
 
-- (id)jsonObjectFromFileNamed:(NSString *)filename;
-- (NSDictionary *)jsonDictionaryFromFileNamed:(NSString *)filename;
+- (id)jsonObjectFromFilePath:(NSString *)filepath;
+
+- (NSDictionary *)jsonDictionaryFromFilePath:(NSString *)filepath;
+- (NSDictionary *)jsonDictionaryFromBundledFileNamed:(NSString *)filename;
 
 @end

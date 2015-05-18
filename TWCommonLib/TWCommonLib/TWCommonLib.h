@@ -25,6 +25,8 @@
 #import "TWCommonFunctions.h"
 #import "TWCoordinateSystemConverter.h"
 #import "TWUIImagePickerHelper.h"
+#import "TWTextViewWithMaxLengthDelegate.h"
+#import "TWScrollViewDelegate.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
@@ -35,6 +37,10 @@
 #import "UIImage+TWCreateImage.h"
 #import "UIImage+TWConvenience.h"
 #import "UIView+TWSizes.h"
+#import "UIViewController+PerformSegueMapping.h"
+#import "UIView+LayerDecoration.h"
+#import "NSLayoutConstraint+ConstraintCopying.h"
+
 // import TWSimpleTableViewDataSource when implementation finished
 
 
