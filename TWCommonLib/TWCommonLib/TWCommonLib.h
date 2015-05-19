@@ -27,6 +27,7 @@
 #import "TWUIImagePickerHelper.h"
 #import "TWTextViewWithMaxLengthDelegate.h"
 #import "TWScrollViewDelegate.h"
+#import "TWConfigurableFromDictionary.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
