@@ -33,6 +33,7 @@
 #import "TWImagePickerOverlayProtocol.h"
 #import "TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h"
 #import "TWUIImagePickerExtendedEventsObserver.h"
+#import "TWCoreDataTableViewDataSource.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
