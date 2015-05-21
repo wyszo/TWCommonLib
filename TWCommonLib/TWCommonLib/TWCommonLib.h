@@ -30,6 +30,7 @@
 #import "TWConfigurableFromDictionary.h"
 #import "TWObjectCountProtocol.h"
 #import "TWShowOverlayWhenTableViewEmptyBehaviour.h"
+#import "TWImagePickerOverlayProtocol.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"

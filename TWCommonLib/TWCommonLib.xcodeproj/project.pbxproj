@@ -31,6 +31,8 @@
 		319412971AF412E000D676A3 /* libPods-KZAsserts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 319412961AF412E000D676A3 /* libPods-KZAsserts.a */; };
 		319412981AF412FD00D676A3 /* TWSimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */; };
 		31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */; };
+		31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB71B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m */; };
+		31A5CDBE1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */; };
 		31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */; };
 		31BFFB751AF8349B00645566 /* TWMapKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB741AF8349B00645566 /* TWMapKitHelper.m */; };
 		31BFFB771AF834E700645566 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BFFB761AF834E700645566 /* MapKit.framework */; };
@@ -113,6 +115,12 @@
 		31A5CDAE1B0E3D1F0007D92E /* TWObjectCountProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWObjectCountProtocol.h; sourceTree = "<group>"; };
 		31A5CDB11B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWShowOverlayWhenTableViewEmptyBehaviour.h; sourceTree = "<group>"; };
 		31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWShowOverlayWhenTableViewEmptyBehaviour.m; sourceTree = "<group>"; };
+		31A5CDB41B0E69CA0007D92E /* TWImagePickerOverlayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWImagePickerOverlayProtocol.h; sourceTree = "<group>"; };
+		31A5CDB61B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h; sourceTree = "<group>"; };
+		31A5CDB71B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m; sourceTree = "<group>"; };
+		31A5CDB91B0E6B2F0007D92E /* TWExtendedUIImagePickerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWExtendedUIImagePickerControllerDelegate.h; sourceTree = "<group>"; };
+		31A5CDBC1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUIImagePickerExtendedEventsObserver.h; sourceTree = "<group>"; };
+		31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIImagePickerExtendedEventsObserver.m; sourceTree = "<group>"; };
 		31BFFB621AF7C54600645566 /* TWOrientationChangeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDelegate.h; sourceTree = "<group>"; };
 		31BFFB631AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorUsingAccelerometer.h; sourceTree = "<group>"; };
 		31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOrientationChangeDetectorUsingAccelerometer.m; sourceTree = "<group>"; };
@@ -339,6 +347,7 @@
 				318394AF1AEDA2050077C079 /* Headers */,
 				318394FE1AF005E10077C079 /* Helpers */,
 				31D645A81AFD4D3F003B4262 /* Math */,
+				31A5CDBA1B0E6B6E0007D92E /* Observers */,
 				3194128E1AF4106A00D676A3 /* UI Components */,
 				318394831AED9E2A0077C079 /* Supporting Files */,
 			);
@@ -488,6 +497,7 @@
 		31A5CDAF1B0E3DB40007D92E /* Behaviours */ = {
 			isa = PBXGroup;
 			children = (
+				31A5CDB51B0E6A2A0007D92E /* ShowImagePickerOverlayOrientationPortrait */,
 				31A5CDB01B0E3DBF0007D92E /* ShowOverlayWhenTutorialsTableEmpty */,
 			);
 			name = Behaviours;
@@ -500,6 +510,32 @@
 				31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */,
 			);
 			name = ShowOverlayWhenTutorialsTableEmpty;
+			sourceTree = "<group>";
+		};
+		31A5CDB51B0E6A2A0007D92E /* ShowImagePickerOverlayOrientationPortrait */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDB61B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h */,
+				31A5CDB71B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m */,
+			);
+			name = ShowImagePickerOverlayOrientationPortrait;
+			sourceTree = "<group>";
+		};
+		31A5CDBA1B0E6B6E0007D92E /* Observers */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDBB1B0E6B790007D92E /* ImagePickerEvents */,
+			);
+			name = Observers;
+			sourceTree = "<group>";
+		};
+		31A5CDBB1B0E6B790007D92E /* ImagePickerEvents */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDBC1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.h */,
+				31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */,
+			);
+			name = ImagePickerEvents;
 			sourceTree = "<group>";
 		};
 		31BFFB601AF7C51000645566 /* OrientationChange (accelerometer) */ = {
@@ -696,6 +732,8 @@
 			isa = PBXGroup;
 			children = (
 				31815F5F1B0B35010062E7C0 /* TWConfigurableFromDictionary.h */,
+				31A5CDB91B0E6B2F0007D92E /* TWExtendedUIImagePickerControllerDelegate.h */,
+				31A5CDB41B0E69CA0007D92E /* TWImagePickerOverlayProtocol.h */,
 				31A5CDAE1B0E3D1F0007D92E /* TWObjectCountProtocol.h */,
 				31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */,
 			);
@@ -918,6 +956,7 @@
 				3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
 				31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */,
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
+				31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */,
 				313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */,
 				313874721B09ADF80088CDA7 /* TWScrollViewDelegate.m in Sources */,
 				3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */,
@@ -934,6 +973,7 @@
 				318394861AED9E2A0077C079 /* main.m in Sources */,
 				31D645D01AFE5AF4003B4262 /* UIView+TWSizes.m in Sources */,
 				318394B41AEDA85D0077C079 /* TWDispatchMacros.m in Sources */,
+				31A5CDBE1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m in Sources */,
 				31BFFB8D1AF9535000645566 /* TWItemsToSeguesMapping.m in Sources */,
 				313873E91B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m in Sources */,
 				312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */,
