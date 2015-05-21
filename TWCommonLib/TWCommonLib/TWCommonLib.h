@@ -28,6 +28,8 @@
 #import "TWTextViewWithMaxLengthDelegate.h"
 #import "TWScrollViewDelegate.h"
 #import "TWConfigurableFromDictionary.h"
+#import "TWObjectCountProtocol.h"
+#import "TWShowOverlayWhenTableViewEmptyBehaviour.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"

@@ -30,6 +30,7 @@
 		319412941AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */; };
 		319412971AF412E000D676A3 /* libPods-KZAsserts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 319412961AF412E000D676A3 /* libPods-KZAsserts.a */; };
 		319412981AF412FD00D676A3 /* TWSimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */; };
+		31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */; };
 		31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */; };
 		31BFFB751AF8349B00645566 /* TWMapKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB741AF8349B00645566 /* TWMapKitHelper.m */; };
 		31BFFB771AF834E700645566 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BFFB761AF834E700645566 /* MapKit.framework */; };
@@ -109,6 +110,9 @@
 		319412911AF410AC00D676A3 /* TWSimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewCell.h; sourceTree = "<group>"; };
 		319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewCell.m; sourceTree = "<group>"; };
 		319412961AF412E000D676A3 /* libPods-KZAsserts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-KZAsserts.a"; path = "Pods/build/Debug-iphoneos/libPods-KZAsserts.a"; sourceTree = "<group>"; };
+		31A5CDAE1B0E3D1F0007D92E /* TWObjectCountProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWObjectCountProtocol.h; sourceTree = "<group>"; };
+		31A5CDB11B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWShowOverlayWhenTableViewEmptyBehaviour.h; sourceTree = "<group>"; };
+		31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWShowOverlayWhenTableViewEmptyBehaviour.m; sourceTree = "<group>"; };
 		31BFFB621AF7C54600645566 /* TWOrientationChangeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDelegate.h; sourceTree = "<group>"; };
 		31BFFB631AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorUsingAccelerometer.h; sourceTree = "<group>"; };
 		31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOrientationChangeDetectorUsingAccelerometer.m; sourceTree = "<group>"; };
@@ -330,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				318394A91AED9EE50077C079 /* AppDelegate */,
+				31A5CDAF1B0E3DB40007D92E /* Behaviours */,
 				318394AA1AED9EEC0077C079 /* Classes */,
 				318394AF1AEDA2050077C079 /* Headers */,
 				318394FE1AF005E10077C079 /* Helpers */,
@@ -478,6 +483,23 @@
 				319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */,
 			);
 			name = SimpleTableView;
+			sourceTree = "<group>";
+		};
+		31A5CDAF1B0E3DB40007D92E /* Behaviours */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDB01B0E3DBF0007D92E /* ShowOverlayWhenTutorialsTableEmpty */,
+			);
+			name = Behaviours;
+			sourceTree = "<group>";
+		};
+		31A5CDB01B0E3DBF0007D92E /* ShowOverlayWhenTutorialsTableEmpty */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDB11B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.h */,
+				31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */,
+			);
+			name = ShowOverlayWhenTutorialsTableEmpty;
 			sourceTree = "<group>";
 		};
 		31BFFB601AF7C51000645566 /* OrientationChange (accelerometer) */ = {
@@ -673,8 +695,9 @@
 		31D6DAC91AFA256600432340 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */,
 				31815F5F1B0B35010062E7C0 /* TWConfigurableFromDictionary.h */,
+				31A5CDAE1B0E3D1F0007D92E /* TWObjectCountProtocol.h */,
+				31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -920,6 +943,7 @@
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
 				31D645B31AFD7121003B4262 /* TWCoordinateSystemConverter.m in Sources */,
 				31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */,
+				31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */,
 				31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */,
 				313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,

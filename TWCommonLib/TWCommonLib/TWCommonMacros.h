@@ -12,6 +12,7 @@
 #define defineWeakSelf() __weak typeof(self) weakSelf = self
 
 #define UIColorMake(r,g,b) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:1.0];
+#define UIFontMake(fontName,fontSize) [UIFont fontWithName:fontName size:fontSize];
 
 #define SuppressPerformSelectorLeakWarning(Code) \
 do { \
