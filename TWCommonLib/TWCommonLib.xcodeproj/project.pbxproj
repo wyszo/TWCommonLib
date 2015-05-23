@@ -52,7 +52,8 @@
 		31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D6463E1B066A29003B4262 /* TWSimpleMapViewDelegate.m */; };
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
 		31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */; };
-		31FB6B531B106D150042C409 /* NSMutableArray+MoveRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B521B106D150042C409 /* NSMutableArray+MoveRow.m */; };
+		31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */; };
+		31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B571B1074410042C409 /* UITableView+TWRegisterNib.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -161,8 +162,10 @@
 		31D6DACB1AFA27C100432340 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		31FB6B4E1B0E85910042C409 /* TWCoreDataTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoreDataTableViewDataSource.h; sourceTree = "<group>"; };
 		31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoreDataTableViewDataSource.m; sourceTree = "<group>"; };
-		31FB6B511B106D150042C409 /* NSMutableArray+MoveRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MoveRow.h"; sourceTree = "<group>"; };
-		31FB6B521B106D150042C409 /* NSMutableArray+MoveRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+MoveRow.m"; sourceTree = "<group>"; };
+		31FB6B511B106D150042C409 /* NSMutableArray+TWMoveRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+TWMoveRow.h"; sourceTree = "<group>"; };
+		31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TWMoveRow.m"; sourceTree = "<group>"; };
+		31FB6B561B1074410042C409 /* UITableView+TWRegisterNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+TWRegisterNib.h"; sourceTree = "<group>"; };
+		31FB6B571B1074410042C409 /* UITableView+TWRegisterNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+TWRegisterNib.m"; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +251,7 @@
 				311B79FE1AF26F9000E97FBC /* NSSet */,
 				31D645B71AFD7832003B4262 /* UIImage */,
 				31BFFB9C1AF983EA00645566 /* UIImagePickerController */,
+				31FB6B551B1074040042C409 /* UITableView */,
 				311B79F11AF107E400E97FBC /* UIView */,
 				31D645D81B0271A3003B4262 /* UIViewController */,
 			);
@@ -760,10 +764,19 @@
 		31FB6B541B106D180042C409 /* NSMutableArray */ = {
 			isa = PBXGroup;
 			children = (
-				31FB6B511B106D150042C409 /* NSMutableArray+MoveRow.h */,
-				31FB6B521B106D150042C409 /* NSMutableArray+MoveRow.m */,
+				31FB6B511B106D150042C409 /* NSMutableArray+TWMoveRow.h */,
+				31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */,
 			);
 			name = NSMutableArray;
+			sourceTree = "<group>";
+		};
+		31FB6B551B1074040042C409 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6B561B1074410042C409 /* UITableView+TWRegisterNib.h */,
+				31FB6B571B1074410042C409 /* UITableView+TWRegisterNib.m */,
+			);
+			name = UITableView;
 			sourceTree = "<group>";
 		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
@@ -984,7 +997,7 @@
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
 				31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */,
 				313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */,
-				31FB6B531B106D150042C409 /* NSMutableArray+MoveRow.m in Sources */,
+				31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */,
 				313874721B09ADF80088CDA7 /* TWScrollViewDelegate.m in Sources */,
 				3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */,
 				31BFFB751AF8349B00645566 /* TWMapKitHelper.m in Sources */,
@@ -1013,6 +1026,7 @@
 				31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */,
 				31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */,
 				313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */,
+				31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */,
 				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,

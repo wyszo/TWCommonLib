@@ -2,11 +2,11 @@
 //  TWCommonLib
 //
 
-#import "NSMutableArray+MoveRow.h"
+#import "NSMutableArray+TWMoveRow.h"
 #import <KZAsserts.h>
 
 
-@implementation NSMutableArray (MoveRow)
+@implementation NSMutableArray (TWMoveRow)
 
 - (void)moveObjectFromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {

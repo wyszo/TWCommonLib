@@ -5,7 +5,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSMutableArray (MoveRow)
+@interface NSMutableArray (TWMoveRow)
 
 - (void)moveObjectFromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath;
 
