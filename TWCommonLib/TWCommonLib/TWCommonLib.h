@@ -47,6 +47,7 @@
 #import "UIViewController+PerformSegueMapping.h"
 #import "UIView+LayerDecoration.h"
 #import "NSLayoutConstraint+ConstraintCopying.h"
+#import "NSMutableArray+MoveRow.h"
 
 // import TWSimpleTableViewDataSource when implementation finished
 
