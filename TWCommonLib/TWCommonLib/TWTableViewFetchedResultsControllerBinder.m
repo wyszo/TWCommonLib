@@ -60,10 +60,11 @@
     } break;
       
     case NSFetchedResultsChangeUpdate: {
+      // Beware - apart from cell content, index path could also have changed (despite getting ChangeUpdate instead of ChangeMove). Use newIndexPath in here!
       if (self.configureCellBlock) {
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:newIndexPath];
         if (cell) {
-          self.configureCellBlock(cell, indexPath);
+          self.configureCellBlock(cell, newIndexPath);
         } else {
           // FetchedResultsController of a tableView from other tabBar item (now invisible) got the update, but didn't return a new cell when asked (since it's invisible). Expected case, don't worry.
         }
