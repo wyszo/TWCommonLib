@@ -56,6 +56,7 @@
 		31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B571B1074410042C409 /* UITableView+TWRegisterNib.m */; };
 		31FB6B5F1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B5C1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m */; };
 		31FB6B601B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B5E1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m */; };
+		31FB6B681B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B671B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +173,8 @@
 		31FB6B5C1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTableViewFetchedResultsControllerBinder.m; sourceTree = "<group>"; };
 		31FB6B5D1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TWTableViewFetchedResultsControllerBinder+Private.h"; sourceTree = "<group>"; };
 		31FB6B5E1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TWTableViewFetchedResultsControllerBinder+Private.m"; sourceTree = "<group>"; };
+		31FB6B661B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+TWHttpHeaders.h"; sourceTree = "<group>"; };
+		31FB6B671B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+TWHttpHeaders.m"; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +257,7 @@
 			children = (
 				31BFFB981AF9748800645566 /* NSLayoutConstraint */,
 				31FB6B541B106D180042C409 /* NSMutableArray */,
+				31FB6B651B1131DA0042C409 /* NSMutableURLRequest */,
 				311B79FE1AF26F9000E97FBC /* NSSet */,
 				31D645B71AFD7832003B4262 /* UIImage */,
 				31BFFB9C1AF983EA00645566 /* UIImagePickerController */,
@@ -797,6 +801,15 @@
 			name = TableViewFetchedResultsControllerBinder;
 			sourceTree = "<group>";
 		};
+		31FB6B651B1131DA0042C409 /* NSMutableURLRequest */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6B661B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.h */,
+				31FB6B671B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m */,
+			);
+			name = NSMutableURLRequest;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1044,6 +1057,7 @@
 				31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */,
 				31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */,
 				31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */,
+				31FB6B681B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m in Sources */,
 				313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */,
 				31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */,
 				31FB6B5F1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m in Sources */,
