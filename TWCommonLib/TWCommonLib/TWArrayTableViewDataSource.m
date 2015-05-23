@@ -3,6 +3,7 @@
 //
 
 #import "TWArrayTableViewDataSource.h"
+#import "NSMutableArray+TWMoveRow.h"
 #import <KZAsserts/KZAsserts.h>
 
 
@@ -125,12 +126,9 @@
   return YES; 
 }
 
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-  AssertTrueOrReturn(sourceIndexPath.row < self.array.count);
-  AssertTrueOrReturn(destinationIndexPath.row < self.array.count);
-  
-  [self.array exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+  [self.array moveObjectFromIndexPath:fromIndexPath toIndexPath:toIndexPath];
 }
 
 @end

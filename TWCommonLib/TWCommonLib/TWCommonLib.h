@@ -27,6 +27,13 @@
 #import "TWUIImagePickerHelper.h"
 #import "TWTextViewWithMaxLengthDelegate.h"
 #import "TWScrollViewDelegate.h"
+#import "TWConfigurableFromDictionary.h"
+#import "TWObjectCountProtocol.h"
+#import "TWShowOverlayWhenTableViewEmptyBehaviour.h"
+#import "TWImagePickerOverlayProtocol.h"
+#import "TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h"
+#import "TWUIImagePickerExtendedEventsObserver.h"
+#import "TWCoreDataTableViewDataSource.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
@@ -40,6 +47,8 @@
 #import "UIViewController+PerformSegueMapping.h"
 #import "UIView+LayerDecoration.h"
 #import "NSLayoutConstraint+ConstraintCopying.h"
+#import "NSMutableArray+TWMoveRow.h"
+#import "UITableView+TWRegisterNib.h"
 
 // import TWSimpleTableViewDataSource when implementation finished
 

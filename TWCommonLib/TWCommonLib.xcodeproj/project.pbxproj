@@ -30,6 +30,9 @@
 		319412941AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */; };
 		319412971AF412E000D676A3 /* libPods-KZAsserts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 319412961AF412E000D676A3 /* libPods-KZAsserts.a */; };
 		319412981AF412FD00D676A3 /* TWSimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */; };
+		31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */; };
+		31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB71B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m */; };
+		31A5CDBE1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */; };
 		31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */; };
 		31BFFB751AF8349B00645566 /* TWMapKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB741AF8349B00645566 /* TWMapKitHelper.m */; };
 		31BFFB771AF834E700645566 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BFFB761AF834E700645566 /* MapKit.framework */; };
@@ -48,6 +51,11 @@
 		31D645DB1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645DA1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m */; };
 		31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D6463E1B066A29003B4262 /* TWSimpleMapViewDelegate.m */; };
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
+		31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */; };
+		31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */; };
+		31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B571B1074410042C409 /* UITableView+TWRegisterNib.m */; };
+		31FB6B5F1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B5C1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m */; };
+		31FB6B601B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B5E1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +95,7 @@
 		313874701B09ADF80088CDA7 /* TWScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWScrollViewDelegate.h; sourceTree = "<group>"; };
 		313874711B09ADF80088CDA7 /* TWScrollViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWScrollViewDelegate.m; sourceTree = "<group>"; };
 		314529611AF0B3CB00C33BC1 /* TWCommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonMacros.h; sourceTree = "<group>"; };
+		31815F5F1B0B35010062E7C0 /* TWConfigurableFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWConfigurableFromDictionary.h; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318394851AED9E2A0077C079 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Exclude/main.m; sourceTree = "<group>"; };
@@ -108,6 +117,15 @@
 		319412911AF410AC00D676A3 /* TWSimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewCell.h; sourceTree = "<group>"; };
 		319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewCell.m; sourceTree = "<group>"; };
 		319412961AF412E000D676A3 /* libPods-KZAsserts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-KZAsserts.a"; path = "Pods/build/Debug-iphoneos/libPods-KZAsserts.a"; sourceTree = "<group>"; };
+		31A5CDAE1B0E3D1F0007D92E /* TWObjectCountProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWObjectCountProtocol.h; sourceTree = "<group>"; };
+		31A5CDB11B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWShowOverlayWhenTableViewEmptyBehaviour.h; sourceTree = "<group>"; };
+		31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWShowOverlayWhenTableViewEmptyBehaviour.m; sourceTree = "<group>"; };
+		31A5CDB41B0E69CA0007D92E /* TWImagePickerOverlayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWImagePickerOverlayProtocol.h; sourceTree = "<group>"; };
+		31A5CDB61B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h; sourceTree = "<group>"; };
+		31A5CDB71B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m; sourceTree = "<group>"; };
+		31A5CDB91B0E6B2F0007D92E /* TWExtendedUIImagePickerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWExtendedUIImagePickerControllerDelegate.h; sourceTree = "<group>"; };
+		31A5CDBC1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUIImagePickerExtendedEventsObserver.h; sourceTree = "<group>"; };
+		31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIImagePickerExtendedEventsObserver.m; sourceTree = "<group>"; };
 		31BFFB621AF7C54600645566 /* TWOrientationChangeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDelegate.h; sourceTree = "<group>"; };
 		31BFFB631AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorUsingAccelerometer.h; sourceTree = "<group>"; };
 		31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOrientationChangeDetectorUsingAccelerometer.m; sourceTree = "<group>"; };
@@ -144,6 +162,16 @@
 		31D6463E1B066A29003B4262 /* TWSimpleMapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleMapViewDelegate.m; sourceTree = "<group>"; };
 		31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorProtocol.h; sourceTree = "<group>"; };
 		31D6DACB1AFA27C100432340 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		31FB6B4E1B0E85910042C409 /* TWCoreDataTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoreDataTableViewDataSource.h; sourceTree = "<group>"; };
+		31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoreDataTableViewDataSource.m; sourceTree = "<group>"; };
+		31FB6B511B106D150042C409 /* NSMutableArray+TWMoveRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+TWMoveRow.h"; sourceTree = "<group>"; };
+		31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TWMoveRow.m"; sourceTree = "<group>"; };
+		31FB6B561B1074410042C409 /* UITableView+TWRegisterNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+TWRegisterNib.h"; sourceTree = "<group>"; };
+		31FB6B571B1074410042C409 /* UITableView+TWRegisterNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+TWRegisterNib.m"; sourceTree = "<group>"; };
+		31FB6B5B1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTableViewFetchedResultsControllerBinder.h; sourceTree = "<group>"; };
+		31FB6B5C1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTableViewFetchedResultsControllerBinder.m; sourceTree = "<group>"; };
+		31FB6B5D1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TWTableViewFetchedResultsControllerBinder+Private.h"; sourceTree = "<group>"; };
+		31FB6B5E1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TWTableViewFetchedResultsControllerBinder+Private.m"; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,9 +253,11 @@
 			isa = PBXGroup;
 			children = (
 				31BFFB981AF9748800645566 /* NSLayoutConstraint */,
+				31FB6B541B106D180042C409 /* NSMutableArray */,
 				311B79FE1AF26F9000E97FBC /* NSSet */,
 				31D645B71AFD7832003B4262 /* UIImage */,
 				31BFFB9C1AF983EA00645566 /* UIImagePickerController */,
+				31FB6B551B1074040042C409 /* UITableView */,
 				311B79F11AF107E400E97FBC /* UIView */,
 				31D645D81B0271A3003B4262 /* UIViewController */,
 			);
@@ -329,10 +359,12 @@
 			isa = PBXGroup;
 			children = (
 				318394A91AED9EE50077C079 /* AppDelegate */,
+				31A5CDAF1B0E3DB40007D92E /* Behaviours */,
 				318394AA1AED9EEC0077C079 /* Classes */,
 				318394AF1AEDA2050077C079 /* Headers */,
 				318394FE1AF005E10077C079 /* Helpers */,
 				31D645A81AFD4D3F003B4262 /* Math */,
+				31A5CDBA1B0E6B6E0007D92E /* Observers */,
 				3194128E1AF4106A00D676A3 /* UI Components */,
 				318394831AED9E2A0077C079 /* Supporting Files */,
 			);
@@ -384,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				319412891AF40F2400D676A3 /* ArrayTableView */,
+				31FB6B4D1B0E856A0042C409 /* CoreDataTableViewDataSource */,
 				3194128A1AF40F3400D676A3 /* SimpleTableView */,
 			);
 			name = DataSources;
@@ -417,12 +450,13 @@
 				31D645B01AFD7105003B4262 /* CoordinateSystemConverter */,
 				312D5FCC1AFABD5000813EE8 /* DataWriteHelper */,
 				31D6459B1AFB6E51003B4262 /* Factories */,
+				31D645C41AFE55AD003B4262 /* ImagePickerHelper */,
 				318394FF1AF005EE0077C079 /* JSONHelper */,
 				31BFFB721AF8348900645566 /* MapKit */,
 				31BFFB891AF9532E00645566 /* Mappings */,
 				311B79F91AF1470500E97FBC /* ObjectLifetime */,
 				31D6DAC91AFA256600432340 /* Protocols */,
-				31D645C41AFE55AD003B4262 /* ImagePickerHelper */,
+				31FB6B5A1B1080F80042C409 /* TableViewFetchedResultsControllerBinder */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -477,6 +511,50 @@
 				319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */,
 			);
 			name = SimpleTableView;
+			sourceTree = "<group>";
+		};
+		31A5CDAF1B0E3DB40007D92E /* Behaviours */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDB51B0E6A2A0007D92E /* ShowImagePickerOverlayOrientationPortrait */,
+				31A5CDB01B0E3DBF0007D92E /* ShowOverlayWhenTutorialsTableEmpty */,
+			);
+			name = Behaviours;
+			sourceTree = "<group>";
+		};
+		31A5CDB01B0E3DBF0007D92E /* ShowOverlayWhenTutorialsTableEmpty */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDB11B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.h */,
+				31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */,
+			);
+			name = ShowOverlayWhenTutorialsTableEmpty;
+			sourceTree = "<group>";
+		};
+		31A5CDB51B0E6A2A0007D92E /* ShowImagePickerOverlayOrientationPortrait */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDB61B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h */,
+				31A5CDB71B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m */,
+			);
+			name = ShowImagePickerOverlayOrientationPortrait;
+			sourceTree = "<group>";
+		};
+		31A5CDBA1B0E6B6E0007D92E /* Observers */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDBB1B0E6B790007D92E /* ImagePickerEvents */,
+			);
+			name = Observers;
+			sourceTree = "<group>";
+		};
+		31A5CDBB1B0E6B790007D92E /* ImagePickerEvents */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDBC1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.h */,
+				31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */,
+			);
+			name = ImagePickerEvents;
 			sourceTree = "<group>";
 		};
 		31BFFB601AF7C51000645566 /* OrientationChange (accelerometer) */ = {
@@ -672,9 +750,51 @@
 		31D6DAC91AFA256600432340 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				31815F5F1B0B35010062E7C0 /* TWConfigurableFromDictionary.h */,
+				31A5CDB91B0E6B2F0007D92E /* TWExtendedUIImagePickerControllerDelegate.h */,
+				31A5CDB41B0E69CA0007D92E /* TWImagePickerOverlayProtocol.h */,
+				31A5CDAE1B0E3D1F0007D92E /* TWObjectCountProtocol.h */,
 				31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		31FB6B4D1B0E856A0042C409 /* CoreDataTableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6B4E1B0E85910042C409 /* TWCoreDataTableViewDataSource.h */,
+				31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */,
+			);
+			name = CoreDataTableViewDataSource;
+			sourceTree = "<group>";
+		};
+		31FB6B541B106D180042C409 /* NSMutableArray */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6B511B106D150042C409 /* NSMutableArray+TWMoveRow.h */,
+				31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */,
+			);
+			name = NSMutableArray;
+			sourceTree = "<group>";
+		};
+		31FB6B551B1074040042C409 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6B561B1074410042C409 /* UITableView+TWRegisterNib.h */,
+				31FB6B571B1074410042C409 /* UITableView+TWRegisterNib.m */,
+			);
+			name = UITableView;
+			sourceTree = "<group>";
+		};
+		31FB6B5A1B1080F80042C409 /* TableViewFetchedResultsControllerBinder */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6B5B1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.h */,
+				31FB6B5C1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m */,
+				31FB6B5D1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.h */,
+				31FB6B5E1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m */,
+			);
+			name = TableViewFetchedResultsControllerBinder;
 			sourceTree = "<group>";
 		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
@@ -893,7 +1013,9 @@
 				3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
 				31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */,
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
+				31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */,
 				313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */,
+				31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */,
 				313874721B09ADF80088CDA7 /* TWScrollViewDelegate.m in Sources */,
 				3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */,
 				31BFFB751AF8349B00645566 /* TWMapKitHelper.m in Sources */,
@@ -904,11 +1026,13 @@
 				31D645C71AFE55CE003B4262 /* TWUIImagePickerHelper.m in Sources */,
 				31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */,
 				31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */,
+				31FB6B601B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m in Sources */,
 				31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
 				31D645D01AFE5AF4003B4262 /* UIView+TWSizes.m in Sources */,
 				318394B41AEDA85D0077C079 /* TWDispatchMacros.m in Sources */,
+				31A5CDBE1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m in Sources */,
 				31BFFB8D1AF9535000645566 /* TWItemsToSeguesMapping.m in Sources */,
 				313873E91B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m in Sources */,
 				312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */,
@@ -918,8 +1042,12 @@
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
 				31D645B31AFD7121003B4262 /* TWCoordinateSystemConverter.m in Sources */,
 				31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */,
+				31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */,
 				31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */,
 				313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */,
+				31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */,
+				31FB6B5F1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m in Sources */,
+				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
