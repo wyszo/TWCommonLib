@@ -54,6 +54,8 @@
 		31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */; };
 		31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */; };
 		31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B571B1074410042C409 /* UITableView+TWRegisterNib.m */; };
+		31FB6B5F1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B5C1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m */; };
+		31FB6B601B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B5E1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +168,10 @@
 		31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TWMoveRow.m"; sourceTree = "<group>"; };
 		31FB6B561B1074410042C409 /* UITableView+TWRegisterNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+TWRegisterNib.h"; sourceTree = "<group>"; };
 		31FB6B571B1074410042C409 /* UITableView+TWRegisterNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+TWRegisterNib.m"; sourceTree = "<group>"; };
+		31FB6B5B1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTableViewFetchedResultsControllerBinder.h; sourceTree = "<group>"; };
+		31FB6B5C1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTableViewFetchedResultsControllerBinder.m; sourceTree = "<group>"; };
+		31FB6B5D1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TWTableViewFetchedResultsControllerBinder+Private.h"; sourceTree = "<group>"; };
+		31FB6B5E1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TWTableViewFetchedResultsControllerBinder+Private.m"; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -444,12 +450,13 @@
 				31D645B01AFD7105003B4262 /* CoordinateSystemConverter */,
 				312D5FCC1AFABD5000813EE8 /* DataWriteHelper */,
 				31D6459B1AFB6E51003B4262 /* Factories */,
+				31D645C41AFE55AD003B4262 /* ImagePickerHelper */,
 				318394FF1AF005EE0077C079 /* JSONHelper */,
 				31BFFB721AF8348900645566 /* MapKit */,
 				31BFFB891AF9532E00645566 /* Mappings */,
 				311B79F91AF1470500E97FBC /* ObjectLifetime */,
 				31D6DAC91AFA256600432340 /* Protocols */,
-				31D645C41AFE55AD003B4262 /* ImagePickerHelper */,
+				31FB6B5A1B1080F80042C409 /* TableViewFetchedResultsControllerBinder */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -779,6 +786,17 @@
 			name = UITableView;
 			sourceTree = "<group>";
 		};
+		31FB6B5A1B1080F80042C409 /* TableViewFetchedResultsControllerBinder */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6B5B1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.h */,
+				31FB6B5C1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m */,
+				31FB6B5D1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.h */,
+				31FB6B5E1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m */,
+			);
+			name = TableViewFetchedResultsControllerBinder;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1008,6 +1026,7 @@
 				31D645C71AFE55CE003B4262 /* TWUIImagePickerHelper.m in Sources */,
 				31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */,
 				31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */,
+				31FB6B601B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m in Sources */,
 				31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
@@ -1027,6 +1046,7 @@
 				31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */,
 				313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */,
 				31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */,
+				31FB6B5F1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m in Sources */,
 				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
