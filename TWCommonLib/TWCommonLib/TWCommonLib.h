@@ -51,6 +51,7 @@
 #import "NSMutableArray+TWMoveRow.h"
 #import "UITableView+TWRegisterNib.h"
 #import "NSMutableURLRequest+TWHttpHeaders.h"
+#import "NSObject+TWLazyInitialization.h"
 
 // import TWSimpleTableViewDataSource when implementation finished
 

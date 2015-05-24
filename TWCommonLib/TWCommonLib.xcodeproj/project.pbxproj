@@ -59,6 +59,8 @@
 		31FB6B681B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B671B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m */; };
 		31FB6B6D1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B6C1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m */; };
 		31FB6B711B11C5700042C409 /* TWInterfaceOrientationClassStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B701B11C5700042C409 /* TWInterfaceOrientationClassStubs.m */; };
+		31FB6BB21B1232950042C409 /* NSObject+TWLazyInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BB11B1232950042C409 /* NSObject+TWLazyInitialization.m */; };
+		31FB6BB71B1233800042C409 /* TWLazyInitializationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BB61B1233800042C409 /* TWLazyInitializationProxy.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -181,6 +183,10 @@
 		31FB6B6C1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWInterfaceOrientationViewControllerDecorator.m; sourceTree = "<group>"; };
 		31FB6B6F1B11C5700042C409 /* TWInterfaceOrientationClassStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWInterfaceOrientationClassStubs.h; sourceTree = "<group>"; };
 		31FB6B701B11C5700042C409 /* TWInterfaceOrientationClassStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWInterfaceOrientationClassStubs.m; sourceTree = "<group>"; };
+		31FB6BB01B1232950042C409 /* NSObject+TWLazyInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TWLazyInitialization.h"; sourceTree = "<group>"; };
+		31FB6BB11B1232950042C409 /* NSObject+TWLazyInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TWLazyInitialization.m"; sourceTree = "<group>"; };
+		31FB6BB51B1233800042C409 /* TWLazyInitializationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWLazyInitializationProxy.h; sourceTree = "<group>"; };
+		31FB6BB61B1233800042C409 /* TWLazyInitializationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWLazyInitializationProxy.m; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -264,6 +270,7 @@
 				31BFFB981AF9748800645566 /* NSLayoutConstraint */,
 				31FB6B541B106D180042C409 /* NSMutableArray */,
 				31FB6B651B1131DA0042C409 /* NSMutableURLRequest */,
+				31FB6BAE1B1232510042C409 /* NSObject */,
 				311B79FE1AF26F9000E97FBC /* NSSet */,
 				31D645B71AFD7832003B4262 /* UIImage */,
 				31BFFB9C1AF983EA00645566 /* UIImagePickerController */,
@@ -844,6 +851,33 @@
 			name = Private;
 			sourceTree = "<group>";
 		};
+		31FB6BAE1B1232510042C409 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6BAF1B1232590042C409 /* LazyInitialization */,
+			);
+			name = NSObject;
+			sourceTree = "<group>";
+		};
+		31FB6BAF1B1232590042C409 /* LazyInitialization */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6BB31B1232AF0042C409 /* LazyInitializationPrivate */,
+				31FB6BB01B1232950042C409 /* NSObject+TWLazyInitialization.h */,
+				31FB6BB11B1232950042C409 /* NSObject+TWLazyInitialization.m */,
+			);
+			name = LazyInitialization;
+			sourceTree = "<group>";
+		};
+		31FB6BB31B1232AF0042C409 /* LazyInitializationPrivate */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6BB51B1233800042C409 /* TWLazyInitializationProxy.h */,
+				31FB6BB61B1233800042C409 /* TWLazyInitializationProxy.m */,
+			);
+			name = LazyInitializationPrivate;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1056,6 +1090,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31FB6BB21B1232950042C409 /* NSObject+TWLazyInitialization.m in Sources */,
 				31BFFB9F1AF9841C00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m in Sources */,
 				3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
 				31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */,
@@ -1088,6 +1123,7 @@
 				31D645AB1AFD4D55003B4262 /* TWRectangleMath.m in Sources */,
 				31D645DB1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m in Sources */,
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
+				31FB6BB71B1233800042C409 /* TWLazyInitializationProxy.m in Sources */,
 				31D645B31AFD7121003B4262 /* TWCoordinateSystemConverter.m in Sources */,
 				31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */,
 				31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */,
