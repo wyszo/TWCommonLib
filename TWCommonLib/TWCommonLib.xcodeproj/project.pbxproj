@@ -61,6 +61,7 @@
 		31FB6B711B11C5700042C409 /* TWInterfaceOrientationClassStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B701B11C5700042C409 /* TWInterfaceOrientationClassStubs.m */; };
 		31FB6BB21B1232950042C409 /* NSObject+TWLazyInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BB11B1232950042C409 /* NSObject+TWLazyInitialization.m */; };
 		31FB6BB71B1233800042C409 /* TWLazyInitializationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BB61B1233800042C409 /* TWLazyInitializationProxy.m */; };
+		31FB6BBB1B1261AE0042C409 /* NSString+TWTrimming.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BBA1B1261AE0042C409 /* NSString+TWTrimming.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -187,6 +188,8 @@
 		31FB6BB11B1232950042C409 /* NSObject+TWLazyInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TWLazyInitialization.m"; sourceTree = "<group>"; };
 		31FB6BB51B1233800042C409 /* TWLazyInitializationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWLazyInitializationProxy.h; sourceTree = "<group>"; };
 		31FB6BB61B1233800042C409 /* TWLazyInitializationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWLazyInitializationProxy.m; sourceTree = "<group>"; };
+		31FB6BB91B1261AE0042C409 /* NSString+TWTrimming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TWTrimming.h"; sourceTree = "<group>"; };
+		31FB6BBA1B1261AE0042C409 /* NSString+TWTrimming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TWTrimming.m"; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +275,7 @@
 				31FB6B651B1131DA0042C409 /* NSMutableURLRequest */,
 				31FB6BAE1B1232510042C409 /* NSObject */,
 				311B79FE1AF26F9000E97FBC /* NSSet */,
+				31FB6BB81B1261A20042C409 /* NSString */,
 				31D645B71AFD7832003B4262 /* UIImage */,
 				31BFFB9C1AF983EA00645566 /* UIImagePickerController */,
 				31FB6B551B1074040042C409 /* UITableView */,
@@ -878,6 +882,15 @@
 			name = LazyInitializationPrivate;
 			sourceTree = "<group>";
 		};
+		31FB6BB81B1261A20042C409 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6BB91B1261AE0042C409 /* NSString+TWTrimming.h */,
+				31FB6BBA1B1261AE0042C409 /* NSString+TWTrimming.m */,
+			);
+			name = NSString;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1095,6 +1108,7 @@
 				3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
 				31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */,
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
+				31FB6BBB1B1261AE0042C409 /* NSString+TWTrimming.m in Sources */,
 				31FB6B6D1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m in Sources */,
 				31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */,
 				313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */,

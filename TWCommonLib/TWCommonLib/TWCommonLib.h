@@ -52,6 +52,7 @@
 #import "UITableView+TWRegisterNib.h"
 #import "NSMutableURLRequest+TWHttpHeaders.h"
 #import "NSObject+TWLazyInitialization.h"
+#import "NSString+TWTrimming.h"
 
 // import TWSimpleTableViewDataSource when implementation finished
 
