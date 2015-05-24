@@ -54,6 +54,7 @@
 #import "NSObject+TWLazyInitialization.h"
 #import "NSString+TWTrimming.h"
 #import "UIView+TWXibLoading.h"
+#import "UIImage+TWCropping.h"
 
 // import TWSimpleTableViewDataSource when implementation finished
 

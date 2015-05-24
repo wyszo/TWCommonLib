@@ -63,6 +63,7 @@
 		31FB6BB71B1233800042C409 /* TWLazyInitializationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BB61B1233800042C409 /* TWLazyInitializationProxy.m */; };
 		31FB6BBB1B1261AE0042C409 /* NSString+TWTrimming.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BBA1B1261AE0042C409 /* NSString+TWTrimming.m */; };
 		31FB6BBF1B1269D40042C409 /* UIView+TWXibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BBE1B1269D40042C409 /* UIView+TWXibLoading.m */; };
+		31FB6BC41B126B260042C409 /* UIImage+TWCropping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BC31B126B250042C409 /* UIImage+TWCropping.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -193,6 +194,8 @@
 		31FB6BBA1B1261AE0042C409 /* NSString+TWTrimming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TWTrimming.m"; sourceTree = "<group>"; };
 		31FB6BBD1B1269D40042C409 /* UIView+TWXibLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWXibLoading.h"; sourceTree = "<group>"; };
 		31FB6BBE1B1269D40042C409 /* UIView+TWXibLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWXibLoading.m"; sourceTree = "<group>"; };
+		31FB6BC21B126B250042C409 /* UIImage+TWCropping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TWCropping.h"; sourceTree = "<group>"; };
+		31FB6BC31B126B250042C409 /* UIImage+TWCropping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TWCropping.m"; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -687,6 +690,7 @@
 			children = (
 				31D645C81AFE587A003B4262 /* Convenience */,
 				31D645BB1AFD7CDE003B4262 /* CreateImage */,
+				31FB6BC11B126B160042C409 /* Cropping */,
 				31D645BC1AFD7CE7003B4262 /* OverlayingImage */,
 			);
 			name = UIImage;
@@ -904,6 +908,15 @@
 			name = XibLoading;
 			sourceTree = "<group>";
 		};
+		31FB6BC11B126B160042C409 /* Cropping */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6BC21B126B250042C409 /* UIImage+TWCropping.h */,
+				31FB6BC31B126B250042C409 /* UIImage+TWCropping.m */,
+			);
+			name = Cropping;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1118,6 +1131,7 @@
 			files = (
 				31FB6BB21B1232950042C409 /* NSObject+TWLazyInitialization.m in Sources */,
 				31BFFB9F1AF9841C00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m in Sources */,
+				31FB6BC41B126B260042C409 /* UIImage+TWCropping.m in Sources */,
 				3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
 				31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */,
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
