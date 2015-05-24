@@ -65,6 +65,7 @@
 		31FB6BBF1B1269D40042C409 /* UIView+TWXibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BBE1B1269D40042C409 /* UIView+TWXibLoading.m */; };
 		31FB6BC41B126B260042C409 /* UIImage+TWCropping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BC31B126B250042C409 /* UIImage+TWCropping.m */; };
 		31FB6BC81B126D0C0042C409 /* TWUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BC71B126D0C0042C409 /* TWUserDefaultsHelper.m */; };
+		31FB6BCD1B126F000042C409 /* TWVideoThumbnailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BCC1B126F000042C409 /* TWVideoThumbnailHelper.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -199,6 +200,8 @@
 		31FB6BC31B126B250042C409 /* UIImage+TWCropping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TWCropping.m"; sourceTree = "<group>"; };
 		31FB6BC61B126D0C0042C409 /* TWUserDefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUserDefaultsHelper.h; sourceTree = "<group>"; };
 		31FB6BC71B126D0C0042C409 /* TWUserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUserDefaultsHelper.m; sourceTree = "<group>"; };
+		31FB6BCB1B126F000042C409 /* TWVideoThumbnailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWVideoThumbnailHelper.h; sourceTree = "<group>"; };
+		31FB6BCC1B126F000042C409 /* TWVideoThumbnailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWVideoThumbnailHelper.m; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -490,6 +493,7 @@
 				31D6DAC91AFA256600432340 /* Protocols */,
 				31FB6B5A1B1080F80042C409 /* TableViewFetchedResultsControllerBinder */,
 				31FB6BC51B126CF90042C409 /* UserDefaults */,
+				31FB6BC91B126EDB0042C409 /* VideoThumbnail */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -930,6 +934,15 @@
 			name = UserDefaults;
 			sourceTree = "<group>";
 		};
+		31FB6BC91B126EDB0042C409 /* VideoThumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6BCB1B126F000042C409 /* TWVideoThumbnailHelper.h */,
+				31FB6BCC1B126F000042C409 /* TWVideoThumbnailHelper.m */,
+			);
+			name = VideoThumbnail;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1159,6 +1172,7 @@
 				319412931AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */,
 				31D645BF1AFD7CFE003B4262 /* UIImage+TWCreateImage.m in Sources */,
 				318395021AF006080077C079 /* TWJSONHelper.m in Sources */,
+				31FB6BCD1B126F000042C409 /* TWVideoThumbnailHelper.m in Sources */,
 				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
 				31D645C71AFE55CE003B4262 /* TWUIImagePickerHelper.m in Sources */,
 				31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */,

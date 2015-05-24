@@ -36,6 +36,7 @@
 #import "TWCoreDataTableViewDataSource.h"
 #import "TWInterfaceOrientationViewControllerDecorator.h"
 #import "TWUserDefaultsHelper.h"
+#import "TWVideoThumbnailHelper.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
