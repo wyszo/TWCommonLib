@@ -53,6 +53,7 @@
 #import "NSMutableURLRequest+TWHttpHeaders.h"
 #import "NSObject+TWLazyInitialization.h"
 #import "NSString+TWTrimming.h"
+#import "UIView+TWXibLoading.h"
 
 // import TWSimpleTableViewDataSource when implementation finished
 

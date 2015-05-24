@@ -62,6 +62,7 @@
 		31FB6BB21B1232950042C409 /* NSObject+TWLazyInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BB11B1232950042C409 /* NSObject+TWLazyInitialization.m */; };
 		31FB6BB71B1233800042C409 /* TWLazyInitializationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BB61B1233800042C409 /* TWLazyInitializationProxy.m */; };
 		31FB6BBB1B1261AE0042C409 /* NSString+TWTrimming.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BBA1B1261AE0042C409 /* NSString+TWTrimming.m */; };
+		31FB6BBF1B1269D40042C409 /* UIView+TWXibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BBE1B1269D40042C409 /* UIView+TWXibLoading.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +191,8 @@
 		31FB6BB61B1233800042C409 /* TWLazyInitializationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWLazyInitializationProxy.m; sourceTree = "<group>"; };
 		31FB6BB91B1261AE0042C409 /* NSString+TWTrimming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TWTrimming.h"; sourceTree = "<group>"; };
 		31FB6BBA1B1261AE0042C409 /* NSString+TWTrimming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TWTrimming.m"; sourceTree = "<group>"; };
+		31FB6BBD1B1269D40042C409 /* UIView+TWXibLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWXibLoading.h"; sourceTree = "<group>"; };
+		31FB6BBE1B1269D40042C409 /* UIView+TWXibLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWXibLoading.m"; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -251,9 +254,10 @@
 		311B79F11AF107E400E97FBC /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				31D645CC1AFE5AC1003B4262 /* FadeAnimations */,
 				313873DF1B076E8C0088CDA7 /* LayerDecoration */,
 				31D645CD1AFE5AC7003B4262 /* Sizes */,
-				31D645CC1AFE5AC1003B4262 /* FadeAnimations */,
+				31FB6BBC1B1269BD0042C409 /* XibLoading */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -891,6 +895,15 @@
 			name = NSString;
 			sourceTree = "<group>";
 		};
+		31FB6BBC1B1269BD0042C409 /* XibLoading */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6BBD1B1269D40042C409 /* UIView+TWXibLoading.h */,
+				31FB6BBE1B1269D40042C409 /* UIView+TWXibLoading.m */,
+			);
+			name = XibLoading;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1122,6 +1135,7 @@
 				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
 				31D645C71AFE55CE003B4262 /* TWUIImagePickerHelper.m in Sources */,
 				31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */,
+				31FB6BBF1B1269D40042C409 /* UIView+TWXibLoading.m in Sources */,
 				31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */,
 				31FB6B601B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m in Sources */,
 				31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */,
