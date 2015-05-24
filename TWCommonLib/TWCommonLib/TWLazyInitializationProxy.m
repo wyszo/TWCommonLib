@@ -10,6 +10,7 @@
 
 @property (nonatomic, strong) id object;
 @property (nonatomic, strong) Class classToInstantiate;
+@property (nonatomic, copy) id (^initBlock)();
 @property (nonatomic, strong) NSInvocation *objectInitInvocation;
 
 @end
@@ -24,19 +25,54 @@
   return self;
 }
 
+- (instancetype)initWithClass:(Class)aClass initBlock:(id (^)())initBlock
+{
+  AssertTrueOrReturnNil(aClass);
+  _classToInstantiate = aClass;
+  _initBlock = initBlock;
+  return self;
+}
+
 - (void)instantiateObject
 {
   AssertTrueOrReturn(self.classToInstantiate);
   self.object = [self.classToInstantiate alloc];
   
-  if (!self.objectInitInvocation) {
-    self.object = [self.object init];
+  if (self.objectInitInvocation) {
+    [self instantiateObjectWithInvocation];
   }
   else {
-    [self.objectInitInvocation invokeWithTarget:self.object];
-    [self.objectInitInvocation getReturnValue:&_object];
-    self.objectInitInvocation = nil;
+    [self instantiateObjectWithInitBlockOrInit];
   }
+}
+
+- (void)instantiateObjectWithInitBlockOrInit
+{
+  if (self.initBlock) {
+    [self instantiateObjectWithInitBlock];
+  }
+  else {
+    self.object = [self.object init];
+  }
+}
+
+- (void)instantiateObjectWithInitBlock
+{
+  AssertTrueOrReturn(self.initBlock);
+  AssertTrueOrReturn(self.classToInstantiate);
+  
+  id object = self.initBlock();
+  AssertTrueOrReturn([object isKindOfClass:self.classToInstantiate]);
+  self.object = object;
+}
+
+- (void)instantiateObjectWithInvocation
+{
+  AssertTrueOrReturn(self.objectInitInvocation);
+  
+  [self.objectInitInvocation invokeWithTarget:self.object];
+  [self.objectInitInvocation getReturnValue:&_object];
+  self.objectInitInvocation = nil;
 }
 
 #pragma mark - Forwarding
