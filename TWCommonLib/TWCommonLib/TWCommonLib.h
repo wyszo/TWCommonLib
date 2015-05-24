@@ -34,6 +34,7 @@
 #import "TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h"
 #import "TWUIImagePickerExtendedEventsObserver.h"
 #import "TWCoreDataTableViewDataSource.h"
+#import "TWInterfaceOrientationViewControllerDecorator.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"

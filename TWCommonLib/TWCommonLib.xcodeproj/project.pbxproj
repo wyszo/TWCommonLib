@@ -57,6 +57,8 @@
 		31FB6B5F1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B5C1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m */; };
 		31FB6B601B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B5E1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m */; };
 		31FB6B681B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B671B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m */; };
+		31FB6B6D1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B6C1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m */; };
+		31FB6B711B11C5700042C409 /* TWInterfaceOrientationClassStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B701B11C5700042C409 /* TWInterfaceOrientationClassStubs.m */; };
 		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
 /* End PBXBuildFile section */
 
@@ -175,6 +177,10 @@
 		31FB6B5E1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TWTableViewFetchedResultsControllerBinder+Private.m"; sourceTree = "<group>"; };
 		31FB6B661B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+TWHttpHeaders.h"; sourceTree = "<group>"; };
 		31FB6B671B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+TWHttpHeaders.m"; sourceTree = "<group>"; };
+		31FB6B6B1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWInterfaceOrientationViewControllerDecorator.h; sourceTree = "<group>"; };
+		31FB6B6C1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWInterfaceOrientationViewControllerDecorator.m; sourceTree = "<group>"; };
+		31FB6B6F1B11C5700042C409 /* TWInterfaceOrientationClassStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWInterfaceOrientationClassStubs.h; sourceTree = "<group>"; };
+		31FB6B701B11C5700042C409 /* TWInterfaceOrientationClassStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWInterfaceOrientationClassStubs.m; sourceTree = "<group>"; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -343,9 +349,9 @@
 			isa = PBXGroup;
 			children = (
 				318394821AED9E2A0077C079 /* TWCommonLib */,
-				311B7A071AF3F2A200E97FBC /* TWCommonLibTests */,
 				318394811AED9E2A0077C079 /* Products */,
 				5B4955590A51240DDED0D614 /* Pods */,
+				311B7A071AF3F2A200E97FBC /* TWCommonLibTests */,
 				3204F5FC6F235B183EDE0409 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				318394B11AEDA8370077C079 /* DataSources */,
+				31FB6B691B11C47F0042C409 /* Decorators */,
 				318394B61AEDA9CC0077C079 /* Delegates */,
 				318394B51AEDA8610077C079 /* DispatchMacros */,
 				311B79E71AF0EA3B00E97FBC /* LocationUpdatesManager */,
@@ -810,6 +817,33 @@
 			name = NSMutableURLRequest;
 			sourceTree = "<group>";
 		};
+		31FB6B691B11C47F0042C409 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6B6A1B11C4890042C409 /* InterfaceOrientationDecorator */,
+			);
+			name = Decorators;
+			sourceTree = "<group>";
+		};
+		31FB6B6A1B11C4890042C409 /* InterfaceOrientationDecorator */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6B6E1B11C52D0042C409 /* Private */,
+				31FB6B6B1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.h */,
+				31FB6B6C1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m */,
+			);
+			name = InterfaceOrientationDecorator;
+			sourceTree = "<group>";
+		};
+		31FB6B6E1B11C52D0042C409 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				31FB6B6F1B11C5700042C409 /* TWInterfaceOrientationClassStubs.h */,
+				31FB6B701B11C5700042C409 /* TWInterfaceOrientationClassStubs.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
 		3204F5FC6F235B183EDE0409 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1026,6 +1060,7 @@
 				3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
 				31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */,
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
+				31FB6B6D1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m in Sources */,
 				31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */,
 				313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */,
 				31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */,
@@ -1064,6 +1099,7 @@
 				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
+				31FB6B711B11C5700042C409 /* TWInterfaceOrientationClassStubs.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
