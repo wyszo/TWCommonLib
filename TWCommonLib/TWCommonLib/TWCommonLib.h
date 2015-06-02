@@ -37,6 +37,7 @@
 #import "TWInterfaceOrientationViewControllerDecorator.h"
 #import "TWUserDefaultsHelper.h"
 #import "TWVideoThumbnailHelper.h"
+#import "TWExtendedMPMoviePlayerViewController.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"

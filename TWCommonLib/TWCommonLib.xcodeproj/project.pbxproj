@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2191FDED734A6C8015795DDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3138C917A5D6846C5FBC483 /* libPods.a */; };
+		310394F11B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 310394F01B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m */; };
 		3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3108E7841AF7BA3700E02C07 /* TWOrientationChangeDetector.m */; };
 		311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79E91AF0EA7F00E97FBC /* TWLocationUpdatesManager.m */; };
 		311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */; };
@@ -81,6 +82,8 @@
 
 /* Begin PBXFileReference section */
 		3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		310394EF1B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWExtendedMPMoviePlayerViewController.h; sourceTree = "<group>"; };
+		310394F01B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWExtendedMPMoviePlayerViewController.m; sourceTree = "<group>"; };
 		3108E7831AF7BA3700E02C07 /* TWOrientationChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetector.h; sourceTree = "<group>"; };
 		3108E7841AF7BA3700E02C07 /* TWOrientationChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOrientationChangeDetector.m; sourceTree = "<group>"; };
 		311B79E81AF0EA7F00E97FBC /* TWLocationUpdatesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWLocationUpdatesManager.h; sourceTree = "<group>"; };
@@ -232,6 +235,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310394EE1B1E113A00D4D81E /* MoviePlayerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				310394EF1B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.h */,
+				310394F01B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m */,
+			);
+			name = MoviePlayerViewController;
+			sourceTree = "<group>";
+		};
 		3108E7811AF7B9F100E02C07 /* Observers */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +501,7 @@
 				318394FF1AF005EE0077C079 /* JSONHelper */,
 				31BFFB721AF8348900645566 /* MapKit */,
 				31BFFB891AF9532E00645566 /* Mappings */,
+				310394EE1B1E113A00D4D81E /* MoviePlayerViewController */,
 				311B79F91AF1470500E97FBC /* ObjectLifetime */,
 				31D6DAC91AFA256600432340 /* Protocols */,
 				31FB6B5A1B1080F80042C409 /* TableViewFetchedResultsControllerBinder */,
@@ -1173,6 +1186,7 @@
 				31D645BF1AFD7CFE003B4262 /* UIImage+TWCreateImage.m in Sources */,
 				318395021AF006080077C079 /* TWJSONHelper.m in Sources */,
 				31FB6BCD1B126F000042C409 /* TWVideoThumbnailHelper.m in Sources */,
+				310394F11B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m in Sources */,
 				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
 				31D645C71AFE55CE003B4262 /* TWUIImagePickerHelper.m in Sources */,
 				31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */,
