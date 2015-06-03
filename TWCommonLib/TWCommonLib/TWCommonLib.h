@@ -38,6 +38,7 @@
 #import "TWUserDefaultsHelper.h"
 #import "TWVideoThumbnailHelper.h"
 #import "TWExtendedMPMoviePlayerViewController.h"
+#import "TWTableViewEditingStyleDelegate.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
