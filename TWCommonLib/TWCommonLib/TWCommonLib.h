@@ -59,6 +59,7 @@
 #import "NSString+TWTrimming.h"
 #import "UIView+TWXibLoading.h"
 #import "UIImage+TWCropping.h"
+#import "UIViewController+Navbar.h"
 
 // import TWSimpleTableViewDataSource when implementation finished
 

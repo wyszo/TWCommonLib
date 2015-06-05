@@ -15,6 +15,7 @@
 		311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */; };
 		311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A001AF26FA200E97FBC /* NSSet+TWSetByRemoving.m */; };
 		311B7A0B1AF3F2A300E97FBC /* SimpleTableViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A0A1AF3F2A300E97FBC /* SimpleTableViewSpec.m */; };
+		3129035E1B2220D600C730DA /* UIViewController+Navbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3129035D1B2220D600C730DA /* UIViewController+Navbar.m */; };
 		312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 312D5FCE1AFABD6200813EE8 /* TWDataWriteHelper.m */; };
 		313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873DD1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m */; };
 		313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873E11B076EA20088CDA7 /* UIView+LayerDecoration.m */; };
@@ -98,6 +99,8 @@
 		311B7A061AF3F2A200E97FBC /* TWCommonLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWCommonLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		311B7A091AF3F2A200E97FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311B7A0A1AF3F2A300E97FBC /* SimpleTableViewSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewSpec.m; sourceTree = "<group>"; };
+		3129035C1B2220D600C730DA /* UIViewController+Navbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navbar.h"; sourceTree = "<group>"; };
+		3129035D1B2220D600C730DA /* UIViewController+Navbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navbar.m"; sourceTree = "<group>"; };
 		312D5FCD1AFABD6200813EE8 /* TWDataWriteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWDataWriteHelper.h; sourceTree = "<group>"; };
 		312D5FCE1AFABD6200813EE8 /* TWDataWriteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWDataWriteHelper.m; sourceTree = "<group>"; };
 		313873DC1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextViewWithMaxLengthDelegate.h; sourceTree = "<group>"; };
@@ -346,6 +349,24 @@
 				311B7A0A1AF3F2A300E97FBC /* SimpleTableViewSpec.m */,
 			);
 			name = TestSpecs;
+			sourceTree = "<group>";
+		};
+		3129035A1B2220A200C730DA /* PerformSegue */ = {
+			isa = PBXGroup;
+			children = (
+				31D645D91B0271D7003B4262 /* UIViewController+PerformSegueMapping.h */,
+				31D645DA1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m */,
+			);
+			name = PerformSegue;
+			sourceTree = "<group>";
+		};
+		3129035B1B2220B100C730DA /* Navbar */ = {
+			isa = PBXGroup;
+			children = (
+				3129035C1B2220D600C730DA /* UIViewController+Navbar.h */,
+				3129035D1B2220D600C730DA /* UIViewController+Navbar.m */,
+			);
+			name = Navbar;
 			sourceTree = "<group>";
 		};
 		312D5FCC1AFABD5000813EE8 /* DataWriteHelper */ = {
@@ -795,8 +816,8 @@
 		31D645D81B0271A3003B4262 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				31D645D91B0271D7003B4262 /* UIViewController+PerformSegueMapping.h */,
-				31D645DA1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m */,
+				3129035B1B2220B100C730DA /* Navbar */,
+				3129035A1B2220A200C730DA /* PerformSegue */,
 			);
 			name = UIViewController;
 			sourceTree = "<group>";
@@ -1238,6 +1259,7 @@
 				313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */,
 				31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */,
 				31FB6B5F1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m in Sources */,
+				3129035E1B2220D600C730DA /* UIViewController+Navbar.m in Sources */,
 				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
