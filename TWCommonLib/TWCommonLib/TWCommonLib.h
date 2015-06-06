@@ -60,6 +60,7 @@
 #import "UIView+TWXibLoading.h"
 #import "UIImage+TWCropping.h"
 #import "UIViewController+Navbar.h"
+#import "UITextView+TWPadding.h"
 
 // import TWSimpleTableViewDataSource when implementation finished
 
