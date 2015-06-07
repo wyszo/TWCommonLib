@@ -38,6 +38,16 @@
   return ![self textLengthExceedsMaxLength:newTextLength];
 }
 
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+  CallBlock(self.textViewDidBeginEditing);
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+  CallBlock(self.textViewDidEndEditing);
+}
+
 - (void)textViewDidChange:(UITextView *)textView
 {
   CallBlock(self.textDidChange, textView.text);
