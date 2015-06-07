@@ -17,6 +17,7 @@
 		311B7A0B1AF3F2A300E97FBC /* SimpleTableViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B7A0A1AF3F2A300E97FBC /* SimpleTableViewSpec.m */; };
 		3129035E1B2220D600C730DA /* UIViewController+Navbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3129035D1B2220D600C730DA /* UIViewController+Navbar.m */; };
 		312903621B23982100C730DA /* UITextView+TWPadding.m in Sources */ = {isa = PBXBuildFile; fileRef = 312903611B23982100C730DA /* UITextView+TWPadding.m */; };
+		312903671B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 312903661B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.m */; };
 		312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 312D5FCE1AFABD6200813EE8 /* TWDataWriteHelper.m */; };
 		313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873DD1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m */; };
 		313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873E11B076EA20088CDA7 /* UIView+LayerDecoration.m */; };
@@ -104,6 +105,8 @@
 		3129035D1B2220D600C730DA /* UIViewController+Navbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navbar.m"; sourceTree = "<group>"; };
 		312903601B23982100C730DA /* UITextView+TWPadding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+TWPadding.h"; sourceTree = "<group>"; };
 		312903611B23982100C730DA /* UITextView+TWPadding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TWPadding.m"; sourceTree = "<group>"; };
+		312903651B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextViewWithCharacterLimitLabelDelegate.h; sourceTree = "<group>"; };
+		312903661B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTextViewWithCharacterLimitLabelDelegate.m; sourceTree = "<group>"; };
 		312D5FCD1AFABD6200813EE8 /* TWDataWriteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWDataWriteHelper.h; sourceTree = "<group>"; };
 		312D5FCE1AFABD6200813EE8 /* TWDataWriteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWDataWriteHelper.m; sourceTree = "<group>"; };
 		313873DC1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextViewWithMaxLengthDelegate.h; sourceTree = "<group>"; };
@@ -382,6 +385,24 @@
 			name = UITextView;
 			sourceTree = "<group>";
 		};
+		312903631B24B9E700C730DA /* MaxLength */ = {
+			isa = PBXGroup;
+			children = (
+				313873DC1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.h */,
+				313873DD1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m */,
+			);
+			name = MaxLength;
+			sourceTree = "<group>";
+		};
+		312903641B24BA2400C730DA /* CharacterLimitLabel */ = {
+			isa = PBXGroup;
+			children = (
+				312903651B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.h */,
+				312903661B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.m */,
+			);
+			name = CharacterLimitLabel;
+			sourceTree = "<group>";
+		};
 		312D5FCC1AFABD5000813EE8 /* DataWriteHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,8 +415,8 @@
 		313873DB1B0768880088CDA7 /* TextView */ = {
 			isa = PBXGroup;
 			children = (
-				313873DC1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.h */,
-				313873DD1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m */,
+				312903641B24BA2400C730DA /* CharacterLimitLabel */,
+				312903631B24B9E700C730DA /* MaxLength */,
 			);
 			name = TextView;
 			sourceTree = "<group>";
@@ -1230,6 +1251,7 @@
 				312903621B23982100C730DA /* UITextView+TWPadding.m in Sources */,
 				31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */,
 				318394891AED9E2A0077C079 /* AppDelegate.m in Sources */,
+				312903671B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.m in Sources */,
 				31FB6BBB1B1261AE0042C409 /* NSString+TWTrimming.m in Sources */,
 				31FB6B6D1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m in Sources */,
 				31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */,
