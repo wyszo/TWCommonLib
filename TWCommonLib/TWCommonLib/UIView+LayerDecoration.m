@@ -6,9 +6,9 @@
 #import <KZAsserts.h>
 
 
-@implementation UIView (LayerDecoration)
+@implementation UIView (TWLayerDecoration)
 
-- (void)addBorderWithWidth:(CGFloat)borderWidth color:(UIColor *)borderColor
+- (void)tw_addBorderWithWidth:(CGFloat)borderWidth color:(UIColor *)borderColor
 {
   AssertTrueOrReturn(borderColor);
   AssertTrueOrReturn(borderWidth >= 0);
@@ -17,7 +17,7 @@
   self.layer.borderColor = borderColor.CGColor;
 }
 
-- (void)setCornerRadius:(CGFloat)cornerRadius
+- (void)tw_setCornerRadius:(CGFloat)cornerRadius
 {
   AssertTrueOrReturn(cornerRadius >= 0);
   self.layer.cornerRadius = cornerRadius;

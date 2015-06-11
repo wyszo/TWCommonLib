@@ -2,9 +2,9 @@
 //  TWCommonLib
 //
 
-@interface UIView (LayerDecoration)
+@interface UIView (TWLayerDecoration)
 
-- (void)addBorderWithWidth:(CGFloat)borderWidth color:(UIColor *)borderColor;
-- (void)setCornerRadius:(CGFloat)cornerRadius;
+- (void)tw_addBorderWithWidth:(CGFloat)borderWidth color:(UIColor *)borderColor;
+- (void)tw_setCornerRadius:(CGFloat)cornerRadius;
 
 @end
