@@ -64,5 +64,6 @@
 #import "UIImage+TWCropping.h"
 #import "UIViewController+Navbar.h"
 #import "UITextView+TWPadding.h"
+#import "UIView+TWEmbedding.h"
 
 #endif
