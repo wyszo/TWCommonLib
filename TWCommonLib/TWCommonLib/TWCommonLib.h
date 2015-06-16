@@ -34,6 +34,7 @@
 #import "TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h"
 #import "TWUIImagePickerExtendedEventsObserver.h"
 #import "TWCoreDataTableViewDataSource.h"
+#import "TWSimpleCollectionViewDataSource.h"
 #import "TWInterfaceOrientationViewControllerDecorator.h"
 #import "TWUserDefaultsHelper.h"
 #import "TWVideoThumbnailHelper.h"
@@ -62,8 +63,5 @@
 #import "UIImage+TWCropping.h"
 #import "UIViewController+Navbar.h"
 #import "UITextView+TWPadding.h"
-
-// import TWSimpleTableViewDataSource when implementation finished
-
 
 #endif
