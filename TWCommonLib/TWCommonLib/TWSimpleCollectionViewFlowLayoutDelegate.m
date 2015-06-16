@@ -17,7 +17,7 @@
 - (instancetype)initWithCellSize:(CGSize)cellSize attachingToCollectionView:(UICollectionView *)collectionView
 {
   AssertTrueOrReturnNil(collectionView);
-  AssertTrueOrReturnNil(collectionView.delegate == nil);
+  AssertTrueOrReturnNil(collectionView.delegate == nil && @"Collection view delegate is already set - forbidding this as it's probably not expected nor desired");
   
   self = [super init];
   if (self) {

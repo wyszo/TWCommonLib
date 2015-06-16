@@ -12,7 +12,7 @@
 - (instancetype)initAttachingToCollectionView:(UICollectionView *)collectionView;
 {
   AssertTrueOrReturnNil(collectionView);
-  AssertTrueOrReturnNil(collectionView.dataSource == nil);
+  AssertTrueOrReturnNil(collectionView.dataSource == nil && @"Collection view dataSource is already set - forbidding this as it's probably not expected nor desired");
   
   self = [super init];
   if (self) {
