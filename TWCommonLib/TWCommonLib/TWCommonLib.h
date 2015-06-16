@@ -41,6 +41,7 @@
 #import "TWExtendedMPMoviePlayerViewController.h"
 #import "TWTableViewEditingStyleDelegate.h"
 #import "TWTextViewWithCharacterLimitLabelDelegate.h"
+#import "TWSimpleCollectionViewFlowLayoutDelegate.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
