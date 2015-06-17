@@ -33,4 +33,9 @@
   return CGSizeMake(self.cellSize.width, self.cellSize.height);
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+  CallBlock(self.cellSelectedBlock, indexPath);
+}
+
 @end
