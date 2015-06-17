@@ -24,6 +24,8 @@ _Pragma("clang diagnostic pop") \
 
 #define NOOP ; // No operation
 
+#define ObjectOrNull(object) ((object != nil) ? (id)(object) : (id)([NSNull null]))
+
 /**
  Useful when we want to have selector as NSString but we still want to get an error if a selector is not implemented
  */
