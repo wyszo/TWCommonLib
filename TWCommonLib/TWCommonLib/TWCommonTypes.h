@@ -9,6 +9,7 @@
 
 
 typedef void (^VoidBlock)();
+typedef void (^VoidBlockWithError)(NSError *error);
 typedef void (^BlockWithBoolParameter)(BOOL);
 typedef void (^BlockWithFloatParameter)(CGFloat);
 typedef void (^CellAtIndexPathBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
