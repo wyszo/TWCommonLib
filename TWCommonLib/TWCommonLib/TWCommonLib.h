@@ -34,12 +34,14 @@
 #import "TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h"
 #import "TWUIImagePickerExtendedEventsObserver.h"
 #import "TWCoreDataTableViewDataSource.h"
+#import "TWSimpleCollectionViewDataSource.h"
 #import "TWInterfaceOrientationViewControllerDecorator.h"
 #import "TWUserDefaultsHelper.h"
 #import "TWVideoThumbnailHelper.h"
 #import "TWExtendedMPMoviePlayerViewController.h"
 #import "TWTableViewEditingStyleDelegate.h"
 #import "TWTextViewWithCharacterLimitLabelDelegate.h"
+#import "TWSimpleCollectionViewFlowLayoutDelegate.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
@@ -62,8 +64,6 @@
 #import "UIImage+TWCropping.h"
 #import "UIViewController+Navbar.h"
 #import "UITextView+TWPadding.h"
-
-// import TWSimpleTableViewDataSource when implementation finished
-
+#import "UIView+TWEmbedding.h"
 
 #endif

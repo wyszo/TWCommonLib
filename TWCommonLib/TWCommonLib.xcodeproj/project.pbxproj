@@ -23,6 +23,9 @@
 		313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873E11B076EA20088CDA7 /* UIView+LayerDecoration.m */; };
 		313873E91B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873E81B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m */; };
 		313874721B09ADF80088CDA7 /* TWScrollViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 313874711B09ADF80088CDA7 /* TWScrollViewDelegate.m */; };
+		314B6F2D1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 314B6F2C1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m */; };
+		314B6F321B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 314B6F311B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m */; };
+		314B6F361B3065500051E00D /* UIView+TWEmbedding.m in Sources */ = {isa = PBXBuildFile; fileRef = 314B6F351B3065500051E00D /* UIView+TWEmbedding.m */; };
 		316D86BE1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 316D86BD1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
@@ -118,6 +121,12 @@
 		313874701B09ADF80088CDA7 /* TWScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWScrollViewDelegate.h; sourceTree = "<group>"; };
 		313874711B09ADF80088CDA7 /* TWScrollViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWScrollViewDelegate.m; sourceTree = "<group>"; };
 		314529611AF0B3CB00C33BC1 /* TWCommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonMacros.h; sourceTree = "<group>"; };
+		314B6F2B1B30467B0051E00D /* TWSimpleCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleCollectionViewDataSource.h; sourceTree = "<group>"; };
+		314B6F2C1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleCollectionViewDataSource.m; sourceTree = "<group>"; };
+		314B6F301B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleCollectionViewFlowLayoutDelegate.h; sourceTree = "<group>"; };
+		314B6F311B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleCollectionViewFlowLayoutDelegate.m; sourceTree = "<group>"; };
+		314B6F341B3065500051E00D /* UIView+TWEmbedding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWEmbedding.h"; sourceTree = "<group>"; };
+		314B6F351B3065500051E00D /* UIView+TWEmbedding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWEmbedding.m"; sourceTree = "<group>"; };
 		316D86BC1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTableViewEditingStyleDelegate.h; sourceTree = "<group>"; };
 		316D86BD1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTableViewEditingStyleDelegate.m; sourceTree = "<group>"; };
 		31815F5F1B0B35010062E7C0 /* TWConfigurableFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWConfigurableFromDictionary.h; sourceTree = "<group>"; };
@@ -287,6 +296,7 @@
 		311B79F11AF107E400E97FBC /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				314B6F331B3065110051E00D /* EmbedingView */,
 				31D645CC1AFE5AC1003B4262 /* FadeAnimations */,
 				313873DF1B076E8C0088CDA7 /* LayerDecoration */,
 				31D645CD1AFE5AC7003B4262 /* Sizes */,
@@ -439,6 +449,41 @@
 			name = ScrollView;
 			sourceTree = "<group>";
 		};
+		314B6F2A1B3046210051E00D /* SimpleCollectionViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				314B6F2B1B30467B0051E00D /* TWSimpleCollectionViewDataSource.h */,
+				314B6F2C1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m */,
+			);
+			name = SimpleCollectionViewDataSource;
+			sourceTree = "<group>";
+		};
+		314B6F2E1B304B3B0051E00D /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				314B6F2F1B304B470051E00D /* SimpleFlowLayoutDelegate */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		314B6F2F1B304B470051E00D /* SimpleFlowLayoutDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				314B6F301B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.h */,
+				314B6F311B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m */,
+			);
+			name = SimpleFlowLayoutDelegate;
+			sourceTree = "<group>";
+		};
+		314B6F331B3065110051E00D /* EmbedingView */ = {
+			isa = PBXGroup;
+			children = (
+				314B6F341B3065500051E00D /* UIView+TWEmbedding.h */,
+				314B6F351B3065500051E00D /* UIView+TWEmbedding.m */,
+			);
+			name = EmbedingView;
+			sourceTree = "<group>";
+		};
 		316D86BA1B1F9C70003874F4 /* SimpleDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,9 +583,10 @@
 		318394B11AEDA8370077C079 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				319412891AF40F2400D676A3 /* ArrayTableView */,
+				319412891AF40F2400D676A3 /* ArrayTableViewDataSource */,
 				31FB6B4D1B0E856A0042C409 /* CoreDataTableViewDataSource */,
-				3194128A1AF40F3400D676A3 /* SimpleTableView */,
+				314B6F2A1B3046210051E00D /* SimpleCollectionViewDataSource */,
+				3194128A1AF40F3400D676A3 /* SimpleTableViewDataSource */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -557,6 +603,7 @@
 		318394B61AEDA9CC0077C079 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				314B6F2E1B304B3B0051E00D /* CollectionView */,
 				31D6463C1B0669E3003B4262 /* MapView */,
 				31D6463B1B0669DC003B4262 /* TableView */,
 				313873DB1B0768880088CDA7 /* TextView */,
@@ -596,22 +643,22 @@
 			name = JSONHelper;
 			sourceTree = "<group>";
 		};
-		319412891AF40F2400D676A3 /* ArrayTableView */ = {
+		319412891AF40F2400D676A3 /* ArrayTableViewDataSource */ = {
 			isa = PBXGroup;
 			children = (
 				318394AB1AEDA1850077C079 /* TWArrayTableViewDataSource.h */,
 				318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */,
 			);
-			name = ArrayTableView;
+			name = ArrayTableViewDataSource;
 			sourceTree = "<group>";
 		};
-		3194128A1AF40F3400D676A3 /* SimpleTableView */ = {
+		3194128A1AF40F3400D676A3 /* SimpleTableViewDataSource */ = {
 			isa = PBXGroup;
 			children = (
 				3194128B1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.h */,
 				3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */,
 			);
-			name = SimpleTableView;
+			name = SimpleTableViewDataSource;
 			sourceTree = "<group>";
 		};
 		3194128E1AF4106A00D676A3 /* UI Components */ = {
@@ -1246,7 +1293,9 @@
 			files = (
 				31FB6BB21B1232950042C409 /* NSObject+TWLazyInitialization.m in Sources */,
 				31BFFB9F1AF9841C00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m in Sources */,
+				314B6F2D1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m in Sources */,
 				31FB6BC41B126B260042C409 /* UIImage+TWCropping.m in Sources */,
+				314B6F361B3065500051E00D /* UIView+TWEmbedding.m in Sources */,
 				3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
 				312903621B23982100C730DA /* UITextView+TWPadding.m in Sources */,
 				31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */,
@@ -1272,6 +1321,7 @@
 				31FB6BBF1B1269D40042C409 /* UIView+TWXibLoading.m in Sources */,
 				316D86BE1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m in Sources */,
 				31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */,
+				314B6F321B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m in Sources */,
 				31FB6B601B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m in Sources */,
 				31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,

@@ -6,7 +6,7 @@
 #define TWCommonLib_TWCommonMacros_h
 
 
-// Inside methods
+#pragma mark -  Inside methods
 
 #define CallBlock(block, ...) (block ? block(__VA_ARGS__) : nil);
 #define defineWeakSelf() __weak typeof(self) weakSelf = self
@@ -22,25 +22,29 @@ Code; \
 _Pragma("clang diagnostic pop") \
 } while (0)
 
+#define NOOP ; // No operation
+
+#define ObjectOrNull(object) ((object != nil) ? (id)(object) : (id)([NSNull null]))
+
 /**
  Useful when we want to have selector as NSString but we still want to get an error if a selector is not implemented
  */
 #define SelectorString(methodName) NSStringFromSelector(@selector(methodName))
 
 
-// Inside methods - assertions
+#pragma mark - Assertions inside methods
 
 #define NOT_IMPLEMENTED_YET_RETURN AssertTrueOrReturn(NO && @"Not implemented yet");
 #define NOT_IMPLEMENTED_YET_RETURN_NIL AssertTrueOrReturnNil(NO && @"Not implemented yet");
 
 
-// Inside class interface definition
+#pragma mark - Inside class interface definition
 
 #define NEW_AND_INIT_UNAVAILABLE + (instancetype)new __unavailable; - (instancetype)init __unavailable;
 #define SHARED_INSTANCE_GENERATE_INTERFACE + (instancetype)sharedInstance;
 
 
-// Inside class implementation
+#pragma mark - Inside class implementation
 
 #define SHARED_INSTANCE_GENERATE_IMPLEMENTATION \
 + (instancetype)sharedInstance \
@@ -52,5 +56,6 @@ _Pragma("clang diagnostic pop") \
   }); \
   return sharedInstance; \
 }
+
 
 #endif

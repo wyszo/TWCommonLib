@@ -4,6 +4,7 @@
 
 #import <KZAsserts/KZAsserts.h>
 #import "TWSimpleTableViewDelegate.h"
+#import "TWCommonMacros.h"
 
 
 @implementation TWSimpleTableViewDelegate
@@ -23,9 +24,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (self.cellSelectedBlock) {
-    self.cellSelectedBlock(indexPath);
-  }
+  CallBlock(self.cellSelectedBlock, indexPath);
   
   if (self.deselectCellOnTouch) {
     [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
