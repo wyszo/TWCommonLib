@@ -42,6 +42,7 @@
 #import "TWTableViewEditingStyleDelegate.h"
 #import "TWTextViewWithCharacterLimitLabelDelegate.h"
 #import "TWSimpleCollectionViewFlowLayoutDelegate.h"
+#import "TWClassMethodCopyHelper.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
