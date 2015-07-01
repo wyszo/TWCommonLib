@@ -9,4 +9,6 @@
 
 + (UIAlertView *)blockingAlertWithTitle:(NSString *)title message:(NSString *)message;
 
++ (UIAlertView *)showTwoButtonsAlertViewWithTitle:(NSString *)title message:(NSString *)message secondaryButtonTitle:(NSString *)cancelTitle action:(void (^)())cancelAction defaultButtonTitle:(NSString *)okTitle action:(void (^)())okAction;
+
 @end
