@@ -38,6 +38,7 @@
 		319412941AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */; };
 		319412971AF412E000D676A3 /* libPods-KZAsserts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 319412961AF412E000D676A3 /* libPods-KZAsserts.a */; };
 		319412981AF412FD00D676A3 /* TWSimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */; };
+		31A282061B48657500D38D5A /* TWPathLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A282051B48657500D38D5A /* TWPathLocator.m */; };
 		31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */; };
 		31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB71B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m */; };
 		31A5CDBE1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */; };
@@ -152,6 +153,8 @@
 		319412911AF410AC00D676A3 /* TWSimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewCell.h; sourceTree = "<group>"; };
 		319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewCell.m; sourceTree = "<group>"; };
 		319412961AF412E000D676A3 /* libPods-KZAsserts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-KZAsserts.a"; path = "Pods/build/Debug-iphoneos/libPods-KZAsserts.a"; sourceTree = "<group>"; };
+		31A282041B48657500D38D5A /* TWPathLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPathLocator.h; sourceTree = "<group>"; };
+		31A282051B48657500D38D5A /* TWPathLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPathLocator.m; sourceTree = "<group>"; };
 		31A5CDAE1B0E3D1F0007D92E /* TWObjectCountProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWObjectCountProtocol.h; sourceTree = "<group>"; };
 		31A5CDB11B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWShowOverlayWhenTableViewEmptyBehaviour.h; sourceTree = "<group>"; };
 		31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWShowOverlayWhenTableViewEmptyBehaviour.m; sourceTree = "<group>"; };
@@ -630,6 +633,7 @@
 				31FB03AA1B3DDF7300539B50 /* MethodCopying */,
 				310394EE1B1E113A00D4D81E /* MoviePlayerViewController */,
 				311B79F91AF1470500E97FBC /* ObjectLifetime */,
+				31A282031B48654C00D38D5A /* PathsLocator */,
 				31D6DAC91AFA256600432340 /* Protocols */,
 				31FB6B5A1B1080F80042C409 /* TableViewFetchedResultsControllerBinder */,
 				31FB6BC51B126CF90042C409 /* UserDefaults */,
@@ -688,6 +692,15 @@
 				319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */,
 			);
 			name = SimpleTableView;
+			sourceTree = "<group>";
+		};
+		31A282031B48654C00D38D5A /* PathsLocator */ = {
+			isa = PBXGroup;
+			children = (
+				31A282041B48657500D38D5A /* TWPathLocator.h */,
+				31A282051B48657500D38D5A /* TWPathLocator.m */,
+			);
+			name = PathsLocator;
 			sourceTree = "<group>";
 		};
 		31A5CDAF1B0E3DB40007D92E /* Behaviours */ = {
@@ -1335,6 +1348,7 @@
 				316D86BE1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m in Sources */,
 				31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */,
 				314B6F321B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m in Sources */,
+				31A282061B48657500D38D5A /* TWPathLocator.m in Sources */,
 				31FB6B601B1081410042C409 /* TWTableViewFetchedResultsControllerBinder+Private.m in Sources */,
 				31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,

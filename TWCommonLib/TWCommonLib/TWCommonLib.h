@@ -44,6 +44,8 @@
 #import "TWSimpleCollectionViewFlowLayoutDelegate.h"
 #import "TWClassMethodCopyHelper.h"
 #import "TWAlertFactory.h"
+#import "TWPathLocator.h"
+#import "TWTableViewFetchedResultsControllerBinder.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
