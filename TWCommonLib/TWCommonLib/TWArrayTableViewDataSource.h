@@ -13,6 +13,8 @@
 
 @property (copy, nonatomic) CellAtIndexPathBlock configureCellBlock;
 
+// TODO: provide initializers that allow to have more than one type of cells
+
 /**
  For tableViews with cells from xib
  */
