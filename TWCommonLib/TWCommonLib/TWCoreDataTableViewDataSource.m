@@ -11,6 +11,7 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (copy, nonatomic) void (^configureCellBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 @property (strong, nonatomic) NSString *cellReuseIdentifier;
+@property (strong, nonatomic) CellReuseMappingBlock cellReuseMappingBlock;
 
 @end
 
@@ -19,9 +20,26 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithCellreuseIdentifier:(NSString *)cellReuseIdentifier
-                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock;
+- (instancetype)initWithCellReuseMappingBlock:(CellReuseMappingBlock)cellReuseMappingBlock
+                           configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
 {
+  AssertTrueOrReturnNil(cellReuseMappingBlock);
+  AssertTrueOrReturnNil(configureCellBlock);
+  
+  self = [super init];
+  if (self) {
+    _cellReuseMappingBlock = cellReuseMappingBlock;
+    _configureCellBlock = configureCellBlock;
+  }
+  return self;
+}
+
+- (instancetype)initWithCellreuseIdentifier:(NSString *)cellReuseIdentifier
+                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
+{
+  AssertTrueOrReturnNil(cellReuseIdentifier.length);
+  AssertTrueOrReturnNil(configureCellBlock);
+  
   self = [super init];
   if (self) {
     _configureCellBlock = configureCellBlock;
@@ -55,12 +73,32 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellReuseIdentifier];
+  NSString *reuseIdentifier = [self reuseIdentifierForCellAtIndexPath:indexPath];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+  AssertTrueOrReturnNil(cell);
   
   if (self.configureCellBlock) {
     self.configureCellBlock(cell, indexPath);
   }
   return cell;
+}
+
+- (NSString *)reuseIdentifierForCellAtIndexPath:(NSIndexPath *)indexPath
+{
+  AssertTrueOrReturnNil(indexPath);
+  NSString *reuseIdentifier;
+ 
+  if (self.cellReuseIdentifier.length) {
+    AssertTrueOr(self.cellReuseMappingBlock == nil,);
+    reuseIdentifier = self.cellReuseIdentifier;
+  }
+  else {
+    AssertTrueOr(self.cellReuseIdentifier.length == 0,);
+    AssertTrueOrReturnNil(self.cellReuseMappingBlock);
+    reuseIdentifier = self.cellReuseMappingBlock(indexPath);
+  }
+  AssertTrueOrReturnNil(reuseIdentifier.length);
+  return reuseIdentifier;
 }
 
 #pragma mark - Deleting cells
