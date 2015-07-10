@@ -110,6 +110,7 @@
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
+  // TODO: simply return [fetchedResultsController objectAtIndexPath:]
   id <NSFetchedResultsSectionInfo> sectionInfo = [self sectionInfoForSection:indexPath.section];
   AssertTrueOrReturnNil(sectionInfo.objects.count > indexPath.row);
   return sectionInfo.objects[indexPath.row];
