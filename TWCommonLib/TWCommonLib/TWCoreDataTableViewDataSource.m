@@ -3,6 +3,7 @@
 //
 
 #import "TWCoreDataTableViewDataSource.h"
+#import "TWCommonMacros.h"
 #import <KZAsserts.h>
 
 
@@ -34,8 +35,23 @@
   return self;
 }
 
+- (instancetype)initWithCellReuseIdentifier:(NSString *)cellReuseIdentifier
+                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
+{
+  AssertTrueOrReturnNil(cellReuseIdentifier.length);
+  AssertTrueOrReturnNil(configureCellBlock);
+  
+  self = [super init];
+  if (self) {
+    _configureCellBlock = configureCellBlock;
+    _cellReuseIdentifier = cellReuseIdentifier;
+  }
+  return self;
+}
+
 - (instancetype)initWithCellreuseIdentifier:(NSString *)cellReuseIdentifier
                          configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
+__attribute__((deprecated))
 {
   AssertTrueOrReturnNil(cellReuseIdentifier.length);
   AssertTrueOrReturnNil(configureCellBlock);

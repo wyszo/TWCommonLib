@@ -3,8 +3,7 @@
 //
 
 @import CoreData;
-#import "TWCommonLib.h"
-
+#import "TWCommonTypes.h"
 
 typedef NSString* (^CellReuseMappingBlock)(NSIndexPath *);
 
@@ -18,7 +17,7 @@ typedef NSString* (^CellReuseMappingBlock)(NSIndexPath *);
 /**
  Supports only one type of cells in the tableView
  */
-- (instancetype)initWithCellreuseIdentifier:(NSString *)cellReuseIdentifier
+- (instancetype)initWithCellReuseIdentifier:(NSString *)cellReuseIdentifier
                          configureCellBlock:(CellAtIndexPathBlock)configureCellBlock;
 
 /**
@@ -27,6 +26,14 @@ typedef NSString* (^CellReuseMappingBlock)(NSIndexPath *);
  */
 - (instancetype)initWithCellReuseMappingBlock:(CellReuseMappingBlock)cellReuseMappingBlock
                            configureCellBlock:(CellAtIndexPathBlock)configureCellBlock;
+
+/**
+ @deprecated (Typo in method name)
+ Use initWithCellReuseIdentifier:configureCellBlock: instead
+ */
+- (instancetype)initWithCellreuseIdentifier:(NSString *)cellReuseIdentifier
+                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
+__attribute__((deprecated));
 
 - (void)resetFetchedResultsController;
 
