@@ -39,6 +39,12 @@ _Pragma("clang diagnostic pop") \
 #define NOT_IMPLEMENTED_YET_RETURN_NIL AssertTrueOrReturnNil(NO && @"Not implemented yet");
 
 
+#pragma mark - Boxing Values
+
+#define BoxObject(object) [NSValue valueWithNonretainedObject:object]
+#define BoxPointer(pointer) [NSValue valueWithPointer:pointer]
+
+
 #pragma mark - Inside class interface definition
 
 #define NEW_AND_INIT_UNAVAILABLE + (instancetype)new __unavailable; - (instancetype)init __unavailable;
