@@ -7,7 +7,11 @@
  */
 @interface NSObject (TWObjectLifetime)
 
-- (void)tw_bindLifetimeTo:(NSObject *)owner;
-- (void)tw_releaseLifetimeDependencyFrom:(NSObject *)owner;
+- (void)tw_bindLifetimeTo:(nonnull NSObject *)owner;
+- (void)tw_releaseLifetimeDependencyFrom:(nonnull NSObject *)owner;
+
+- (void)tw_bindLifetimeTo:(nonnull NSObject *)owner usingKey:(nonnull NSString *)key;
+- (nullable id)tw_getAttachedObjectWithKey:(nonnull NSString *)key;
+- (void)tw_releaseAttachedObjectFromOwner:(nonnull NSObject *)owner withKey:(nonnull NSString *)key;
 
 @end
