@@ -48,6 +48,7 @@
 		31BFFB8D1AF9535000645566 /* TWItemsToSeguesMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB8C1AF9535000645566 /* TWItemsToSeguesMapping.m */; };
 		31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB9A1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m */; };
 		31BFFB9F1AF9841C00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB9E1AF9841B00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m */; };
+		31D4C3251B54446C00B948B4 /* UIViewController+TWNotificationObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D4C3241B54446C00B948B4 /* UIViewController+TWNotificationObserving.m */; };
 		31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D6459D1AFB6E63003B4262 /* TWAlertFactory.m */; };
 		31D645AB1AFD4D55003B4262 /* TWRectangleMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645AA1AFD4D55003B4262 /* TWRectangleMath.m */; };
 		31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D645AC1AFD5B62003B4262 /* TWCommonFunctions.m */; };
@@ -176,6 +177,8 @@
 		31BFFB9A1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+TWAnimations.m"; sourceTree = "<group>"; };
 		31BFFB9D1AF9841B00645566 /* UIImagePickerController+TWCameraDeviceSwitching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+TWCameraDeviceSwitching.h"; sourceTree = "<group>"; };
 		31BFFB9E1AF9841B00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+TWCameraDeviceSwitching.m"; sourceTree = "<group>"; };
+		31D4C3231B54446C00B948B4 /* UIViewController+TWNotificationObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TWNotificationObserving.h"; sourceTree = "<group>"; };
+		31D4C3241B54446C00B948B4 /* UIViewController+TWNotificationObserving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TWNotificationObserving.m"; sourceTree = "<group>"; };
 		31D6459C1AFB6E63003B4262 /* TWAlertFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAlertFactory.h; sourceTree = "<group>"; };
 		31D6459D1AFB6E63003B4262 /* TWAlertFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAlertFactory.m; sourceTree = "<group>"; };
 		31D645A91AFD4D55003B4262 /* TWRectangleMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRectangleMath.h; sourceTree = "<group>"; };
@@ -810,6 +813,15 @@
 			name = UIImagePickerController;
 			sourceTree = "<group>";
 		};
+		31D4C3221B54443400B948B4 /* NotificationObserving */ = {
+			isa = PBXGroup;
+			children = (
+				31D4C3231B54446C00B948B4 /* UIViewController+TWNotificationObserving.h */,
+				31D4C3241B54446C00B948B4 /* UIViewController+TWNotificationObserving.m */,
+			);
+			name = NotificationObserving;
+			sourceTree = "<group>";
+		};
 		31D6459B1AFB6E51003B4262 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -915,6 +927,7 @@
 			isa = PBXGroup;
 			children = (
 				3129035B1B2220B100C730DA /* Navbar */,
+				31D4C3221B54443400B948B4 /* NotificationObserving */,
 				3129035A1B2220A200C730DA /* PerformSegue */,
 			);
 			name = UIViewController;
@@ -1341,6 +1354,7 @@
 				31FB6BCD1B126F000042C409 /* TWVideoThumbnailHelper.m in Sources */,
 				310394F11B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m in Sources */,
 				311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */,
+				31D4C3251B54446C00B948B4 /* UIViewController+TWNotificationObserving.m in Sources */,
 				31D645C71AFE55CE003B4262 /* TWUIImagePickerHelper.m in Sources */,
 				31BFFB9B1AF974AD00645566 /* NSLayoutConstraint+TWAnimations.m in Sources */,
 				31FB6BC81B126D0C0042C409 /* TWUserDefaultsHelper.m in Sources */,

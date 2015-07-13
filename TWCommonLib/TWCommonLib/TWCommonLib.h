@@ -69,5 +69,6 @@
 #import "UIViewController+Navbar.h"
 #import "UITextView+TWPadding.h"
 #import "UIView+TWEmbedding.h"
+#import "UIViewController+TWNotificationObserving.h"
 
 #endif
