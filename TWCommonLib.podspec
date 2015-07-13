@@ -14,4 +14,5 @@ Pod::Spec.new do |s|
 
   s.dependency  'UIAlertView-Blocks', '1.0'
   s.dependency  'KZAsserts', '1.0'
+  s.dependency  'BlocksKit', '2.2.5'
 end
