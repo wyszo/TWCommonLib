@@ -15,6 +15,6 @@
 @property (nonatomic, copy) IndexPathBlock cellSelectedBlock;
 
 NEW_AND_INIT_UNAVAILABLE
-- (instancetype)initWithCellSize:(CGSize)cellSize attachingToCollectionView:(UICollectionView *)collectionView;
+- (instancetype)initWithCellSize:(CGSize)cellSize collectionViewSize:(CGSize)collectionViewSize numberOfCells:(NSUInteger)numberOfCells attachingToCollectionView:(UICollectionView *)collectionView;
 
 @end
