@@ -45,8 +45,10 @@
 
 - (id)tw_getAttachedObjectWithKey:(NSString *)key
 {
-  AssertTrueOrReturnNil(key.length);
-  return objc_getAssociatedObject(self, (__bridge const void *)(key));
+    AssertTrueOrReturnNil(key.length);
+    NSArray *results = objc_getAssociatedObject(self, (__bridge const void *)(key));
+    AssertTrueOrReturnNil(results.count == 1 && @"no support for returning multiple objects yet (or no attached object)");
+    return results[0];
 }
 
 - (void)tw_releaseAttachedObjectFromOwner:(nonnull NSObject *)owner withKey:(nonnull NSString *)key
