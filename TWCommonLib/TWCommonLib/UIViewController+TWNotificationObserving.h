@@ -9,6 +9,8 @@
 
 /**
  @param mapping   Dictionary with notification names as keys and boxed selectors (using BoxPointer macro) as values
+
+ // TODO: extend to allow blocks to call as dictionary values!
  
  Example usage:
  [viewController tw_registerNotificationsWithNameToSelectorMapping:@{
