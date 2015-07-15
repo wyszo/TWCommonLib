@@ -42,7 +42,10 @@ _Pragma("clang diagnostic pop") \
 #pragma mark - Boxing Values
 
 #define BoxObject(object) [NSValue valueWithNonretainedObject:object]
+#define UnboxObject(boxedObject) [boxedObject nonretainedObjectValue]
+
 #define BoxPointer(pointer) [NSValue valueWithPointer:pointer]
+#define UnboxPointer(boxedPointer) [boxedPointer pointerValue]
 
 
 #pragma mark - Inside class interface definition
