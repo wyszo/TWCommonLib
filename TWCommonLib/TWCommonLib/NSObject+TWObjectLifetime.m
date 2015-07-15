@@ -47,7 +47,7 @@
 {
     AssertTrueOrReturnNil(key.length);
     NSArray *results = objc_getAssociatedObject(self, (__bridge const void *)(key));
-    AssertTrueOrReturnNil(results.count == 1 && @"no support for returning multiple objects yet (or no attached object)");
+    AssertTrueOrReturnNil(results.count <= 1 && @"no support for returning multiple objects yet");
     return results[0];
 }
 
