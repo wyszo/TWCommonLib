@@ -45,15 +45,17 @@
 
 - (id)tw_getAttachedObjectWithKey:(NSString *)key
 {
-    AssertTrueOrReturnNil(key.length);
-    NSArray *results = objc_getAssociatedObject(self, (__bridge const void *)(key));
-    AssertTrueOrReturnNil(results.count <= 1 && @"no support for returning multiple objects yet");
-    return results[0];
+  AssertTrueOrReturnNil(key.length);
+  NSArray *results = objc_getAssociatedObject(self, (__bridge const void *)(key));
+  AssertTrueOrReturnNil(results.count <= 1 && @"no support for returning multiple objects yet");
+  return results[0];
 }
 
 - (void)tw_releaseAttachedObjectFromOwner:(nonnull NSObject *)owner withKey:(nonnull NSString *)key
 {
-  NOT_IMPLEMENTED_YET_RETURN;
+  AssertTrueOrReturn(owner);
+  AssertTrueOrReturn(key.length);
+  objc_setAssociatedObject(self, (__bridge const void *)(key), nil, OBJC_ASSOCIATION_RETAIN);
 }
 
 #pragma mark - Auxiliary methods
