@@ -10,6 +10,7 @@
 
 @implementation NSObject (TWObjectLifetime)
 
+// TODO: bind using real selector, not selector string
 - (void)tw_bindLifetimeTo:(NSObject *)owner
 {
   SEL selector = self.tw_associatedObjectDefaultKey;
@@ -60,6 +61,7 @@
 
 #pragma mark - Auxiliary methods
 
+// TODO: return also objects attached using custom keys
 - (NSMutableArray *)elementsAttachedTo:(NSObject *)owner
 {
   id value = objc_getAssociatedObject(owner, self.tw_associatedObjectDefaultKey);
