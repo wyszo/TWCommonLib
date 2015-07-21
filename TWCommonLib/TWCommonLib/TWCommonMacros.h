@@ -47,10 +47,24 @@ _Pragma("clang diagnostic pop") \
 #define BoxPointer(pointer) [NSValue valueWithPointer:pointer]
 #define UnboxPointer(boxedPointer) [boxedPointer pointerValue]
 
+#define STRINGIFY(string) #string
+
 
 #pragma mark - Inside class interface definition
 
-#define NEW_AND_INIT_UNAVAILABLE + (instancetype)new __unavailable; - (instancetype)init __unavailable;
+#define SUPPRESS_NULLABILITY_COMPLETENESS_BEGIN \
+_Pragma("clang diagnostic push") \
+_Pragma(STRINGIFY(clang diagnostic ignored "-Wnullability-completeness"))
+
+#define SUPPRESS_NULLABILITY_COMPLETENESS_END \
+_Pragma("clang diagnostic pop")
+
+#define NEW_AND_INIT_UNAVAILABLE \
+SUPPRESS_NULLABILITY_COMPLETENESS_BEGIN \
++ (instancetype)new __unavailable; \
+- (instancetype)init __unavailable; \
+SUPPRESS_NULLABILITY_COMPLETENESS_END
+
 #define SHARED_INSTANCE_GENERATE_INTERFACE + (instancetype)sharedInstance;
 
 
