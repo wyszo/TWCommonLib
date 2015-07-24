@@ -13,6 +13,7 @@ typedef NSString* (^CellReuseMappingBlock)(NSIndexPath *);
 @property (copy, nonatomic) NSFetchedResultsController* (^fetchedResultsControllerLazyInitializationBlock)();
 @property (copy, nonatomic) void (^deleteCellOnSwipeBlock)(NSIndexPath *indexPath);
 @property (copy, nonatomic) void (^moveRowAtIndexPathToIndexPathBlock)(NSIndexPath *fromIndexPath, NSIndexPath *toIndexPath);
+@property (assign, nonatomic) BOOL displaySectionIndex;
 
 /**
  Supports only one type of cells in the tableView

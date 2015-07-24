@@ -117,6 +117,16 @@ __attribute__((deprecated))
   return reuseIdentifier;
 }
 
+#pragma mark - Index sections
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return self.displaySectionIndex ? [self.fetchedResultsController sectionIndexTitles] : nil;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+}
+
 #pragma mark - Deleting cells
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
