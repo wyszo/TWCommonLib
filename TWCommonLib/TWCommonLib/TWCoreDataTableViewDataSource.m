@@ -29,6 +29,7 @@
   
   self = [super init];
   if (self) {
+    // TODO: this won't copy the block (since it's assigned to an array)! bug!
     _cellReuseMappingBlock = cellReuseMappingBlock;
     _configureCellBlock = configureCellBlock;
   }
