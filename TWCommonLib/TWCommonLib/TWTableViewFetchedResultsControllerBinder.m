@@ -60,11 +60,18 @@
     } break;
       
     case NSFetchedResultsChangeUpdate: {
-      // Beware - apart from cell content, index path could also have changed (despite getting ChangeUpdate instead of ChangeMove). Use newIndexPath in here!
+      // Beware - apart from cell content, index path could also have changed (despite getting ChangeUpdate instead of ChangeMove). Use newIndexPath in here! (if it exists)
+      NSIndexPath *updateIndexPath = newIndexPath;
+      if (!updateIndexPath) {
+        // This is another case - sometimes newIndexPath is nil and only IndexPath is set
+        updateIndexPath = indexPath;
+      }
+      AssertTrueOrReturn(updateIndexPath);
+      
       if (self.configureCellBlock) {
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:newIndexPath];
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:updateIndexPath];
         if (cell) {
-          self.configureCellBlock(cell, newIndexPath);
+          self.configureCellBlock(cell, updateIndexPath);
         } else {
           // FetchedResultsController of a tableView from other tabBar item (now invisible) got the update, but didn't return a new cell when asked (since it's invisible). Expected case, don't worry.
         }
