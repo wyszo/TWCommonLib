@@ -121,11 +121,15 @@ __attribute__((deprecated))
 #pragma mark - Index sections
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return self.displaySectionIndex ? [self.fetchedResultsController sectionIndexTitles] : nil;
+    return (self.displaySectionIndex ? [self.fetchedResultsController sectionIndexTitles] : nil);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
     return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return (self.displaySectionTitle ? [self.fetchedResultsController sectionIndexTitles][section] : nil);
 }
 
 #pragma mark - Deleting cells
