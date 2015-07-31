@@ -54,4 +54,10 @@
     return cellHeight;
 }
 
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CallBlock(self.scrollViewDidScrollBlock);
+}
+
 @end

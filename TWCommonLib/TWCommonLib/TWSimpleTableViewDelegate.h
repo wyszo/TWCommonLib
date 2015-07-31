@@ -14,6 +14,7 @@
 
 @property (nonatomic, copy) IndexPathBlock cellSelectedBlock;
 @property (nonatomic, copy) FloatBlockWithIndexPathParameter cellHeightBlock;
+@property (nonatomic, copy) VoidBlock scrollViewDidScrollBlock;
 @property (nonatomic, assign) BOOL deselectCellOnTouch;
 
 - (instancetype)initAndAttachToTableView:(UITableView *)tableView;
