@@ -45,6 +45,13 @@
   UITableView *tableView = self.tableView;
   AssertTrueOrReturn(tableView);
   
+  if (self.indexPathTransformBlock) {
+    indexPath = self.indexPathTransformBlock(indexPath);
+    AssertTrueOrReturn(indexPath && @"indexPath should not be nil after transformation!");
+    newIndexPath = self.indexPathTransformBlock(newIndexPath);
+    AssertTrueOrReturn(newIndexPath && @"newIndexPath should not be nil after transformation!");
+  }
+  
   switch(type) {
       
     case NSFetchedResultsChangeInsert: {
