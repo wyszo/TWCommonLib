@@ -46,6 +46,7 @@
 #import "TWAlertFactory.h"
 #import "TWPathLocator.h"
 #import "TWTableViewFetchedResultsControllerBinder.h"
+#import "TWUIComponentsFactory.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"

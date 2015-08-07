@@ -19,6 +19,7 @@
 		3129035E1B2220D600C730DA /* UIViewController+Navbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3129035D1B2220D600C730DA /* UIViewController+Navbar.m */; };
 		312903621B23982100C730DA /* UITextView+TWPadding.m in Sources */ = {isa = PBXBuildFile; fileRef = 312903611B23982100C730DA /* UITextView+TWPadding.m */; };
 		312903671B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 312903661B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.m */; };
+		312BD19B1B7477D60023FEE4 /* TWUIComponentsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 312BD19A1B7477D60023FEE4 /* TWUIComponentsFactory.m */; };
 		312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 312D5FCE1AFABD6200813EE8 /* TWDataWriteHelper.m */; };
 		313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873DD1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m */; };
 		313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873E11B076EA20088CDA7 /* UIView+LayerDecoration.m */; };
@@ -116,6 +117,8 @@
 		312903611B23982100C730DA /* UITextView+TWPadding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TWPadding.m"; sourceTree = "<group>"; };
 		312903651B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextViewWithCharacterLimitLabelDelegate.h; sourceTree = "<group>"; };
 		312903661B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTextViewWithCharacterLimitLabelDelegate.m; sourceTree = "<group>"; };
+		312BD1991B7477D60023FEE4 /* TWUIComponentsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUIComponentsFactory.h; sourceTree = "<group>"; };
+		312BD19A1B7477D60023FEE4 /* TWUIComponentsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIComponentsFactory.m; sourceTree = "<group>"; };
 		312D5FCD1AFABD6200813EE8 /* TWDataWriteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWDataWriteHelper.h; sourceTree = "<group>"; };
 		312D5FCE1AFABD6200813EE8 /* TWDataWriteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWDataWriteHelper.m; sourceTree = "<group>"; };
 		313873DC1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextViewWithMaxLengthDelegate.h; sourceTree = "<group>"; };
@@ -688,6 +691,8 @@
 		3194128E1AF4106A00D676A3 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				312BD1991B7477D60023FEE4 /* TWUIComponentsFactory.h */,
+				312BD19A1B7477D60023FEE4 /* TWUIComponentsFactory.m */,
 				3194128F1AF4107E00D676A3 /* Cells */,
 			);
 			name = "UI Components";
@@ -1388,6 +1393,7 @@
 				312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */,
 				31FB03AD1B3DDF9000539B50 /* TWClassMethodCopyHelper.m in Sources */,
 				311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */,
+				312BD19B1B7477D60023FEE4 /* TWUIComponentsFactory.m in Sources */,
 				31D645AB1AFD4D55003B4262 /* TWRectangleMath.m in Sources */,
 				31D645DB1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m in Sources */,
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
