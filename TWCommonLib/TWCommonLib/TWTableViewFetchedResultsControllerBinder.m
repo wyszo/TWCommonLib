@@ -11,6 +11,7 @@
 @property (weak, nonatomic) UITableView *tableView;
 @property (copy, nonatomic) void (^configureCellBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 @property (nonatomic, assign) BOOL disabled;
+@property (copy, nonatomic) IndexPathTransformBlock indexPathTransformBlock;
 
 @end
 
@@ -44,12 +45,19 @@
   
   UITableView *tableView = self.tableView;
   AssertTrueOrReturn(tableView);
-  
+
   if (self.indexPathTransformBlock) {
+    NSIndexPath *indexPathBeforeTransformation = indexPath;
     indexPath = self.indexPathTransformBlock(indexPath);
-    AssertTrueOrReturn(indexPath && @"indexPath should not be nil after transformation!");
+    if (indexPathBeforeTransformation) {
+      AssertTrueOrReturn(indexPath && @"indexPath should not be nil after transformation!");
+    }
+    
+    NSIndexPath *newIndexPathBeforeTransformation = newIndexPath;
     newIndexPath = self.indexPathTransformBlock(newIndexPath);
-    AssertTrueOrReturn(newIndexPath && @"newIndexPath should not be nil after transformation!");
+    if (newIndexPathBeforeTransformation) {
+      AssertTrueOrReturn(newIndexPath && @"newIndexPath should not be nil after transformation!");
+    }
   }
   
   switch(type) {
