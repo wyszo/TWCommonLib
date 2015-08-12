@@ -63,12 +63,14 @@
   switch(type) {
       
     case NSFetchedResultsChangeInsert: {
+      AssertTrueOrReturn(newIndexPath);
       [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
                        withRowAnimation:UITableViewRowAnimationFade];
       [self invokeNumberOfObjectsChangedCallbackForController:controller];
     } break;
       
     case NSFetchedResultsChangeDelete: {
+      AssertTrueOrReturn(indexPath);
       [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                        withRowAnimation:UITableViewRowAnimationFade];
       [self invokeNumberOfObjectsChangedCallbackForController:controller];
@@ -94,10 +96,15 @@
     } break;
       
     case NSFetchedResultsChangeMove: {
-      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                       withRowAnimation:UITableViewRowAnimationFade];
-      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
-                       withRowAnimation:UITableViewRowAnimationFade];
+      AssertTrueOrReturn(indexPath);
+      AssertTrueOrReturn(newIndexPath);
+      
+      if (![indexPath isEqual:newIndexPath]) {
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+        [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+      }
     } break;
   }
 }
