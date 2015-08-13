@@ -28,6 +28,7 @@
 		314B6F2D1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 314B6F2C1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m */; };
 		314B6F321B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 314B6F311B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m */; };
 		314B6F361B3065500051E00D /* UIView+TWEmbedding.m in Sources */ = {isa = PBXBuildFile; fileRef = 314B6F351B3065500051E00D /* UIView+TWEmbedding.m */; };
+		314ED2681B7CEF5700B64EB1 /* UITextView+NumberOfLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 314ED2671B7CEF5700B64EB1 /* UITextView+NumberOfLines.m */; };
 		316D86BE1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 316D86BD1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
@@ -136,6 +137,8 @@
 		314B6F311B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleCollectionViewFlowLayoutDelegate.m; sourceTree = "<group>"; };
 		314B6F341B3065500051E00D /* UIView+TWEmbedding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWEmbedding.h"; sourceTree = "<group>"; };
 		314B6F351B3065500051E00D /* UIView+TWEmbedding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWEmbedding.m"; sourceTree = "<group>"; };
+		314ED2661B7CEF5700B64EB1 /* UITextView+NumberOfLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+NumberOfLines.h"; sourceTree = "<group>"; };
+		314ED2671B7CEF5700B64EB1 /* UITextView+NumberOfLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+NumberOfLines.m"; sourceTree = "<group>"; };
 		316D86BC1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTableViewEditingStyleDelegate.h; sourceTree = "<group>"; };
 		316D86BD1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTableViewEditingStyleDelegate.m; sourceTree = "<group>"; };
 		31815F5F1B0B35010062E7C0 /* TWConfigurableFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWConfigurableFromDictionary.h; sourceTree = "<group>"; };
@@ -415,6 +418,8 @@
 			children = (
 				312903601B23982100C730DA /* UITextView+TWPadding.h */,
 				312903611B23982100C730DA /* UITextView+TWPadding.m */,
+				314ED2661B7CEF5700B64EB1 /* UITextView+NumberOfLines.h */,
+				314ED2671B7CEF5700B64EB1 /* UITextView+NumberOfLines.m */,
 			);
 			name = UITextView;
 			sourceTree = "<group>";
@@ -1407,6 +1412,7 @@
 				31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */,
 				31FB6B5F1B1081410042C409 /* TWTableViewFetchedResultsControllerBinder.m in Sources */,
 				31038DB51B5E97F7001187A5 /* TWImagePickerDelegate.m in Sources */,
+				314ED2681B7CEF5700B64EB1 /* UITextView+NumberOfLines.m in Sources */,
 				3129035E1B2220D600C730DA /* UIViewController+Navbar.m in Sources */,
 				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,

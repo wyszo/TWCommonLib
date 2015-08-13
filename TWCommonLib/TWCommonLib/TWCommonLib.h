@@ -47,6 +47,7 @@
 #import "TWPathLocator.h"
 #import "TWTableViewFetchedResultsControllerBinder.h"
 #import "TWUIComponentsFactory.h"
+#import "UITextView+NumberOfLines.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
