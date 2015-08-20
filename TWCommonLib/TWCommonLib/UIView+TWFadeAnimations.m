@@ -43,7 +43,9 @@
   [UIView animateWithDuration:duration delay:0 options:animationOptions animations:^{
     self.alpha = 0.0f;
   } completion:^(BOOL finished) {
-    self.hidden = YES;
+    if (finished) {
+        self.hidden = YES;
+    }
     if (completion) {
       completion(finished);
     }
