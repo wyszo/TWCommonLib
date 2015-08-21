@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2191FDED734A6C8015795DDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3138C917A5D6846C5FBC483 /* libPods.a */; };
+		3102A7F51B87546300FC3A18 /* CALayer+TWAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3102A7F41B87546300FC3A18 /* CALayer+TWAnimations.m */; };
 		31038DB51B5E97F7001187A5 /* TWImagePickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31038DB41B5E97F7001187A5 /* TWImagePickerDelegate.m */; };
 		310394F11B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 310394F01B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m */; };
 		3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3108E7841AF7BA3700E02C07 /* TWOrientationChangeDetector.m */; };
@@ -95,6 +96,8 @@
 
 /* Begin PBXFileReference section */
 		3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3102A7F31B87546300FC3A18 /* CALayer+TWAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+TWAnimations.h"; sourceTree = "<group>"; };
+		3102A7F41B87546300FC3A18 /* CALayer+TWAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+TWAnimations.m"; sourceTree = "<group>"; };
 		31038DB31B5E97F7001187A5 /* TWImagePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWImagePickerDelegate.h; sourceTree = "<group>"; };
 		31038DB41B5E97F7001187A5 /* TWImagePickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWImagePickerDelegate.m; sourceTree = "<group>"; };
 		310394EF1B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWExtendedMPMoviePlayerViewController.h; sourceTree = "<group>"; };
@@ -274,6 +277,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3102A7F11B8753F200FC3A18 /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				3102A7F31B87546300FC3A18 /* CALayer+TWAnimations.h */,
+				3102A7F41B87546300FC3A18 /* CALayer+TWAnimations.m */,
+			);
+			name = CALayer;
+			sourceTree = "<group>";
+		};
 		31038DB21B5E97E2001187A5 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +356,7 @@
 		311B79FD1AF26F6B00E97FBC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				3102A7F11B8753F200FC3A18 /* CALayer */,
 				31BFFB981AF9748800645566 /* NSLayoutConstraint */,
 				31FB6B541B106D180042C409 /* NSMutableArray */,
 				31FB6B651B1131DA0042C409 /* NSMutableURLRequest */,
@@ -1404,6 +1417,7 @@
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
 				31FB6BB71B1233800042C409 /* TWLazyInitializationProxy.m in Sources */,
 				31D645B31AFD7121003B4262 /* TWCoordinateSystemConverter.m in Sources */,
+				3102A7F51B87546300FC3A18 /* CALayer+TWAnimations.m in Sources */,
 				31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */,
 				31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */,
 				31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */,
