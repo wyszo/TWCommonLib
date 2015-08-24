@@ -16,6 +16,8 @@
 #define UIFontMake(fontName,fontSize) [UIFont fontWithName:fontName size:fontSize]
 
 #define ValueIfExistsOr(value, alternativeValue) (value ? value : alternativeValue)
+#define ValueOr(value, alternativeValue) (value ? value : alternativeValue)
+#define ValueOrEmptyString(value) (value ? value : @"")
 
 #define SuppressPerformSelectorLeakWarning(Code) \
 do { \
