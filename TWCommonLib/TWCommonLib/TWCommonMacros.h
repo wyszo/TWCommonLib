@@ -11,8 +11,13 @@
 #define CallBlock(block, ...) (block ? block(__VA_ARGS__) : nil);
 #define defineWeakSelf() __weak typeof(self) weakSelf = self
 
-#define UIColorMake(r,g,b) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:1.0];
-#define UIFontMake(fontName,fontSize) [UIFont fontWithName:fontName size:fontSize];
+#define UIColorMake(r,g,b) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:1.0]
+#define UIColorWithAlphaMake(r,g,b,a) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:a]
+#define UIFontMake(fontName,fontSize) [UIFont fontWithName:fontName size:fontSize]
+
+#define ValueIfExistsOr(value, alternativeValue) (value ? value : alternativeValue)
+#define ValueOr(value, alternativeValue) (value ? value : alternativeValue)
+#define ValueOrEmptyString(value) (value ? value : @"")
 
 #define SuppressPerformSelectorLeakWarning(Code) \
 do { \
@@ -38,9 +43,32 @@ _Pragma("clang diagnostic pop") \
 #define NOT_IMPLEMENTED_YET_RETURN_NIL AssertTrueOrReturnNil(NO && @"Not implemented yet");
 
 
+#pragma mark - Boxing Values
+
+#define BoxObject(object) [NSValue valueWithNonretainedObject:object]
+#define UnboxObject(boxedObject) [boxedObject nonretainedObjectValue]
+
+#define BoxPointer(pointer) [NSValue valueWithPointer:pointer]
+#define UnboxPointer(boxedPointer) [boxedPointer pointerValue]
+
+#define STRINGIFY(string) #string
+
+
 #pragma mark - Inside class interface definition
 
-#define NEW_AND_INIT_UNAVAILABLE + (instancetype)new __unavailable; - (instancetype)init __unavailable;
+#define SUPPRESS_NULLABILITY_COMPLETENESS_BEGIN \
+_Pragma("clang diagnostic push") \
+_Pragma(STRINGIFY(clang diagnostic ignored "-Wnullability-completeness"))
+
+#define SUPPRESS_NULLABILITY_COMPLETENESS_END \
+_Pragma("clang diagnostic pop")
+
+#define NEW_AND_INIT_UNAVAILABLE \
+SUPPRESS_NULLABILITY_COMPLETENESS_BEGIN \
++ (instancetype)new __unavailable; \
+- (instancetype)init __unavailable; \
+SUPPRESS_NULLABILITY_COMPLETENESS_END
+
 #define SHARED_INSTANCE_GENERATE_INTERFACE + (instancetype)sharedInstance;
 
 

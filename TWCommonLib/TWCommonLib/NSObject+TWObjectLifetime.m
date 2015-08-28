@@ -5,13 +5,23 @@
 #import "NSObject+TWObjectLifetime.h"
 #import <objc/runtime.h>
 #import <KZAsserts.h>
+#import "TWCommonMacros.h"
 
 
 @implementation NSObject (TWObjectLifetime)
 
+// TODO: bind using real selector, not selector string
 - (void)tw_bindLifetimeTo:(NSObject *)owner
 {
+  SEL selector = self.tw_associatedObjectDefaultKey;
+  [self tw_bindLifetimeTo:owner usingKey:NSStringFromSelector(selector)];
+}
+
+- (void)tw_bindLifetimeTo:(NSObject *)owner usingKey:(NSString *)key
+{
   AssertTrueOrReturn(owner);
+  AssertTrueOrReturn(key);
+  
   NSMutableArray *attachedObjects = [self elementsAttachedTo:owner];
   AssertTrueOrReturn(attachedObjects);
   
@@ -20,7 +30,7 @@
   }
   
   [attachedObjects addObject:self];
-  objc_setAssociatedObject(owner, self.tw_associatedObjectKey, attachedObjects, OBJC_ASSOCIATION_RETAIN);
+  objc_setAssociatedObject(owner, (__bridge const void *)(key), attachedObjects, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (void)tw_releaseLifetimeDependencyFrom:(NSObject *)owner
@@ -31,14 +41,30 @@
   AssertTrueOrReturn([attachedObjects containsObject:self]);
   
   [attachedObjects removeObject:self];
-  objc_setAssociatedObject(owner, self.tw_associatedObjectKey, attachedObjects, OBJC_ASSOCIATION_RETAIN);
+  objc_setAssociatedObject(owner, self.tw_associatedObjectDefaultKey, attachedObjects, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (id)tw_getAttachedObjectWithKey:(NSString *)key
+{
+  AssertTrueOrReturnNil(key.length);
+  NSArray *results = objc_getAssociatedObject(self, (__bridge const void *)(key));
+  AssertTrueOrReturnNil(results.count <= 1 && @"no support for returning multiple objects yet");
+  return results[0];
+}
+
+- (void)tw_releaseAttachedObjectFromOwner:(nonnull NSObject *)owner withKey:(nonnull NSString *)key
+{
+  AssertTrueOrReturn(owner);
+  AssertTrueOrReturn(key.length);
+  objc_setAssociatedObject(self, (__bridge const void *)(key), nil, OBJC_ASSOCIATION_RETAIN);
 }
 
 #pragma mark - Auxiliary methods
 
+// TODO: return also objects attached using custom keys
 - (NSMutableArray *)elementsAttachedTo:(NSObject *)owner
 {
-  id value = objc_getAssociatedObject(owner, self.tw_associatedObjectKey);
+  id value = objc_getAssociatedObject(owner, self.tw_associatedObjectDefaultKey);
   AssertTrueOrReturnNil(value == nil || [value isKindOfClass:[NSMutableArray class]]);
   
   if (!value) {
@@ -47,7 +73,7 @@
   return value;
 }
 
-- (SEL)tw_associatedObjectKey
+- (SEL)tw_associatedObjectDefaultKey
 {
   return _cmd; // selectors are unique and constant, _cmd can be used as an associated object key
 }

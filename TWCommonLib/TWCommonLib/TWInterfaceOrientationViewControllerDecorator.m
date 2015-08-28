@@ -2,10 +2,10 @@
 //  TWCommonLib
 //
 
-#import <objc/runtime.h>
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 #import "TWInterfaceOrientationViewControllerDecorator.h"
 #import "TWInterfaceOrientationClassStubs.h"
+#import "TWClassMethodCopyHelper.h"
 
 
 @implementation TWInterfaceOrientationViewControllerDecorator
@@ -22,21 +22,10 @@
     sourceClass = [TWInterfaceOrientationPortraitStub class];
   }
   
-  [self copyMethodFromClass:sourceClass withSelector:@selector(shouldAutorotate) toClass:aClass];
-  [self copyMethodFromClass:sourceClass withSelector:@selector(supportedInterfaceOrientations) toClass:aClass];
-}
-
-- (void)copyMethodFromClass:(Class)sourceClass withSelector:(SEL)selector toClass:destinationClass
-{
-  AssertTrueOrReturn(sourceClass);
-  AssertTrueOrReturn(selector);
-  AssertTrueOrReturn(destinationClass);
+  TWClassMethodCopyHelper *methodCopyHelper = [TWClassMethodCopyHelper new];
   
-  Method method = class_getInstanceMethod(sourceClass, selector);
-  IMP imp = method_getImplementation(method);
-  const char *methodTypeEncoding = method_getTypeEncoding(method);
-  
-  class_addMethod(destinationClass, selector, imp, methodTypeEncoding);
+  [methodCopyHelper copyMethodFromClass:sourceClass withSelector:@selector(shouldAutorotate) toClass:aClass];
+  [methodCopyHelper copyMethodFromClass:sourceClass withSelector:@selector(supportedInterfaceOrientations) toClass:aClass];
 }
 
 @end

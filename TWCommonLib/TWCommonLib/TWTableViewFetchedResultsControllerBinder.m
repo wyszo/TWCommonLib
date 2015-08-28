@@ -11,6 +11,7 @@
 @property (weak, nonatomic) UITableView *tableView;
 @property (copy, nonatomic) void (^configureCellBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 @property (nonatomic, assign) BOOL disabled;
+@property (copy, nonatomic) IndexPathTransformBlock indexPathTransformBlock;
 
 @end
 
@@ -44,27 +45,50 @@
   
   UITableView *tableView = self.tableView;
   AssertTrueOrReturn(tableView);
+
+  if (self.indexPathTransformBlock) {
+    NSIndexPath *indexPathBeforeTransformation = indexPath;
+    indexPath = self.indexPathTransformBlock(indexPath);
+    if (indexPathBeforeTransformation) {
+      AssertTrueOrReturn(indexPath && @"indexPath should not be nil after transformation!");
+    }
+    
+    NSIndexPath *newIndexPathBeforeTransformation = newIndexPath;
+    newIndexPath = self.indexPathTransformBlock(newIndexPath);
+    if (newIndexPathBeforeTransformation) {
+      AssertTrueOrReturn(newIndexPath && @"newIndexPath should not be nil after transformation!");
+    }
+  }
   
   switch(type) {
       
     case NSFetchedResultsChangeInsert: {
+      AssertTrueOrReturn(newIndexPath);
       [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
                        withRowAnimation:UITableViewRowAnimationFade];
       [self invokeNumberOfObjectsChangedCallbackForController:controller];
     } break;
       
     case NSFetchedResultsChangeDelete: {
+      AssertTrueOrReturn(indexPath);
       [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                        withRowAnimation:UITableViewRowAnimationFade];
       [self invokeNumberOfObjectsChangedCallbackForController:controller];
     } break;
       
     case NSFetchedResultsChangeUpdate: {
-      // Beware - apart from cell content, index path could also have changed (despite getting ChangeUpdate instead of ChangeMove). Use newIndexPath in here!
+      // Beware - apart from cell content, index path could also have changed (despite getting ChangeUpdate instead of ChangeMove). Use newIndexPath in here! (if it exists)
+      NSIndexPath *updateIndexPath = newIndexPath;
+      if (!updateIndexPath) {
+        // This is another case - sometimes newIndexPath is nil and only IndexPath is set
+        updateIndexPath = indexPath;
+      }
+      AssertTrueOrReturn(updateIndexPath);
+      
       if (self.configureCellBlock) {
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:newIndexPath];
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:updateIndexPath];
         if (cell) {
-          self.configureCellBlock(cell, newIndexPath);
+          self.configureCellBlock(cell, updateIndexPath);
         } else {
           // FetchedResultsController of a tableView from other tabBar item (now invisible) got the update, but didn't return a new cell when asked (since it's invisible). Expected case, don't worry.
         }
@@ -72,10 +96,15 @@
     } break;
       
     case NSFetchedResultsChangeMove: {
-      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                       withRowAnimation:UITableViewRowAnimationFade];
-      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
-                       withRowAnimation:UITableViewRowAnimationFade];
+      AssertTrueOrReturn(indexPath);
+      AssertTrueOrReturn(newIndexPath);
+      
+      if (![indexPath isEqual:newIndexPath]) {
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+        [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+      }
     } break;
   }
 }

@@ -3,6 +3,7 @@
 //
 
 #import "TWCoreDataTableViewDataSource.h"
+#import "TWCommonMacros.h"
 #import <KZAsserts.h>
 
 
@@ -11,6 +12,7 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (copy, nonatomic) void (^configureCellBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 @property (strong, nonatomic) NSString *cellReuseIdentifier;
+@property (strong, nonatomic) CellReuseMappingBlock cellReuseMappingBlock;
 
 @end
 
@@ -19,9 +21,42 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithCellreuseIdentifier:(NSString *)cellReuseIdentifier
-                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock;
+- (instancetype)initWithCellReuseMappingBlock:(CellReuseMappingBlock)cellReuseMappingBlock
+                           configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
 {
+  AssertTrueOrReturnNil(cellReuseMappingBlock);
+  AssertTrueOrReturnNil(configureCellBlock);
+  
+  self = [super init];
+  if (self) {
+    // TODO: this won't copy the block (since it's assigned to an array)! bug!
+    _cellReuseMappingBlock = cellReuseMappingBlock;
+    _configureCellBlock = configureCellBlock;
+  }
+  return self;
+}
+
+- (instancetype)initWithCellReuseIdentifier:(NSString *)cellReuseIdentifier
+                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
+{
+  AssertTrueOrReturnNil(cellReuseIdentifier.length);
+  AssertTrueOrReturnNil(configureCellBlock);
+  
+  self = [super init];
+  if (self) {
+    _configureCellBlock = configureCellBlock;
+    _cellReuseIdentifier = cellReuseIdentifier;
+  }
+  return self;
+}
+
+- (instancetype)initWithCellreuseIdentifier:(NSString *)cellReuseIdentifier
+                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
+__attribute__((deprecated))
+{
+  AssertTrueOrReturnNil(cellReuseIdentifier.length);
+  AssertTrueOrReturnNil(configureCellBlock);
+  
   self = [super init];
   if (self) {
     _configureCellBlock = configureCellBlock;
@@ -55,12 +90,46 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellReuseIdentifier];
+  NSString *reuseIdentifier = [self reuseIdentifierForCellAtIndexPath:indexPath];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+  AssertTrueOrReturnNil(cell);
   
   if (self.configureCellBlock) {
     self.configureCellBlock(cell, indexPath);
   }
   return cell;
+}
+
+- (NSString *)reuseIdentifierForCellAtIndexPath:(NSIndexPath *)indexPath
+{
+  AssertTrueOrReturnNil(indexPath);
+  NSString *reuseIdentifier;
+ 
+  if (self.cellReuseIdentifier.length) {
+    AssertTrueOr(self.cellReuseMappingBlock == nil,);
+    reuseIdentifier = self.cellReuseIdentifier;
+  }
+  else {
+    AssertTrueOr(self.cellReuseIdentifier.length == 0,);
+    AssertTrueOrReturnNil(self.cellReuseMappingBlock);
+    reuseIdentifier = self.cellReuseMappingBlock(indexPath);
+  }
+  AssertTrueOrReturnNil(reuseIdentifier.length);
+  return reuseIdentifier;
+}
+
+#pragma mark - Index sections
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return (self.displaySectionIndex ? [self.fetchedResultsController sectionIndexTitles] : nil);
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return (self.displaySectionTitle ? [self.fetchedResultsController sectionIndexTitles][section] : nil);
 }
 
 #pragma mark - Deleting cells
@@ -110,6 +179,7 @@
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
+  // TODO: simply return [fetchedResultsController objectAtIndexPath:]
   id <NSFetchedResultsSectionInfo> sectionInfo = [self sectionInfoForSection:indexPath.section];
   AssertTrueOrReturnNil(sectionInfo.objects.count > indexPath.row);
   return sectionInfo.objects[indexPath.row];

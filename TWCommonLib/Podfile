@@ -2,6 +2,8 @@ platform :ios, '7.0'
 inhibit_all_warnings!
 
 pod 'KZAsserts', '1.0'
+pod 'UIAlertView-Blocks', '1.0'
+pod 'BlocksKit', '2.2.5'
 
 target :TWCommonLibTests, :exclusive => true do
   pod 'Kiwi', '2.3.1'
