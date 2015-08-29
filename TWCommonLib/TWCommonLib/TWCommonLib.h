@@ -75,5 +75,6 @@
 #import "UIView+TWEmbedding.h"
 #import "UIViewController+TWNotificationObserving.h"
 #import "NSString+TWBase64Encoding.h"
+#import "NSString+TWHTMLString.h"
 
 #endif
