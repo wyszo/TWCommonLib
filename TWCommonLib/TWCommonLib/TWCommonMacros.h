@@ -69,7 +69,10 @@ SUPPRESS_NULLABILITY_COMPLETENESS_BEGIN \
 - (instancetype)init __unavailable; \
 SUPPRESS_NULLABILITY_COMPLETENESS_END
 
-#define SHARED_INSTANCE_GENERATE_INTERFACE + (instancetype)sharedInstance;
+#define SHARED_INSTANCE_GENERATE_INTERFACE \
+SUPPRESS_NULLABILITY_COMPLETENESS_BEGIN \
++ (instancetype)sharedInstance; \
+SUPPRESS_NULLABILITY_COMPLETENESS_END
 
 
 #pragma mark - Inside class implementation
