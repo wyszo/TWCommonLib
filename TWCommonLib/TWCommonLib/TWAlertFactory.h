@@ -19,6 +19,8 @@
 
 + (UIAlertView *)showOKAlertViewWithMessage:(NSString *)message;
 + (UIAlertView *)showOKAlertViewWithMessage:(NSString *)message okButtonTitle:(NSString *)okTitle;
++ (UIAlertView *)showOKAlertViewWithMessage:(NSString *)message action:(VoidBlock)action;
++ (UIAlertView *)showOKAlertViewWithMessage:(NSString *)message okButtonTitle:(NSString *)okTitle action:(VoidBlock)action;
 
 // Two button alerts
 

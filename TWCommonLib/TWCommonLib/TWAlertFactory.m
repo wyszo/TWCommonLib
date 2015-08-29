@@ -38,7 +38,20 @@
 
 + (UIAlertView *)showOKAlertViewWithMessage:(NSString *)message okButtonTitle:(NSString *)okTitle
 {
-  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:okTitle otherButtonTitles:nil];
+  return [self showOKAlertViewWithMessage:message okButtonTitle:okTitle action:nil];
+}
+
++ (UIAlertView *)showOKAlertViewWithMessage:(NSString *)message action:(VoidBlock)action
+{
+  return [self showOKAlertViewWithMessage:message okButtonTitle:@"OK" action:action];
+}
+
++ (UIAlertView *)showOKAlertViewWithMessage:(NSString *)message okButtonTitle:(NSString *)okTitle action:(VoidBlock)action
+{
+  AssertTrueOrReturnNil(message.length);
+  RIButtonItem *okButtonItem = [RIButtonItem itemWithLabel:okTitle action:action];
+  
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:message cancelButtonItem:okButtonItem otherButtonItems:nil];
   [alert show];
   return alert;
 }
