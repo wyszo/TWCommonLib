@@ -1221,7 +1221,6 @@
 				3183947C1AED9E2A0077C079 /* Sources */,
 				3183947D1AED9E2A0077C079 /* Frameworks */,
 				3183947E1AED9E2A0077C079 /* Resources */,
-				066A35C604374BF8F24DB5A4 /* Find unused imports */,
 				7A3898079963CD1C39E64929 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1288,20 +1287,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		066A35C604374BF8F24DB5A4 /* Find unused imports */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Find unused imports";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"/Users/wyszo/Library/Application Support/Developer/Shared/Xcode/Plug-ins/xcfui.xcplugin/Contents/Resources/fui_script.sh\" \"/Volumes/OS X Mavericks/Users/wyszo/Documents/Devel/PlayerAid/TWCommonLib/TWCommonLib\"";
-		};
 		1A512928B78C54E210885563 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
