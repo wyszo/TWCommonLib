@@ -7,7 +7,7 @@
 
 @implementation NSString (TWHTMLString)
 
-+ (nullable NSString *)htmlStringFromFileNamed:(nonnull NSString *)filename
++ (nullable NSString *)tw_htmlStringFromFileNamed:(nonnull NSString *)filename
 {
   AssertTrueOrReturnNil(filename.length);
   NSString *htmlFile = [[NSBundle mainBundle] pathForResource:filename ofType:nil];
