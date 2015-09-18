@@ -47,9 +47,7 @@
 #import "TWPathLocator.h"
 #import "TWTableViewFetchedResultsControllerBinder.h"
 #import "TWUIComponentsFactory.h"
-#import "UITextView+NumberOfLines.h"
-#import "UIScrollView+StopScrolling.h"
-#import "CALayer+TWAnimations.h"
+#import "TWTextFieldsFormHelper.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
@@ -76,5 +74,8 @@
 #import "UIViewController+TWNotificationObserving.h"
 #import "NSString+TWBase64Encoding.h"
 #import "NSString+TWHTMLString.h"
+#import "UITextView+NumberOfLines.h"
+#import "UIScrollView+StopScrolling.h"
+#import "CALayer+TWAnimations.h"
 
 #endif
