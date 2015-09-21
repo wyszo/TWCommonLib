@@ -1,0 +1,6 @@
+framework module KZAsserts {
+  umbrella header "KZAsserts-umbrella.h"
+
+  export *
+  module * { export * }
+}

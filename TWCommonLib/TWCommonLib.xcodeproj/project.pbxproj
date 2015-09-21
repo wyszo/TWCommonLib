@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2191FDED734A6C8015795DDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3138C917A5D6846C5FBC483 /* libPods.a */; };
+		0277D957DBE3C4F4BEEE7926 /* Pods_TWCommonLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B41FBB91F54B64A66DD0D98 /* Pods_TWCommonLibTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		310261121B8B745F00E5A3A0 /* UIScrollView+StopScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 310261111B8B745F00E5A3A0 /* UIScrollView+StopScrolling.m */; };
 		3102A7F51B87546300FC3A18 /* CALayer+TWAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3102A7F41B87546300FC3A18 /* CALayer+TWAnimations.m */; };
 		31038DB51B5E97F7001187A5 /* TWImagePickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31038DB41B5E97F7001187A5 /* TWImagePickerDelegate.m */; };
@@ -85,7 +85,7 @@
 		31FB6BC41B126B260042C409 /* UIImage+TWCropping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BC31B126B250042C409 /* UIImage+TWCropping.m */; };
 		31FB6BC81B126D0C0042C409 /* TWUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BC71B126D0C0042C409 /* TWUserDefaultsHelper.m */; };
 		31FB6BCD1B126F000042C409 /* TWVideoThumbnailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BCC1B126F000042C409 /* TWVideoThumbnailHelper.m */; };
-		A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */; };
+		6A7CCE83AA03D3970B1457D1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ADD17F01F392419A6EC400 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,11 +259,11 @@
 		31FB6BC71B126D0C0042C409 /* TWUserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUserDefaultsHelper.m; sourceTree = "<group>"; };
 		31FB6BCB1B126F000042C409 /* TWVideoThumbnailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWVideoThumbnailHelper.h; sourceTree = "<group>"; };
 		31FB6BCC1B126F000042C409 /* TWVideoThumbnailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWVideoThumbnailHelper.m; sourceTree = "<group>"; };
+		3B41FBB91F54B64A66DD0D98 /* Pods_TWCommonLibTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWCommonLibTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TWCommonLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54ADD17F01F392419A6EC400 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AECCAF1FCC57060D2E1C36CD /* Pods-TWCommonLibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.release.xcconfig"; sourceTree = "<group>"; };
-		E3138C917A5D6846C5FBC483 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,7 +274,7 @@
 				31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */,
 				31BFFB771AF834E700645566 /* MapKit.framework in Frameworks */,
 				319412971AF412E000D676A3 /* libPods-KZAsserts.a in Frameworks */,
-				A86732DF40FAD105BED86FD5 /* libPods-TWCommonLibTests.a in Frameworks */,
+				0277D957DBE3C4F4BEEE7926 /* Pods_TWCommonLibTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2191FDED734A6C8015795DDD /* libPods.a in Frameworks */,
+				6A7CCE83AA03D3970B1457D1 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1196,8 +1196,8 @@
 				31D6DACB1AFA27C100432340 /* CoreMotion.framework */,
 				31BFFB761AF834E700645566 /* MapKit.framework */,
 				319412961AF412E000D676A3 /* libPods-KZAsserts.a */,
-				E3138C917A5D6846C5FBC483 /* libPods.a */,
-				AE0F4A21293B1FD010B403D9 /* libPods-TWCommonLibTests.a */,
+				54ADD17F01F392419A6EC400 /* Pods.framework */,
+				3B41FBB91F54B64A66DD0D98 /* Pods_TWCommonLibTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1225,6 +1225,7 @@
 				311B7A031AF3F2A200E97FBC /* Frameworks */,
 				311B7A041AF3F2A200E97FBC /* Resources */,
 				F636B692DA464C6B43683AE3 /* Copy Pods Resources */,
+				23B05BDEC903AEBE300FE3A1 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1245,6 +1246,7 @@
 				3183947D1AED9E2A0077C079 /* Frameworks */,
 				3183947E1AED9E2A0077C079 /* Resources */,
 				7A3898079963CD1C39E64929 /* Copy Pods Resources */,
+				49C257B1D198A58EAA6AF464 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1323,6 +1325,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		23B05BDEC903AEBE300FE3A1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49C257B1D198A58EAA6AF464 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7A3898079963CD1C39E64929 /* Copy Pods Resources */ = {

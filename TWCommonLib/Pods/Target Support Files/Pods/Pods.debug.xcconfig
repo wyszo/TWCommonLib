@@ -1,5 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BlocksKit" "${PODS_ROOT}/Headers/Public/KZAsserts" "${PODS_ROOT}/Headers/Public/Kiwi" "${PODS_ROOT}/Headers/Public/UIAlertView-Blocks"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BlocksKit" -isystem "${PODS_ROOT}/Headers/Public/KZAsserts" -isystem "${PODS_ROOT}/Headers/Public/Kiwi" -isystem "${PODS_ROOT}/Headers/Public/UIAlertView-Blocks"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"BlocksKit" -l"KZAsserts" -l"UIAlertView-Blocks" -framework "MessageUI"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/BlocksKit.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/KZAsserts.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/UIAlertView_Blocks.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "BlocksKit" -framework "KZAsserts" -framework "UIAlertView_Blocks"
+PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods
 PODS_ROOT = ${SRCROOT}/Pods
