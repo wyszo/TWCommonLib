@@ -3,7 +3,7 @@
 //
 
 #import "UIView+LayerDecoration.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation UIView (TWLayerDecoration)

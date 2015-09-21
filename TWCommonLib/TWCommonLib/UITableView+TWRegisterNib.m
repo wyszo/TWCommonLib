@@ -3,7 +3,7 @@
 //
 
 #import "UITableView+TWRegisterNib.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation UITableView (TWRegisterNib)

@@ -3,7 +3,7 @@
 //
 
 #import "NSMutableURLRequest+TWHttpHeaders.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation NSMutableURLRequest (TWHttpHeaders)

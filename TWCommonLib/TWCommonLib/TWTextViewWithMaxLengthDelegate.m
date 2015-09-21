@@ -3,7 +3,7 @@
 //
 
 #import "TWTextViewWithMaxLengthDelegate.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @interface TWTextViewWithMaxLengthDelegate ()

@@ -3,7 +3,7 @@
 //
 
 #import "TWInterfaceOrientationClassStubs.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 #pragma mark - InterfaceOrientationClassStub

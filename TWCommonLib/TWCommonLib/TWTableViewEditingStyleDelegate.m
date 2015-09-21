@@ -3,7 +3,7 @@
 //
 
 #import "TWTableViewEditingStyleDelegate.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @interface TWTableViewEditingStyleDelegate ()

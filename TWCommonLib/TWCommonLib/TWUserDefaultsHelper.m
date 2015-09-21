@@ -4,7 +4,7 @@
 
 #import "TWUserDefaultsHelper.h"
 #import "NSObject+TWLazyInitialization.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @interface TWUserDefaultsHelper ()

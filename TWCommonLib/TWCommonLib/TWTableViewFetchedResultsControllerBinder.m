@@ -3,7 +3,7 @@
 //
 
 #import "TWTableViewFetchedResultsControllerBinder+Private.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @interface TWTableViewFetchedResultsControllerBinder ()

@@ -3,7 +3,7 @@
 //
 
 #import "TWLazyInitializationProxy.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @interface TWLazyInitializationProxy ()

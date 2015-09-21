@@ -2,7 +2,7 @@
 //  TWCommonLib
 //
 
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 #import "TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.h"
 #import "TWUIImagePickerExtendedEventsObserver.h"
 #import "TWOrientationChangeDetectorProtocol.h"

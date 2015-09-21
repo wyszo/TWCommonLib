@@ -3,7 +3,7 @@
 //
 
 #import <CoreMotion/CoreMotion.h>
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 #import "TWOrientationChangeDetectorUsingAccelerometer.h"
 #import "TWCommonMacros.h"
 

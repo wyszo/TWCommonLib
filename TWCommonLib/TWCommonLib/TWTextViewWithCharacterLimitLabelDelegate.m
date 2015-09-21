@@ -4,7 +4,7 @@
 
 #import "TWTextViewWithCharacterLimitLabelDelegate.h"
 #import "NSObject+TWObjectLifetime.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @interface TWTextViewWithCharacterLimitLabelDelegate ()

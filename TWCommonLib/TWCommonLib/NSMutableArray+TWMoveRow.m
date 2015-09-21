@@ -3,7 +3,7 @@
 //
 
 #import "NSMutableArray+TWMoveRow.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation NSMutableArray (TWMoveRow)
