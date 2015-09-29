@@ -48,6 +48,7 @@
 #import "TWTableViewFetchedResultsControllerBinder.h"
 #import "TWUIComponentsFactory.h"
 #import "TWTextFieldsFormHelper.h"
+#import "TWFullscreenActivityIndicatorView.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
