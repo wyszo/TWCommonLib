@@ -18,9 +18,9 @@ static const CGFloat kDefaultBackgroundAlphaValue = 0.5f;
 
 - (instancetype)init
 {
-  self = [super init];
+  CGRect frame = [UIScreen mainScreen].bounds;
+  self = [super initWithFrame:frame];
   if (self) {
-    CGRect frame = [UIScreen mainScreen].bounds;
     [self setupWithFrame:frame];
   }
   return self;
