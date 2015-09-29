@@ -43,7 +43,6 @@
 		3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */; };
 		319412931AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */; };
 		319412941AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 319412921AF410AC00D676A3 /* TWSimpleTableViewCell.m */; };
-		319412971AF412E000D676A3 /* libPods-KZAsserts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 319412961AF412E000D676A3 /* libPods-KZAsserts.a */; };
 		319412981AF412FD00D676A3 /* TWSimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */; };
 		31A282061B48657500D38D5A /* TWPathLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A282051B48657500D38D5A /* TWPathLocator.m */; };
 		31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */; };
@@ -273,7 +272,6 @@
 			files = (
 				31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */,
 				31BFFB771AF834E700645566 /* MapKit.framework in Frameworks */,
-				319412971AF412E000D676A3 /* libPods-KZAsserts.a in Frameworks */,
 				0277D957DBE3C4F4BEEE7926 /* Pods_TWCommonLibTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
