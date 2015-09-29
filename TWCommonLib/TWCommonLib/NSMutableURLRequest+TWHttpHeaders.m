@@ -14,7 +14,7 @@
   
   [httpHeaders enumerateKeysAndObjectsUsingBlock:^(NSString *key, id obj, BOOL *stop) {
     NSString *value = httpHeaders[key];
-    [self addValue:value forHTTPHeaderField:key];
+    [self setValue:value forHTTPHeaderField:key];
   }];
 }
 
