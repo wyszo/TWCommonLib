@@ -78,5 +78,6 @@
 #import "UITextView+NumberOfLines.h"
 #import "UIScrollView+StopScrolling.h"
 #import "CALayer+TWAnimations.h"
+#import "UIViewController+TWResponderChain.h"
 
 #endif
