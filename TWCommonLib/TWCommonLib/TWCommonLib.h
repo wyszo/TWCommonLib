@@ -80,5 +80,6 @@
 #import "CALayer+TWAnimations.h"
 #import "UIViewController+TWResponderChain.h"
 #import "UITableViewCell+TWHideSeparator.h"
+#import "NSIndexPath+TWNextPreviousRow.h"
 
 #endif

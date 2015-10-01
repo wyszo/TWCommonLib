@@ -70,6 +70,7 @@
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
 		31D91AF11BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D91AF01BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m */; settings = {ASSET_TAGS = (); }; };
 		31E505411BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E505401BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m */; settings = {ASSET_TAGS = (); }; };
+		31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */; settings = {ASSET_TAGS = (); }; };
 		31EFB6CF1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */; };
 		31FB03AD1B3DDF9000539B50 /* TWClassMethodCopyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB03AC1B3DDF9000539B50 /* TWClassMethodCopyHelper.m */; };
 		31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */; };
@@ -233,6 +234,8 @@
 		31D91AF01BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFullscreenActivityIndicatorView.m; sourceTree = "<group>"; };
 		31E5053F1BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+TWHideSeparator.h"; sourceTree = "<group>"; };
 		31E505401BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+TWHideSeparator.m"; sourceTree = "<group>"; };
+		31E5138B1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+TWNextPreviousRow.h"; sourceTree = "<group>"; };
+		31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+TWNextPreviousRow.m"; sourceTree = "<group>"; };
 		31EFB6CD1BAC6BE600F87C03 /* TWTextFieldsFormHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextFieldsFormHelper.h; sourceTree = "<group>"; };
 		31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTextFieldsFormHelper.m; sourceTree = "<group>"; };
 		31FB03AB1B3DDF9000539B50 /* TWClassMethodCopyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWClassMethodCopyHelper.h; sourceTree = "<group>"; };
@@ -385,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				3102A7F11B8753F200FC3A18 /* CALayer */,
+				31E505421BBD7805004BC7C4 /* NSIndexPath */,
 				31BFFB981AF9748800645566 /* NSLayoutConstraint */,
 				31FB6B541B106D180042C409 /* NSMutableArray */,
 				31FB6B651B1131DA0042C409 /* NSMutableURLRequest */,
@@ -1067,6 +1071,15 @@
 			name = UITableViewCell;
 			sourceTree = "<group>";
 		};
+		31E505421BBD7805004BC7C4 /* NSIndexPath */ = {
+			isa = PBXGroup;
+			children = (
+				31E5138B1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.h */,
+				31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */,
+			);
+			name = NSIndexPath;
+			sourceTree = "<group>";
+		};
 		31EFB6CC1BAC6BAB00F87C03 /* TextFieldsForm */ = {
 			isa = PBXGroup;
 			children = (
@@ -1537,6 +1550,7 @@
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
 				31FB6B711B11C5700042C409 /* TWInterfaceOrientationClassStubs.m in Sources */,
+				31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
