@@ -79,5 +79,6 @@
 #import "UIScrollView+StopScrolling.h"
 #import "CALayer+TWAnimations.h"
 #import "UIViewController+TWResponderChain.h"
+#import "UITableViewCell+TWHideSeparator.h"
 
 #endif
