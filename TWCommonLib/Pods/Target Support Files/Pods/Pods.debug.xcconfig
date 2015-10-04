@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/BlocksKit.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/FLKAutoLayout.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/KZAsserts.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/UIAlertView_Blocks.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "BlocksKit" -framework "FLKAutoLayout" -framework "KZAsserts" -framework "UIAlertView_Blocks"
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/BlocksKit.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/FLKAutoLayout.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/KZAsserts.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/MagicalRecord.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/UIAlertView_Blocks.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "BlocksKit" -framework "FLKAutoLayout" -framework "KZAsserts" -framework "MagicalRecord" -framework "UIAlertView_Blocks"
 PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods
 PODS_ROOT = ${SRCROOT}/Pods
