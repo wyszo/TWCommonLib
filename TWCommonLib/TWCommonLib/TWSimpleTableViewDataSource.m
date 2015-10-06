@@ -3,7 +3,7 @@
 //
 
 #import "TWSimpleTableViewDataSource.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation TWSimpleTableViewDataSource

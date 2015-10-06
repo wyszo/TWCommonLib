@@ -4,7 +4,7 @@
 
 #import "NSObject+TWObjectLifetime.h"
 #import <objc/runtime.h>
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 #import "TWCommonMacros.h"
 
 

@@ -3,7 +3,7 @@
 //
 
 #import "TWJSONHelper.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation TWJSONHelper

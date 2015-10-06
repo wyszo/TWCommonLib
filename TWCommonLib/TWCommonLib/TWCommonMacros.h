@@ -11,10 +11,12 @@
 #define CallBlock(block, ...) (block ? block(__VA_ARGS__) : nil);
 #define defineWeakSelf() __weak typeof(self) weakSelf = self
 
+// TODO: change ColorMake macros into C functions to get type checking (macros can't take floats as parameters)
 #define UIColorMake(r,g,b) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:1.0]
 #define UIColorWithAlphaMake(r,g,b,a) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:a]
 #define UIFontMake(fontName,fontSize) [UIFont fontWithName:fontName size:fontSize]
 
+// Macros helping avoid ternary operator abuse (value ?: alternativeValue)
 #define ValueIfExistsOr(value, alternativeValue) (value ? value : alternativeValue)
 #define ValueOr(value, alternativeValue) (value ? value : alternativeValue)
 #define ValueOrEmptyString(value) (value ? value : @"")
@@ -69,11 +71,16 @@ SUPPRESS_NULLABILITY_COMPLETENESS_BEGIN \
 - (instancetype)init __unavailable; \
 SUPPRESS_NULLABILITY_COMPLETENESS_END
 
-#define SHARED_INSTANCE_GENERATE_INTERFACE + (instancetype)sharedInstance;
+// Disclaimer: using singletons is generally discouraged, try to use dependency injection framework (such as Objection or Typhoon) instead!
+#define SHARED_INSTANCE_GENERATE_INTERFACE \
+SUPPRESS_NULLABILITY_COMPLETENESS_BEGIN \
++ (instancetype)sharedInstance; \
+SUPPRESS_NULLABILITY_COMPLETENESS_END
 
 
 #pragma mark - Inside class implementation
 
+// Disclaimer: using singletons is generally discouraged, try to use dependency injection framework (such as Objection or Typhoon) instead!
 #define SHARED_INSTANCE_GENERATE_IMPLEMENTATION \
 + (instancetype)sharedInstance \
 { \

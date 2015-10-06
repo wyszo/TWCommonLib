@@ -5,7 +5,7 @@
 #import "TWDataWriteHelper.h"
 #import "NSObject+TWObjectLifetime.h"
 #import "TWCommonMacros.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @interface TWDataWriteHelper ()

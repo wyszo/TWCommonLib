@@ -3,7 +3,7 @@
 //
 
 #import "TWSimpleMapViewDelegate.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @interface TWSimpleMapViewDelegate ()

@@ -3,7 +3,7 @@
 //
 
 #import "TWSimpleCollectionViewFlowLayoutDelegate.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 #import "NSObject+TWObjectLifetime.h"
 
 

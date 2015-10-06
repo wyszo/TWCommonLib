@@ -27,7 +27,7 @@
     
     _cellDequeueIdentifier = @"cell";
     
-    UINib *tableViewCellNib = [UINib nibWithNibName:cellNibName bundle:[NSBundle bundleForClass:[self class]]];
+    UINib *tableViewCellNib = [UINib nibWithNibName:cellNibName bundle:[NSBundle mainBundle]];
     [_tableView registerNib:tableViewCellNib forCellReuseIdentifier:_cellDequeueIdentifier];
   }
   return self;

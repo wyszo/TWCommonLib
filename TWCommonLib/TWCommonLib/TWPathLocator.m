@@ -3,7 +3,7 @@
 //
 
 #import "TWPathLocator.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation TWPathLocator

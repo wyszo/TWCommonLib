@@ -3,8 +3,8 @@
 //
 
 #import "UIViewController+TWNotificationObserving.h"
-#import <KZAsserts.h>
-#import <BlocksKit.h>
+#import <KZAsserts/KZAsserts.h>
+#import <BlocksKit/BlocksKit.h>
 #import "TWCommonLib.h"
 
 static NSString *const kBindingKey = @"NotificationsNameToSelectorMapping";

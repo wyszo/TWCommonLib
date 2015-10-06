@@ -9,6 +9,10 @@ CGRect CGRectFromSize(CGSize size) {
 }
 
 CGFloat valueInRange(CGFloat min, CGFloat max, CGFloat value) {
-  CGFloat result = (value > max ? max : value);
-  return (result < min ? min : result);
+    return ValueInRange(min, max, value);
+}
+
+CGFloat ValueInRange(CGFloat min, CGFloat max, CGFloat value) {
+    CGFloat result = (value > max ? max : value);
+    return (result < min ? min : result);
 }

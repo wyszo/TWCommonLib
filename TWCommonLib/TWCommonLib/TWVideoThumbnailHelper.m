@@ -5,7 +5,7 @@
 @import AVFoundation;
 @import UIKit;
 #import "TWVideoThumbnailHelper.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation TWVideoThumbnailHelper

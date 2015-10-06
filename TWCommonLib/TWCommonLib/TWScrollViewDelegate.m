@@ -4,7 +4,7 @@
 //
 
 #import "TWScrollViewDelegate.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation TWScrollViewDelegate

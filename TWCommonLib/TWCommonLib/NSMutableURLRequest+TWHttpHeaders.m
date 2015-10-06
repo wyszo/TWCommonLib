@@ -3,7 +3,7 @@
 //
 
 #import "NSMutableURLRequest+TWHttpHeaders.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation NSMutableURLRequest (TWHttpHeaders)
@@ -14,7 +14,7 @@
   
   [httpHeaders enumerateKeysAndObjectsUsingBlock:^(NSString *key, id obj, BOOL *stop) {
     NSString *value = httpHeaders[key];
-    [self addValue:value forHTTPHeaderField:key];
+    [self setValue:value forHTTPHeaderField:key];
   }];
 }
 

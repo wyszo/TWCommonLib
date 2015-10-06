@@ -3,7 +3,7 @@
 //
 
 #import "NSString+TWTrimming.h"
-#import <KZAsserts.h>
+#import <KZAsserts/KZAsserts.h>
 
 
 @implementation NSString (TWTrimming)
