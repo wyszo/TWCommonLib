@@ -49,6 +49,7 @@
 #import "TWUIComponentsFactory.h"
 #import "TWTextFieldsFormHelper.h"
 #import "TWFullscreenActivityIndicatorView.h"
+#import "TWAssetsHelper.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"

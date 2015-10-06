@@ -72,6 +72,7 @@
 		31D91AF11BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D91AF01BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m */; settings = {ASSET_TAGS = (); }; };
 		31E505411BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E505401BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m */; settings = {ASSET_TAGS = (); }; };
 		31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */; settings = {ASSET_TAGS = (); }; };
+		31E5B6B01BC4286B008845AD /* TWAssetsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6AF1BC4286B008845AD /* TWAssetsHelper.m */; settings = {ASSET_TAGS = (); }; };
 		31EFB6CF1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */; };
 		31FB03AD1B3DDF9000539B50 /* TWClassMethodCopyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB03AC1B3DDF9000539B50 /* TWClassMethodCopyHelper.m */; };
 		31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */; };
@@ -239,6 +240,8 @@
 		31E505401BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+TWHideSeparator.m"; sourceTree = "<group>"; };
 		31E5138B1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+TWNextPreviousRow.h"; sourceTree = "<group>"; };
 		31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+TWNextPreviousRow.m"; sourceTree = "<group>"; };
+		31E5B6AE1BC4286B008845AD /* TWAssetsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAssetsHelper.h; sourceTree = "<group>"; };
+		31E5B6AF1BC4286B008845AD /* TWAssetsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAssetsHelper.m; sourceTree = "<group>"; };
 		31EFB6CD1BAC6BE600F87C03 /* TWTextFieldsFormHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextFieldsFormHelper.h; sourceTree = "<group>"; };
 		31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTextFieldsFormHelper.m; sourceTree = "<group>"; };
 		31FB03AB1B3DDF9000539B50 /* TWClassMethodCopyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWClassMethodCopyHelper.h; sourceTree = "<group>"; };
@@ -713,6 +716,7 @@
 		318394FE1AF005E10077C079 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				31E5B6AD1BC42854008845AD /* AssetsHelper */,
 				311B79FD1AF26F6B00E97FBC /* Categories */,
 				31D645AF1AFD5BB5003B4262 /* CommonFunctions */,
 				31D645B01AFD7105003B4262 /* CoordinateSystemConverter */,
@@ -1091,6 +1095,15 @@
 				31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */,
 			);
 			name = NSIndexPath;
+			sourceTree = "<group>";
+		};
+		31E5B6AD1BC42854008845AD /* AssetsHelper */ = {
+			isa = PBXGroup;
+			children = (
+				31E5B6AE1BC4286B008845AD /* TWAssetsHelper.h */,
+				31E5B6AF1BC4286B008845AD /* TWAssetsHelper.m */,
+			);
+			name = AssetsHelper;
 			sourceTree = "<group>";
 		};
 		31EFB6CC1BAC6BAB00F87C03 /* TextFieldsForm */ = {
@@ -1558,6 +1571,7 @@
 				31038DB51B5E97F7001187A5 /* TWImagePickerDelegate.m in Sources */,
 				314ED2681B7CEF5700B64EB1 /* UITextView+NumberOfLines.m in Sources */,
 				3129035E1B2220D600C730DA /* UIViewController+Navbar.m in Sources */,
+				31E5B6B01BC4286B008845AD /* TWAssetsHelper.m in Sources */,
 				310ACDE81B923100002E6613 /* NSString+TWBase64Encoding.m in Sources */,
 				31639F7D1BBAE49F005F19F0 /* UIViewController+TWResponderChain.m in Sources */,
 				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
