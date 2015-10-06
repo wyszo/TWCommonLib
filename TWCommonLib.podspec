@@ -15,4 +15,6 @@ Pod::Spec.new do |s|
   s.dependency  'UIAlertView-Blocks', '1.0'
   s.dependency  'KZAsserts', '1.0'
   s.dependency  'BlocksKit', '2.2.5'
+  s.dependency  'FLKAutoLayout', '0.2.1'
+  s.dependency  'MagicalRecord', '2.3.0' 
 end
