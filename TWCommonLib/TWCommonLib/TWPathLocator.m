@@ -2,13 +2,17 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWPathLocator.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation TWPathLocator
 
 - (NSString *)documentsPath
+{
+  return [[self documentsPathURL] path];
+}
+
+- (NSURL *)documentsPathURL
 {
   NSArray *documentsURLs = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
   AssertTrueOrReturnNil(documentsURLs.count);
