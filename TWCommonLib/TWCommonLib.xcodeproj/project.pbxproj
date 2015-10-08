@@ -73,6 +73,7 @@
 		31E505411BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E505401BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m */; settings = {ASSET_TAGS = (); }; };
 		31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */; settings = {ASSET_TAGS = (); }; };
 		31E5B6B01BC4286B008845AD /* TWAssetsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6AF1BC4286B008845AD /* TWAssetsHelper.m */; settings = {ASSET_TAGS = (); }; };
+		31E5B6B41BC6CD00008845AD /* TWFilesystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6B31BC6CD00008845AD /* TWFilesystemHelper.m */; settings = {ASSET_TAGS = (); }; };
 		31EFB6CF1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */; };
 		31FB03AD1B3DDF9000539B50 /* TWClassMethodCopyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB03AC1B3DDF9000539B50 /* TWClassMethodCopyHelper.m */; };
 		31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */; };
@@ -242,6 +243,8 @@
 		31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+TWNextPreviousRow.m"; sourceTree = "<group>"; };
 		31E5B6AE1BC4286B008845AD /* TWAssetsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAssetsHelper.h; sourceTree = "<group>"; };
 		31E5B6AF1BC4286B008845AD /* TWAssetsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAssetsHelper.m; sourceTree = "<group>"; };
+		31E5B6B21BC6CD00008845AD /* TWFilesystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFilesystemHelper.h; sourceTree = "<group>"; };
+		31E5B6B31BC6CD00008845AD /* TWFilesystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFilesystemHelper.m; sourceTree = "<group>"; };
 		31EFB6CD1BAC6BE600F87C03 /* TWTextFieldsFormHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextFieldsFormHelper.h; sourceTree = "<group>"; };
 		31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTextFieldsFormHelper.m; sourceTree = "<group>"; };
 		31FB03AB1B3DDF9000539B50 /* TWClassMethodCopyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWClassMethodCopyHelper.h; sourceTree = "<group>"; };
@@ -722,6 +725,7 @@
 				31D645B01AFD7105003B4262 /* CoordinateSystemConverter */,
 				312D5FCC1AFABD5000813EE8 /* DataWriteHelper */,
 				31D6459B1AFB6E51003B4262 /* Factories */,
+				31E5B6B11BC6CCC3008845AD /* Filesystem */,
 				31D645C41AFE55AD003B4262 /* ImagePickerHelper */,
 				318394FF1AF005EE0077C079 /* JSONHelper */,
 				312A238F1BC191B0004CB7F0 /* MagicalRecord */,
@@ -1104,6 +1108,15 @@
 				31E5B6AF1BC4286B008845AD /* TWAssetsHelper.m */,
 			);
 			name = AssetsHelper;
+			sourceTree = "<group>";
+		};
+		31E5B6B11BC6CCC3008845AD /* Filesystem */ = {
+			isa = PBXGroup;
+			children = (
+				31E5B6B21BC6CD00008845AD /* TWFilesystemHelper.h */,
+				31E5B6B31BC6CD00008845AD /* TWFilesystemHelper.m */,
+			);
+			name = Filesystem;
 			sourceTree = "<group>";
 		};
 		31EFB6CC1BAC6BAB00F87C03 /* TextFieldsForm */ = {
@@ -1577,6 +1590,7 @@
 				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
+				31E5B6B41BC6CD00008845AD /* TWFilesystemHelper.m in Sources */,
 				31FB6B711B11C5700042C409 /* TWInterfaceOrientationClassStubs.m in Sources */,
 				31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
