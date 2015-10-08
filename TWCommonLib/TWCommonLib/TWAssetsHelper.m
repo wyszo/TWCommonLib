@@ -28,4 +28,29 @@
   }];
 }
 
+- (void)videoExportFromPhotoLibraryWithReferenceURL:(nonnull NSURL *)referenceURL outputLocalURL:(nonnull NSURL *)outputLocalURL completion:(VoidBlockWithError)completion
+{
+  AssertTrueOrReturn(referenceURL);
+  AssertTrueOrReturn(outputLocalURL);
+  
+  PHAsset *asset = [[PHAsset fetchAssetsWithALAssetURLs:@[referenceURL] options:0] firstObject];
+  AssertTrueOrReturn(asset);
+  
+  PHImageManager *imageManager = [PHImageManager defaultManager];
+  
+  // TODO: wire up a progress handler
+  [imageManager requestExportSessionForVideo:asset options:0 exportPreset:AVAssetExportPresetPassthrough resultHandler:^(AVAssetExportSession * _Nullable exportSession, NSDictionary * _Nullable info) {
+    exportSession.outputURL = outputLocalURL;
+    exportSession.outputFileType = AVFileTypeQuickTimeMovie;
+    
+    [exportSession exportAsynchronouslyWithCompletionHandler:^{
+      if (exportSession.status == AVAssetExportSessionStatusCompleted) {
+        CallBlock(completion, nil);
+      } else {
+        CallBlock(completion, exportSession.error);
+      }
+    }];
+  }];
+}
+
 @end
