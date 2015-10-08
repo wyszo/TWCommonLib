@@ -83,5 +83,6 @@
 #import "UIViewController+TWResponderChain.h"
 #import "UITableViewCell+TWHideSeparator.h"
 #import "NSIndexPath+TWNextPreviousRow.h"
+#import "NSString+TWReplacingCharacters.h"
 
 #endif

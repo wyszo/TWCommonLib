@@ -74,6 +74,7 @@
 		31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */; settings = {ASSET_TAGS = (); }; };
 		31E5B6B01BC4286B008845AD /* TWAssetsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6AF1BC4286B008845AD /* TWAssetsHelper.m */; settings = {ASSET_TAGS = (); }; };
 		31E5B6B41BC6CD00008845AD /* TWFilesystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6B31BC6CD00008845AD /* TWFilesystemHelper.m */; settings = {ASSET_TAGS = (); }; };
+		31E5B6B71BC6E049008845AD /* NSString+TWReplacingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6B61BC6E049008845AD /* NSString+TWReplacingCharacters.m */; settings = {ASSET_TAGS = (); }; };
 		31EFB6CF1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */; };
 		31FB03AD1B3DDF9000539B50 /* TWClassMethodCopyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB03AC1B3DDF9000539B50 /* TWClassMethodCopyHelper.m */; };
 		31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */; };
@@ -245,6 +246,8 @@
 		31E5B6AF1BC4286B008845AD /* TWAssetsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAssetsHelper.m; sourceTree = "<group>"; };
 		31E5B6B21BC6CD00008845AD /* TWFilesystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFilesystemHelper.h; sourceTree = "<group>"; };
 		31E5B6B31BC6CD00008845AD /* TWFilesystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFilesystemHelper.m; sourceTree = "<group>"; };
+		31E5B6B51BC6E049008845AD /* NSString+TWReplacingCharacters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TWReplacingCharacters.h"; sourceTree = "<group>"; };
+		31E5B6B61BC6E049008845AD /* NSString+TWReplacingCharacters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TWReplacingCharacters.m"; sourceTree = "<group>"; };
 		31EFB6CD1BAC6BE600F87C03 /* TWTextFieldsFormHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextFieldsFormHelper.h; sourceTree = "<group>"; };
 		31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTextFieldsFormHelper.m; sourceTree = "<group>"; };
 		31FB03AB1B3DDF9000539B50 /* TWClassMethodCopyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWClassMethodCopyHelper.h; sourceTree = "<group>"; };
@@ -1247,6 +1250,8 @@
 				310ACDE71B923100002E6613 /* NSString+TWBase64Encoding.m */,
 				310ACDEE1B924BCA002E6613 /* NSString+TWHTMLString.h */,
 				310ACDEF1B924BCA002E6613 /* NSString+TWHTMLString.m */,
+				31E5B6B51BC6E049008845AD /* NSString+TWReplacingCharacters.h */,
+				31E5B6B61BC6E049008845AD /* NSString+TWReplacingCharacters.m */,
 			);
 			name = NSString;
 			sourceTree = "<group>";
@@ -1591,6 +1596,7 @@
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
 				31E5B6B41BC6CD00008845AD /* TWFilesystemHelper.m in Sources */,
+				31E5B6B71BC6E049008845AD /* NSString+TWReplacingCharacters.m in Sources */,
 				31FB6B711B11C5700042C409 /* TWInterfaceOrientationClassStubs.m in Sources */,
 				31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
