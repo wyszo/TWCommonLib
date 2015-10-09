@@ -79,7 +79,7 @@
 #import "NSString+TWBase64Encoding.h"
 #import "NSString+TWHTMLString.h"
 #import "UITextView+NumberOfLines.h"
-#import "UIScrollView+StopScrolling.h"
+#import "UIScrollView+TWScrolling.h"
 #import "CALayer+TWAnimations.h"
 #import "UIViewController+TWResponderChain.h"
 #import "UITableViewCell+TWHideSeparator.h"

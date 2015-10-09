@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0277D957DBE3C4F4BEEE7926 /* Pods_TWCommonLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B41FBB91F54B64A66DD0D98 /* Pods_TWCommonLibTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		310261121B8B745F00E5A3A0 /* UIScrollView+StopScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 310261111B8B745F00E5A3A0 /* UIScrollView+StopScrolling.m */; };
+		310261121B8B745F00E5A3A0 /* UIScrollView+TWScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 310261111B8B745F00E5A3A0 /* UIScrollView+TWScrolling.m */; };
 		3102A7F51B87546300FC3A18 /* CALayer+TWAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3102A7F41B87546300FC3A18 /* CALayer+TWAnimations.m */; };
 		31038DB51B5E97F7001187A5 /* TWImagePickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31038DB41B5E97F7001187A5 /* TWImagePickerDelegate.m */; };
 		310394F11B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 310394F01B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m */; };
@@ -108,8 +108,8 @@
 
 /* Begin PBXFileReference section */
 		3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		310261101B8B745F00E5A3A0 /* UIScrollView+StopScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+StopScrolling.h"; sourceTree = "<group>"; };
-		310261111B8B745F00E5A3A0 /* UIScrollView+StopScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+StopScrolling.m"; sourceTree = "<group>"; };
+		310261101B8B745F00E5A3A0 /* UIScrollView+TWScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "UIScrollView+TWScrolling.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		310261111B8B745F00E5A3A0 /* UIScrollView+TWScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIScrollView+TWScrolling.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3102A7F31B87546300FC3A18 /* CALayer+TWAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+TWAnimations.h"; sourceTree = "<group>"; };
 		3102A7F41B87546300FC3A18 /* CALayer+TWAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+TWAnimations.m"; sourceTree = "<group>"; };
 		31038DB31B5E97F7001187A5 /* TWImagePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWImagePickerDelegate.h; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		318394B31AEDA85D0077C079 /* TWDispatchMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWDispatchMacros.m; sourceTree = "<group>"; };
 		318394B71AEDA9E90077C079 /* TWSimpleTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewDelegate.h; sourceTree = "<group>"; };
 		318394B81AEDA9E90077C079 /* TWSimpleTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewDelegate.m; sourceTree = "<group>"; };
-		318394BA1AEDAAA50077C079 /* TWCommonLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonLib.h; sourceTree = "<group>"; };
+		318394BA1AEDAAA50077C079 /* TWCommonLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TWCommonLib.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		318395001AF006080077C079 /* TWJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWJSONHelper.h; sourceTree = "<group>"; };
 		318395011AF006080077C079 /* TWJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWJSONHelper.m; sourceTree = "<group>"; };
 		3194128B1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewDataSource.h; sourceTree = "<group>"; };
@@ -317,8 +317,8 @@
 		3102610F1B8B742100E5A3A0 /* UIScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				310261101B8B745F00E5A3A0 /* UIScrollView+StopScrolling.h */,
-				310261111B8B745F00E5A3A0 /* UIScrollView+StopScrolling.m */,
+				310261101B8B745F00E5A3A0 /* UIScrollView+TWScrolling.h */,
+				310261111B8B745F00E5A3A0 /* UIScrollView+TWScrolling.m */,
 			);
 			name = UIScrollView;
 			sourceTree = "<group>";
@@ -1535,7 +1535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31FB6BB21B1232950042C409 /* NSObject+TWLazyInitialization.m in Sources */,
-				310261121B8B745F00E5A3A0 /* UIScrollView+StopScrolling.m in Sources */,
+				310261121B8B745F00E5A3A0 /* UIScrollView+TWScrolling.m in Sources */,
 				31BFFB9F1AF9841C00645566 /* UIImagePickerController+TWCameraDeviceSwitching.m in Sources */,
 				314B6F2D1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m in Sources */,
 				31FB6BC41B126B260042C409 /* UIImage+TWCropping.m in Sources */,

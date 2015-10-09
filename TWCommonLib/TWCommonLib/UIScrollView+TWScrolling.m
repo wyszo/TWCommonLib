@@ -2,9 +2,9 @@
 //  TWCommonLib
 //
 
-#import "UIScrollView+StopScrolling.h"
+#import "UIScrollView+TWScrolling.h"
 
-@implementation UIScrollView (StopScrolling)
+@implementation UIScrollView (TWScrolling)
 
 - (void)tw_stopScrolling
 {
