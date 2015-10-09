@@ -51,6 +51,7 @@
 #import "TWFullscreenActivityIndicatorView.h"
 #import "TWAssetsHelper.h"
 #import "TWFilesystemHelper.h"
+#import "TWVideoPlaybackErrorHandler.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
