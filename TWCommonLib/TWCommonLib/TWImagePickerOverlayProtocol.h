@@ -10,7 +10,7 @@
 
 - (instancetype)initWithImagePickerController:(UIImagePickerController *)imagePickerController;
 
-- (void)showOverlay;
-- (void)hideOverlay;
+- (void)showPickerOverlay;
+- (void)hidePickerOverlay;
 
 @end
