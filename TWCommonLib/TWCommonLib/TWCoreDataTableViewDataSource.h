@@ -8,7 +8,7 @@
 typedef NSString* (^CellReuseMappingBlock)(NSIndexPath *);
 
 
-@interface TWCoreDataTableViewDataSource : NSObject <UITableViewDataSource>
+@interface TWCoreDataTableViewDataSource<__covariant T:NSManagedObject *> : NSObject <UITableViewDataSource>
 
 @property (copy, nonatomic) NSFetchedResultsController* (^fetchedResultsControllerLazyInitializationBlock)();
 @property (copy, nonatomic) void (^deleteCellOnSwipeBlock)(NSIndexPath *indexPath);
@@ -39,7 +39,7 @@ __attribute__((deprecated));
 
 - (void)resetFetchedResultsController;
 
-- (id)objectAtIndexPath:(NSIndexPath *)indexPath;
+- (T)objectAtIndexPath:(NSIndexPath *)indexPath;
 - (id<NSFetchedResultsSectionInfo>)sectionInfoForSection:(NSInteger)section;
 
 - (NSInteger)objectCount;
