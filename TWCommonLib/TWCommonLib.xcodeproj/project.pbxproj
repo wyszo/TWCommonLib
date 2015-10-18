@@ -1765,6 +1765,7 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = Exclude/PrefixHeader.pch;
 				INFOPLIST_FILE = TWCommonLib/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "synappse.tw.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1777,6 +1778,7 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = Exclude/PrefixHeader.pch;
 				INFOPLIST_FILE = TWCommonLib/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "synappse.tw.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
