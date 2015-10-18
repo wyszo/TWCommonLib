@@ -421,8 +421,7 @@
 				3129035F1B23980300C730DA /* UITextView */,
 				311B79F11AF107E400E97FBC /* UIView */,
 				31D645D81B0271A3003B4262 /* UIViewController */,
-				3150C7451BD3C6CD00742B8D /* NSURLCache+TWCache.h */,
-				3150C7461BD3C6CD00742B8D /* NSURLCache+TWCache.m */,
+				31F0F4E31BD4CC7300E55FBC /* NSURLCache */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1147,6 +1146,15 @@
 				31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */,
 			);
 			name = TextFieldsForm;
+			sourceTree = "<group>";
+		};
+		31F0F4E31BD4CC7300E55FBC /* NSURLCache */ = {
+			isa = PBXGroup;
+			children = (
+				3150C7451BD3C6CD00742B8D /* NSURLCache+TWCache.h */,
+				3150C7461BD3C6CD00742B8D /* NSURLCache+TWCache.m */,
+			);
+			name = NSURLCache;
 			sourceTree = "<group>";
 		};
 		31FB03AA1B3DDF7300539B50 /* MethodCopying */ = {
