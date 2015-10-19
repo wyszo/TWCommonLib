@@ -8,6 +8,9 @@
 
 + (void)tw_setMemoryCacheSizeMegabytes:(CGFloat)memoryCacheSizeMegabytes diskCacheSizeMegabytes:(CGFloat)diskCacheMegabytes;
 
+- (nullable NSHTTPURLResponse *)tw_cachedHTTPResponseForURLRequest:(nonnull NSURLRequest *)request;
+
+
 - (CGFloat)tw_memoryCacheCapacityInMegabytes;
 - (CGFloat)tw_diskCacheCapacityInMegabytes;
 

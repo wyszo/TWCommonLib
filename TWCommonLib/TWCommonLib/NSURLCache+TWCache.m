@@ -2,6 +2,7 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "NSURLCache+TWCache.h"
 
 static CGFloat const kBytesToMegabytesDenominator = 1024.0 * 1024.0;
@@ -19,6 +20,16 @@ static CGFloat const kMegabytesToBytesCoefficient = kBytesToMegabytesDenominator
   
   NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:memoryCacheInBytes diskCapacity:diskCacheInBytes diskPath:nil];
   [NSURLCache setSharedURLCache:cache];
+}
+
+#pragma mark - Public interface 
+
+- (nullable NSHTTPURLResponse *)tw_cachedHTTPResponseForURLRequest:(nonnull NSURLRequest *)request;
+{
+  AssertTrueOrReturnNil(request);
+  
+  NSCachedURLResponse *cachedResponse = [self cachedResponseForRequest:request];
+  return (NSHTTPURLResponse *)cachedResponse.response;
 }
 
 #pragma mark - Diagnostic helpers
