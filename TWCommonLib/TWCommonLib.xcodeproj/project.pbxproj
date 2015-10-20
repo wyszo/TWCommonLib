@@ -73,6 +73,7 @@
 		31D91AF11BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D91AF01BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m */; settings = {ASSET_TAGS = (); }; };
 		31E505411BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E505401BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m */; settings = {ASSET_TAGS = (); }; };
 		31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */; settings = {ASSET_TAGS = (); }; };
+		31E57A351BD6BA7C005ED7C0 /* TWPerformanceTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E57A341BD6BA7C005ED7C0 /* TWPerformanceTimer.swift */; settings = {ASSET_TAGS = (); }; };
 		31E5B6B01BC4286B008845AD /* TWAssetsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6AF1BC4286B008845AD /* TWAssetsHelper.m */; settings = {ASSET_TAGS = (); }; };
 		31E5B6B41BC6CD00008845AD /* TWFilesystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6B31BC6CD00008845AD /* TWFilesystemHelper.m */; settings = {ASSET_TAGS = (); }; };
 		31E5B6B71BC6E049008845AD /* NSString+TWReplacingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6B61BC6E049008845AD /* NSString+TWReplacingCharacters.m */; settings = {ASSET_TAGS = (); }; };
@@ -246,6 +247,8 @@
 		31E505401BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+TWHideSeparator.m"; sourceTree = "<group>"; };
 		31E5138B1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+TWNextPreviousRow.h"; sourceTree = "<group>"; };
 		31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+TWNextPreviousRow.m"; sourceTree = "<group>"; };
+		31E57A331BD6BA7C005ED7C0 /* TWCommonLib-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TWCommonLib-Bridging-Header.h"; sourceTree = "<group>"; };
+		31E57A341BD6BA7C005ED7C0 /* TWPerformanceTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWPerformanceTimer.swift; sourceTree = "<group>"; };
 		31E5B6AE1BC4286B008845AD /* TWAssetsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAssetsHelper.h; sourceTree = "<group>"; };
 		31E5B6AF1BC4286B008845AD /* TWAssetsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAssetsHelper.m; sourceTree = "<group>"; };
 		31E5B6B21BC6CD00008845AD /* TWFilesystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFilesystemHelper.h; sourceTree = "<group>"; };
@@ -689,6 +692,7 @@
 				314529611AF0B3CB00C33BC1 /* TWCommonMacros.h */,
 				318394AE1AEDA2010077C079 /* TWCommonTypes.h */,
 				318394BA1AEDAAA50077C079 /* TWCommonLib.h */,
+				31E57A331BD6BA7C005ED7C0 /* TWCommonLib-Bridging-Header.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -746,6 +750,7 @@
 				310394EE1B1E113A00D4D81E /* MoviePlayerViewController */,
 				311B79F91AF1470500E97FBC /* ObjectLifetime */,
 				31A282031B48654C00D38D5A /* PathsLocator */,
+				31E57A321BD6B94F005ED7C0 /* PerformanceTimer */,
 				31D6DAC91AFA256600432340 /* Protocols */,
 				31FB6B5A1B1080F80042C409 /* TableViewFetchedResultsControllerBinder */,
 				31EFB6CC1BAC6BAB00F87C03 /* TextFieldsForm */,
@@ -1112,6 +1117,14 @@
 			name = NSIndexPath;
 			sourceTree = "<group>";
 		};
+		31E57A321BD6B94F005ED7C0 /* PerformanceTimer */ = {
+			isa = PBXGroup;
+			children = (
+				31E57A341BD6BA7C005ED7C0 /* TWPerformanceTimer.swift */,
+			);
+			name = PerformanceTimer;
+			sourceTree = "<group>";
+		};
 		31E5B6AD1BC42854008845AD /* AssetsHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -1391,6 +1404,7 @@
 		318394781AED9E2A0077C079 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Synappse;
 				TargetAttributes = {
@@ -1626,6 +1640,7 @@
 				31E5B6B41BC6CD00008845AD /* TWFilesystemHelper.m in Sources */,
 				31E5B6B71BC6E049008845AD /* NSString+TWReplacingCharacters.m in Sources */,
 				31FB6B711B11C5700042C409 /* TWInterfaceOrientationClassStubs.m in Sources */,
+				31E57A351BD6BA7C005ED7C0 /* TWPerformanceTimer.swift in Sources */,
 				31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
 			);
@@ -1771,12 +1786,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				GCC_PREFIX_HEADER = Exclude/PrefixHeader.pch;
 				INFOPLIST_FILE = TWCommonLib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "synappse.tw.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TWCommonLib/TWCommonLib-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1784,12 +1803,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3079B227CB46AFBD701DB7DC /* Pods.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				GCC_PREFIX_HEADER = Exclude/PrefixHeader.pch;
 				INFOPLIST_FILE = TWCommonLib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "synappse.tw.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TWCommonLib/TWCommonLib-Bridging-Header.h";
 			};
 			name = Release;
 		};

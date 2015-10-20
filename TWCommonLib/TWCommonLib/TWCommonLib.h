@@ -5,6 +5,7 @@
 #ifndef TWCommonLib_TWCommonLib_h
 #define TWCommonLib_TWCommonLib_h
 
+#import "TWCommonLib-Swift.h" // swift bridging header
 
 #import "TWCommonMacros.h"
 #import "TWCommonTypes.h"
