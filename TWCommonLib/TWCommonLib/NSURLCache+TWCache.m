@@ -24,15 +24,15 @@ static CGFloat const kMegabytesToBytesCoefficient = kBytesToMegabytesDenominator
 
 #pragma mark - Public interface 
 
-- (nullable NSHTTPURLResponse *)tw_cachedHTTPResponseForURLRequest:(nonnull NSURLRequest *)request;
+- (nullable NSCachedURLResponse *)tw_cachedHTTPResponseForURLRequest:(nonnull NSURLRequest *)request;
 {
   AssertTrueOrReturnNil(request);
   
   NSCachedURLResponse *cachedResponse = [self cachedResponseForRequest:request];
-  return (NSHTTPURLResponse *)cachedResponse.response;
+  return cachedResponse;
 }
 
-- (nullable NSHTTPURLResponse *)tw_cachedHTTPResponseForURLRequestWithURLString:(nonnull NSString *)urlString
+- (nullable NSCachedURLResponse *)tw_cachedHTTPResponseForURLRequestWithURLString:(nonnull NSString *)urlString
 {
   AssertTrueOrReturnNil(urlString.length);
   
