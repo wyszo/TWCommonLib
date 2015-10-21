@@ -5,11 +5,12 @@
 #import "TWCommonTypes.h"
 #import "TWObjectCountProtocol.h"
 
+NS_ASSUME_NONNULL_BEGIN
 
 // TODO: dataSource should bind it's lifecycle to a tableView lifespan
 // TODO: modify interface so it's possible to add cells like elements in UIAlertController
 
-@interface TWArrayTableViewDataSource : NSObject <UITableViewDataSource, TWObjectCountProtocol>
+@interface TWArrayTableViewDataSource<__covariant T> : NSObject <UITableViewDataSource, TWObjectCountProtocol>
 
 @property (copy, nonatomic) CellAtIndexPathBlock configureCellBlock;
 
@@ -18,17 +19,19 @@
 /**
  For tableViews with cells from xib
  */
-- (instancetype)initWithArray:(NSArray *)array attachToTableView:(UITableView *)tableView cellNibName:(NSString *)cellNibName;
+- (instancetype)initWithArray:(NSArray<T> *)array attachToTableView:(UITableView *)tableView cellNibName:(NSString *)cellNibName;
 
 /**
  For tableViews with prototype cells from Storyboard
  */
-- (instancetype)initWithArray:(NSArray *)array attachToTableView:(UITableView *)tableView cellDequeueIdentifier:(NSString *)cellDequeueIdentifier;
+- (instancetype)initWithArray:(NSArray<T> *)array attachToTableView:(UITableView *)tableView cellDequeueIdentifier:(NSString *)cellDequeueIdentifier;
 
-- (void)removeObject:(id)object;
+- (void)removeObject:(T)object;
 - (void)removeObjectAtIndex:(NSUInteger)index;
-- (id)objectAtIndexPath:(NSIndexPath *)indexPath;
+- (T)objectAtIndexPath:(NSIndexPath *)indexPath;
 - (NSInteger)objectCount;
 - (NSArray *)allSteps;
 
 @end
+
+NS_ASSUME_NONNULL_END
