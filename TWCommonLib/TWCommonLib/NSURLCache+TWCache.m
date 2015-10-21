@@ -32,6 +32,14 @@ static CGFloat const kMegabytesToBytesCoefficient = kBytesToMegabytesDenominator
   return (NSHTTPURLResponse *)cachedResponse.response;
 }
 
+- (nullable NSHTTPURLResponse *)tw_cachedHTTPResponseForURLRequestWithURLString:(nonnull NSString *)urlString
+{
+  AssertTrueOrReturnNil(urlString.length);
+  
+  NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
+  return [self tw_cachedHTTPResponseForURLRequest:request];
+}
+
 #pragma mark - Diagnostic helpers
 
 - (CGFloat)tw_memoryCacheCapacityInMegabytes
