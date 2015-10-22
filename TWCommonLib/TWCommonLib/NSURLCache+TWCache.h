@@ -17,4 +17,6 @@
 - (CGFloat)tw_memoryCacheUssageInMegabytes;
 - (CGFloat)tw_diskCacheUssageInMegabytes;
 
+- (void)tw_debug_clearCache;
+
 @end
