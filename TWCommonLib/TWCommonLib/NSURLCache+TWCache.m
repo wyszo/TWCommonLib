@@ -62,11 +62,5 @@ static CGFloat const kMegabytesToBytesCoefficient = kBytesToMegabytesDenominator
   return (self.currentDiskUsage / kBytesToMegabytesDenominator);
 }
 
-#pragma mark - Debug helpers
-
-- (void)tw_debug_clearCache
-{
-  [self removeAllCachedResponses];
-}
 
 @end
