@@ -51,6 +51,7 @@
 #import "TWAssetsHelper.h"
 #import "TWFilesystemHelper.h"
 #import "TWVideoPlaybackErrorHandler.h"
+#import "TWGradientView.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"

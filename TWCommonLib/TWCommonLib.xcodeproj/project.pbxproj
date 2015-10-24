@@ -52,6 +52,7 @@
 		31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB21B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m */; };
 		31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB71B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m */; };
 		31A5CDBE1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */; };
+		31AC3CB51BDB4DF900BB938E /* TWGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AC3CB41BDB4DF900BB938E /* TWGradientView.m */; };
 		31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */; };
 		31BFFB751AF8349B00645566 /* TWMapKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB741AF8349B00645566 /* TWMapKitHelper.m */; };
 		31BFFB771AF834E700645566 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BFFB761AF834E700645566 /* MapKit.framework */; };
@@ -207,6 +208,8 @@
 		31A5CDB91B0E6B2F0007D92E /* TWExtendedUIImagePickerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWExtendedUIImagePickerControllerDelegate.h; sourceTree = "<group>"; };
 		31A5CDBC1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUIImagePickerExtendedEventsObserver.h; sourceTree = "<group>"; };
 		31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIImagePickerExtendedEventsObserver.m; sourceTree = "<group>"; };
+		31AC3CB31BDB4DF900BB938E /* TWGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWGradientView.h; sourceTree = "<group>"; };
+		31AC3CB41BDB4DF900BB938E /* TWGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWGradientView.m; sourceTree = "<group>"; };
 		31BFFB621AF7C54600645566 /* TWOrientationChangeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDelegate.h; sourceTree = "<group>"; };
 		31BFFB631AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorUsingAccelerometer.h; sourceTree = "<group>"; };
 		31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOrientationChangeDetectorUsingAccelerometer.m; sourceTree = "<group>"; };
@@ -796,6 +799,7 @@
 			isa = PBXGroup;
 			children = (
 				31D91AEE1BBA95160013C7D3 /* FullscreenActivityIndicatorView */,
+				31AC3CB21BDB4DDD00BB938E /* GradientView */,
 				31D91AED1BBA950C0013C7D3 /* ComponentsFactory */,
 				3194128F1AF4107E00D676A3 /* Cells */,
 			);
@@ -870,6 +874,15 @@
 				31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */,
 			);
 			name = ImagePickerEvents;
+			sourceTree = "<group>";
+		};
+		31AC3CB21BDB4DDD00BB938E /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				31AC3CB31BDB4DF900BB938E /* TWGradientView.h */,
+				31AC3CB41BDB4DF900BB938E /* TWGradientView.m */,
+			);
+			name = GradientView;
 			sourceTree = "<group>";
 		};
 		31BFFB601AF7C51000645566 /* OrientationChange (accelerometer) */ = {
@@ -1591,6 +1604,7 @@
 				313874721B09ADF80088CDA7 /* TWScrollViewDelegate.m in Sources */,
 				3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */,
 				31BFFB751AF8349B00645566 /* TWMapKitHelper.m in Sources */,
+				31AC3CB51BDB4DF900BB938E /* TWGradientView.m in Sources */,
 				319412931AF410AC00D676A3 /* TWSimpleTableViewCell.m in Sources */,
 				31D645BF1AFD7CFE003B4262 /* UIImage+TWCreateImage.m in Sources */,
 				318395021AF006080077C079 /* TWJSONHelper.m in Sources */,
