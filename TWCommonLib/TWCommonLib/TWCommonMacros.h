@@ -9,7 +9,10 @@
 #pragma mark -  Inside methods
 
 #define CallBlock(block, ...) (block ? block(__VA_ARGS__) : nil);
+
 #define defineWeakSelf() __weak typeof(self) weakSelf = self
+// this macro makes sense only at the beginning of the block (before which weakSelf has been defined)
+#define defineStrongSelf() typeof(self) strongSelf = weakSelf
 
 // TODO: change ColorMake macros into C functions to get type checking (macros can't take floats as parameters)
 #define UIColorMake(r,g,b) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:1.0]

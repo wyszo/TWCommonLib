@@ -42,12 +42,12 @@
 
 - (void)presentPortraitOrientationOverlay
 {
-  [self.imagePickerOverlayController showOverlay];
+  [self.imagePickerOverlayController showPickerOverlay];
 }
 
 - (void)hidePortraitOrientationOverlay
 {
-  [self.imagePickerOverlayController hideOverlay];
+  [self.imagePickerOverlayController hidePickerOverlay];
 }
 
 - (void)checkOrientationPresentOverlayForPortrait
@@ -62,7 +62,7 @@
 
 - (void)imagePickerControllerUserDidCaptureItem
 {
-  [self.imagePickerOverlayController hideOverlay];
+  [self.imagePickerOverlayController hidePickerOverlay];
   [self.orientationChangeDetector stopDetectingOrientationChanges];
 }
 
