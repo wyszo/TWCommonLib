@@ -1,4 +1,4 @@
-![TWCommonLib logo](http://s30.postimg.org/gqn4fmrbl/TWCommon_Lib_0_7.png)
+![TWCommonLib logo](TWCommonLib.png)
 
 #TWCommonLib - why write boilerplate?
 
