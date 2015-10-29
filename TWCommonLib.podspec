@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TWCommonLib"
-  s.version      = "0.1"
+  s.version      = "0.9"
   s.summary      = "Library containing iOS components and helpers I use in my projects"
   s.homepage     = "https://github.com/wyszo/TWCommonLib"
   s.license      = { :type => "MIT", :file => "LICENSE" }
