@@ -45,7 +45,7 @@
   
   UITableView *tableView = self.tableView;
   AssertTrueOrReturn(tableView);
-
+  
   if (self.indexPathTransformBlock) {
     NSIndexPath *indexPathBeforeTransformation = indexPath;
     indexPath = self.indexPathTransformBlock(indexPath);
@@ -61,11 +61,18 @@
   }
   
   switch(type) {
-      
     case NSFetchedResultsChangeInsert: {
       AssertTrueOrReturn(newIndexPath);
+      
       [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
                        withRowAnimation:UITableViewRowAnimationFade];
+      
+      if ([self useCATransactionAPI]) {
+        // for now we just have one completion block - if we wanted more, we'd have to chain them
+        [CATransaction setCompletionBlock:^{
+          CallBlock(self.objectInsertedAtIndexPathBlock, newIndexPath); // will be called after all the UI changes finished animating
+        }];
+      }
       [self invokeNumberOfObjectsChangedCallbackForController:controller];
     } break;
       
@@ -147,6 +154,11 @@
   if (self.disabled) {
     return;
   }
+  
+  if ([self useCATransactionAPI]) {
+    [CATransaction begin];
+  }
+  
   [self.tableView beginUpdates];
 }
 
@@ -156,6 +168,17 @@
     return;
   }
   [self.tableView endUpdates];
+  
+  if ([self useCATransactionAPI]) {
+    [CATransaction commit];
+  }
+}
+
+#pragma mark - Auxiliary methods
+
+- (BOOL)useCATransactionAPI
+{
+  return (self.objectInsertedAtIndexPathBlock != nil);
 }
 
 @end

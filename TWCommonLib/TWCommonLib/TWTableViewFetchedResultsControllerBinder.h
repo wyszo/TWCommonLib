@@ -4,7 +4,7 @@
 
 @import CoreData;
 #import "TWCommonMacros.h"
-
+#import "TWCommonTypes.h"
 
 /**
  A class that detects changes in FetchedResultsController and updates TableView based on them
@@ -12,6 +12,7 @@
 @interface TWTableViewFetchedResultsControllerBinder : NSObject <NSFetchedResultsControllerDelegate>
 
 @property (copy, nonatomic) void (^numberOfObjectsChangedBlock)(NSInteger objectCount);
+@property (copy, nonatomic) IndexPathBlock objectInsertedAtIndexPathBlock;
 
 NEW_AND_INIT_UNAVAILABLE
 
