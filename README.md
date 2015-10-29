@@ -1,8 +1,8 @@
 ![TWCommonLib logo](TWCommonLib.png)
 
-#TWCommonLib - why write boilerplate?
+#TWCommonLib: no more iOS boilerplate! 
 
-Library of iOS utilities I use in my projects. 
+Library of iOS utilities I use in my projects. Mostly serving to improve readability, app architecture and encapsulate unnecessary complexity.
 
 
 ##TableView CoreData utilities
