@@ -52,9 +52,8 @@
   return results[0];
 }
 
-- (void)tw_releaseAttachedObjectFromOwner:(nonnull NSObject *)owner withKey:(nonnull NSString *)key
+- (void)tw_releaseAttachedObjectWithKey:(nonnull NSString *)key
 {
-  AssertTrueOrReturn(owner);
   AssertTrueOrReturn(key.length);
   objc_setAssociatedObject(self, (__bridge const void *)(key), nil, OBJC_ASSOCIATION_RETAIN);
 }
