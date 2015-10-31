@@ -2,14 +2,12 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWTextViewWithMaxLengthDelegate.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWTextViewWithMaxLengthDelegate ()
 @property (nonatomic, assign) NSInteger maxLength;
 @end
-
 
 @implementation TWTextViewWithMaxLengthDelegate
 

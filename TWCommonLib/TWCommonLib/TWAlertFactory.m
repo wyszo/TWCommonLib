@@ -2,11 +2,10 @@
 //  TWCommonLib
 //
 
-#import <KZAsserts/KZAsserts.h>
+@import KZAsserts;
 #import "TWAlertFactory.h"
 #import "UIAlertView+Blocks.h"
 #import "TWCommonMacros.h"
-
 
 @implementation TWAlertFactory
 

@@ -4,10 +4,8 @@
 
 #import "TWUIImagePickerExtendedEventsObserver.h"
 
-
 static NSString *const kImagePickerUserDidCaptureItemNotificationName = @"_UIImagePickerControllerUserDidCaptureItem";
 static NSString *const kImagePickerUserDidRejectItemNotificationName = @"_UIImagePickerControllerUserDidRejectItem";
-
 
 @implementation TWUIImagePickerExtendedEventsObserver
 

@@ -4,7 +4,6 @@
 
 #import "TWCommonTypes.h"
 
-
 /**
  TODO: Redirect all the unimplemented delegate methods to TableViewController!!
  TODO: Bind lifecycle to a tableView!!

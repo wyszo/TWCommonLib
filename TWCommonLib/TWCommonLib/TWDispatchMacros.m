@@ -2,10 +2,9 @@
 //  TWCommonLib
 //
 
-#import <KZAsserts/KZAsserts.h>
+@import KZAsserts;
 #import "TWDispatchMacros.h"
 #import "TWCommonMacros.h"
-
 
 void inline DISPATCH_AFTER(NSTimeInterval when, VoidBlock block)
 {

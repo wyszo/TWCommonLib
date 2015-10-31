@@ -3,10 +3,9 @@
 //
 
 @import AVFoundation;
+@import KZAsserts;
 @import UIKit;
 #import "TWVideoThumbnailHelper.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation TWVideoThumbnailHelper
 

@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "NSString+TWTrimming.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation NSString (TWTrimming)
 

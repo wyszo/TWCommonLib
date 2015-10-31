@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
-
+@import UIKit;
 #import "TWOrientationChangeDelegate.h"
-
 
 @protocol TWOrientationChangeDetectorProtocol <NSObject>
 @required

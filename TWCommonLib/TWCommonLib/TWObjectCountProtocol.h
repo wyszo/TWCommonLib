@@ -2,8 +2,7 @@
 //  TWCommonLib
 //
 
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 
 @protocol TWObjectCountProtocol <NSObject>
 @required

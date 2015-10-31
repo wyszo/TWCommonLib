@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "NSMutableArray+TWMoveRow.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation NSMutableArray (TWMoveRow)
 

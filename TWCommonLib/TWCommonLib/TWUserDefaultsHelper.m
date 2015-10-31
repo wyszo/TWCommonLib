@@ -2,15 +2,13 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWUserDefaultsHelper.h"
 #import "NSObject+TWLazyInitialization.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWUserDefaultsHelper ()
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
 @end
-
 
 @implementation TWUserDefaultsHelper
 

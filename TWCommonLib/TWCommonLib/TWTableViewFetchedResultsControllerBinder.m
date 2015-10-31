@@ -2,19 +2,15 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWTableViewFetchedResultsControllerBinder+Private.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWTableViewFetchedResultsControllerBinder ()
-
 @property (weak, nonatomic) UITableView *tableView;
 @property (copy, nonatomic) void (^configureCellBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 @property (nonatomic, assign) BOOL disabled;
 @property (copy, nonatomic) IndexPathTransformBlock indexPathTransformBlock;
-
 @end
-
 
 @implementation TWTableViewFetchedResultsControllerBinder
 

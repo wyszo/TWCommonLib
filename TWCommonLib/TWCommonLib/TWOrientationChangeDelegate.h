@@ -2,6 +2,7 @@
 //  TWCommonLib
 //
 
+@import Foundation;
 
 @protocol TWOrientationChangeDelegate <NSObject>
 

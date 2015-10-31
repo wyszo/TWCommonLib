@@ -4,7 +4,6 @@
 
 #import "UIView+TWFadeAnimations.h"
 
-
 @implementation UIView (TWFadeAnimations)
 
 - (void)tw_fadeInAnimationWithDuration:(NSTimeInterval)duration

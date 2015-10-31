@@ -5,7 +5,6 @@
 #import "NSObject+TWLazyInitialization.h"
 #import "TWLazyInitializationProxy.h"
 
-
 @implementation NSObject (TWLazyInitialization)
 
 + (instancetype)tw_lazy

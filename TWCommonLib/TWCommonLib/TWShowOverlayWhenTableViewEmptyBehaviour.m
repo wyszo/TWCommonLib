@@ -2,9 +2,8 @@
 //  CommonLib
 //
 
+@import KZAsserts;
 #import "TWShowOverlayWhenTableViewEmptyBehaviour.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWShowOverlayWhenTableViewEmptyBehaviour ()
 
@@ -14,7 +13,6 @@
 @property (nonatomic, assign) BOOL allowScrollingWhenNoCells;
 
 @end
-
 
 @implementation TWShowOverlayWhenTableViewEmptyBehaviour
 

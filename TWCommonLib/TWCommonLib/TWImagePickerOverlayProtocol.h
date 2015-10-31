@@ -2,8 +2,7 @@
 //  TWCommonLib
 //
 
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 
 @protocol TWImagePickerOverlayProtocol <NSObject>
 @required

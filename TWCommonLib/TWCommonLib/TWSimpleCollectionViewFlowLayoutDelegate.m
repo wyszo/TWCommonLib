@@ -2,8 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWSimpleCollectionViewFlowLayoutDelegate.h"
-#import <KZAsserts/KZAsserts.h>
 #import "NSObject+TWObjectLifetime.h"
 
 

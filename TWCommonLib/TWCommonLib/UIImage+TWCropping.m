@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "UIImage+TWCropping.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation UIImage (TWCropping)
 

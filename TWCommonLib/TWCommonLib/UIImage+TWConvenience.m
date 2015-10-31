@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "UIImage+TWConvenience.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation UIImage (TWConvenience)
 

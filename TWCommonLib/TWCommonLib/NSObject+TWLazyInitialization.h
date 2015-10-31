@@ -2,8 +2,7 @@
 //  TWCommonLib
 //
 
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 
 // TODO: write unit tests and extract this to a separate Pod
 /**

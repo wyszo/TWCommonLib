@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "TWCommonTypes.h"
-
 
 @interface UIImage (TWCreateImage)
 

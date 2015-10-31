@@ -2,10 +2,9 @@
 //  TWCommonLib
 //
 
-#import <KZAsserts/KZAsserts.h>
+@import KZAsserts;
 #import "TWSimpleTableViewDelegate.h"
 #import "TWCommonMacros.h"
-
 
 @implementation TWSimpleTableViewDelegate
 

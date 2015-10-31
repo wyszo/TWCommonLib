@@ -2,6 +2,7 @@
 //  TWCommonLib
 //
 
+@import UIKit;
 
 @interface TWUIImagePickerHelper : NSObject
 

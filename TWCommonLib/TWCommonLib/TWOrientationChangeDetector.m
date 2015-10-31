@@ -4,11 +4,9 @@
 
 #import "TWOrientationChangeDetector.h"
 
-
 @interface TWOrientationChangeDetector ()
 @property (nonatomic, assign) UIInterfaceOrientation lastInterfaceOrientation;
 @end
-
 
 @implementation TWOrientationChangeDetector
 @synthesize delegate;

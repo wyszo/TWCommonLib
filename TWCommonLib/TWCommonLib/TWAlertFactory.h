@@ -4,7 +4,6 @@
 
 #import "TWCommonTypes.h"
 
-
 /**
  Disclaimer: This class uses obsolete UIAlertView instead of new UIActionController (for iOS7 compatibility)
  */

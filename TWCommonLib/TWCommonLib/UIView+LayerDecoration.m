@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "UIView+LayerDecoration.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation UIView (TWLayerDecoration)
 

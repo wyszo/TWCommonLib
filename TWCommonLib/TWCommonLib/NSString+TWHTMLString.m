@@ -2,8 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "NSString+TWHTMLString.h"
-#import <KZAsserts/KZAsserts.h>
 
 @implementation NSString (TWHTMLString)
 

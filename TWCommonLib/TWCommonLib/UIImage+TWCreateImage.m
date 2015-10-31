@@ -2,10 +2,9 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "UIImage+TWCreateImage.h"
-#import <KZAsserts/KZAsserts.h>
 #import "TWCommonMacros.h"
-
 
 @implementation UIImage (TWCreateImage)
 

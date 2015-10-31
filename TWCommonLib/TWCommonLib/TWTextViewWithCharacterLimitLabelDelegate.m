@@ -2,22 +2,18 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWTextViewWithCharacterLimitLabelDelegate.h"
 #import "NSObject+TWObjectLifetime.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWTextViewWithCharacterLimitLabelDelegate ()
-
 @property (assign, nonatomic) NSInteger remainingCharactersCount;
 @property (assign, nonatomic) NSInteger maxLength;
 @property (assign, nonatomic) BOOL lastOverCharacterLimitValue;
 @property (weak, nonatomic) UITextView *textView;
 @property (strong, nonatomic) UIColor *textViewDefaultLabelColor;
 @property (weak, nonatomic) UILabel *characterLimitLabel;
-
 @end
-
 
 @implementation TWTextViewWithCharacterLimitLabelDelegate
 

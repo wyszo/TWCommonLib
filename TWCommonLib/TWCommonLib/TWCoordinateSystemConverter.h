@@ -2,6 +2,8 @@
 //  TWCommonLib
 //
 
+@import UIKit;
+
 @interface TWCoordinateSystemConverter : NSObject
 
 + (CGPoint)convertPoint:(CGPoint)point fromCoordinateSystemWithSize:(CGSize)coordinateSystemSize toCoordinateSystemWithSize:(CGSize)destinationSystemSize;

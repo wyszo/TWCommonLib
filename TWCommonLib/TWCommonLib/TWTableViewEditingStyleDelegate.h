@@ -4,7 +4,6 @@
 
 #import "TWCommonMacros.h"
 
-
 /**
  Can be useful for a tableView which supports just changing cells order
  */

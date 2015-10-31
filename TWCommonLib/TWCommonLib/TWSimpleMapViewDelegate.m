@@ -2,14 +2,12 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWSimpleMapViewDelegate.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWSimpleMapViewDelegate ()
 @property (nonatomic, weak) MKMapView *mapView;
 @end
-
 
 @implementation TWSimpleMapViewDelegate
 

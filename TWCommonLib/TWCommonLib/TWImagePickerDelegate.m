@@ -1,5 +1,5 @@
+@import KZAsserts;
 #import "TWImagePickerDelegate.h"
-#import <KZAsserts/KZAsserts.h>
 #import "NSObject+TWObjectLifetime.h"
 
 @interface TWImagePickerDelegate ()

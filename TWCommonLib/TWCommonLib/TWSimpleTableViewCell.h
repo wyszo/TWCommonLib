@@ -2,10 +2,9 @@
 //  TWCommonLib
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "TWCommonMacros.h"
 #import "TWCommonTypes.h"
-
 
 /**
  Mean to be used with TWSimpleTableViewDataSource

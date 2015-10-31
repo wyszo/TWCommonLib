@@ -2,10 +2,9 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWClassMethodCopyHelper.h"
 #import <objc/runtime.h>
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation TWClassMethodCopyHelper
 

@@ -7,7 +7,6 @@
 
 @import UIKit;
 
-
 typedef void (^VoidBlock)();
 typedef void (^VoidBlockWithError)(NSError *error);
 typedef void (^VoidBlockWithImage)(UIImage *image);
@@ -18,6 +17,5 @@ typedef CGFloat (^FloatBlockWithIndexPathParameter)(NSIndexPath *indexPath);
 typedef void (^CellAtIndexPathBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 typedef void (^CollectionViewCellAtIndexPathBlock)(UICollectionViewCell *cell, NSIndexPath *indexPath);
 typedef void (^IndexPathBlock)(NSIndexPath *indexPath);
-
 
 #endif

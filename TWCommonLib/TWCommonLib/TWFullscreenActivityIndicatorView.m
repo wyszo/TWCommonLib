@@ -2,9 +2,9 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
+@import FLKAutoLayout;
 #import "TWFullscreenActivityIndicatorView.h"
-#import <KZAsserts/KZAsserts.h>
-#import <FLKAutoLayout/UIView+FLKAutoLayout.h>
 
 static const CGFloat kDefaultBackgroundAlphaValue = 0.5f;
 

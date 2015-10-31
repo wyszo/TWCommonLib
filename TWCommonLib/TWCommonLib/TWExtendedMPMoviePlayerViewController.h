@@ -2,8 +2,7 @@
 //  TWCommonLib
 //
 
-#import <MediaPlayer/MediaPlayer.h>
-
+@import MediaPlayer;
 
 /**
  Standard MoviePlayerController allowing to choose initial orientation

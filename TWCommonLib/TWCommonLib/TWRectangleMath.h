@@ -2,6 +2,8 @@
 //  TWCommonLib
 //
 
+@import UIKit;
+
 @interface TWRectangleMath : NSObject
 
 + (CGPoint)topLeftPointOfRectangleWithSize:(CGSize)rectangleSize centerPoint:(CGPoint)center;

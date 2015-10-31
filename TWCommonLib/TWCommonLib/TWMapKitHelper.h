@@ -2,8 +2,7 @@
 //  TWCommonLib
 //
 
-#import <MapKit/MapKit.h>
-
+@import MapKit;
 
 @interface TWMapKitHelper : NSObject
 

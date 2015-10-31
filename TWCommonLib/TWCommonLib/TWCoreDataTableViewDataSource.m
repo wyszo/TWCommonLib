@@ -2,10 +2,9 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWCoreDataTableViewDataSource.h"
 #import "TWCommonMacros.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWCoreDataTableViewDataSource ()
 
@@ -15,7 +14,6 @@
 @property (strong, nonatomic) CellReuseMappingBlock cellReuseMappingBlock;
 
 @end
-
 
 @implementation TWCoreDataTableViewDataSource
 

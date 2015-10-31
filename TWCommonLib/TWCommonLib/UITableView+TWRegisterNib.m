@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "UITableView+TWRegisterNib.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation UITableView (TWRegisterNib)
 

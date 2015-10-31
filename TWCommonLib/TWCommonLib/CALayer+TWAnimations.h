@@ -2,7 +2,7 @@
 //  TWCommonLib
 //
 
-#import <QuartzCore/QuartzCore.h>
+@import QuartzCore;
 
 @interface CALayer (TWAnimations)
 

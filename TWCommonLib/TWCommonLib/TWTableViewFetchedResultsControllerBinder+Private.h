@@ -2,8 +2,8 @@
 //  TWCommonLib
 //
 
-#import "TWTableViewFetchedResultsControllerBinder.h"
 @import UIKit;
+#import "TWTableViewFetchedResultsControllerBinder.h"
 
 
 typedef NSIndexPath* (^IndexPathTransformBlock)(NSIndexPath *indexPath);

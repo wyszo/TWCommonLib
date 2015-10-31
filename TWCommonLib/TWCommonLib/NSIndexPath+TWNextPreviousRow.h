@@ -2,7 +2,7 @@
 //  TWCommonLib
 //
 
-@import Foundation;
+@import UIKit;
 
 @interface NSIndexPath (TWNextPreviosRow)
 

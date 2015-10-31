@@ -4,7 +4,6 @@
 
 #import "UIViewController+Navbar.h"
 
-
 @implementation UIViewController (Navbar)
 
 - (void)tw_setNavbarDoesNotCoverTheView

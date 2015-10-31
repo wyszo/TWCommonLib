@@ -3,8 +3,7 @@
 //
 
 #import "UIView+TWXibLoading.h"
-#import <KZAsserts/KZAsserts.h>
-
+@import KZAsserts;
 
 @implementation UIView (TWXibLoading)
 

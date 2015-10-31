@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWInterfaceOrientationClassStubs.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 #pragma mark - InterfaceOrientationClassStub
 

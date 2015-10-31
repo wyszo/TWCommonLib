@@ -2,8 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "CALayer+TWAnimations.h"
-#import <KZAsserts/KZAsserts.h>
 
 @implementation CALayer (TWAnimations)
 

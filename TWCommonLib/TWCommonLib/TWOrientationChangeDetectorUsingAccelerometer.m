@@ -2,22 +2,17 @@
 //  TWCommonLib
 //
 
-#import <CoreMotion/CoreMotion.h>
-#import <KZAsserts/KZAsserts.h>
+@import CoreMotion;
+@import KZAsserts;
 #import "TWOrientationChangeDetectorUsingAccelerometer.h"
 #import "TWCommonMacros.h"
 
-
 const CGFloat kAccelerometerUpdateInterval = .2;
 
-
 @interface TWOrientationChangeDetectorUsingAccelerometer()
-
 @property (nonatomic, assign) UIInterfaceOrientation lastInterfaceOrientation;
 @property (nonatomic, strong) CMMotionManager *motionManager;
-
 @end
-
 
 @implementation TWOrientationChangeDetectorUsingAccelerometer
 @synthesize delegate;

@@ -1,11 +1,9 @@
 //
 //  TWCommonLib
 //
-//
 
+@import KZAsserts;
 #import "TWScrollViewDelegate.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation TWScrollViewDelegate
 

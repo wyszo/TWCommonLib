@@ -98,7 +98,7 @@
 		31FB6BC81B126D0C0042C409 /* TWUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BC71B126D0C0042C409 /* TWUserDefaultsHelper.m */; };
 		31FB6BCD1B126F000042C409 /* TWVideoThumbnailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BCC1B126F000042C409 /* TWVideoThumbnailHelper.m */; };
 		6A7CCE83AA03D3970B1457D1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ADD17F01F392419A6EC400 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		7D67A0CA1BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D67A0C91BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m */; settings = {ASSET_TAGS = (); }; };
+		7D67A0CA1BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D67A0C91BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1824,7 +1824,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				GCC_PREFIX_HEADER = Exclude/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = TWCommonLib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1841,7 +1841,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				GCC_PREFIX_HEADER = Exclude/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = TWCommonLib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

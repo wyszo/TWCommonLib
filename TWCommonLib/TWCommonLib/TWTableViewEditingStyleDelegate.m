@@ -2,14 +2,12 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWTableViewEditingStyleDelegate.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWTableViewEditingStyleDelegate ()
 @property (nonatomic, assign) UITableViewCellEditingStyle editingStyle;
 @end
-
 
 @implementation TWTableViewEditingStyleDelegate
 

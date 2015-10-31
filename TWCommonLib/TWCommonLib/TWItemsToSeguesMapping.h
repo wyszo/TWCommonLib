@@ -4,7 +4,6 @@
 
 #import "TWCommonMacros.h"
 
-
 @interface TWItemsToSeguesMapping : NSObject
 
 NEW_AND_INIT_UNAVAILABLE
