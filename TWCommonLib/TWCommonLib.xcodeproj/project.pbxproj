@@ -81,7 +81,7 @@
 		31E5B6B71BC6E049008845AD /* NSString+TWReplacingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6B61BC6E049008845AD /* NSString+TWReplacingCharacters.m */; };
 		31E5B6BB1BC7F230008845AD /* TWVideoPlaybackErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6BA1BC7F230008845AD /* TWVideoPlaybackErrorHandler.m */; };
 		31EFB6CF1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */; };
-		31F721771BE9847B001DB831 /* NSManagedObject+Clone.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F721761BE9847B001DB831 /* NSManagedObject+Clone.m */; };
+		31F7217E1BE98781001DB831 /* NSManagedObject+Clone.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F7217D1BE98781001DB831 /* NSManagedObject+Clone.m */; };
 		31FB03AD1B3DDF9000539B50 /* TWClassMethodCopyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB03AC1B3DDF9000539B50 /* TWClassMethodCopyHelper.m */; };
 		31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */; };
 		31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */; };
@@ -268,8 +268,8 @@
 		31E5B6BA1BC7F230008845AD /* TWVideoPlaybackErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWVideoPlaybackErrorHandler.m; sourceTree = "<group>"; };
 		31EFB6CD1BAC6BE600F87C03 /* TWTextFieldsFormHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTextFieldsFormHelper.h; sourceTree = "<group>"; };
 		31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTextFieldsFormHelper.m; sourceTree = "<group>"; };
-		31F721751BE9847B001DB831 /* NSManagedObject+Clone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Clone.h"; path = "../../../PlayerAid/PlayerAid/NSManagedObject+Clone.h"; sourceTree = "<group>"; };
-		31F721761BE9847B001DB831 /* NSManagedObject+Clone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Clone.m"; path = "../../../PlayerAid/PlayerAid/NSManagedObject+Clone.m"; sourceTree = "<group>"; };
+		31F7217C1BE98781001DB831 /* NSManagedObject+Clone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Clone.h"; sourceTree = "<group>"; };
+		31F7217D1BE98781001DB831 /* NSManagedObject+Clone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Clone.m"; sourceTree = "<group>"; };
 		31FB03AB1B3DDF9000539B50 /* TWClassMethodCopyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWClassMethodCopyHelper.h; sourceTree = "<group>"; };
 		31FB03AC1B3DDF9000539B50 /* TWClassMethodCopyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWClassMethodCopyHelper.m; sourceTree = "<group>"; };
 		31FB6B4E1B0E85910042C409 /* TWCoreDataTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoreDataTableViewDataSource.h; sourceTree = "<group>"; };
@@ -1201,8 +1201,8 @@
 		31F721741BE98453001DB831 /* NSManagedObject */ = {
 			isa = PBXGroup;
 			children = (
-				31F721751BE9847B001DB831 /* NSManagedObject+Clone.h */,
-				31F721761BE9847B001DB831 /* NSManagedObject+Clone.m */,
+				31F7217C1BE98781001DB831 /* NSManagedObject+Clone.h */,
+				31F7217D1BE98781001DB831 /* NSManagedObject+Clone.m */,
 			);
 			name = NSManagedObject;
 			sourceTree = "<group>";
@@ -1671,6 +1671,7 @@
 				3102A7F51B87546300FC3A18 /* CALayer+TWAnimations.m in Sources */,
 				31D645AE1AFD5B62003B4262 /* TWCommonFunctions.m in Sources */,
 				31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */,
+				31F7217E1BE98781001DB831 /* NSManagedObject+Clone.m in Sources */,
 				31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */,
 				31FB6B681B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m in Sources */,
 				313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */,
@@ -1682,7 +1683,6 @@
 				31E5B6B01BC4286B008845AD /* TWAssetsHelper.m in Sources */,
 				310ACDE81B923100002E6613 /* NSString+TWBase64Encoding.m in Sources */,
 				31639F7D1BBAE49F005F19F0 /* UIViewController+TWResponderChain.m in Sources */,
-				31F721771BE9847B001DB831 /* NSManagedObject+Clone.m in Sources */,
 				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				31E5B6BB1BC7F230008845AD /* TWVideoPlaybackErrorHandler.m in Sources */,

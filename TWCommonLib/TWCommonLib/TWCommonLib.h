@@ -87,5 +87,6 @@
 #import "NSIndexPath+TWNextPreviousRow.h"
 #import "NSString+TWReplacingCharacters.h"
 #import "NSURLCache+TWCache.h"
+#import "NSManagedObject+Clone.h"
 
 #endif
