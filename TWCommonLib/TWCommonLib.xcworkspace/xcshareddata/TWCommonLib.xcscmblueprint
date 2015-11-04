@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E32DCCBF449877EC87A06E0CB9B49557E2DB90AB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E32DCCBF449877EC87A06E0CB9B49557E2DB90AB" : 0,
+    "3D86EFF9344F139003D9A23F37E0C7553F2D3EF8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D6C097F0-0BB2-4825-BC05-AF96393D1F92",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E32DCCBF449877EC87A06E0CB9B49557E2DB90AB" : "TWCommonLib",
+    "3D86EFF9344F139003D9A23F37E0C7553F2D3EF8" : "PlayerAid\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TWCommonLib",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TWCommonLib\/TWCommonLib.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:twyszomirski\/playeraid.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3D86EFF9344F139003D9A23F37E0C7553F2D3EF8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wyszo\/TWCommonLib.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E32DCCBF449877EC87A06E0CB9B49557E2DB90AB"
+    }
+  ]
+}
