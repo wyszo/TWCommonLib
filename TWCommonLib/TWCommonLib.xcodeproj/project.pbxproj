@@ -82,6 +82,7 @@
 		31E5B6BB1BC7F230008845AD /* TWVideoPlaybackErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5B6BA1BC7F230008845AD /* TWVideoPlaybackErrorHandler.m */; };
 		31EFB6CF1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */; };
 		31F7217E1BE98781001DB831 /* NSManagedObject+Clone.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F7217D1BE98781001DB831 /* NSManagedObject+Clone.m */; };
+		31F721821BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F721811BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.m */; };
 		31FB03AD1B3DDF9000539B50 /* TWClassMethodCopyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB03AC1B3DDF9000539B50 /* TWClassMethodCopyHelper.m */; };
 		31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */; };
 		31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */; };
@@ -270,6 +271,8 @@
 		31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTextFieldsFormHelper.m; sourceTree = "<group>"; };
 		31F7217C1BE98781001DB831 /* NSManagedObject+Clone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Clone.h"; sourceTree = "<group>"; };
 		31F7217D1BE98781001DB831 /* NSManagedObject+Clone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Clone.m"; sourceTree = "<group>"; };
+		31F721801BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+TWShallowCopy.h"; sourceTree = "<group>"; };
+		31F721811BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+TWShallowCopy.m"; sourceTree = "<group>"; };
 		31FB03AB1B3DDF9000539B50 /* TWClassMethodCopyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWClassMethodCopyHelper.h; sourceTree = "<group>"; };
 		31FB03AC1B3DDF9000539B50 /* TWClassMethodCopyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWClassMethodCopyHelper.m; sourceTree = "<group>"; };
 		31FB6B4E1B0E85910042C409 /* TWCoreDataTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoreDataTableViewDataSource.h; sourceTree = "<group>"; };
@@ -1203,6 +1206,8 @@
 			children = (
 				31F7217C1BE98781001DB831 /* NSManagedObject+Clone.h */,
 				31F7217D1BE98781001DB831 /* NSManagedObject+Clone.m */,
+				31F721801BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.h */,
+				31F721811BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.m */,
 			);
 			name = NSManagedObject;
 			sourceTree = "<group>";
@@ -1624,6 +1629,7 @@
 				312903671B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.m in Sources */,
 				31FB6BBB1B1261AE0042C409 /* NSString+TWTrimming.m in Sources */,
 				31FB6B6D1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m in Sources */,
+				31F721821BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.m in Sources */,
 				31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */,
 				313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */,
 				31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */,

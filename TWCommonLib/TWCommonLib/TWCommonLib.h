@@ -88,5 +88,6 @@
 #import "NSString+TWReplacingCharacters.h"
 #import "NSURLCache+TWCache.h"
 #import "NSManagedObject+Clone.h"
+#import "NSManagedObject+TWShallowCopy.h"
 
 #endif
