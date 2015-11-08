@@ -5,15 +5,17 @@
 @import CoreData;
 #import "TWCommonTypes.h"
 
-typedef NSString* (^CellReuseMappingBlock)(NSIndexPath *);
-typedef NSString* (^CellReuseExtendedMappingBlock)(id object, NSIndexPath *);
+typedef NSString* _Nonnull (^CellReuseMappingBlock)(NSIndexPath * _Nonnull);
+typedef NSString* _Nonnull (^CellReuseExtendedMappingBlock)(id _Nonnull object, NSIndexPath * _Nonnull);
 
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface TWCoreDataTableViewDataSource<__covariant T:NSManagedObject *> : NSObject <UITableViewDataSource>
 
 @property (copy, nonatomic) NSFetchedResultsController* (^fetchedResultsControllerLazyInitializationBlock)();
-@property (copy, nonatomic) void (^deleteCellOnSwipeBlock)(NSIndexPath *indexPath);
-@property (copy, nonatomic) void (^moveRowAtIndexPathToIndexPathBlock)(NSIndexPath *fromIndexPath, NSIndexPath *toIndexPath);
+@property (copy, nonatomic, nullable) void (^deleteCellOnSwipeBlock)(NSIndexPath * indexPath);
+@property (copy, nonatomic, nullable) void (^moveRowAtIndexPathToIndexPathBlock)(NSIndexPath * fromIndexPath, NSIndexPath * toIndexPath);
 @property (assign, nonatomic) BOOL displaySectionIndex;
 @property (assign, nonatomic) BOOL displaySectionTitle;
 
@@ -22,8 +24,8 @@ typedef NSString* (^CellReuseExtendedMappingBlock)(id object, NSIndexPath *);
 /**
  Supports only one type of cells in the tableView
  */
-- (instancetype)initWithCellReuseIdentifier:(nonnull NSString *)cellReuseIdentifier
-                         configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock;
+- (instancetype)initWithCellReuseIdentifier:(NSString *)cellReuseIdentifier
+                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock;
 
 /**
  Supports cells with multiple cellIdentifiers
@@ -31,8 +33,8 @@ typedef NSString* (^CellReuseExtendedMappingBlock)(id object, NSIndexPath *);
  
  TODO: add usage example
  */
-- (instancetype)initWithCellReuseMappingBlock:(nonnull CellReuseMappingBlock)cellReuseMappingBlock
-                           configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock;
+- (instancetype)initWithCellReuseMappingBlock:(CellReuseMappingBlock)cellReuseMappingBlock
+                           configureCellBlock:(CellAtIndexPathBlock)configureCellBlock;
 
 /**
  Supports cells with multiple cellIdentifiers
@@ -40,25 +42,20 @@ typedef NSString* (^CellReuseExtendedMappingBlock)(id object, NSIndexPath *);
  
  TODO: add usage example
  */
-- (nonnull instancetype)initWithCellReuseExtendedMappingBlock:(nonnull CellReuseExtendedMappingBlock)cellReuseExtendedMappingBlock
-                                           configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock;
-
-/**
- @deprecated (Typo in a method name)
- Use initWithCellReuseIdentifier:configureCellBlock: instead
- */
-- (instancetype)initWithCellreuseIdentifier:(nonnull NSString *)cellReuseIdentifier
-                         configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock __attribute__((deprecated));
+- (instancetype)initWithCellReuseExtendedMappingBlock:(CellReuseExtendedMappingBlock)cellReuseExtendedMappingBlock
+                                   configureCellBlock:(CellAtIndexPathBlock)configureCellBlock;
 
 #pragma mark - Public
 
 - (void)resetFetchedResultsController;
 
-- (T)objectAtIndexPath:(NSIndexPath *)indexPath;
-- (id<NSFetchedResultsSectionInfo>)sectionInfoForSection:(NSInteger)section;
+- (nullable T)objectAtIndexPath:(NSIndexPath *)indexPath;
+- (nullable id<NSFetchedResultsSectionInfo>)sectionInfoForSection:(NSInteger)section;
 
 - (NSInteger)objectCount;
 - (NSInteger)sectionsCount;
-- (NSIndexPath *)lastTableViewCellIndexPath;
+- (nullable NSIndexPath *)lastTableViewCellIndexPath;
 
 @end
+
+NS_ASSUME_NONNULL_END

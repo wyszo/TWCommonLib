@@ -64,12 +64,6 @@
   return self;
 }
 
-- (instancetype)initWithCellreuseIdentifier:(nonnull NSString *)cellReuseIdentifier
-                         configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock __attribute__((deprecated))
-{
-  return [self initWithCellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureCellBlock];
-}
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
