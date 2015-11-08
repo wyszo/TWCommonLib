@@ -12,6 +12,7 @@
 @property (copy, nonatomic) void (^configureCellBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 @property (strong, nonatomic) NSString *cellReuseIdentifier;
 @property (strong, nonatomic) CellReuseMappingBlock cellReuseMappingBlock;
+@property (strong, nonatomic) CellReuseExtendedMappingBlock cellReuseExtendedMappingBlock;
 
 @end
 
@@ -19,8 +20,8 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithCellReuseMappingBlock:(CellReuseMappingBlock)cellReuseMappingBlock
-                           configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
+- (instancetype)initWithCellReuseMappingBlock:(nonnull CellReuseMappingBlock)cellReuseMappingBlock
+                           configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock
 {
   AssertTrueOrReturnNil(cellReuseMappingBlock);
   AssertTrueOrReturnNil(configureCellBlock);
@@ -34,8 +35,23 @@
   return self;
 }
 
-- (instancetype)initWithCellReuseIdentifier:(NSString *)cellReuseIdentifier
-                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
+- (instancetype)initWithCellReuseExtendedMappingBlock:(nonnull CellReuseExtendedMappingBlock)cellReuseExtendedMappingBlock
+                                   configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock
+{
+  AssertTrueOrReturnNil(cellReuseExtendedMappingBlock);
+  AssertTrueOrReturnNil(configureCellBlock);
+  
+  self = [super init];
+  if (self) {
+    // TODO: this won't copy the block (since it's assigned to an array)! bug!
+    _cellReuseExtendedMappingBlock = cellReuseExtendedMappingBlock;
+    _configureCellBlock = configureCellBlock;
+  }
+  return self;
+}
+
+- (instancetype)initWithCellReuseIdentifier:(nonnull NSString *)cellReuseIdentifier
+                         configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock
 {
   AssertTrueOrReturnNil(cellReuseIdentifier.length);
   AssertTrueOrReturnNil(configureCellBlock);
@@ -48,19 +64,10 @@
   return self;
 }
 
-- (instancetype)initWithCellreuseIdentifier:(NSString *)cellReuseIdentifier
-                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
-__attribute__((deprecated))
+- (instancetype)initWithCellreuseIdentifier:(nonnull NSString *)cellReuseIdentifier
+                         configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock __attribute__((deprecated))
 {
-  AssertTrueOrReturnNil(cellReuseIdentifier.length);
-  AssertTrueOrReturnNil(configureCellBlock);
-  
-  self = [super init];
-  if (self) {
-    _configureCellBlock = configureCellBlock;
-    _cellReuseIdentifier = cellReuseIdentifier;
-  }
-  return self;
+  return [self initWithCellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureCellBlock];
 }
 
 #pragma mark - UITableViewDataSource
@@ -105,12 +112,22 @@ __attribute__((deprecated))
  
   if (self.cellReuseIdentifier.length) {
     AssertTrueOr(self.cellReuseMappingBlock == nil,);
+    
     reuseIdentifier = self.cellReuseIdentifier;
+  }
+  else if (self.cellReuseMappingBlock) {
+    AssertTrueOr(self.cellReuseIdentifier.length == 0,);
+    AssertTrueOrReturnNil(self.cellReuseMappingBlock);
+    
+    reuseIdentifier = self.cellReuseMappingBlock(indexPath);
   }
   else {
     AssertTrueOr(self.cellReuseIdentifier.length == 0,);
-    AssertTrueOrReturnNil(self.cellReuseMappingBlock);
-    reuseIdentifier = self.cellReuseMappingBlock(indexPath);
+    AssertTrueOr(self.cellReuseMappingBlock == nil,);
+    AssertTrueOrReturnNil(self.cellReuseExtendedMappingBlock);
+    
+    id object = [self objectAtIndexPath:indexPath];
+    reuseIdentifier = self.cellReuseExtendedMappingBlock(object, indexPath);
   }
   AssertTrueOrReturnNil(reuseIdentifier.length);
   return reuseIdentifier;
