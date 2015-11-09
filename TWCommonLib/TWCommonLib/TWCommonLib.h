@@ -90,5 +90,6 @@
 #import "NSURLCache+TWCache.h"
 #import "NSManagedObject+Clone.h"
 #import "NSManagedObject+TWShallowCopy.h"
+#import "UIScreen+TWScreenSize.h"
 
 #endif
