@@ -83,6 +83,7 @@
 		31EFB6CF1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EFB6CE1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m */; };
 		31F7217E1BE98781001DB831 /* NSManagedObject+Clone.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F7217D1BE98781001DB831 /* NSManagedObject+Clone.m */; };
 		31F721821BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F721811BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.m */; };
+		31F721A51BF0BB01001DB831 /* TWTableViewNibRegisteringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F721A41BF0BB01001DB831 /* TWTableViewNibRegisteringHelper.m */; };
 		31FB03AD1B3DDF9000539B50 /* TWClassMethodCopyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB03AC1B3DDF9000539B50 /* TWClassMethodCopyHelper.m */; };
 		31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B4F1B0E85910042C409 /* TWCoreDataTableViewDataSource.m */; };
 		31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6B521B106D150042C409 /* NSMutableArray+TWMoveRow.m */; };
@@ -273,6 +274,8 @@
 		31F7217D1BE98781001DB831 /* NSManagedObject+Clone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Clone.m"; sourceTree = "<group>"; };
 		31F721801BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+TWShallowCopy.h"; sourceTree = "<group>"; };
 		31F721811BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+TWShallowCopy.m"; sourceTree = "<group>"; };
+		31F721A31BF0BB01001DB831 /* TWTableViewNibRegisteringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTableViewNibRegisteringHelper.h; sourceTree = "<group>"; };
+		31F721A41BF0BB01001DB831 /* TWTableViewNibRegisteringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTableViewNibRegisteringHelper.m; sourceTree = "<group>"; };
 		31FB03AB1B3DDF9000539B50 /* TWClassMethodCopyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWClassMethodCopyHelper.h; sourceTree = "<group>"; };
 		31FB03AC1B3DDF9000539B50 /* TWClassMethodCopyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWClassMethodCopyHelper.m; sourceTree = "<group>"; };
 		31FB6B4E1B0E85910042C409 /* TWCoreDataTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoreDataTableViewDataSource.h; sourceTree = "<group>"; };
@@ -772,6 +775,7 @@
 				31E57A321BD6B94F005ED7C0 /* PerformanceTimer */,
 				31D6DAC91AFA256600432340 /* Protocols */,
 				31FB6B5A1B1080F80042C409 /* TableViewFetchedResultsControllerBinder */,
+				31F721A21BF0BAE3001DB831 /* TableViewNibRegisteringHelper */,
 				31EFB6CC1BAC6BAB00F87C03 /* TextFieldsForm */,
 				31FB6BC51B126CF90042C409 /* UserDefaults */,
 				31FB6BC91B126EDB0042C409 /* VideoThumbnail */,
@@ -1210,6 +1214,15 @@
 				31F721811BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.m */,
 			);
 			name = NSManagedObject;
+			sourceTree = "<group>";
+		};
+		31F721A21BF0BAE3001DB831 /* TableViewNibRegisteringHelper */ = {
+			isa = PBXGroup;
+			children = (
+				31F721A31BF0BB01001DB831 /* TWTableViewNibRegisteringHelper.h */,
+				31F721A41BF0BB01001DB831 /* TWTableViewNibRegisteringHelper.m */,
+			);
+			name = TableViewNibRegisteringHelper;
 			sourceTree = "<group>";
 		};
 		31FB03AA1B3DDF7300539B50 /* MethodCopying */ = {
@@ -1661,6 +1674,7 @@
 				318394B41AEDA85D0077C079 /* TWDispatchMacros.m in Sources */,
 				31A5CDBE1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m in Sources */,
 				31E505411BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m in Sources */,
+				31F721A51BF0BB01001DB831 /* TWTableViewNibRegisteringHelper.m in Sources */,
 				31BFFB8D1AF9535000645566 /* TWItemsToSeguesMapping.m in Sources */,
 				313873E91B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m in Sources */,
 				312D5FCF1AFABD6200813EE8 /* TWDataWriteHelper.m in Sources */,
