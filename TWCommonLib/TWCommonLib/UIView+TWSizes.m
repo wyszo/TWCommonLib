@@ -18,4 +18,16 @@
   self.frame = frame;
 }
 
+- (CGFloat)tw_height
+{
+  return self.frame.size.height;
+}
+
+- (void)setTw_height:(CGFloat)tw_height
+{
+  CGRect frame = self.frame;
+  frame.size.height = tw_height;
+  self.frame = frame;
+}
+
 @end

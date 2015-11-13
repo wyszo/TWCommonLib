@@ -10,5 +10,6 @@
 @interface UIView (TWSizes)
 
 @property (nonatomic, assign) CGFloat tw_width;
+@property (nonatomic, assign) CGFloat tw_height;
 
 @end
