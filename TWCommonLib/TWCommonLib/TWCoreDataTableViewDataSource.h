@@ -4,6 +4,7 @@
 
 @import CoreData;
 #import "TWCommonTypes.h"
+#import "TWObjectCountProtocol.h"
 
 typedef NSString* _Nonnull (^CellReuseMappingBlock)(NSIndexPath * _Nonnull);
 typedef NSString* _Nonnull (^CellReuseExtendedMappingBlock)(id _Nonnull object, NSIndexPath * _Nonnull);
@@ -11,7 +12,7 @@ typedef NSString* _Nonnull (^CellReuseExtendedMappingBlock)(id _Nonnull object, 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TWCoreDataTableViewDataSource<__covariant T:NSManagedObject *> : NSObject <UITableViewDataSource>
+@interface TWCoreDataTableViewDataSource<__covariant T:NSManagedObject *> : NSObject <UITableViewDataSource, TWObjectCountProtocol>
 
 @property (copy, nonatomic) NSFetchedResultsController* (^fetchedResultsControllerLazyInitializationBlock)();
 @property (copy, nonatomic, nullable) void (^deleteCellOnSwipeBlock)(NSIndexPath * indexPath);
