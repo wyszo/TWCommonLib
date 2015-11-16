@@ -28,6 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
                          configureCellBlock:(CellAtIndexPathBlock)configureCellBlock;
 
 /**
+ Supports only one type of cells in the tableView
+ */
+- (instancetype)initWithCellReuseIdentifier:(NSString *)cellReuseIdentifier
+                         configureCellWithObjectBlock:(CellWithObjectAtIndexPathBlock)configureCellBlock;
+
+/**
  Supports cells with multiple cellIdentifiers
  The block passed in this method only takes indexPath as a parameter. If you need an actual object to determine reuse identifier, use initWithCellReuseExtendedMappingBlock:configureCellBlock
  

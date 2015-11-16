@@ -9,7 +9,8 @@
 @interface TWCoreDataTableViewDataSource ()
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (copy, nonatomic) void (^configureCellBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
+@property (copy, nonatomic) CellAtIndexPathBlock configureCellBlock;
+@property (copy, nonatomic) CellWithObjectAtIndexPathBlock configureCellWithObjectBlock;
 @property (strong, nonatomic) NSString *cellReuseIdentifier;
 @property (strong, nonatomic) CellReuseMappingBlock cellReuseMappingBlock;
 @property (strong, nonatomic) CellReuseExtendedMappingBlock cellReuseExtendedMappingBlock;
@@ -64,6 +65,20 @@
   return self;
 }
 
+- (instancetype)initWithCellReuseIdentifier:(nonnull NSString *)cellReuseIdentifier
+                         configureCellWithObjectBlock:(nonnull CellWithObjectAtIndexPathBlock)configureCellWithObjectBlock
+{
+  AssertTrueOrReturnNil(cellReuseIdentifier.length);
+  AssertTrueOrReturnNil(configureCellWithObjectBlock);
+  
+  self = [super init];
+  if (self) {
+    _configureCellWithObjectBlock = configureCellWithObjectBlock;
+    _cellReuseIdentifier = cellReuseIdentifier;
+  }
+  return self;
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -95,6 +110,10 @@
   
   if (self.configureCellBlock) {
     self.configureCellBlock(cell, indexPath);
+  }
+  else if (self.configureCellWithObjectBlock) {
+    id object = [self objectAtIndexPath:indexPath];
+    self.configureCellWithObjectBlock(cell, object, indexPath);
   }
   return cell;
 }
