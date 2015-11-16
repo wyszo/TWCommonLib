@@ -10,6 +10,7 @@
 		0277D957DBE3C4F4BEEE7926 /* Pods_TWCommonLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B41FBB91F54B64A66DD0D98 /* Pods_TWCommonLibTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		310261121B8B745F00E5A3A0 /* UIScrollView+TWScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 310261111B8B745F00E5A3A0 /* UIScrollView+TWScrolling.m */; };
 		3102A7F51B87546300FC3A18 /* CALayer+TWAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3102A7F41B87546300FC3A18 /* CALayer+TWAnimations.m */; };
+		3102F9471BF9D8AB00B544C6 /* NSFetchedResultsController+TWFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3102F9461BF9D8AB00B544C6 /* NSFetchedResultsController+TWFetch.m */; };
 		31038DB51B5E97F7001187A5 /* TWImagePickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31038DB41B5E97F7001187A5 /* TWImagePickerDelegate.m */; };
 		310394F11B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 310394F01B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.m */; };
 		3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3108E7841AF7BA3700E02C07 /* TWOrientationChangeDetector.m */; };
@@ -121,6 +122,8 @@
 		310261111B8B745F00E5A3A0 /* UIScrollView+TWScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIScrollView+TWScrolling.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3102A7F31B87546300FC3A18 /* CALayer+TWAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+TWAnimations.h"; sourceTree = "<group>"; };
 		3102A7F41B87546300FC3A18 /* CALayer+TWAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+TWAnimations.m"; sourceTree = "<group>"; };
+		3102F9451BF9D8AB00B544C6 /* NSFetchedResultsController+TWFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+TWFetch.h"; sourceTree = "<group>"; };
+		3102F9461BF9D8AB00B544C6 /* NSFetchedResultsController+TWFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+TWFetch.m"; sourceTree = "<group>"; };
 		31038DB31B5E97F7001187A5 /* TWImagePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWImagePickerDelegate.h; sourceTree = "<group>"; };
 		31038DB41B5E97F7001187A5 /* TWImagePickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWImagePickerDelegate.m; sourceTree = "<group>"; };
 		310394EF1B1E116800D4D81E /* TWExtendedMPMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWExtendedMPMoviePlayerViewController.h; sourceTree = "<group>"; };
@@ -360,6 +363,15 @@
 			name = CALayer;
 			sourceTree = "<group>";
 		};
+		3102F9441BF9D87500B544C6 /* NSFetchedResultsController */ = {
+			isa = PBXGroup;
+			children = (
+				3102F9451BF9D8AB00B544C6 /* NSFetchedResultsController+TWFetch.h */,
+				3102F9461BF9D8AB00B544C6 /* NSFetchedResultsController+TWFetch.m */,
+			);
+			name = NSFetchedResultsController;
+			sourceTree = "<group>";
+		};
 		31038DB21B5E97E2001187A5 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +444,7 @@
 			children = (
 				3102A7F11B8753F200FC3A18 /* CALayer */,
 				7D67A0CB1BCFE3F400EAF449 /* NSArray */,
+				3102F9441BF9D87500B544C6 /* NSFetchedResultsController */,
 				31E505421BBD7805004BC7C4 /* NSIndexPath */,
 				31BFFB981AF9748800645566 /* NSLayoutConstraint */,
 				31F721741BE98453001DB831 /* NSManagedObject */,
@@ -1657,6 +1670,7 @@
 				31FB6B6D1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m in Sources */,
 				31F721821BEA3CE4001DB831 /* NSManagedObject+TWShallowCopy.m in Sources */,
 				31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */,
+				3102F9471BF9D8AB00B544C6 /* NSFetchedResultsController+TWFetch.m in Sources */,
 				313873DE1B0768DB0088CDA7 /* TWTextViewWithMaxLengthDelegate.m in Sources */,
 				31FB6B531B106D150042C409 /* NSMutableArray+TWMoveRow.m in Sources */,
 				3150C7471BD3C6CD00742B8D /* NSURLCache+TWCache.m in Sources */,

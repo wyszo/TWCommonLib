@@ -91,5 +91,6 @@
 #import "NSManagedObject+Clone.h"
 #import "NSManagedObject+TWShallowCopy.h"
 #import "UIScreen+TWScreenSize.h"
+#import "NSFetchedResultsController+TWFetch.h"
 
 #endif
