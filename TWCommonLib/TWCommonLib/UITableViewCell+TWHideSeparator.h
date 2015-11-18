@@ -13,4 +13,9 @@
  */
 - (void)tw_showSeparatorWithMarginInset:(CGFloat)marginInset;
 
+// Together with setting marginInsets to 0 will allow to display full width separator
+- (void)tw_removeLayoutMargins;
+
+- (void)tw_configureForFullWidthSeparators;
+
 @end
