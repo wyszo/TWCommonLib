@@ -93,5 +93,6 @@
 #import "UIScreen+TWScreenSize.h"
 #import "NSFetchedResultsController+TWFetch.h"
 #import "UIView+TWTransformations.h"
+#import "UIWindow+TWWindow.h"
 
 #endif

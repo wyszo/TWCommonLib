@@ -40,6 +40,7 @@
 		31639F7D1BBAE49F005F19F0 /* UIViewController+TWResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 31639F7C1BBAE49F005F19F0 /* UIViewController+TWResponderChain.m */; };
 		31652D731BFC010C0007855A /* UIView+TWTransformations.m in Sources */ = {isa = PBXBuildFile; fileRef = 31652D721BFC010C0007855A /* UIView+TWTransformations.m */; };
 		316D86BE1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 316D86BD1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m */; };
+		3177CACE1BFCE2C300F371A0 /* UIWindow+TWWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3177CACD1BFCE2C300F371A0 /* UIWindow+TWWindow.m */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
 		318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394AC1AEDA1850077C079 /* TWArrayTableViewDataSource.m */; };
@@ -186,6 +187,8 @@
 		31652D721BFC010C0007855A /* UIView+TWTransformations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWTransformations.m"; sourceTree = "<group>"; };
 		316D86BC1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTableViewEditingStyleDelegate.h; sourceTree = "<group>"; };
 		316D86BD1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTableViewEditingStyleDelegate.m; sourceTree = "<group>"; };
+		3177CACC1BFCE2C300F371A0 /* UIWindow+TWWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+TWWindow.h"; sourceTree = "<group>"; };
+		3177CACD1BFCE2C300F371A0 /* UIWindow+TWWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TWWindow.m"; sourceTree = "<group>"; };
 		31815F5F1B0B35010062E7C0 /* TWConfigurableFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWConfigurableFromDictionary.h; sourceTree = "<group>"; };
 		318394801AED9E2A0077C079 /* TWCommonLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWCommonLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318394841AED9E2A0077C079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -466,6 +469,7 @@
 				3129035F1B23980300C730DA /* UITextView */,
 				311B79F11AF107E400E97FBC /* UIView */,
 				31D645D81B0271A3003B4262 /* UIViewController */,
+				3177CACB1BFCE2A200F371A0 /* UIWindow */,
 				31F0F4E31BD4CC7300E55FBC /* NSURLCache */,
 			);
 			name = Categories;
@@ -667,6 +671,15 @@
 				316D86BD1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m */,
 			);
 			name = EditingStyleDelegate;
+			sourceTree = "<group>";
+		};
+		3177CACB1BFCE2A200F371A0 /* UIWindow */ = {
+			isa = PBXGroup;
+			children = (
+				3177CACC1BFCE2C300F371A0 /* UIWindow+TWWindow.h */,
+				3177CACD1BFCE2C300F371A0 /* UIWindow+TWWindow.m */,
+			);
+			name = UIWindow;
 			sourceTree = "<group>";
 		};
 		318394771AED9E2A0077C079 = {
@@ -1726,6 +1739,7 @@
 				31D91AF11BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m in Sources */,
 				31D645DB1B0271D7003B4262 /* UIViewController+PerformSegueMapping.m in Sources */,
 				311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */,
+				3177CACE1BFCE2C300F371A0 /* UIWindow+TWWindow.m in Sources */,
 				31FB6BB71B1233800042C409 /* TWLazyInitializationProxy.m in Sources */,
 				31D645B31AFD7121003B4262 /* TWCoordinateSystemConverter.m in Sources */,
 				310ACDF01B924BCA002E6613 /* NSString+TWHTMLString.m in Sources */,
