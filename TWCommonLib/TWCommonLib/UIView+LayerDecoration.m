@@ -16,6 +16,16 @@
   self.layer.borderColor = borderColor.CGColor;
 }
 
+- (void)tw_addTopBorderWithWidth:(CGFloat)borderWidth color:(UIColor *)borderColor
+{
+  AssertTrueOrReturn(borderColor);
+  
+  CALayer *topBorder = [CALayer layer];
+  topBorder.backgroundColor = [borderColor CGColor];
+  topBorder.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), borderWidth);
+  [self.layer addSublayer:topBorder];
+}
+
 - (void)tw_setCornerRadius:(CGFloat)cornerRadius
 {
   AssertTrueOrReturn(cornerRadius >= 0);
