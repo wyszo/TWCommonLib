@@ -61,12 +61,30 @@ _Pragma("clang diagnostic pop") \
 
 #pragma mark - Inside class interface definition
 
+#define CLANG_DIAGNOSTIC_PUSH _Pragma("clang diagnostic push")
+#define CLANG_DIAGNOSTIC_POP _Pragma("clang diagnostic pop")
+
+#define PRAGMA_DIAGNOSTIC_IGNORED(param) _Pragma(STRINGIFY(clang diagnostic ignored param))
+
+// Suppresing Nullability warnings
+
 #define SUPPRESS_NULLABILITY_COMPLETENESS_BEGIN \
-_Pragma("clang diagnostic push") \
-_Pragma(STRINGIFY(clang diagnostic ignored "-Wnullability-completeness"))
+CLANG_DIAGNOSTIC_PUSH \
+PRAGMA_DIAGNOSTIC_IGNORED("-Wnullability-completeness")
 
 #define SUPPRESS_NULLABILITY_COMPLETENESS_END \
-_Pragma("clang diagnostic pop")
+CLANG_DIAGNOSTIC_POP
+
+// Suppresing Deprecation warnings
+
+#define SUPPRESS_DEPRECATION_WARNINGS_BEGIN \
+CLANG_DIAGNOSTIC_PUSH \
+PRAGMA_DIAGNOSTIC_IGNORED("-Wdeprecated-declarations")
+
+#define SUPPRESS_DEPRECATION_WARNINGS_END \
+CLANG_DIAGNOSTIC_POP
+
+// New, Init unavailable
 
 #define NEW_AND_INIT_UNAVAILABLE \
 SUPPRESS_NULLABILITY_COMPLETENESS_BEGIN \

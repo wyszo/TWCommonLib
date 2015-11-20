@@ -11,7 +11,12 @@
  */
 @interface TWSimpleTableViewDelegate : NSObject <UITableViewDelegate>
 
-@property (nonatomic, copy) IndexPathBlock cellSelectedBlock;
+/// Use cellSelectedExtendedBlock instead
+@property (nonatomic, copy) IndexPathBlock cellSelectedBlock DEPRECATED_ATTRIBUTE;
+
+/// Apart from an indexPath will give you associated object (as long as tableView dataSource conforms to protocol TWObjectAtIndexPathProtocol)
+@property (nonatomic, copy) IndexPathWithObjectBlock cellSelectedExtendedBlock;
+
 @property (nonatomic, copy) FloatBlockWithIndexPathParameter cellHeightBlock;
 @property (nonatomic, copy) void (^scrollViewDidScrollBlock)(UIScrollView *scrollView);
 @property (nonatomic, assign) BOOL deselectCellOnTouch;

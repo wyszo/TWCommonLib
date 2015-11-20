@@ -4,13 +4,14 @@
 
 #import "TWCommonTypes.h"
 #import "TWObjectCountProtocol.h"
+#import "TWObjectAtIndexPathProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 // TODO: dataSource should bind it's lifecycle to a tableView lifespan
 // TODO: modify interface so it's possible to add cells like elements in UIAlertController
 
-@interface TWArrayTableViewDataSource<__covariant T> : NSObject <UITableViewDataSource, TWObjectCountProtocol>
+@interface TWArrayTableViewDataSource<__covariant T> : NSObject <UITableViewDataSource, TWObjectCountProtocol, TWObjectAtIndexPathProtocol>
 
 @property (copy, nonatomic) CellAtIndexPathBlock configureCellBlock;
 

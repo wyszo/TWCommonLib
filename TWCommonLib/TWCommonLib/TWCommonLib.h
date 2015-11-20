@@ -94,5 +94,6 @@
 #import "NSFetchedResultsController+TWFetch.h"
 #import "UIView+TWTransformations.h"
 #import "UIWindow+TWWindow.h"
+#import "TWObjectAtIndexPathProtocol.h"
 
 #endif

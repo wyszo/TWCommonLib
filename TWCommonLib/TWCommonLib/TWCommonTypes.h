@@ -18,5 +18,6 @@ typedef void (^CellAtIndexPathBlock)(UITableViewCell *cell, NSIndexPath *indexPa
 typedef void (^CellWithObjectAtIndexPathBlock)(UITableViewCell *cell, id object, NSIndexPath *indexPath);
 typedef void (^CollectionViewCellAtIndexPathBlock)(UICollectionViewCell *cell, NSIndexPath *indexPath);
 typedef void (^IndexPathBlock)(NSIndexPath *indexPath);
+typedef void (^IndexPathWithObjectBlock)(NSIndexPath *indexPath, id object);
 
 #endif

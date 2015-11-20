@@ -206,6 +206,7 @@
 		318394BA1AEDAAA50077C079 /* TWCommonLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TWCommonLib.h; sourceTree = "<group>"; };
 		318395001AF006080077C079 /* TWJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWJSONHelper.h; sourceTree = "<group>"; };
 		318395011AF006080077C079 /* TWJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWJSONHelper.m; sourceTree = "<group>"; };
+		3190D84B1BFF47B2001B6942 /* TWObjectAtIndexPathProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWObjectAtIndexPathProtocol.h; sourceTree = "<group>"; };
 		3194128B1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewDataSource.h; sourceTree = "<group>"; };
 		3194128C1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleTableViewDataSource.m; sourceTree = "<group>"; };
 		319412911AF410AC00D676A3 /* TWSimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleTableViewCell.h; sourceTree = "<group>"; };
@@ -835,6 +836,33 @@
 			name = JSONHelper;
 			sourceTree = "<group>";
 		};
+		3190D8481BFF4756001B6942 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDB91B0E6B2F0007D92E /* TWExtendedUIImagePickerControllerDelegate.h */,
+				31A5CDB41B0E69CA0007D92E /* TWImagePickerOverlayProtocol.h */,
+				31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		3190D8491BFF475D001B6942 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31815F5F1B0B35010062E7C0 /* TWConfigurableFromDictionary.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3190D84A1BFF4766001B6942 /* TableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				31A5CDAE1B0E3D1F0007D92E /* TWObjectCountProtocol.h */,
+				3190D84B1BFF47B2001B6942 /* TWObjectAtIndexPathProtocol.h */,
+			);
+			name = TableViewDataSource;
+			sourceTree = "<group>";
+		};
 		319412891AF40F2400D676A3 /* ArrayTableViewDataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1148,11 +1176,9 @@
 		31D6DAC91AFA256600432340 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				31815F5F1B0B35010062E7C0 /* TWConfigurableFromDictionary.h */,
-				31A5CDB91B0E6B2F0007D92E /* TWExtendedUIImagePickerControllerDelegate.h */,
-				31A5CDB41B0E69CA0007D92E /* TWImagePickerOverlayProtocol.h */,
-				31A5CDAE1B0E3D1F0007D92E /* TWObjectCountProtocol.h */,
-				31D6DACA1AFA258F00432340 /* TWOrientationChangeDetectorProtocol.h */,
+				3190D8491BFF475D001B6942 /* Model */,
+				3190D8481BFF4756001B6942 /* UI */,
+				3190D84A1BFF4766001B6942 /* TableViewDataSource */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";

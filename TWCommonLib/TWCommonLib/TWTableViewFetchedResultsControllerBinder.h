@@ -18,6 +18,7 @@ NEW_AND_INIT_UNAVAILABLE
 
 /**
  @param configureCellBlock  A block that will be called if dataModel object for item changed (and NSFetchedResultsController got NSFetchedResultsChangeUpdate change notification)
+ // TODO: introduce (id)object parametr to configureCellBlock (we can ask the dataSource for the object) 
  */
 - (instancetype)initWithTableView:(UITableView *)tableView
                configureCellBlock:(void (^)(UITableViewCell *cell, NSIndexPath *indexPath))configureCellBlock;
