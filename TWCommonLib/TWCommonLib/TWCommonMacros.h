@@ -6,40 +6,39 @@
 #define TWCommonLib_TWCommonMacros_h
 
 
-#pragma mark -  Inside methods
+#pragma mark -  Inside methods: Blocks
 
 #define CallBlock(block, ...) (block ? block(__VA_ARGS__) : nil);
+
+
+#pragma mark -  Inside methods: Weak/Strong self
 
 #define defineWeakSelf() __weak typeof(self) weakSelf = self
 // this macro makes sense only at the beginning of the block (before which weakSelf has been defined)
 #define defineStrongSelf() typeof(self) strongSelf = weakSelf
 
-// TODO: change ColorMake macros into C functions to get type checking (macros can't take floats as parameters)
+
+#pragma mark -  Inside methods: Color Utilities
+
+// TODO: change ColorMake macros into C functions to get type checking
 #define UIColorMake(r,g,b) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:1.0]
 #define UIColorWithAlphaMake(r,g,b,a) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:a]
 #define UIFontMake(fontName,fontSize) [UIFont fontWithName:fontName size:fontSize]
+
+
+#pragma mark -  Inside methods: Safe values
 
 // Macros helping avoid ternary operator abuse (value ?: alternativeValue)
 #define ValueIfExistsOr(value, alternativeValue) (value ? value : alternativeValue)
 #define ValueOr(value, alternativeValue) (value ? value : alternativeValue)
 #define ValueOrEmptyString(value) (value ? value : @"")
 
-#define SuppressPerformSelectorLeakWarning(Code) \
-do { \
-_Pragma("clang diagnostic push") \
-_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
-Code; \
-_Pragma("clang diagnostic pop") \
-} while (0)
+
+#pragma mark -  Inside methods: Nulls
 
 #define NOOP ; // No operation
 
 #define ObjectOrNull(object) ((object != nil) ? (id)(object) : (id)([NSNull null]))
-
-/**
- Useful when we want to have selector as NSString but we still want to get an error if a selector is not implemented
- */
-#define SelectorString(methodName) NSStringFromSelector(@selector(methodName))
 
 
 #pragma mark - Assertions inside methods
@@ -58,13 +57,28 @@ _Pragma("clang diagnostic pop") \
 
 #define STRINGIFY(string) #string
 
+/**
+ Useful when we want to have selector as NSString but we still want to get an error if a selector is not implemented
+ */
+#define SelectorString(methodName) NSStringFromSelector(@selector(methodName))
 
-#pragma mark - Inside class interface definition
+
+#pragma mark - Suppressing diagnostic warnings
 
 #define CLANG_DIAGNOSTIC_PUSH _Pragma("clang diagnostic push")
 #define CLANG_DIAGNOSTIC_POP _Pragma("clang diagnostic pop")
 
 #define PRAGMA_DIAGNOSTIC_IGNORED(param) _Pragma(STRINGIFY(clang diagnostic ignored param))
+
+// Suppresing perform selector leaking
+
+#define SuppressPerformSelectorLeakWarning(Code) \
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+Code; \
+_Pragma("clang diagnostic pop") \
+} while (0)
 
 // Suppresing Nullability warnings
 
@@ -83,6 +97,9 @@ PRAGMA_DIAGNOSTIC_IGNORED("-Wdeprecated-declarations")
 
 #define SUPPRESS_DEPRECATION_WARNINGS_END \
 CLANG_DIAGNOSTIC_POP
+
+
+#pragma mark - Inside class interface definition
 
 // New, Init unavailable
 
