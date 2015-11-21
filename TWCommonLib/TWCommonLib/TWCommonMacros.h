@@ -23,6 +23,14 @@
 // TODO: change ColorMake macros into C functions to get type checking
 #define UIColorMake(r,g,b) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:1.0]
 #define UIColorWithAlphaMake(r,g,b,a) [UIColor colorWithRed:((CGFloat)r)/255.0 green:((CGFloat)g)/255.0 blue:((CGFloat)b)/255 alpha:a]
+
+#define UIColorFromHexWithAlpha(hexValue,alphaValue) [UIColor \
+colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((hexValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(hexValue & 0xFF))/255.0 alpha:alphaValue]
+
+#define UIColorFromHex(hexValue) UIColorFromHexWithAlpha(hexValue,1.0)
+
 #define UIFontMake(fontName,fontSize) [UIFont fontWithName:fontName size:fontSize]
 
 
