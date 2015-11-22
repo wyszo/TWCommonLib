@@ -95,5 +95,7 @@
 #import "UIView+TWTransformations.h"
 #import "UIWindow+TWWindow.h"
 #import "TWObjectAtIndexPathProtocol.h"
+#import "NSString+TWSizing.h"
+#import "UILabel+TWLineCount.h"
 
 #endif

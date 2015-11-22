@@ -32,6 +32,8 @@
 		313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873E11B076EA20088CDA7 /* UIView+LayerDecoration.m */; };
 		313873E91B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873E81B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m */; };
 		313874721B09ADF80088CDA7 /* TWScrollViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 313874711B09ADF80088CDA7 /* TWScrollViewDelegate.m */; };
+		31413E661C0277150045E818 /* NSString+TWSizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 31413E651C0277150045E818 /* NSString+TWSizing.m */; };
+		31413E6A1C02787F0045E818 /* UILabel+TWLineCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 31413E691C02787F0045E818 /* UILabel+TWLineCount.m */; };
 		314B6F2D1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 314B6F2C1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m */; };
 		314B6F321B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 314B6F311B304B6C0051E00D /* TWSimpleCollectionViewFlowLayoutDelegate.m */; };
 		314B6F361B3065500051E00D /* UIView+TWEmbedding.m in Sources */ = {isa = PBXBuildFile; fileRef = 314B6F351B3065500051E00D /* UIView+TWEmbedding.m */; };
@@ -170,6 +172,10 @@
 		313873E81B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+ConstraintCopying.m"; sourceTree = "<group>"; };
 		313874701B09ADF80088CDA7 /* TWScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWScrollViewDelegate.h; sourceTree = "<group>"; };
 		313874711B09ADF80088CDA7 /* TWScrollViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWScrollViewDelegate.m; sourceTree = "<group>"; };
+		31413E641C0277150045E818 /* NSString+TWSizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TWSizing.h"; sourceTree = "<group>"; };
+		31413E651C0277150045E818 /* NSString+TWSizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TWSizing.m"; sourceTree = "<group>"; };
+		31413E681C02787F0045E818 /* UILabel+TWLineCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TWLineCount.h"; sourceTree = "<group>"; };
+		31413E691C02787F0045E818 /* UILabel+TWLineCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TWLineCount.m"; sourceTree = "<group>"; };
 		314529611AF0B3CB00C33BC1 /* TWCommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCommonMacros.h; sourceTree = "<group>"; };
 		314B6F2B1B30467B0051E00D /* TWSimpleCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSimpleCollectionViewDataSource.h; sourceTree = "<group>"; };
 		314B6F2C1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSimpleCollectionViewDataSource.m; sourceTree = "<group>"; };
@@ -463,6 +469,7 @@
 				31FB6BB81B1261A20042C409 /* NSString */,
 				31D645B71AFD7832003B4262 /* UIImage */,
 				31BFFB9C1AF983EA00645566 /* UIImagePickerController */,
+				31413E671C02785C0045E818 /* UILabel */,
 				31F721AC1BF101A3001DB831 /* UIScreen */,
 				3102610F1B8B742100E5A3A0 /* UIScrollView */,
 				31FB6B551B1074040042C409 /* UITableView */,
@@ -601,6 +608,15 @@
 				313874711B09ADF80088CDA7 /* TWScrollViewDelegate.m */,
 			);
 			name = ScrollView;
+			sourceTree = "<group>";
+		};
+		31413E671C02785C0045E818 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				31413E681C02787F0045E818 /* UILabel+TWLineCount.h */,
+				31413E691C02787F0045E818 /* UILabel+TWLineCount.m */,
+			);
+			name = UILabel;
 			sourceTree = "<group>";
 		};
 		314B6F2A1B3046210051E00D /* SimpleCollectionViewDataSource */ = {
@@ -1424,6 +1440,8 @@
 				310ACDEF1B924BCA002E6613 /* NSString+TWHTMLString.m */,
 				31E5B6B51BC6E049008845AD /* NSString+TWReplacingCharacters.h */,
 				31E5B6B61BC6E049008845AD /* NSString+TWReplacingCharacters.m */,
+				31413E641C0277150045E818 /* NSString+TWSizing.h */,
+				31413E651C0277150045E818 /* NSString+TWSizing.m */,
 			);
 			name = NSString;
 			sourceTree = "<group>";
@@ -1750,6 +1768,7 @@
 				31D645CB1AFE5896003B4262 /* UIImage+TWConvenience.m in Sources */,
 				318394AD1AEDA1850077C079 /* TWArrayTableViewDataSource.m in Sources */,
 				318394861AED9E2A0077C079 /* main.m in Sources */,
+				31413E6A1C02787F0045E818 /* UILabel+TWLineCount.m in Sources */,
 				31D645D01AFE5AF4003B4262 /* UIView+TWSizes.m in Sources */,
 				318394B41AEDA85D0077C079 /* TWDispatchMacros.m in Sources */,
 				31A5CDBE1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m in Sources */,
@@ -1774,6 +1793,7 @@
 				31A5CDB31B0E3DDE0007D92E /* TWShowOverlayWhenTableViewEmptyBehaviour.m in Sources */,
 				31F7217E1BE98781001DB831 /* NSManagedObject+Clone.m in Sources */,
 				31D645B61AFD77BD003B4262 /* UIImage+TWByOverlayingImage.m in Sources */,
+				31413E661C0277150045E818 /* NSString+TWSizing.m in Sources */,
 				31FB6B681B1131EC0042C409 /* NSMutableURLRequest+TWHttpHeaders.m in Sources */,
 				313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */,
 				31FB6B581B1074410042C409 /* UITableView+TWRegisterNib.m in Sources */,
