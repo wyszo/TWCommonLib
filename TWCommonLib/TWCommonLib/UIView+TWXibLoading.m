@@ -18,13 +18,14 @@
   return view;
 }
 
-- (void)tw_loadView:(UIView *)view fromNibNamed:(NSString *)nibName
+- (UIView *)tw_loadView:(UIView *)view fromNibNamed:(NSString *)nibName
 {
-  AssertTrueOrReturn(nibName.length);
+  AssertTrueOrReturnNil(nibName.length);
   view = [UIView tw_viewFromNibNamed:nibName withOwner:self];
   view.frame = self.bounds;
   view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   [self addSubview:view];
+  return view;
 }
 
 @end
