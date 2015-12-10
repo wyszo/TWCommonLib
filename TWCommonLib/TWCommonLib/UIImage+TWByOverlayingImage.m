@@ -2,12 +2,11 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "UIImage+TWByOverlayingImage.h"
-#import <KZAsserts/KZAsserts.h>
 #import "TWRectangleMath.h"
 #import "TWCommonMacros.h"
 #import "UIImage+TWCreateImage.h"
-
 
 @implementation UIImage (TWByOverlayingImage)
 

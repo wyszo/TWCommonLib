@@ -2,8 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "UIViewController+TWResponderChain.h"
-#import <KZAsserts/KZAsserts.h>
 
 @implementation UIViewController (TWResponderChain)
 

@@ -2,8 +2,8 @@
 //  TWCommonLib
 //
 
+@import UIKit;
 #import "UIImagePickerController+TWCameraDeviceSwitching.h"
-
 
 @implementation UIImagePickerController (TWCameraDeviceSwitching)
 

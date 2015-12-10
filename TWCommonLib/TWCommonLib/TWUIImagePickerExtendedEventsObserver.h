@@ -4,7 +4,6 @@
 
 #import "TWExtendedUIImagePickerControllerDelegate.h"
 
-
 @interface TWUIImagePickerExtendedEventsObserver : NSObject
 
 @property (nonatomic, weak) id<TWExtendedUIImagePickerControllerDelegate> delegate;

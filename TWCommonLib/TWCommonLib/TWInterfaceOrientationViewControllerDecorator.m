@@ -2,7 +2,7 @@
 //  TWCommonLib
 //
 
-#import <KZAsserts/KZAsserts.h>
+@import KZAsserts;
 #import "TWInterfaceOrientationViewControllerDecorator.h"
 #import "TWInterfaceOrientationClassStubs.h"
 #import "TWClassMethodCopyHelper.h"

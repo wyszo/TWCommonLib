@@ -2,9 +2,8 @@
 //  ChopinSelfie
 //
 
+@import KZAsserts;
 #import "TWJSONHelper.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation TWJSONHelper
 

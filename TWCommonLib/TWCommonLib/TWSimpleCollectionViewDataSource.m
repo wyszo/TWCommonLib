@@ -2,7 +2,7 @@
 //  TWCommonLib
 //
 
-#import <KZAsserts/KZAsserts.h>
+@import KZAsserts;
 #import "TWSimpleCollectionViewDataSource.h"
 #import "NSObject+TWObjectLifetime.h"
 

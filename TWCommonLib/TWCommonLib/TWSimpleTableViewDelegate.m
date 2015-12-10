@@ -2,10 +2,14 @@
 //  TWCommonLib
 //
 
-#import <KZAsserts/KZAsserts.h>
+@import KZAsserts;
 #import "TWSimpleTableViewDelegate.h"
 #import "TWCommonMacros.h"
+#import "TWObjectAtIndexPathProtocol.h"
 
+@interface TWSimpleTableViewDelegate()
+@property (nonatomic, weak) UITableView *tableView;
+@end
 
 @implementation TWSimpleTableViewDelegate
 
@@ -15,7 +19,8 @@
   
   self = [super init];
   if (self) {
-    tableView.delegate = self;
+    _tableView = tableView;
+    _tableView.delegate = self;
   }
   return self;
 }
@@ -37,7 +42,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+SUPPRESS_DEPRECATION_WARNINGS_BEGIN
   CallBlock(self.cellSelectedBlock, indexPath);
+SUPPRESS_DEPRECATION_WARNINGS_END
+  
+  [self invokeCellSelectedExtendedBlockIfNeededForIndexPath:indexPath];
   
   if (self.deselectCellOnTouch) {
     [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
@@ -58,6 +67,27 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CallBlock(self.scrollViewDidScrollBlock, scrollView);
+}
+
+#pragma mark - Private 
+
+- (void)invokeCellSelectedExtendedBlockIfNeededForIndexPath:(nonnull NSIndexPath *)indexPath
+{
+  AssertTrueOrReturn(indexPath);
+  
+  if (!self.cellSelectedExtendedBlock) {
+    return;
+  }
+  
+  id object;
+  if ([self.tableView.dataSource conformsToProtocol:@protocol(TWObjectAtIndexPathProtocol)]) {
+    id<TWObjectAtIndexPathProtocol> dataSource = (id)self.tableView.dataSource;
+    object = [dataSource objectAtIndexPath:indexPath];
+  }
+  else {
+    AssertTrueOr(NO && @"TableView dataSource should implement ObjectCountProtocol for this to work!",);
+  }
+  CallBlock(self.cellSelectedExtendedBlock, indexPath, object);
 }
 
 @end

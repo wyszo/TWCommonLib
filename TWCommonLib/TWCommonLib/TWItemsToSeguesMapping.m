@@ -2,15 +2,13 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWItemsToSeguesMapping.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWItemsToSeguesMapping()
 @property (nonatomic, copy) NSArray *menuItems;
 @property (nonatomic, copy) NSArray *segues;
 @end
-
 
 @implementation TWItemsToSeguesMapping
 

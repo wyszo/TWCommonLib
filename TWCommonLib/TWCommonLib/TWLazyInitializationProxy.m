@@ -2,19 +2,15 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWLazyInitializationProxy.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWLazyInitializationProxy ()
-
 @property (nonatomic, strong) id object;
 @property (nonatomic, strong) Class classToInstantiate;
 @property (nonatomic, copy) id (^initBlock)();
 @property (nonatomic, strong) NSInvocation *objectInitInvocation;
-
 @end
-
 
 @implementation TWLazyInitializationProxy
 

@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWSimpleTableViewDataSource.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation TWSimpleTableViewDataSource
 

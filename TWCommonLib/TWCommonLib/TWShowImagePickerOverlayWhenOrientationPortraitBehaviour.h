@@ -2,7 +2,7 @@
 //  TWCommonLib
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "TWCommonMacros.h"
 #import "TWImagePickerOverlayProtocol.h"
 

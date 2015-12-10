@@ -2,27 +2,27 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWCoreDataTableViewDataSource.h"
 #import "TWCommonMacros.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWCoreDataTableViewDataSource ()
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (copy, nonatomic) void (^configureCellBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
+@property (copy, nonatomic) CellAtIndexPathBlock configureCellBlock;
+@property (copy, nonatomic) CellWithObjectAtIndexPathBlock configureCellWithObjectBlock;
 @property (strong, nonatomic) NSString *cellReuseIdentifier;
 @property (strong, nonatomic) CellReuseMappingBlock cellReuseMappingBlock;
+@property (strong, nonatomic) CellReuseExtendedMappingBlock cellReuseExtendedMappingBlock;
 
 @end
-
 
 @implementation TWCoreDataTableViewDataSource
 
 #pragma mark - Initialization
 
-- (instancetype)initWithCellReuseMappingBlock:(CellReuseMappingBlock)cellReuseMappingBlock
-                           configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
+- (instancetype)initWithCellReuseMappingBlock:(nonnull CellReuseMappingBlock)cellReuseMappingBlock
+                           configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock
 {
   AssertTrueOrReturnNil(cellReuseMappingBlock);
   AssertTrueOrReturnNil(configureCellBlock);
@@ -36,8 +36,23 @@
   return self;
 }
 
-- (instancetype)initWithCellReuseIdentifier:(NSString *)cellReuseIdentifier
-                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
+- (instancetype)initWithCellReuseExtendedMappingBlock:(nonnull CellReuseExtendedMappingBlock)cellReuseExtendedMappingBlock
+                                   configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock
+{
+  AssertTrueOrReturnNil(cellReuseExtendedMappingBlock);
+  AssertTrueOrReturnNil(configureCellBlock);
+  
+  self = [super init];
+  if (self) {
+    // TODO: this won't copy the block (since it's assigned to an array)! bug!
+    _cellReuseExtendedMappingBlock = cellReuseExtendedMappingBlock;
+    _configureCellBlock = configureCellBlock;
+  }
+  return self;
+}
+
+- (instancetype)initWithCellReuseIdentifier:(nonnull NSString *)cellReuseIdentifier
+                         configureCellBlock:(nonnull CellAtIndexPathBlock)configureCellBlock
 {
   AssertTrueOrReturnNil(cellReuseIdentifier.length);
   AssertTrueOrReturnNil(configureCellBlock);
@@ -50,16 +65,15 @@
   return self;
 }
 
-- (instancetype)initWithCellreuseIdentifier:(NSString *)cellReuseIdentifier
-                         configureCellBlock:(CellAtIndexPathBlock)configureCellBlock
-__attribute__((deprecated))
+- (instancetype)initWithCellReuseIdentifier:(nonnull NSString *)cellReuseIdentifier
+                         configureCellWithObjectBlock:(nonnull CellWithObjectAtIndexPathBlock)configureCellWithObjectBlock
 {
   AssertTrueOrReturnNil(cellReuseIdentifier.length);
-  AssertTrueOrReturnNil(configureCellBlock);
+  AssertTrueOrReturnNil(configureCellWithObjectBlock);
   
   self = [super init];
   if (self) {
-    _configureCellBlock = configureCellBlock;
+    _configureCellWithObjectBlock = configureCellWithObjectBlock;
     _cellReuseIdentifier = cellReuseIdentifier;
   }
   return self;
@@ -97,6 +111,10 @@ __attribute__((deprecated))
   if (self.configureCellBlock) {
     self.configureCellBlock(cell, indexPath);
   }
+  else if (self.configureCellWithObjectBlock) {
+    id object = [self objectAtIndexPath:indexPath];
+    self.configureCellWithObjectBlock(cell, object, indexPath);
+  }
   return cell;
 }
 
@@ -107,12 +125,22 @@ __attribute__((deprecated))
  
   if (self.cellReuseIdentifier.length) {
     AssertTrueOr(self.cellReuseMappingBlock == nil,);
+    
     reuseIdentifier = self.cellReuseIdentifier;
+  }
+  else if (self.cellReuseMappingBlock) {
+    AssertTrueOr(self.cellReuseIdentifier.length == 0,);
+    AssertTrueOrReturnNil(self.cellReuseMappingBlock);
+    
+    reuseIdentifier = self.cellReuseMappingBlock(indexPath);
   }
   else {
     AssertTrueOr(self.cellReuseIdentifier.length == 0,);
-    AssertTrueOrReturnNil(self.cellReuseMappingBlock);
-    reuseIdentifier = self.cellReuseMappingBlock(indexPath);
+    AssertTrueOr(self.cellReuseMappingBlock == nil,);
+    AssertTrueOrReturnNil(self.cellReuseExtendedMappingBlock);
+    
+    id object = [self objectAtIndexPath:indexPath];
+    reuseIdentifier = self.cellReuseExtendedMappingBlock(object, indexPath);
   }
   AssertTrueOrReturnNil(reuseIdentifier.length);
   return reuseIdentifier;

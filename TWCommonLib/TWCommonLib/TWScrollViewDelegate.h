@@ -2,9 +2,8 @@
 //  TWCommonLib
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "TWCommonMacros.h"
-
 
 @interface TWScrollViewDelegate : NSObject <UIScrollViewDelegate>
 

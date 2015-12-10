@@ -5,7 +5,6 @@
 #import "TWCommonMacros.h"
 #import "TWCommonTypes.h"
 
-
 @interface TWTextViewWithMaxLengthDelegate : NSObject <UITextViewDelegate>
 
 @property (nonatomic, assign) BOOL resignsFirstResponderOnPressingReturn;

@@ -2,10 +2,9 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWArrayTableViewDataSource.h"
 #import "NSMutableArray+TWMoveRow.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @interface TWArrayTableViewDataSource ()
 
@@ -14,7 +13,6 @@
 @property (strong, nonatomic) NSString *cellDequeueIdentifier;
 
 @end
-
 
 @implementation TWArrayTableViewDataSource
 

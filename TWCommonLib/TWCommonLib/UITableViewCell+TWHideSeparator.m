@@ -16,4 +16,15 @@
   self.separatorInset = UIEdgeInsetsMake(0, marginInset, 0, marginInset);
 }
 
+- (void)tw_removeLayoutMargins
+{
+  self.layoutMargins = UIEdgeInsetsZero;
+}
+
+- (void)tw_configureForFullWidthSeparators
+{
+  [self tw_showSeparatorWithMarginInset:0.0f];
+  [self tw_removeLayoutMargins];
+}
+
 @end

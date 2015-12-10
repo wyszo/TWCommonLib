@@ -4,7 +4,6 @@
 
 #import "TWRectangleMath.h"
 
-
 @implementation TWRectangleMath
 
 + (CGPoint)topLeftPointOfRectangleWithSize:(CGSize)rectangleSize centerPoint:(CGPoint)center

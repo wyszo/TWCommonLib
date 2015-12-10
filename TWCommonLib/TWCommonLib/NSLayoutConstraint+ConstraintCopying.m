@@ -4,7 +4,6 @@
 
 #import "NSLayoutConstraint+ConstraintCopying.h"
 
-
 @implementation NSLayoutConstraint (ConstraintCopying)
 
 - (NSLayoutConstraint *)constraintCopyWithRelation:(NSLayoutRelation)relation

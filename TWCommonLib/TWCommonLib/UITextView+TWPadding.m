@@ -4,7 +4,6 @@
 
 #import "UITextView+TWPadding.h"
 
-
 @implementation UITextView (TWPadding)
 
 - (void)tw_setLeftAndRightPadding:(CGFloat)padding

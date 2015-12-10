@@ -2,8 +2,7 @@
 //  TWCommonLib
 //
 
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 
 /**
  Delays object initialization until first non-init method call on that object

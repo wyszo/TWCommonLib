@@ -2,10 +2,9 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "UIViewController+PerformSegueMapping.h"
 #import "TWCommonMacros.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 @implementation UIViewController (PerformSegueMapping)
 

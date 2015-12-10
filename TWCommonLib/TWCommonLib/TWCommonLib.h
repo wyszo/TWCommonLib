@@ -52,6 +52,7 @@
 #import "TWFilesystemHelper.h"
 #import "TWVideoPlaybackErrorHandler.h"
 #import "TWGradientView.h"
+#import "TWTableViewNibRegisteringHelper.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"
@@ -87,5 +88,14 @@
 #import "NSIndexPath+TWNextPreviousRow.h"
 #import "NSString+TWReplacingCharacters.h"
 #import "NSURLCache+TWCache.h"
+#import "NSManagedObject+Clone.h"
+#import "NSManagedObject+TWShallowCopy.h"
+#import "UIScreen+TWScreenSize.h"
+#import "NSFetchedResultsController+TWFetch.h"
+#import "UIView+TWTransformations.h"
+#import "UIWindow+TWWindow.h"
+#import "TWObjectAtIndexPathProtocol.h"
+#import "NSString+TWSizing.h"
+#import "UILabel+TWLineCount.h"
 
 #endif

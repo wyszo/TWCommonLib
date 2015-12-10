@@ -1,6 +1,6 @@
 //  TWCommonLib
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UITextView (NumberOfLines)
 

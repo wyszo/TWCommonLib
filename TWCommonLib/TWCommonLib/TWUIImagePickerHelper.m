@@ -4,7 +4,6 @@
 
 #import "TWUIImagePickerHelper.h"
 
-
 @implementation TWUIImagePickerHelper
 
 - (CGSize)imagePickerCameraPreviewViewSize

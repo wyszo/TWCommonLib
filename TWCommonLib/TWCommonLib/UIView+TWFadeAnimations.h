@@ -2,6 +2,8 @@
 //  TWCommonLib
 //
 
+@import UIKit;
+
 @interface UIView (TWFadeAnimations)
 
 - (void)tw_fadeInAnimationWithDuration:(NSTimeInterval)duration;

@@ -2,17 +2,14 @@
 //  TWCommonLib
 //
 
+@import KZAsserts;
 #import "TWLocationUpdatesManager.h"
-#import <KZAsserts/KZAsserts.h>
-
 
 static NSString *const kLocationWhenInUseUsageDescriptionKey = @"NSLocationWhenInUseUsageDescription";
-
 
 @interface TWLocationUpdatesManager ()
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @end
-
 
 @implementation TWLocationUpdatesManager
 

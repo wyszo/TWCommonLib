@@ -2,7 +2,7 @@
 //  TWCommonLib
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "TWCommonMacros.h"
 #import "TWSimpleTableViewCell.h"
 

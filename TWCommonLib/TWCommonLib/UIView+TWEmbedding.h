@@ -2,8 +2,7 @@
 //  TWCommonLib
 //
 
-#import <UIKit/UIKit.h>
-
+@import UIKit;
 
 @interface UIView (TWEmbedding)
 

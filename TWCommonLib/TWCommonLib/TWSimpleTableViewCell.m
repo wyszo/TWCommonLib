@@ -4,7 +4,6 @@
 
 #import "TWSimpleTableViewCell.h"
 
-
 @implementation TWSimpleTableViewCell
 
 + (instancetype)cellWithNibName:(NSString *)nibName action:(void (^)())actionBlock

@@ -3,7 +3,7 @@
 //
 
 @import KZAsserts;
-#import <MagicalRecord/MagicalRecord+ErrorHandling.h>
+@import MagicalRecord;
 #import "TWMagicalRecordDebugErrorHandler.h"
 
 @implementation TWMagicalRecordDebugErrorHandler

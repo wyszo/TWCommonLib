@@ -14,7 +14,7 @@
 NEW_AND_INIT_UNAVAILABLE
 
 /**
- * @param overlayView   doesn't have to be subview of tableView (ideally it shouldn't be)
+ * @param overlayView   Doesn't have to be subview of tableView (ideally it shouldn't be). But it has to already be in the view hierarchy - if it's not, it won't be added! 
  */
 - (instancetype)initWithTableView:(UITableView *)tableView dataSource:(id<TWObjectCountProtocol>)dataSource overlayView:(UIView *)alternativeView allowScrollingWhenNoCells:(BOOL)allowScrollingWhenNoCells;
 
