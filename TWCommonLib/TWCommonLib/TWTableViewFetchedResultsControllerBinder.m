@@ -56,6 +56,18 @@
     }
   }
   
+  void (^callConfigureCellAtIndexPathCallback)(NSIndexPath * _Nonnull) = ^(NSIndexPath * _Nonnull indexPath) {
+    // safe to use self in this block, since it's not persisted
+    if (self.configureCellBlock) {
+      UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+      if (cell) {
+        self.configureCellBlock(cell, indexPath);
+      } else {
+        // FetchedResultsController of a tableView from other tabBar item (now invisible) got the update, but didn't return a new cell when asked (since it's invisible). Expected case, don't worry.
+      }
+    }
+  };
+  
   switch(type) {
     case NSFetchedResultsChangeInsert: {
       AssertTrueOrReturn(newIndexPath);
@@ -87,15 +99,7 @@
         updateIndexPath = indexPath;
       }
       AssertTrueOrReturn(updateIndexPath);
-      
-      if (self.configureCellBlock) {
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:updateIndexPath];
-        if (cell) {
-          self.configureCellBlock(cell, updateIndexPath);
-        } else {
-          // FetchedResultsController of a tableView from other tabBar item (now invisible) got the update, but didn't return a new cell when asked (since it's invisible). Expected case, don't worry.
-        }
-      }
+      callConfigureCellAtIndexPathCallback(updateIndexPath);
     } break;
       
     case NSFetchedResultsChangeMove: {
@@ -107,6 +111,10 @@
                          withRowAnimation:UITableViewRowAnimationFade];
         [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
                          withRowAnimation:UITableViewRowAnimationFade];
+      }
+      else {
+        // yup - it's possible that the binder will get a ResultChangeMove... with the same old and new indexPath... (happens sometimes on iOS8)
+        callConfigureCellAtIndexPathCallback(indexPath);
       }
     } break;
   }
