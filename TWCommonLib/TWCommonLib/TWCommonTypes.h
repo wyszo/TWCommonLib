@@ -13,6 +13,7 @@ typedef void (^VoidBlockWithImage)(UIImage *image);
 
 typedef void (^BlockWithBoolParameter)(BOOL);
 typedef void (^BlockWithFloatParameter)(CGFloat);
+typedef CGFloat (^FloatReturningBlock)();
 typedef CGFloat (^FloatBlockWithIndexPathParameter)(NSIndexPath *indexPath);
 typedef void (^CellAtIndexPathBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 typedef void (^CellWithObjectAtIndexPathBlock)(UITableViewCell *cell, id object, NSIndexPath *indexPath);
