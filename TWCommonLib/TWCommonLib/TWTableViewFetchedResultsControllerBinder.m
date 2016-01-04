@@ -10,6 +10,7 @@
 @property (copy, nonatomic) void (^configureCellBlock)(UITableViewCell *cell, NSIndexPath *indexPath);
 @property (nonatomic, assign) BOOL disabled;
 @property (copy, nonatomic) IndexPathTransformBlock indexPathTransformBlock;
+@property (strong, nonatomic) NSMutableArray *deletedSections;
 @end
 
 @implementation TWTableViewFetchedResultsControllerBinder
@@ -24,6 +25,7 @@
   if (self) {
     _tableView = tableView;
     _configureCellBlock = configureCellBlock;
+    _deletedSections = [NSMutableArray new];
   }
   return self;
 }
@@ -72,8 +74,7 @@
     case NSFetchedResultsChangeInsert: {
       AssertTrueOrReturn(newIndexPath);
       
-      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
-                       withRowAnimation:UITableViewRowAnimationFade];
+      [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
       
       if ([self useCATransactionAPI]) {
         // for now we just have one completion block - if we wanted more, we'd have to chain them
@@ -86,8 +87,7 @@
       
     case NSFetchedResultsChangeDelete: {
       AssertTrueOrReturn(indexPath);
-      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                       withRowAnimation:UITableViewRowAnimationFade];
+      [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
       [self invokeNumberOfObjectsChangedCallbackForController:controller];
     } break;
       
@@ -107,14 +107,18 @@
       AssertTrueOrReturn(newIndexPath);
       
       if (![indexPath isEqual:newIndexPath]) {
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                         withRowAnimation:UITableViewRowAnimationFade];
-        [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
-                         withRowAnimation:UITableViewRowAnimationFade];
+        // [tableView moveRowAtIndexPath:toIndexPath:] method could *probably* be used in here (provided oldIndexPath section has not been removed)
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
       }
-      else {
-        // yup - it's possible that the binder will get a ResultChangeMove... with the same old and new indexPath... (happens sometimes on iOS8)
-        callConfigureCellAtIndexPathCallback(indexPath);
+      else { // old and new indexPaths are equal
+        if ([self.deletedSections containsObject:@(indexPath.section)]) { // cell used to be in a section that has just been deleted
+          [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+          // note that insertion callbacks are not called in this case (since cell has already been in the tableView, just moved)
+        } else {
+          // sometimes on iOS9 we get a ResultChangeMove instead of Update - with the same old and new indexPath - iOS9 bug
+          callConfigureCellAtIndexPathCallback(indexPath);
+        }
       }
     } break;
   }
@@ -145,6 +149,7 @@
     case NSFetchedResultsChangeDelete: {
       [tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
                withRowAnimation:UITableViewRowAnimationFade];
+      [self.deletedSections addObject:@(sectionIndex)];
     } break;
       
     case NSFetchedResultsChangeMove:
@@ -168,6 +173,8 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
+  [self.deletedSections removeAllObjects];
+
   if (self.disabled) {
     return;
   }
