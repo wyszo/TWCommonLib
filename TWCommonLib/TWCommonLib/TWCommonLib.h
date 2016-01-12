@@ -98,4 +98,6 @@
 #import "NSString+TWSizing.h"
 #import "UILabel+TWLineCount.h"
 
+#import "TWCommonLib-Swift.h"
+
 #endif

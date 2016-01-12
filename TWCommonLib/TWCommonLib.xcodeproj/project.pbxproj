@@ -43,6 +43,7 @@
 		31639F7D1BBAE49F005F19F0 /* UIViewController+TWResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 31639F7C1BBAE49F005F19F0 /* UIViewController+TWResponderChain.m */; };
 		31652D731BFC010C0007855A /* UIView+TWTransformations.m in Sources */ = {isa = PBXBuildFile; fileRef = 31652D721BFC010C0007855A /* UIView+TWTransformations.m */; };
 		316D86BE1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 316D86BD1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m */; };
+		316E02291C452D1500023C11 /* TWTableViewScrollHandlingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316E02281C452D1500023C11 /* TWTableViewScrollHandlingDelegate.swift */; };
 		3177CACE1BFCE2C300F371A0 /* UIWindow+TWWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3177CACD1BFCE2C300F371A0 /* UIWindow+TWWindow.m */; };
 		318394861AED9E2A0077C079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394851AED9E2A0077C079 /* main.m */; };
 		318394891AED9E2A0077C079 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 318394881AED9E2A0077C079 /* AppDelegate.m */; };
@@ -195,6 +196,7 @@
 		31652D721BFC010C0007855A /* UIView+TWTransformations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWTransformations.m"; sourceTree = "<group>"; };
 		316D86BC1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTableViewEditingStyleDelegate.h; sourceTree = "<group>"; };
 		316D86BD1B1F9C86003874F4 /* TWTableViewEditingStyleDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTableViewEditingStyleDelegate.m; sourceTree = "<group>"; };
+		316E02281C452D1500023C11 /* TWTableViewScrollHandlingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWTableViewScrollHandlingDelegate.swift; sourceTree = "<group>"; };
 		3177CACC1BFCE2C300F371A0 /* UIWindow+TWWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+TWWindow.h"; sourceTree = "<group>"; };
 		3177CACD1BFCE2C300F371A0 /* UIWindow+TWWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TWWindow.m"; sourceTree = "<group>"; };
 		31815F5F1B0B35010062E7C0 /* TWConfigurableFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWConfigurableFromDictionary.h; sourceTree = "<group>"; };
@@ -700,6 +702,14 @@
 			name = EditingStyleDelegate;
 			sourceTree = "<group>";
 		};
+		316E02271C452C9200023C11 /* ScrollHandlingDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				316E02281C452D1500023C11 /* TWTableViewScrollHandlingDelegate.swift */,
+			);
+			name = ScrollHandlingDelegate;
+			sourceTree = "<group>";
+		};
 		3177CACB1BFCE2A200F371A0 /* UIWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -1186,6 +1196,7 @@
 			isa = PBXGroup;
 			children = (
 				316D86BB1B1F9C76003874F4 /* EditingStyleDelegate */,
+				316E02271C452C9200023C11 /* ScrollHandlingDelegate */,
 				316D86BA1B1F9C70003874F4 /* SimpleDelegate */,
 			);
 			name = TableView;
@@ -1827,6 +1838,7 @@
 				31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */,
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
 				31652D731BFC010C0007855A /* UIView+TWTransformations.m in Sources */,
+				316E02291C452D1500023C11 /* TWTableViewScrollHandlingDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
