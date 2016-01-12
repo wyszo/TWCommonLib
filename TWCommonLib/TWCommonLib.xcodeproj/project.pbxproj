@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0277D957DBE3C4F4BEEE7926 /* Pods_TWCommonLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B41FBB91F54B64A66DD0D98 /* Pods_TWCommonLibTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0277D957DBE3C4F4BEEE7926 /* Pods_TWCommonLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B41FBB91F54B64A66DD0D98 /* Pods_TWCommonLibTests.framework */; };
 		310261121B8B745F00E5A3A0 /* UIScrollView+TWScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 310261111B8B745F00E5A3A0 /* UIScrollView+TWScrolling.m */; };
 		3102A7F51B87546300FC3A18 /* CALayer+TWAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3102A7F41B87546300FC3A18 /* CALayer+TWAnimations.m */; };
 		3102F9471BF9D8AB00B544C6 /* NSFetchedResultsController+TWFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3102F9461BF9D8AB00B544C6 /* NSFetchedResultsController+TWFetch.m */; };
@@ -108,7 +108,7 @@
 		31FB6BC41B126B260042C409 /* UIImage+TWCropping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BC31B126B250042C409 /* UIImage+TWCropping.m */; };
 		31FB6BC81B126D0C0042C409 /* TWUserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BC71B126D0C0042C409 /* TWUserDefaultsHelper.m */; };
 		31FB6BCD1B126F000042C409 /* TWVideoThumbnailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BCC1B126F000042C409 /* TWVideoThumbnailHelper.m */; };
-		6A7CCE83AA03D3970B1457D1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ADD17F01F392419A6EC400 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6A7CCE83AA03D3970B1457D1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ADD17F01F392419A6EC400 /* Pods.framework */; };
 		7D67A0CA1BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D67A0C91BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m */; };
 /* End PBXBuildFile section */
 
@@ -1867,7 +1867,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "TWCommonLib Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1889,7 +1889,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "TWCommonLib Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
