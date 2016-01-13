@@ -9,18 +9,21 @@ enum ScrollHandlingDelegateError : ErrorType {
  */
 class TWTableViewScrollHandlingDelegate: NSObject, UITableViewDelegate {
   
-  private var footerVisibleValue : Bool;
-  private var tableView : UITableView;
+  private var footerVisibleValue : Bool
+  private var tableView : UITableView
+  
+  var tableViewDelegates : LBDelegateMatrioska?
   
   var didScrollToFooter: (()->Void)?
   var didScrollAboveFooter: (()->Void)?
   
-  init(tableView : UITableView) throws {
+  init(tableView : UITableView, fallbackDelegate : UITableViewDelegate) throws {
     self.tableView = tableView
     self.footerVisibleValue = false
     
     super.init()
-    self.tableView.delegate = self
+    self.tableViewDelegates = LBDelegateMatrioska.init(delegates: [fallbackDelegate, self])
+    self.tableView.delegate = self.tableViewDelegates as? UITableViewDelegate
     
     guard let _ = tableView.tableFooterView else {
       throw ScrollHandlingDelegateError.TableViewFooterMissingError
@@ -35,6 +38,8 @@ class TWTableViewScrollHandlingDelegate: NSObject, UITableViewDelegate {
       footerVisibleValue = visible
     }
   }
+  
+  // MARK: UITableViewDelegate
   
   func scrollViewDidScroll(scrollView: UIScrollView) {
     checkDidScrollToFooter()
