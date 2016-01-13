@@ -7,13 +7,14 @@ Pod::Spec.new do |s|
   s.author             = "Tomasz W"
   s.platform = :ios, '8.0'
   s.social_media_url   = "http://twitter.com/Wyszo"
-  s.source       = { :git => "https://github.com/wyszo/TWCommonLib.git", :commit => "bbc47578f985a31d2c9f8b1bbda83e2125c116d7" }
+  s.source       = { :git => "https://github.com/wyszo/TWCommonLib.git", :tag => "CommonLib_0_9" }
   s.frameworks   = "CoreMotion", "MapKit", "CoreData"
   s.source_files  = "TWCommonLib", "TWCommonLib/**/*.{h,m,swift}"
   s.exclude_files = "TWCommonLib/Exclude", "TWCommonLib/Pods", "TWCommonLib/iOSInjectionProject", "TWCommonLib/TWCommonLib Tests"
 
   s.dependency  'UIAlertView-Blocks', '1.0'
   s.dependency  'KZAsserts', '1.0'
+  s.dependency  'LBDelegateMatrioska', '0.0.2'
   s.dependency  'BlocksKit', '2.2.5'
   s.dependency  'FLKAutoLayout', '0.2.1'
   s.dependency  'MagicalRecord', '2.3.0' 
