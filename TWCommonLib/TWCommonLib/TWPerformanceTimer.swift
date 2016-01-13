@@ -2,18 +2,18 @@
 
 import UIKit
 
-class TWPerformanceTimer: NSObject {
-  var startDate : NSDate!
-  var timerName : NSString?
+public class TWPerformanceTimer: NSObject {
+  private var startDate : NSDate!
+  private var timerName : NSString?
  
 // MARK: init
   
-  override init() {
+  public override init() {
     super.init();
     self.start();
   }
   
-  convenience init(timerName : NSString) {
+  public convenience init(timerName : NSString) {
     self.init();
     self.timerName = timerName;
   }
@@ -23,14 +23,14 @@ class TWPerformanceTimer: NSObject {
   /**
   It's not required to call this method, if timer object exists, it'll call start at initialisation
   */
-  func start() {
+  public func start() {
     self.startDate = NSDate();
   }
   
   /**
   Finish measuring execution time, return and print time elapsed
   */
-  func stopAndLogTime() -> NSTimeInterval {
+  public func stopAndLogTime() -> NSTimeInterval {
     let endDate = NSDate();
     let executionTime = endDate.timeIntervalSinceDate(self.startDate!);
 

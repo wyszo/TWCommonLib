@@ -7,17 +7,17 @@ enum ScrollHandlingDelegateError : ErrorType {
 /**
  Sets the tableView delegate to itself and then notifies when tableView footer becomes visible or is scrolled out of a visible area
  */
-class TWTableViewScrollHandlingDelegate: NSObject, UITableViewDelegate {
+public class TWTableViewScrollHandlingDelegate: NSObject, UITableViewDelegate {
   
   private var footerVisibleValue : Bool
   private var tableView : UITableView
   
-  var tableViewDelegates : LBDelegateMatrioska?
+  private var tableViewDelegates : LBDelegateMatrioska?
   
-  var didScrollToFooter: (()->Void)?
-  var didScrollAboveFooter: (()->Void)?
+  public var didScrollToFooter: (()->Void)?
+  public var didScrollAboveFooter: (()->Void)?
   
-  init(tableView : UITableView, fallbackDelegate : UITableViewDelegate) throws {
+  public init(tableView : UITableView, fallbackDelegate : UITableViewDelegate) throws {
     self.tableView = tableView
     self.footerVisibleValue = false
     
@@ -33,7 +33,7 @@ class TWTableViewScrollHandlingDelegate: NSObject, UITableViewDelegate {
   /**
    Forces updating internal state. You might want to call this for example from viewDidAppear if you need to ensure correct state before user did scroll
    */
-  func updateFooterVisibleValue() {
+  public func updateFooterVisibleValue() {
     if let visible = try? isFooterViewVisible() {
       footerVisibleValue = visible
     }
@@ -41,7 +41,7 @@ class TWTableViewScrollHandlingDelegate: NSObject, UITableViewDelegate {
   
   // MARK: UITableViewDelegate
   
-  func scrollViewDidScroll(scrollView: UIScrollView) {
+  public func scrollViewDidScroll(scrollView: UIScrollView) {
     checkDidScrollToFooter()
     checkDidScrollAboveFooter()
   }
