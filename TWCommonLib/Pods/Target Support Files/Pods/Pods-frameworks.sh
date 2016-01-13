@@ -87,6 +87,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/BlocksKit.framework"
   install_framework "Pods/FLKAutoLayout.framework"
   install_framework "Pods/KZAsserts.framework"
+  install_framework "Pods/LBDelegateMatrioska.framework"
   install_framework "Pods/MagicalRecord.framework"
   install_framework "Pods/UIAlertView_Blocks.framework"
 fi
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/BlocksKit.framework"
   install_framework "Pods/FLKAutoLayout.framework"
   install_framework "Pods/KZAsserts.framework"
+  install_framework "Pods/LBDelegateMatrioska.framework"
   install_framework "Pods/MagicalRecord.framework"
   install_framework "Pods/UIAlertView_Blocks.framework"
 fi

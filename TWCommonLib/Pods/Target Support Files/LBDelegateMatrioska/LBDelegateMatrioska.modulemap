@@ -1,0 +1,6 @@
+framework module LBDelegateMatrioska {
+  umbrella header "LBDelegateMatrioska-umbrella.h"
+
+  export *
+  module * { export * }
+}
