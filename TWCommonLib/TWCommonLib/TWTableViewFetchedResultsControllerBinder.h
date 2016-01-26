@@ -12,7 +12,10 @@
 @interface TWTableViewFetchedResultsControllerBinder : NSObject <NSFetchedResultsControllerDelegate>
 
 @property (copy, nonatomic) void (^numberOfObjectsChangedBlock)(NSInteger objectCount);
-@property (copy, nonatomic) IndexPathBlock objectInsertedAtIndexPathBlock;
+
+// Deprecated, use objectInsertedAtIndexPathExtendedBlock instead
+@property (copy, nonatomic) IndexPathBlock objectInsertedAtIndexPathBlock DEPRECATED_ATTRIBUTE; // deprecated
+@property (copy, nonatomic) IndexPathWithObjectBlock objectInsertedAtIndexPathExtendedBlock;
 
 NEW_AND_INIT_UNAVAILABLE
 

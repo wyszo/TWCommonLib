@@ -80,6 +80,7 @@
         // for now we just have one completion block - if we wanted more, we'd have to chain them
         [CATransaction setCompletionBlock:^{
           CallBlock(self.objectInsertedAtIndexPathBlock, newIndexPath); // will be called after all the UI changes finished animating
+          CallBlock(self.objectInsertedAtIndexPathExtendedBlock, newIndexPath, anObject);
         }];
       }
       [self invokeNumberOfObjectsChangedCallbackForController:controller];
@@ -189,7 +190,7 @@
 
 - (BOOL)useCATransactionAPI
 {
-  return (self.objectInsertedAtIndexPathBlock != nil);
+  return (self.objectInsertedAtIndexPathBlock != nil || self.objectInsertedAtIndexPathExtendedBlock != nil);
 }
 
 @end
