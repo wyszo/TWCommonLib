@@ -60,7 +60,7 @@ SUPPRESS_DEPRECATION_WARNINGS_END
     if (self.cellHeightBlock) {
         cellHeight = self.cellHeightBlock(indexPath);
     }
-    return cellHeight;
+    return ceilf(cellHeight);
 }
 
 #pragma mark - UIScrollViewDelegate
