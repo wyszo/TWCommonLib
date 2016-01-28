@@ -108,9 +108,7 @@
       AssertTrueOrReturn(newIndexPath);
       
       if (![indexPath isEqual:newIndexPath]) {
-        // [tableView moveRowAtIndexPath:toIndexPath:] method could *probably* be used in here (provided oldIndexPath section has not been removed)
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
       }
       else { // old and new indexPaths are equal
         if ([self.deletedSections containsObject:@(indexPath.section)]) { // cell used to be in a section that has just been deleted
