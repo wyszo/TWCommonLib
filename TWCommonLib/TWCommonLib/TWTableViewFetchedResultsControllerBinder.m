@@ -115,10 +115,13 @@
           [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
           // note that insertion callbacks are not called in this case (since cell has already been in the tableView, just moved)
         } else {
-          // sometimes on iOS9 we get a ResultChangeMove instead of Update - with the same old and new indexPath - iOS9 bug
-          callConfigureCellAtIndexPathCallback(indexPath);
+          // Note that sometimes on iOS9 we get a ResultChangeMove instead of Update - with the same old and new indexPath - iOS9 bug
+          // (current else statement captures this case)
         }
       }
+
+      // no matter if we got a proper move action or update (due to a bug described above), we want to update cell UI
+      callConfigureCellAtIndexPathCallback(newIndexPath);
     } break;
   }
 }
