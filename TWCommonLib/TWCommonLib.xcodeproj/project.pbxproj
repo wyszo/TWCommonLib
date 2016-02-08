@@ -110,7 +110,9 @@
 		31FB6BCD1B126F000042C409 /* TWVideoThumbnailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FB6BCC1B126F000042C409 /* TWVideoThumbnailHelper.m */; };
 		6A7CCE83AA03D3970B1457D1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ADD17F01F392419A6EC400 /* Pods.framework */; };
 		6C5AC4D043A048EDA3E148C4 /* DispatchFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5ACA65389F2D91E56755EB /* DispatchFunctions.swift */; };
+		6C5AC537208B36E4D7D404B4 /* NSDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5ACF35E75C609623F24201 /* NSDataExtensions.swift */; };
 		6C5AC58EFEA4FEA77A50B1FD /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5ACC7D9C8023A195EB1257 /* UIViewExtensions.swift */; };
+		6C5AC592EE906A9179B86362 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5AC291E14357268984560F /* DictionaryExtensions.swift */; };
 		7D67A0CA1BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D67A0C91BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m */; };
 /* End PBXBuildFile section */
 
@@ -336,8 +338,10 @@
 		3B41FBB91F54B64A66DD0D98 /* Pods_TWCommonLibTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWCommonLibTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BB4109946864A804D4DF7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		54ADD17F01F392419A6EC400 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C5AC291E14357268984560F /* DictionaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 		6C5ACA65389F2D91E56755EB /* DispatchFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchFunctions.swift; sourceTree = "<group>"; };
 		6C5ACC7D9C8023A195EB1257 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		6C5ACF35E75C609623F24201 /* NSDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataExtensions.swift; sourceTree = "<group>"; };
 		7D67A0C81BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TWArrayByRemoving.h"; sourceTree = "<group>"; };
 		7D67A0C91BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TWArrayByRemoving.m"; sourceTree = "<group>"; };
 		AEB3EBAD61902C5B2B6A8F80 /* Pods-TWCommonLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWCommonLibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWCommonLibTests/Pods-TWCommonLibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -866,6 +870,8 @@
 				31FB6BC51B126CF90042C409 /* UserDefaults */,
 				31FB6BC91B126EDB0042C409 /* VideoThumbnail */,
 				6C5ACA65389F2D91E56755EB /* DispatchFunctions.swift */,
+				6C5AC291E14357268984560F /* DictionaryExtensions.swift */,
+				6C5ACF35E75C609623F24201 /* NSDataExtensions.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -1847,6 +1853,8 @@
 				316E02291C452D1500023C11 /* TWTableViewScrollHandlingDelegate.swift in Sources */,
 				6C5AC58EFEA4FEA77A50B1FD /* UIViewExtensions.swift in Sources */,
 				6C5AC4D043A048EDA3E148C4 /* DispatchFunctions.swift in Sources */,
+				6C5AC592EE906A9179B86362 /* DictionaryExtensions.swift in Sources */,
+				6C5AC537208B36E4D7D404B4 /* NSDataExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
