@@ -6,14 +6,14 @@ enum JSONError: String, ErrorType {
 }
 
 extension NSData {
-    func jsonDictionary() throws -> [NSObject: AnyObject] {
+    public func jsonDictionary() throws -> [NSObject: AnyObject] {
         guard let jsonResponse = try NSJSONSerialization.JSONObjectWithData(self, options: []) as? [NSObject : AnyObject] else {
             throw JSONError.ConversionFailed
         }
         return jsonResponse
     }
 
-    func jsonArray() throws -> [AnyObject] {
+    public func jsonArray() throws -> [AnyObject] {
         guard let jsonResponse = try NSJSONSerialization.JSONObjectWithData(self, options: []) as? [AnyObject] else {
             throw JSONError.ConversionFailed
         }
