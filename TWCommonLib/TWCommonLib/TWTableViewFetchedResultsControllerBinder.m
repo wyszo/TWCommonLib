@@ -32,7 +32,7 @@
 
 #pragma mark - NSFetchedResultsControllerDelegate
 
-// source: http://samwize.com/2014/03/29/implementing-nsfetchedresultscontroller-with-magicalrecord/
+// original (heavlily modified) source: http://samwize.com/2014/03/29/implementing-nsfetchedresultscontroller-with-magicalrecord/
 
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath

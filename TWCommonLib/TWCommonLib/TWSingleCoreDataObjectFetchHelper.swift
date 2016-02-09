@@ -8,6 +8,7 @@ public class TWSingleCoreDataObjectFetchHelper<ManagedObjectType: NSManagedObjec
   private var fetchedResultsControllerDelegate: NSFetchedResultsControllerDelegate?
   private var objectID: String
   private var objectIdPropertyName: String
+  private var objectChangedCallback: () -> ()
   
   public var managedObject: ManagedObjectType?
     {
@@ -19,9 +20,10 @@ public class TWSingleCoreDataObjectFetchHelper<ManagedObjectType: NSManagedObjec
     }
   }
   
-  public required init(objectIdPropertyName: String, objectID: String) {
+  required public init(objectIdPropertyName: String, objectID: String, objectChanged: ()->()) {
     self.objectID = objectID
     self.objectIdPropertyName = objectIdPropertyName
+    self.objectChangedCallback = objectChanged
     setupFetchedResultsController()
   }
   
@@ -30,19 +32,14 @@ public class TWSingleCoreDataObjectFetchHelper<ManagedObjectType: NSManagedObjec
   private func setupFetchedResultsController() {
     
     func createFetchRequest(objectIdPropertyName: String, objectID: String) -> NSFetchRequest {
-      let predicate = NSPredicate(format: "%K == %@", objectIdPropertyName, objectID)
+      let predicate = NSPredicate(format: "%K == %ld", objectIdPropertyName, Int(objectID)!) // TODO: jesli to zostawie na incie, to bede musial pozmieniac typy!!
       let fetchRequest: NSFetchRequest = ManagedObjectType.MR_requestAllWithPredicate(predicate)
       fetchRequest.sortDescriptors = [ NSSortDescriptor(key: objectIdPropertyName, ascending: true) ]
       return fetchRequest
     }
     let fetchRequest = createFetchRequest(objectIdPropertyName, objectID: objectID)
     
-    func createFetchedResultsControllerDelegate() -> NSFetchedResultsControllerDelegate? {
-      // TODO: initialize FetchedResultsControllerDelegateObject here
-      return nil
-    }
-    fetchedResultsControllerDelegate = createFetchedResultsControllerDelegate()
-    
+    fetchedResultsControllerDelegate = TWFetchResultsControllerAnyObjectChangedNotifier(objectChanged: self.objectChangedCallback)
     let context = NSManagedObjectContext.MR_defaultContext()
     
     fetchedResultsController = ManagedObjectType.MR_fetchController(fetchRequest, delegate: fetchedResultsControllerDelegate, useFileCache:false, groupedBy: nil, inContext:context)
