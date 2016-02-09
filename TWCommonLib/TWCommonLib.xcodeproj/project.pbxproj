@@ -60,6 +60,7 @@
 		31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB71B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m */; };
 		31A5CDBE1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */; };
 		31AC3CB51BDB4DF900BB938E /* TWGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AC3CB41BDB4DF900BB938E /* TWGradientView.m */; };
+		31B6B6D81C6A8C5500D8A85E /* TWSingleCoreDataObjectFetchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6B6D71C6A8C5500D8A85E /* TWSingleCoreDataObjectFetchHelper.swift */; };
 		31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */; };
 		31BFFB751AF8349B00645566 /* TWMapKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB741AF8349B00645566 /* TWMapKitHelper.m */; };
 		31BFFB771AF834E700645566 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BFFB761AF834E700645566 /* MapKit.framework */; };
@@ -239,6 +240,7 @@
 		31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIImagePickerExtendedEventsObserver.m; sourceTree = "<group>"; };
 		31AC3CB31BDB4DF900BB938E /* TWGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWGradientView.h; sourceTree = "<group>"; };
 		31AC3CB41BDB4DF900BB938E /* TWGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWGradientView.m; sourceTree = "<group>"; };
+		31B6B6D71C6A8C5500D8A85E /* TWSingleCoreDataObjectFetchHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWSingleCoreDataObjectFetchHelper.swift; sourceTree = "<group>"; };
 		31BFFB621AF7C54600645566 /* TWOrientationChangeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDelegate.h; sourceTree = "<group>"; };
 		31BFFB631AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDetectorUsingAccelerometer.h; sourceTree = "<group>"; };
 		31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOrientationChangeDetectorUsingAccelerometer.m; sourceTree = "<group>"; };
@@ -872,6 +874,7 @@
 				6C5ACA65389F2D91E56755EB /* DispatchFunctions.swift */,
 				6C5AC291E14357268984560F /* DictionaryExtensions.swift */,
 				6C5ACF35E75C609623F24201 /* NSDataExtensions.swift */,
+				31B6B6D71C6A8C5500D8A85E /* TWSingleCoreDataObjectFetchHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -1839,6 +1842,7 @@
 				310ACDE81B923100002E6613 /* NSString+TWBase64Encoding.m in Sources */,
 				31639F7D1BBAE49F005F19F0 /* UIViewController+TWResponderChain.m in Sources */,
 				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
+				31B6B6D81C6A8C5500D8A85E /* TWSingleCoreDataObjectFetchHelper.swift in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				31E5B6BB1BC7F230008845AD /* TWVideoPlaybackErrorHandler.m in Sources */,
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
