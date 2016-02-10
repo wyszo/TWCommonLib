@@ -6,7 +6,7 @@ public class TWSingleCoreDataObjectFetchHelper<ManagedObjectType: NSManagedObjec
   
   private var fetchedResultsController: NSFetchedResultsController?
   private var fetchedResultsControllerDelegate: NSFetchedResultsControllerDelegate?
-  private var objectID: String
+  private var objectID: Int
   private var objectIdPropertyName: String
   private var objectChangedCallback: () -> ()
   
@@ -20,7 +20,7 @@ public class TWSingleCoreDataObjectFetchHelper<ManagedObjectType: NSManagedObjec
     }
   }
   
-  required public init(objectIdPropertyName: String, objectID: String, objectChanged: ()->()) {
+  required public init(objectIdPropertyName: String, objectID: Int, objectChanged: ()->()) {
     self.objectID = objectID
     self.objectIdPropertyName = objectIdPropertyName
     self.objectChangedCallback = objectChanged
@@ -31,8 +31,8 @@ public class TWSingleCoreDataObjectFetchHelper<ManagedObjectType: NSManagedObjec
   
   private func setupFetchedResultsController() {
     
-    func createFetchRequest(objectIdPropertyName: String, objectID: String) -> NSFetchRequest {
-      let predicate = NSPredicate(format: "%K == %ld", objectIdPropertyName, Int(objectID)!) // TODO: jesli to zostawie na incie, to bede musial pozmieniac typy!!
+    func createFetchRequest(objectIdPropertyName: String, objectID: Int) -> NSFetchRequest {
+      let predicate = NSPredicate(format: "%K == %ld", objectIdPropertyName, objectID)
       let fetchRequest: NSFetchRequest = ManagedObjectType.MR_requestAllWithPredicate(predicate)
       fetchRequest.sortDescriptors = [ NSSortDescriptor(key: objectIdPropertyName, ascending: true) ]
       return fetchRequest
