@@ -10,6 +10,7 @@
 typedef void (^VoidBlock)();
 typedef void (^VoidBlockWithError)(NSError *error);
 typedef void (^VoidBlockWithImage)(UIImage *image);
+typedef void (^VoidBlockWithDictionary)(NSDictionary *dictionary);
 
 typedef void (^BlockWithBoolParameter)(BOOL);
 typedef void (^BlockWithFloatParameter)(CGFloat);
