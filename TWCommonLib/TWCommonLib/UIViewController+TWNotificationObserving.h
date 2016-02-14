@@ -3,6 +3,7 @@
 //
 
 @import UIKit;
+#import "TWCommonTypes.h"
 
 @interface UIViewController (TWNotificationObserving)
 
@@ -20,5 +21,7 @@
 
 - (void)tw_removeNotificationsWithNameToSelectorMapping:(NSDictionary *)mapping;
 - (void)tw_removeNotificationsRegisteredUsingMapping;
+
+- (void)tw_registerNotificationObserverWithName:(nonnull NSString *)name handler:(nonnull VoidBlockWithDictionary)block;
 
 @end

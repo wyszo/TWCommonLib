@@ -54,4 +54,13 @@ static NSString *const kBindingKey = @"NotificationsNameToSelectorMapping";
   [self tw_removeNotificationsWithNameToSelectorMapping:mapping];
 }
 
+- (void)tw_registerNotificationObserverWithName:(nonnull NSString *)name handler:(nonnull VoidBlockWithDictionary)block {
+    AssertTrueOrReturn(name.length > 0);
+    AssertTrueOrReturn(block);
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:name object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        CallBlock(block, note.userInfo);
+    }];
+}
+
 @end
