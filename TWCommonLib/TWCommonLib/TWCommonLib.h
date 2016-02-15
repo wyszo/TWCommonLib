@@ -53,6 +53,7 @@
 #import "TWVideoPlaybackErrorHandler.h"
 #import "TWGradientView.h"
 #import "TWTableViewNibRegisteringHelper.h"
+#import "TWKeyboardNotificationsManager.h"
 
 #import "NSLayoutConstraint+TWAnimations.h"
 #import "NSSet+TWSetByRemoving.h"

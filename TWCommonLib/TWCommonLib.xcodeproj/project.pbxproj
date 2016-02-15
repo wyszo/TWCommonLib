@@ -17,6 +17,7 @@
 		3108E7851AF7BA3700E02C07 /* TWOrientationChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3108E7841AF7BA3700E02C07 /* TWOrientationChangeDetector.m */; };
 		310ACDE81B923100002E6613 /* NSString+TWBase64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 310ACDE71B923100002E6613 /* NSString+TWBase64Encoding.m */; };
 		310ACDF01B924BCA002E6613 /* NSString+TWHTMLString.m in Sources */ = {isa = PBXBuildFile; fileRef = 310ACDEF1B924BCA002E6613 /* NSString+TWHTMLString.m */; };
+		311180011C7238340091A9FE /* TWKeyboardNotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 311180001C7238340091A9FE /* TWKeyboardNotificationsManager.m */; };
 		311B79EA1AF0EA7F00E97FBC /* TWLocationUpdatesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79E91AF0EA7F00E97FBC /* TWLocationUpdatesManager.m */; };
 		311B79F41AF107F800E97FBC /* UIView+TWFadeAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79F31AF107F800E97FBC /* UIView+TWFadeAnimations.m */; };
 		311B79FC1AF1471400E97FBC /* NSObject+TWObjectLifetime.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B79FB1AF1471400E97FBC /* NSObject+TWObjectLifetime.m */; };
@@ -147,6 +148,8 @@
 		310ACDE71B923100002E6613 /* NSString+TWBase64Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TWBase64Encoding.m"; sourceTree = "<group>"; };
 		310ACDEE1B924BCA002E6613 /* NSString+TWHTMLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TWHTMLString.h"; sourceTree = "<group>"; };
 		310ACDEF1B924BCA002E6613 /* NSString+TWHTMLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TWHTMLString.m"; sourceTree = "<group>"; };
+		31117FFF1C7238340091A9FE /* TWKeyboardNotificationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWKeyboardNotificationsManager.h; sourceTree = "<group>"; };
+		311180001C7238340091A9FE /* TWKeyboardNotificationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWKeyboardNotificationsManager.m; sourceTree = "<group>"; };
 		311B79E81AF0EA7F00E97FBC /* TWLocationUpdatesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWLocationUpdatesManager.h; sourceTree = "<group>"; };
 		311B79E91AF0EA7F00E97FBC /* TWLocationUpdatesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWLocationUpdatesManager.m; sourceTree = "<group>"; };
 		311B79F21AF107F800E97FBC /* UIView+TWFadeAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWFadeAnimations.h"; sourceTree = "<group>"; };
@@ -444,6 +447,15 @@
 				3108E7841AF7BA3700E02C07 /* TWOrientationChangeDetector.m */,
 			);
 			name = "OrientationChange (notification)";
+			sourceTree = "<group>";
+		};
+		31117FFE1C7237DF0091A9FE /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				31117FFF1C7238340091A9FE /* TWKeyboardNotificationsManager.h */,
+				311180001C7238340091A9FE /* TWKeyboardNotificationsManager.m */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 		311B79E71AF0EA3B00E97FBC /* LocationUpdatesManager */ = {
@@ -863,6 +875,7 @@
 				31BFFB891AF9532E00645566 /* Mappings */,
 				31FB03AA1B3DDF7300539B50 /* MethodCopying */,
 				310394EE1B1E113A00D4D81E /* MoviePlayerViewController */,
+				31117FFE1C7237DF0091A9FE /* Notifications */,
 				311B79F91AF1470500E97FBC /* ObjectLifetime */,
 				31A282031B48654C00D38D5A /* PathsLocator */,
 				31E57A321BD6B94F005ED7C0 /* PerformanceTimer */,
@@ -1776,6 +1789,7 @@
 				312EFF3D1BD9163B00F2017D /* NSURLCache+TWDebug.m in Sources */,
 				31B6B6DA1C6AA03800D8A85E /* TWFetchResultsControllerAnyObjectChangedNotifier.swift in Sources */,
 				31EFB6CF1BAC6BE600F87C03 /* TWTextFieldsFormHelper.m in Sources */,
+				311180011C7238340091A9FE /* TWKeyboardNotificationsManager.m in Sources */,
 				312903671B24BA4C00C730DA /* TWTextViewWithCharacterLimitLabelDelegate.m in Sources */,
 				31FB6BBB1B1261AE0042C409 /* NSString+TWTrimming.m in Sources */,
 				31FB6B6D1B11C52A0042C409 /* TWInterfaceOrientationViewControllerDecorator.m in Sources */,

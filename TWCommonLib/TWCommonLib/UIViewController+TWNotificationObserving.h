@@ -17,9 +17,9 @@
     UIKeyboardWillShowNotification : BoxPointer(@selector(keyboardWillShow:)),
  }];
  */
-- (void)tw_registerNotificationsWithNameToSelectorMapping:(NSDictionary *)mapping;
+- (void)tw_registerNotificationsWithNameToSelectorMapping:(nonnull NSDictionary *)mapping;
 
-- (void)tw_removeNotificationsWithNameToSelectorMapping:(NSDictionary *)mapping;
+- (void)tw_removeNotificationsWithNameToSelectorMapping:(nonnull NSDictionary *)mapping;
 - (void)tw_removeNotificationsRegisteredUsingMapping;
 
 - (void)tw_registerNotificationObserverWithName:(nonnull NSString *)name handler:(nonnull VoidBlockWithDictionary)block;
