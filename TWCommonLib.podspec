@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author             = "Tomasz W"
   s.platform = :ios, '8.0'
   s.social_media_url   = "http://twitter.com/Wyszo"
-  s.source       = { :git => "https://github.com/wyszo/TWCommonLib.git", :tag => "CommonLib_0_9" }
+  s.source       = { :git => "https://github.com/wyszo/TWCommonLib.git", :tag => "CommonLib_1_0_0" }
   s.frameworks   = "CoreMotion", "MapKit", "CoreData"
   s.source_files  = "TWCommonLib", "TWCommonLib/**/*.{h,m,swift}"
   s.exclude_files = "TWCommonLib/Exclude", "TWCommonLib/Pods", "TWCommonLib/iOSInjectionProject", "TWCommonLib/TWCommonLib Tests"
