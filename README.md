@@ -4,6 +4,8 @@
 
 Library of iOS utilities I use in my projects. Mostly serving to improve readability, app architecture and encapsulate unnecessary complexity.
 
+Some of the helpers are meant for Objective-C only (obviously all the macros), but lots of the code can be interacted with from Swift. And new classes and extensions are written in Swift to begin with. 
+
 
 ##TableView CoreData utilities
 
@@ -68,11 +70,19 @@ Shorthand for annotating new and init methods as unavailable.
 
 Why are all those dispatch macros so long and full of parameters that never change?
 
-Don't ask me. Just use one of the options below: 
+Don't ask me. In Objective-C just use one of the options below: 
 **DISPATCH_AFTER(NSTimeInterval when, VoidBlock)**
 **DISPATCH_ASYNC(QueuePriority priority, VoidBlock)**
 **DISPATCH_ASYNC_ON_MAIN_THREAD(VoidBlock)**
 **DISPATCH_SYNC_ON_MAIN_THREAD(VoidBlock)**
+
+
+##Dispatch Swift Functions
+
+Same thing - GCD is awesome, but most of the time you don’t need a lot of customisation options. If you do want to express common intentions in a shorter form, use one of the following functions: 
+
+**DispatchAfter(time: Double, closure: ()-())**
+**DispatchSyncOnMainThread(closure: ()->())**
 
 
 ##Delegates
