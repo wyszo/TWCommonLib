@@ -41,7 +41,7 @@ Sure! You can setup a delegate using block syntax if you prefer that to implemen
 From now on everytime you'll need to display a label or a fancy image when your tableView doesn't contain any data, you'll be able to do it in just one line of code :)
 
 
-##Macros
+##Macros (Obj-C only)
 
 **CallBlock**
 
@@ -71,9 +71,13 @@ Shorthand for annotating new and init methods as unavailable.
 Why are all those dispatch macros so long and full of parameters that never change?
 
 Don't ask me. In Objective-C just use one of the options below: 
+
 **DISPATCH_AFTER(NSTimeInterval when, VoidBlock)**
+
 **DISPATCH_ASYNC(QueuePriority priority, VoidBlock)**
+
 **DISPATCH_ASYNC_ON_MAIN_THREAD(VoidBlock)**
+
 **DISPATCH_SYNC_ON_MAIN_THREAD(VoidBlock)**
 
 
