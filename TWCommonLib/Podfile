@@ -7,7 +7,7 @@ pod 'UIAlertView-Blocks', '1.0'
 pod 'BlocksKit', '2.2.5'
 pod 'LBDelegateMatrioska', '0.0.2'
 pod 'FLKAutoLayout', '0.2.1'
-pod 'MagicalRecord', '2.3.0'
+pod 'MagicalRecord', '2.3.2'
 
 target :TWCommonLibTests, :exclusive => true do
   pod 'Kiwi', '2.4.0'

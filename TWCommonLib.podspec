@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.dependency  'LBDelegateMatrioska', '0.0.2'
   s.dependency  'BlocksKit', '2.2.5'
   s.dependency  'FLKAutoLayout', '0.2.1'
-  s.dependency  'MagicalRecord', '2.3.0' 
+  s.dependency  'MagicalRecord', '2.3.2' 
 end

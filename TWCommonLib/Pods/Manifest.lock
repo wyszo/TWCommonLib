@@ -18,7 +18,9 @@ PODS:
   - Kiwi (2.4.0)
   - KZAsserts (1.0)
   - LBDelegateMatrioska (0.0.2)
-  - MagicalRecord (2.3.0)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
   - UIAlertView-Blocks (1.0)
 
 DEPENDENCIES:
@@ -27,7 +29,7 @@ DEPENDENCIES:
   - Kiwi (= 2.4.0)
   - KZAsserts (= 1.0)
   - LBDelegateMatrioska (= 0.0.2)
-  - MagicalRecord (= 2.3.0)
+  - MagicalRecord (= 2.3.2)
   - UIAlertView-Blocks (= 1.0)
 
 SPEC CHECKSUMS:
@@ -36,7 +38,7 @@ SPEC CHECKSUMS:
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
   KZAsserts: 6e613b569a33582dc94cf7a1f34a2c6d870982a7
   LBDelegateMatrioska: 4af6c7c5ba142d2f24d741e360558d8a0202cfc4
-  MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   UIAlertView-Blocks: 7904744fca618afbd2ec646608924f5e69d5acd1
 
 COCOAPODS: 0.39.0
