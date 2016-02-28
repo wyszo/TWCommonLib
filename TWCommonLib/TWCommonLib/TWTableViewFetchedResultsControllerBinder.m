@@ -76,14 +76,22 @@
       
       [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
       
+      VoidBlock invokeCallbacks = ^{
+        // if changes animated, all those blocks will be invoked when animation ends
+        CallBlock(self.objectInsertedAtIndexPathBlock, newIndexPath); 
+        CallBlock(self.objectInsertedAtIndexPathExtendedBlock, newIndexPath, anObject);
+      };
+      
+      [self invokeNumberOfObjectsChangedCallbackForController:controller];
+      
       if ([self useCATransactionAPI]) {
         // for now we just have one completion block - if we wanted more, we'd have to chain them
         [CATransaction setCompletionBlock:^{
-          CallBlock(self.objectInsertedAtIndexPathBlock, newIndexPath); // will be called after all the UI changes finished animating
-          CallBlock(self.objectInsertedAtIndexPathExtendedBlock, newIndexPath, anObject);
+          invokeCallbacks();
         }];
+      } else {
+        invokeCallbacks();
       }
-      [self invokeNumberOfObjectsChangedCallbackForController:controller];
     } break;
       
     case NSFetchedResultsChangeDelete: {
