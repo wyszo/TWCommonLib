@@ -12,6 +12,6 @@
 
 - (void)tw_bindLifetimeTo:(nonnull NSObject *)owner usingKey:(nonnull NSString *)key;
 - (nullable id)tw_getAttachedObjectWithKey:(nonnull NSString *)key;
-- (void)tw_releaseAttachedObjectFromOwner:(nonnull NSObject *)owner withKey:(nonnull NSString *)key;
+- (void)tw_releaseAttachedObjectWithKey:(nonnull NSString *)key;
 
 @end

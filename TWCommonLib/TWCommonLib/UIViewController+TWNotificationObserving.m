@@ -50,7 +50,7 @@ static NSString *const kBindingKey = @"NotificationsNameToSelectorMapping";
   id mapping = [self tw_getAttachedObjectWithKey:kBindingKey];
   AssertTrueOrReturn(mapping);
   AssertTrueOrReturn([mapping isKindOfClass:[NSDictionary class]]);
-  [self tw_releaseAttachedObjectFromOwner:self withKey:kBindingKey];
+  [self tw_releaseAttachedObjectWithKey:kBindingKey];
   [self tw_removeNotificationsWithNameToSelectorMapping:mapping];
 }
 
