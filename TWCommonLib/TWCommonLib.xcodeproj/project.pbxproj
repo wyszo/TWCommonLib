@@ -34,6 +34,7 @@
 		313873E21B076EA20088CDA7 /* UIView+LayerDecoration.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873E11B076EA20088CDA7 /* UIView+LayerDecoration.m */; };
 		313873E91B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 313873E81B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m */; };
 		313874721B09ADF80088CDA7 /* TWScrollViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 313874711B09ADF80088CDA7 /* TWScrollViewDelegate.m */; };
+		31407A2D1CA47975004B8F0F /* UIAlertController+TWActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31407A2C1CA47975004B8F0F /* UIAlertController+TWActions.swift */; };
 		31413E661C0277150045E818 /* NSString+TWSizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 31413E651C0277150045E818 /* NSString+TWSizing.m */; };
 		31413E6A1C02787F0045E818 /* UILabel+TWLineCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 31413E691C02787F0045E818 /* UILabel+TWLineCount.m */; };
 		314B6F2D1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 314B6F2C1B30467B0051E00D /* TWSimpleCollectionViewDataSource.m */; };
@@ -184,6 +185,7 @@
 		313873E81B07F8DD0088CDA7 /* NSLayoutConstraint+ConstraintCopying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+ConstraintCopying.m"; sourceTree = "<group>"; };
 		313874701B09ADF80088CDA7 /* TWScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWScrollViewDelegate.h; sourceTree = "<group>"; };
 		313874711B09ADF80088CDA7 /* TWScrollViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWScrollViewDelegate.m; sourceTree = "<group>"; };
+		31407A2C1CA47975004B8F0F /* UIAlertController+TWActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+TWActions.swift"; sourceTree = "<group>"; };
 		31413E641C0277150045E818 /* NSString+TWSizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TWSizing.h"; sourceTree = "<group>"; };
 		31413E651C0277150045E818 /* NSString+TWSizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TWSizing.m"; sourceTree = "<group>"; };
 		31413E681C02787F0045E818 /* UILabel+TWLineCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TWLineCount.h"; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 				31FB6BAE1B1232510042C409 /* NSObject */,
 				311B79FE1AF26F9000E97FBC /* NSSet */,
 				31FB6BB81B1261A20042C409 /* NSString */,
+				31407A2B1CA47943004B8F0F /* UIAlertController */,
 				31D645B71AFD7832003B4262 /* UIImage */,
 				31BFFB9C1AF983EA00645566 /* UIImagePickerController */,
 				31413E671C02785C0045E818 /* UILabel */,
@@ -645,6 +648,14 @@
 				313874711B09ADF80088CDA7 /* TWScrollViewDelegate.m */,
 			);
 			name = ScrollView;
+			sourceTree = "<group>";
+		};
+		31407A2B1CA47943004B8F0F /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				31407A2C1CA47975004B8F0F /* UIAlertController+TWActions.swift */,
+			);
+			name = UIAlertController;
 			sourceTree = "<group>";
 		};
 		31413E671C02785C0045E818 /* UILabel */ = {
@@ -1782,6 +1793,7 @@
 				31FB6BC41B126B260042C409 /* UIImage+TWCropping.m in Sources */,
 				314B6F361B3065500051E00D /* UIView+TWEmbedding.m in Sources */,
 				3194128D1AF40F5E00D676A3 /* TWSimpleTableViewDataSource.m in Sources */,
+				31407A2D1CA47975004B8F0F /* UIAlertController+TWActions.swift in Sources */,
 				312903621B23982100C730DA /* UITextView+TWPadding.m in Sources */,
 				312A23921BC191D6004CB7F0 /* TWMagicalRecordDebugErrorHandler.m in Sources */,
 				31D6459E1AFB6E63003B4262 /* TWAlertFactory.m in Sources */,
