@@ -11,6 +11,7 @@
 @property (nonatomic, assign) BOOL disabled;
 @property (copy, nonatomic) IndexPathTransformBlock indexPathTransformBlock;
 @property (strong, nonatomic) NSMutableArray *deletedSections;
+@property (strong, nonatomic) NSMutableArray *insertedSections;
 @end
 
 @implementation TWTableViewFetchedResultsControllerBinder
@@ -26,6 +27,7 @@
     _tableView = tableView;
     _configureCellBlock = configureCellBlock;
     _deletedSections = [NSMutableArray new];
+    _insertedSections = [NSMutableArray new];
   }
   return self;
 }
@@ -116,7 +118,15 @@
       AssertTrueOrReturn(newIndexPath);
       
       if (![indexPath isEqual:newIndexPath]) {
-        [tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
+        BOOL noSectionChanges = (![self indexPathInDeletedOrInsertedSections:indexPath] && ![self indexPathInDeletedOrInsertedSections:newIndexPath]);
+      
+        if (noSectionChanges) {
+          [tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
+        } else {
+          // if we have just added or deleted a section, we'd get a crash if we tried to execute move in the same run
+          [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+          [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
       }
       else { // old and new indexPaths are equal
         if ([self.deletedSections containsObject:@(indexPath.section)]) { // cell used to be in a section that has just been deleted
@@ -132,6 +142,15 @@
       callConfigureCellAtIndexPathCallback(newIndexPath);
     } break;
   }
+}
+
+- (BOOL)indexPathInDeletedOrInsertedSections:(NSIndexPath *)indexPath {
+  AssertTrueOrReturnNo(indexPath);
+
+  BOOL inDeleted = [self.deletedSections containsObject:@(indexPath.section)];
+  BOOL inInserted = [self.insertedSections containsObject:@(indexPath.section)];
+
+  return (inDeleted || inInserted);
 }
 
 - (void)invokeNumberOfObjectsChangedCallbackForController:(NSFetchedResultsController *)fetchedResultsController
@@ -154,6 +173,7 @@
     case NSFetchedResultsChangeInsert: {
       [tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
                withRowAnimation:UITableViewRowAnimationFade];
+      [self.insertedSections addObject:@(sectionIndex)];
     } break;
       
     case NSFetchedResultsChangeDelete: {
@@ -184,6 +204,7 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
   [self.deletedSections removeAllObjects];
+  [self.insertedSections removeAllObjects];
 
   if (self.disabled) {
     return;
