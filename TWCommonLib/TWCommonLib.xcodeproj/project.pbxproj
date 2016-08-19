@@ -84,6 +84,7 @@
 		31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D6463E1B066A29003B4262 /* TWSimpleMapViewDelegate.m */; };
 		31D6DACC1AFA27C100432340 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6DACB1AFA27C100432340 /* CoreMotion.framework */; };
 		31D91AF11BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D91AF01BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m */; };
+		31DF699E1D67510D00CA05B0 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DF699D1D67510D00CA05B0 /* UIView+Constraints.swift */; };
 		31E505411BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E505401BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m */; };
 		31E5138D1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5138C1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.m */; };
 		31E57A351BD6BA7C005ED7C0 /* TWPerformanceTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E57A341BD6BA7C005ED7C0 /* TWPerformanceTimer.swift */; };
@@ -115,7 +116,7 @@
 		6A7CCE83AA03D3970B1457D1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ADD17F01F392419A6EC400 /* Pods.framework */; };
 		6C5AC4D043A048EDA3E148C4 /* DispatchFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5ACA65389F2D91E56755EB /* DispatchFunctions.swift */; };
 		6C5AC537208B36E4D7D404B4 /* NSDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5ACF35E75C609623F24201 /* NSDataExtensions.swift */; };
-		6C5AC58EFEA4FEA77A50B1FD /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5ACC7D9C8023A195EB1257 /* UIViewExtensions.swift */; };
+		6C5AC58EFEA4FEA77A50B1FD /* UIView+XibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5ACC7D9C8023A195EB1257 /* UIView+XibLoading.swift */; };
 		6C5AC592EE906A9179B86362 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5AC291E14357268984560F /* DictionaryExtensions.swift */; };
 		7D67A0CA1BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D67A0C91BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m */; };
 /* End PBXBuildFile section */
@@ -288,6 +289,7 @@
 		31D6DACB1AFA27C100432340 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		31D91AEF1BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFullscreenActivityIndicatorView.h; sourceTree = "<group>"; };
 		31D91AF01BBA95B70013C7D3 /* TWFullscreenActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFullscreenActivityIndicatorView.m; sourceTree = "<group>"; };
+		31DF699D1D67510D00CA05B0 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		31E5053F1BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+TWHideSeparator.h"; sourceTree = "<group>"; };
 		31E505401BBD6A68004BC7C4 /* UITableViewCell+TWHideSeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+TWHideSeparator.m"; sourceTree = "<group>"; };
 		31E5138B1BBD7874004BC7C4 /* NSIndexPath+TWNextPreviousRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+TWNextPreviousRow.h"; sourceTree = "<group>"; };
@@ -349,7 +351,7 @@
 		54ADD17F01F392419A6EC400 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C5AC291E14357268984560F /* DictionaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 		6C5ACA65389F2D91E56755EB /* DispatchFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchFunctions.swift; sourceTree = "<group>"; };
-		6C5ACC7D9C8023A195EB1257 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		6C5ACC7D9C8023A195EB1257 /* UIView+XibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+XibLoading.swift"; sourceTree = "<group>"; };
 		6C5ACF35E75C609623F24201 /* NSDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataExtensions.swift; sourceTree = "<group>"; };
 		7D67A0C81BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TWArrayByRemoving.h"; sourceTree = "<group>"; };
 		7D67A0C91BCFE3F000EAF449 /* NSArray+TWArrayByRemoving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TWArrayByRemoving.m"; sourceTree = "<group>"; };
@@ -472,13 +474,13 @@
 		311B79F11AF107E400E97FBC /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				31DF699C1D6750FF00CA05B0 /* Constraints */,
 				314B6F331B3065110051E00D /* EmbedingView */,
 				31D645CC1AFE5AC1003B4262 /* FadeAnimations */,
 				313873DF1B076E8C0088CDA7 /* LayerDecoration */,
 				31D645CD1AFE5AC7003B4262 /* Sizes */,
 				31652D701BFC00E90007855A /* Transformations */,
 				31FB6BBC1B1269BD0042C409 /* XibLoading */,
-				6C5ACC7D9C8023A195EB1257 /* UIViewExtensions.swift */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -1281,6 +1283,14 @@
 			name = FullscreenActivityIndicatorView;
 			sourceTree = "<group>";
 		};
+		31DF699C1D6750FF00CA05B0 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				31DF699D1D67510D00CA05B0 /* UIView+Constraints.swift */,
+			);
+			name = Constraints;
+			sourceTree = "<group>";
+		};
 		31E5053E1BBD6A44004BC7C4 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1513,6 +1523,7 @@
 		31FB6BBC1B1269BD0042C409 /* XibLoading */ = {
 			isa = PBXGroup;
 			children = (
+				6C5ACC7D9C8023A195EB1257 /* UIView+XibLoading.swift */,
 				31FB6BBD1B1269D40042C409 /* UIView+TWXibLoading.h */,
 				31FB6BBE1B1269D40042C409 /* UIView+TWXibLoading.m */,
 			);
@@ -1872,6 +1883,7 @@
 				310ACDE81B923100002E6613 /* NSString+TWBase64Encoding.m in Sources */,
 				31639F7D1BBAE49F005F19F0 /* UIViewController+TWResponderChain.m in Sources */,
 				31FB6B501B0E85910042C409 /* TWCoreDataTableViewDataSource.m in Sources */,
+				31DF699E1D67510D00CA05B0 /* UIView+Constraints.swift in Sources */,
 				31B6B6D81C6A8C5500D8A85E /* TWSingleCoreDataObjectFetchHelper.swift in Sources */,
 				31D6463F1B066A29003B4262 /* TWSimpleMapViewDelegate.m in Sources */,
 				31E5B6BB1BC7F230008845AD /* TWVideoPlaybackErrorHandler.m in Sources */,
@@ -1885,7 +1897,7 @@
 				311B7A011AF26FA200E97FBC /* NSSet+TWSetByRemoving.m in Sources */,
 				31652D731BFC010C0007855A /* UIView+TWTransformations.m in Sources */,
 				316E02291C452D1500023C11 /* TWTableViewScrollHandlingDelegate.swift in Sources */,
-				6C5AC58EFEA4FEA77A50B1FD /* UIViewExtensions.swift in Sources */,
+				6C5AC58EFEA4FEA77A50B1FD /* UIView+XibLoading.swift in Sources */,
 				6C5AC4D043A048EDA3E148C4 /* DispatchFunctions.swift in Sources */,
 				6C5AC592EE906A9179B86362 /* DictionaryExtensions.swift in Sources */,
 				6C5AC537208B36E4D7D404B4 /* NSDataExtensions.swift in Sources */,
