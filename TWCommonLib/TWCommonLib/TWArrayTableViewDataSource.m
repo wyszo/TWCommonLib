@@ -16,12 +16,12 @@
 
 @implementation TWArrayTableViewDataSource
 
-- (instancetype)initWithArray:(NSArray *)array attachToTableView:(UITableView *)tableView cellNibName:(NSString *)cellNibName
+- (instancetype)initWithArray:(NSArray *)array tableView:(UITableView *)tableView attachToTableView:(BOOL)attachToTableView cellNibName:(NSString *)cellNibName
 {
   AssertTrueOrReturnNil(cellNibName);
   
   if (self = [super init]) {
-    [self initializeWithArray:array attachToTableView:tableView];
+    [self initializeWithArray:array tableView:tableView attachToTableView:attachToTableView];
     
     _cellDequeueIdentifier = @"cell";
     
@@ -31,25 +31,28 @@
   return self;
 }
 
-- (instancetype)initWithArray:(NSArray *)array attachToTableView:(UITableView *)tableView cellDequeueIdentifier:(NSString *)cellDequeueIdentifier
+- (instancetype)initWithArray:(NSArray *)array tableView:(UITableView *)tableView attachToTableView:(BOOL)attachToTableView cellDequeueIdentifier:(NSString *)cellDequeueIdentifier
 {
   AssertTrueOrReturnNil(cellDequeueIdentifier.length);
   
   if (self = [super init]) {
-    [self initializeWithArray:array attachToTableView:tableView];
+    [self initializeWithArray:array tableView:tableView attachToTableView:attachToTableView];
     _cellDequeueIdentifier = cellDequeueIdentifier;
   }
   return self;
 }
 
-- (void)initializeWithArray:(NSArray *)array attachToTableView:(UITableView *)tableView
+- (void)initializeWithArray:(NSArray *)array tableView:(UITableView *)tableView attachToTableView:(BOOL)attachToTableView
 {
-  AssertTrueOrReturn(array);
-  AssertTrueOrReturn(tableView);
-  
-  _array = [array mutableCopy];
-  _tableView = tableView;
-  _tableView.dataSource = self;
+    AssertTrueOrReturn(array);
+    AssertTrueOrReturn(tableView);
+    
+    _array = [array mutableCopy];
+    _tableView = tableView;
+    
+    if (attachToTableView) {
+        _tableView.dataSource = self;
+    }
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
@@ -73,9 +76,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellDequeueIdentifier];
-  [self configureCell:cell atIndexPath:indexPath];
-  return cell;
+    return [self cellForRowAtIndexPath:indexPath];
+}
+
+- (UITableViewCell *)cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:self.cellDequeueIdentifier];
+    [self configureCell:cell atIndexPath:indexPath];
+    return cell;
 }
 
 #pragma mark - deleting objects

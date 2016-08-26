@@ -36,7 +36,6 @@
 
 // original (heavlily modified) source: http://samwize.com/2014/03/29/implementing-nsfetchedresultscontroller-with-magicalrecord/
 
-
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
 {
   if (self.disabled) {
@@ -46,19 +45,8 @@
   UITableView *tableView = self.tableView;
   AssertTrueOrReturn(tableView);
   
-  if (self.indexPathTransformBlock) {
-    NSIndexPath *indexPathBeforeTransformation = indexPath;
-    indexPath = self.indexPathTransformBlock(indexPath);
-    if (indexPathBeforeTransformation) {
-      AssertTrueOrReturn(indexPath && @"indexPath should not be nil after transformation!");
-    }
-    
-    NSIndexPath *newIndexPathBeforeTransformation = newIndexPath;
-    newIndexPath = self.indexPathTransformBlock(newIndexPath);
-    if (newIndexPathBeforeTransformation) {
-      AssertTrueOrReturn(newIndexPath && @"newIndexPath should not be nil after transformation!");
-    }
-  }
+  indexPath = [self indexPathAfterTransformation:indexPath];
+  newIndexPath = [self indexPathAfterTransformation:newIndexPath];
   
   void (^callConfigureCellAtIndexPathCallback)(NSIndexPath * _Nonnull) = ^(NSIndexPath * _Nonnull indexPath) {
     // safe to use self in this block, since it's not persisted
@@ -169,6 +157,9 @@
   UITableView *tableView = self.tableView;
   AssertTrueOrReturn(tableView);
   
+  sectionIndex = [self sectionIndexAfterTransformation:sectionIndex];
+  AssertTrueOrReturn(sectionIndex >= 0);
+  
   switch(type) {
     case NSFetchedResultsChangeInsert: {
       [tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
@@ -221,6 +212,28 @@
 - (BOOL)useCATransactionAPI
 {
   return (self.objectInsertedAtIndexPathBlock != nil || self.objectInsertedAtIndexPathExtendedBlock != nil);
+}
+
+- (NSIndexPath *)indexPathAfterTransformation:(NSIndexPath *)indexPath {
+    if (!self.indexPathTransformBlock) {
+        return indexPath;
+    }
+    
+    NSIndexPath *transformedIndexPath = self.indexPathTransformBlock(indexPath);
+    if (indexPath) {
+        AssertTrueOr(transformedIndexPath && @"indexPath should not be nil after transformation!", return indexPath;);
+    }
+    return transformedIndexPath;
+}
+
+- (NSInteger)sectionIndexAfterTransformation:(NSInteger)sectionIndex {
+    if (!self.indexPathTransformBlock) {
+        return sectionIndex;
+    }
+    
+    NSIndexPath *dummyIndexPath = [NSIndexPath indexPathForRow:0 inSection:sectionIndex];
+    dummyIndexPath = [self indexPathAfterTransformation:dummyIndexPath];
+    return dummyIndexPath.section;
 }
 
 @end

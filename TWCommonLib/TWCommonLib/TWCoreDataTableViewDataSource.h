@@ -64,6 +64,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger)sectionsCount;
 - (nullable NSIndexPath *)lastTableViewCellIndexPath;
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 NS_ASSUME_NONNULL_END

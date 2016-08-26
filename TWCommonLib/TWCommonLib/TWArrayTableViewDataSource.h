@@ -20,18 +20,21 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  For tableViews with cells from xib
  */
-- (instancetype)initWithArray:(NSArray<T> *)array attachToTableView:(UITableView *)tableView cellNibName:(NSString *)cellNibName;
+- (instancetype)initWithArray:(NSArray *)array tableView:(UITableView *)tableView attachToTableView:(BOOL)attachToTableView cellNibName:(NSString *)cellNibName;
 
 /**
  For tableViews with prototype cells from Storyboard
  */
-- (instancetype)initWithArray:(NSArray<T> *)array attachToTableView:(UITableView *)tableView cellDequeueIdentifier:(NSString *)cellDequeueIdentifier;
+- (instancetype)initWithArray:(NSArray *)array tableView:(UITableView *)tableView attachToTableView:(BOOL)attachToTableView cellDequeueIdentifier:(NSString *)cellDequeueIdentifier;
 
 - (void)removeObject:(T)object;
 - (void)removeObjectAtIndex:(NSUInteger)index;
 - (T)objectAtIndexPath:(NSIndexPath *)indexPath;
 - (NSInteger)objectCount;
 - (NSArray *)allSteps;
+
+// you'll only need to use this in a wrapper
+- (UITableViewCell *)cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
