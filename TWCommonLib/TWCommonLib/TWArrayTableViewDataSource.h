@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithArray:(NSArray *)array tableView:(UITableView *)tableView attachToTableView:(BOOL)attachToTableView cellDequeueIdentifier:(NSString *)cellDequeueIdentifier;
 
+- (void)attachDataSourceToTableView;
+
 - (void)removeObject:(T)object;
 - (void)removeObjectAtIndex:(NSUInteger)index;
 - (T)objectAtIndexPath:(NSIndexPath *)indexPath;

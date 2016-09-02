@@ -51,8 +51,12 @@
     _tableView = tableView;
     
     if (attachToTableView) {
-        _tableView.dataSource = self;
+        [self attachDataSourceToTableView];
     }
+}
+
+- (void)attachDataSourceToTableView {
+    _tableView.dataSource = self;
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath

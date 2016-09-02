@@ -62,6 +62,7 @@
 		31A5CDB81B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDB71B0E6A500007D92E /* TWShowImagePickerOverlayWhenOrientationPortraitBehaviour.m */; };
 		31A5CDBE1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */; };
 		31AC3CB51BDB4DF900BB938E /* TWGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AC3CB41BDB4DF900BB938E /* TWGradientView.m */; };
+		31B0D6721D79D3F4004BA885 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B0D6711D79D3F4004BA885 /* StringExtensions.swift */; };
 		31B6B6D81C6A8C5500D8A85E /* TWSingleCoreDataObjectFetchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6B6D71C6A8C5500D8A85E /* TWSingleCoreDataObjectFetchHelper.swift */; };
 		31B6B6DA1C6AA03800D8A85E /* TWFetchResultsControllerAnyObjectChangedNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6B6D91C6AA03800D8A85E /* TWFetchResultsControllerAnyObjectChangedNotifier.swift */; };
 		31BFFB651AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BFFB641AF7C5DC00645566 /* TWOrientationChangeDetectorUsingAccelerometer.m */; };
@@ -247,6 +248,7 @@
 		31A5CDBD1B0E6BB80007D92E /* TWUIImagePickerExtendedEventsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUIImagePickerExtendedEventsObserver.m; sourceTree = "<group>"; };
 		31AC3CB31BDB4DF900BB938E /* TWGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWGradientView.h; sourceTree = "<group>"; };
 		31AC3CB41BDB4DF900BB938E /* TWGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWGradientView.m; sourceTree = "<group>"; };
+		31B0D6711D79D3F4004BA885 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		31B6B6D71C6A8C5500D8A85E /* TWSingleCoreDataObjectFetchHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWSingleCoreDataObjectFetchHelper.swift; sourceTree = "<group>"; };
 		31B6B6D91C6AA03800D8A85E /* TWFetchResultsControllerAnyObjectChangedNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWFetchResultsControllerAnyObjectChangedNotifier.swift; sourceTree = "<group>"; };
 		31BFFB621AF7C54600645566 /* TWOrientationChangeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWOrientationChangeDelegate.h; sourceTree = "<group>"; };
@@ -904,6 +906,7 @@
 				6C5ACF35E75C609623F24201 /* NSDataExtensions.swift */,
 				31B6B6D71C6A8C5500D8A85E /* TWSingleCoreDataObjectFetchHelper.swift */,
 				31B6B6D91C6AA03800D8A85E /* TWFetchResultsControllerAnyObjectChangedNotifier.swift */,
+				31B0D6711D79D3F4004BA885 /* StringExtensions.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -1890,6 +1893,7 @@
 				318394B91AEDA9E90077C079 /* TWSimpleTableViewDelegate.m in Sources */,
 				31E5B6B41BC6CD00008845AD /* TWFilesystemHelper.m in Sources */,
 				310510B31C1244B70070C702 /* TWRandom.swift in Sources */,
+				31B0D6721D79D3F4004BA885 /* StringExtensions.swift in Sources */,
 				31E5B6B71BC6E049008845AD /* NSString+TWReplacingCharacters.m in Sources */,
 				31FB6B711B11C5700042C409 /* TWInterfaceOrientationClassStubs.m in Sources */,
 				31E57A351BD6BA7C005ED7C0 /* TWPerformanceTimer.swift in Sources */,

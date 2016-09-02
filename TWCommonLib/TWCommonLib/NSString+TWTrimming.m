@@ -28,4 +28,12 @@
   return resultString;
 }
 
+- (NSString *)tw_condensedWhitespace {
+    NSPredicate *noEmptyStringsPredicate = [NSPredicate predicateWithFormat:@"SELF != ''"];
+    
+    NSArray *components = [self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSArray *filteredComponents = [components filteredArrayUsingPredicate:noEmptyStringsPredicate];
+    return [filteredComponents componentsJoinedByString:@" "];
+}
+
 @end
