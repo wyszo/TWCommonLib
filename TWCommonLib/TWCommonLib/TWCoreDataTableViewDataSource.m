@@ -5,6 +5,7 @@
 @import KZAsserts;
 #import "TWCoreDataTableViewDataSource.h"
 #import "TWCommonMacros.h"
+#import "NSFetchedResultsController+TWFetch.h"
 
 @interface TWCoreDataTableViewDataSource ()
 
@@ -223,6 +224,12 @@
   
   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRowInLastSectionIndex inSection:lastSectionIndex];
   return indexPath;
+}
+
+- (void)performFetchAssertResults {
+    if (_fetchedResultsController != nil) {
+        [self.fetchedResultsController tw_performFetchAssertResults];
+    }
 }
 
 - (NSInteger)objectCount
