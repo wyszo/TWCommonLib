@@ -7,7 +7,16 @@
 
 @implementation NSString (TWHTMLString)
 
-+ (nullable NSString *)tw_htmlStringFromFileNamed:(nonnull NSString *)filename
+- (NSString *)tw_stringByRemovingHtmlTags {
+    NSRange range;
+    NSString *result = [self copy];
+    while ((range = [result rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound) {
+        result = [result stringByReplacingCharactersInRange:range withString:@""];
+    }
+    return result;
+}
+
++ (NSString *)tw_htmlStringFromFileNamed:(nonnull NSString *)filename
 {
   AssertTrueOrReturnNil(filename.length);
   NSString *htmlFile = [[NSBundle mainBundle] pathForResource:filename ofType:nil];
