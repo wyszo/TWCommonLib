@@ -2,13 +2,13 @@
 
 import Foundation
 
-public class TWRandom: NSObject {
+open class TWRandom: NSObject {
   
-  public func randomIntegerLessThan(maxInt : UInt) -> UInt {
+  open func randomIntegerLessThan(_ maxInt : UInt) -> UInt {
     return ((UInt)(arc4random()) % maxInt);
   }
   
-  public func randomBoolean() -> Bool {
+  open func randomBoolean() -> Bool {
     return ((arc4random() % 2) != 0);
   }
 }

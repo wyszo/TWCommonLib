@@ -6,8 +6,8 @@ extension UIAlertController {
             assert(title.characters.count > 0)
             assert(segueIdentifier.characters.count > 0)
             
-            self.addAction(UIAlertAction(title: title, style: .Default, handler: { action in
-                viewController.performSegueWithIdentifier(segueIdentifier, sender: viewController)
+            self.addAction(UIAlertAction(title: title, style: .default, handler: { action in
+                viewController.performSegue(withIdentifier: segueIdentifier, sender: viewController)
             }))
         }
     }

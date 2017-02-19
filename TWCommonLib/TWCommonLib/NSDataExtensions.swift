@@ -1,20 +1,20 @@
 import Foundation
 
-enum JSONError: String, ErrorType {
+enum JSONError: String, Error {
     case NoData = "Error: no data"
     case ConversionFailed = "Error: Conversion from JSON failed"
 }
 
-extension NSData {
-    public func jsonDictionary() throws -> [NSObject: AnyObject] {
-        guard let jsonResponse = try NSJSONSerialization.JSONObjectWithData(self, options: []) as? [NSObject : AnyObject] else {
+extension Data {
+    public func jsonDictionary() throws -> [AnyHashable: Any] {
+        guard let jsonResponse = try JSONSerialization.jsonObject(with: self, options: []) as? [AnyHashable: Any] else {
             throw JSONError.ConversionFailed
         }
         return jsonResponse
     }
 
     public func jsonArray() throws -> [AnyObject] {
-        guard let jsonResponse = try NSJSONSerialization.JSONObjectWithData(self, options: []) as? [AnyObject] else {
+        guard let jsonResponse = try JSONSerialization.jsonObject(with: self, options: []) as? [AnyObject] else {
             throw JSONError.ConversionFailed
         }
         return jsonResponse

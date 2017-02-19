@@ -3,8 +3,8 @@ import UIKit
 public extension UIView {
     func makeEqualSize(toView view: UIView) {
         if #available(iOS 9.0, *) {
-            widthAnchor.constraintEqualToAnchor(view.widthAnchor).active = true
-            heightAnchor.constraintEqualToAnchor(view.heightAnchor).active = true
+            widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
         } else {
             assertionFailure("api not supported in this iOS version")
         }
@@ -12,8 +12,8 @@ public extension UIView {
   
     func center(withView view: UIView) {
         if #available(iOS 9.0, *) {
-            centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
-            centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
+            centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         }
         else {
             assertionFailure("api not supported in this iOS version")

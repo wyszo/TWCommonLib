@@ -1,9 +1,9 @@
 import Foundation
 
-extension Dictionary where Key: StringLiteralConvertible, Value: AnyObject {
-    public func jsonEncodedData() throws -> NSData? {
-        if NSJSONSerialization.isValidJSONObject(self as! AnyObject) {
-            return try? NSJSONSerialization.dataWithJSONObject(self as! AnyObject, options: [])
+extension Dictionary where Key: ExpressibleByStringLiteral, Value: AnyObject {
+    public func jsonEncodedData() throws -> Data? {
+        if JSONSerialization.isValidJSONObject(self as AnyObject) {
+            return try? JSONSerialization.data(withJSONObject: self as AnyObject, options: [])
         }
         return nil
     }

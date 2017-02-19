@@ -2,9 +2,9 @@
 
 import UIKit
 
-public class TWPerformanceTimer: NSObject {
-  private var startDate : NSDate!
-  private var timerName : NSString?
+open class TWPerformanceTimer: NSObject {
+  fileprivate var startDate : Date!
+  fileprivate var timerName : NSString?
  
 // MARK: init
   
@@ -23,16 +23,16 @@ public class TWPerformanceTimer: NSObject {
   /**
   It's not required to call this method, if timer object exists, it'll call start at initialisation
   */
-  public func start() {
-    self.startDate = NSDate();
+  open func start() {
+    self.startDate = Date();
   }
   
   /**
   Finish measuring execution time, return and print time elapsed
   */
-  public func stopAndLogTime() -> NSTimeInterval {
-    let endDate = NSDate();
-    let executionTime = endDate.timeIntervalSinceDate(self.startDate!);
+  open func stopAndLogTime() -> TimeInterval {
+    let endDate = Date();
+    let executionTime = endDate.timeIntervalSince(self.startDate!);
 
     self.logTime(executionTime);
     return executionTime;
@@ -40,13 +40,13 @@ public class TWPerformanceTimer: NSObject {
   
 // MARK: private
   
-  private func logTime(executionTime : NSTimeInterval) {
+  fileprivate func logTime(_ executionTime : TimeInterval) {
     let stringToLog = NSMutableString()
     
     if (self.timerName?.length != nil) {
       stringToLog.appendFormat("[Timer %@] ", self.timerName!);
     }
-    stringToLog.appendString("Execution Time: \(executionTime)");
+    stringToLog.append("Execution Time: \(executionTime)");
 
     print(stringToLog);
   }

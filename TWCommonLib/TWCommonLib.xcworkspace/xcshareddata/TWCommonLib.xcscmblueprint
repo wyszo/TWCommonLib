@@ -9,7 +9,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D6C097F0-0BB2-4825-BC05-AF96393D1F92",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "E32DCCBF449877EC87A06E0CB9B49557E2DB90AB" : "TWCommonLib",
+    "E32DCCBF449877EC87A06E0CB9B49557E2DB90AB" : "TWCommonLib\/",
     "3D86EFF9344F139003D9A23F37E0C7553F2D3EF8" : "PlayerAid\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "TWCommonLib",

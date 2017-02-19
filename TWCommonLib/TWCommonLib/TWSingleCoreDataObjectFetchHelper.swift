@@ -2,15 +2,15 @@ import Foundation
 import CoreData
 import MagicalRecord
 
-public class TWSingleCoreDataObjectFetchHelper<ManagedObjectType: NSManagedObject> {
+open class TWSingleCoreDataObjectFetchHelper<ManagedObjectType: NSManagedObject> {
   
-  private var fetchedResultsController: NSFetchedResultsController?
-  private var fetchedResultsControllerDelegate: NSFetchedResultsControllerDelegate?
-  private var objectID: Int
-  private var objectIdPropertyName: String
-  private var objectChangedCallback: () -> ()
+  fileprivate var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>?
+  fileprivate var fetchedResultsControllerDelegate: NSFetchedResultsControllerDelegate?
+  fileprivate var objectID: Int
+  fileprivate var objectIdPropertyName: String
+  fileprivate var objectChangedCallback: () -> ()
   
-  public var managedObject: ManagedObjectType?
+  open var managedObject: ManagedObjectType?
     {
     get {
       assert(fetchedResultsController?.fetchedObjects?.count == 1, "core data fetch failed, should return exactly one object")
@@ -20,7 +20,7 @@ public class TWSingleCoreDataObjectFetchHelper<ManagedObjectType: NSManagedObjec
     }
   }
   
-  required public init(objectIdPropertyName: String, objectID: Int, objectChanged: ()->()) {
+  required public init(objectIdPropertyName: String, objectID: Int, objectChanged: @escaping ()->()) {
     self.objectID = objectID
     self.objectIdPropertyName = objectIdPropertyName
     self.objectChangedCallback = objectChanged
@@ -29,20 +29,20 @@ public class TWSingleCoreDataObjectFetchHelper<ManagedObjectType: NSManagedObjec
   
   // MARK: Private
   
-  private func setupFetchedResultsController() {
+  fileprivate func setupFetchedResultsController() {
     
-    func createFetchRequest(objectIdPropertyName: String, objectID: Int) -> NSFetchRequest {
+    func createFetchRequest(_ objectIdPropertyName: String, objectID: Int) -> NSFetchRequest<NSFetchRequestResult> {
       let predicate = NSPredicate(format: "%K == %ld", objectIdPropertyName, objectID)
-      let fetchRequest: NSFetchRequest = ManagedObjectType.MR_requestAllWithPredicate(predicate)
+      let fetchRequest: NSFetchRequest = ManagedObjectType.mr_requestAll(with: predicate)
       fetchRequest.sortDescriptors = [ NSSortDescriptor(key: objectIdPropertyName, ascending: true) ]
       return fetchRequest
     }
     let fetchRequest = createFetchRequest(objectIdPropertyName, objectID: objectID)
     
     fetchedResultsControllerDelegate = TWFetchResultsControllerAnyObjectChangedNotifier(objectChanged: self.objectChangedCallback)
-    let context = NSManagedObjectContext.MR_defaultContext()
+    let context = NSManagedObjectContext.mr_default()
     
-    fetchedResultsController = ManagedObjectType.MR_fetchController(fetchRequest, delegate: fetchedResultsControllerDelegate, useFileCache:false, groupedBy: nil, inContext:context)
+    fetchedResultsController = ManagedObjectType.mr_fetchController(fetchRequest, delegate: fetchedResultsControllerDelegate, useFileCache:false, groupedBy: nil, in:context)
     do {
       try fetchedResultsController?.performFetch()
     } catch {

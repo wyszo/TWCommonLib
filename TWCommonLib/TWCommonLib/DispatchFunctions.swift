@@ -1,18 +1,18 @@
 import Foundation
 
-public func DispatchAfter(time: Double, closure: ()->()) {
-    let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
-    dispatch_after(delayTime, dispatch_get_main_queue(), closure)
+public func DispatchAfter(_ time: Double, closure: @escaping ()->()) {
+    let delayTime = DispatchTime.now() + Double(Int64(time * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+    DispatchQueue.main.asyncAfter(deadline: delayTime, execute: closure)
 }
 
-public func DispatchSyncOnMainThread(closure: ()->()) {
-    if NSThread.isMainThread() {
+public func DispatchSyncOnMainThread(_ closure: ()->()) {
+    if Thread.isMainThread {
         closure()
     } else {
-        dispatch_sync(dispatch_get_main_queue(), closure)
+        DispatchQueue.main.sync(execute: closure)
     }
 }
 
-public func DispatchAsyncOnMainThread(closure: ()->()) {
-  dispatch_async(dispatch_get_main_queue(), closure)
+public func DispatchAsyncOnMainThread(_ closure: @escaping ()->()) {
+  DispatchQueue.main.async(execute: closure)
 }

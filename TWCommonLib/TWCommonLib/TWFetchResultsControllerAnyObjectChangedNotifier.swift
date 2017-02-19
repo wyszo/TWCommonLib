@@ -2,20 +2,20 @@ import Foundation
 import CoreData
 
 @objc
-public class TWFetchResultsControllerAnyObjectChangedNotifier: NSObject, NSFetchedResultsControllerDelegate {
-  private var anyObjectChanged: () -> ()
+open class TWFetchResultsControllerAnyObjectChangedNotifier: NSObject, NSFetchedResultsControllerDelegate {
+  fileprivate var anyObjectChanged: () -> ()
   
-  required public init(objectChanged: () -> ()) {
+  required public init(objectChanged: @escaping () -> ()) {
     anyObjectChanged = objectChanged
   }
   
   // MARK: FRC delegate
   
-  public func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+  open func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
     // place a breakpoint in here to understand what happens behind the scenes
   }
   
-  public func controllerDidChangeContent(controller: NSFetchedResultsController) {
+  open func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
     anyObjectChanged()
   }
 }
