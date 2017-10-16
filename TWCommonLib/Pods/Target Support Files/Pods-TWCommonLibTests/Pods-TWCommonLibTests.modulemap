@@ -1,6 +1,0 @@
-framework module Pods_TWCommonLibTests {
-  umbrella header "Pods-TWCommonLibTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,0 +1,6 @@
+framework module Pods_TWCommonLib {
+  umbrella header "Pods-TWCommonLib-umbrella.h"
+
+  export *
+  module * { export * }
+}

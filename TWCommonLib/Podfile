@@ -2,13 +2,16 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 use_frameworks!
 
-pod 'KZAsserts', '1.0'
-pod 'UIAlertView-Blocks', '1.0'
-pod 'BlocksKit', '2.2.5'
-pod 'LBDelegateMatrioska', '0.0.2'
-pod 'FLKAutoLayout', '0.2.1'
-pod 'MagicalRecord', '2.3.2'
+target 'TWCommonLib' do
+	pod 'KZAsserts', '1.0'
+	pod 'UIAlertView-Blocks', '1.0'
+	pod 'BlocksKit', '2.2.5'
+	pod 'LBDelegateMatrioska', '0.0.2'
+	pod 'FLKAutoLayout', '0.2.1'
+	pod 'MagicalRecord', '2.3.2'
 
-target :TWCommonLibTests, :exclusive => true do
-  pod 'Kiwi', '2.4.0'
+	target 'TWCommonLibTests' do
+		pod 'Kiwi', '2.4.0'
+	end
 end
+

@@ -10,5 +10,7 @@
 #endif
 #endif
 
-#import <CoreData/CoreData.h>
-#import <MagicalRecord/MagicalRecord.h>
+
+FOUNDATION_EXPORT double Pods_TWCommonLibVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_TWCommonLibVersionString[];
+
