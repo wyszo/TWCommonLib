@@ -1,5 +1,7 @@
 ![TWCommonLib logo](TWCommonLib.png)
 
+##WARNING: This project is deprecated, please resist the urge to integrate it with new apps
+
 #TWCommonLib: no more iOS boilerplate! 
 
 Library of iOS utilities I use in my projects. Mostly serving to improve readability, app architecture and encapsulate unnecessary complexity.
