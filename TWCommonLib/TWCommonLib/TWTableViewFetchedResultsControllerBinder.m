@@ -127,6 +127,7 @@
       }
 
       // no matter if we got a proper move action or update (due to a bug described above), we want to update cell UI
+      callConfigureCellAtIndexPathCallback(indexPath);
       callConfigureCellAtIndexPathCallback(newIndexPath);
     } break;
   }
